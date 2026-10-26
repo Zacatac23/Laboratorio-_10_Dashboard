@@ -152,7 +152,9 @@ div[data-baseweb="tab-list"] {
     padding: 0 !important;
 }
 
-button[data-baseweb="tab"] {
+button[data-baseweb="tab"],
+button[role="tab"],
+button[data-testid="stTab"] {
     border-radius: 8px !important;
     padding: 8px 22px !important;
     font-size: 14px !important;
@@ -165,16 +167,26 @@ button[data-baseweb="tab"] {
 
 button[data-baseweb="tab"] p,
 button[data-baseweb="tab"] span,
-button[data-baseweb="tab"] div {
+button[data-baseweb="tab"] div,
+button[role="tab"] p,
+button[role="tab"] span,
+button[role="tab"] div,
+button[data-testid="stTab"] p,
+button[data-testid="stTab"] span,
+button[data-testid="stTab"] div {
     color: #000000 !important;
 }
 
-button[data-baseweb="tab"]:hover {
+button[data-baseweb="tab"]:hover,
+button[role="tab"]:hover,
+button[data-testid="stTab"]:hover {
     background: #E2E8F0 !important;
     color: #000000 !important;
 }
 
-button[data-baseweb="tab"][aria-selected="true"] {
+button[data-baseweb="tab"][aria-selected="true"],
+button[role="tab"][aria-selected="true"],
+button[data-testid="stTab"][aria-selected="true"] {
     background: #5EEAD4 !important;
     color: #000000 !important;
     border-color: #0B6E6E !important;
@@ -183,7 +195,13 @@ button[data-baseweb="tab"][aria-selected="true"] {
 
 button[data-baseweb="tab"][aria-selected="true"] p,
 button[data-baseweb="tab"][aria-selected="true"] span,
-button[data-baseweb="tab"][aria-selected="true"] div {
+button[data-baseweb="tab"][aria-selected="true"] div,
+button[role="tab"][aria-selected="true"] p,
+button[role="tab"][aria-selected="true"] span,
+button[role="tab"][aria-selected="true"] div,
+button[data-testid="stTab"][aria-selected="true"] p,
+button[data-testid="stTab"][aria-selected="true"] span,
+button[data-testid="stTab"][aria-selected="true"] div {
     color: #000000 !important;
     font-weight: 700 !important;
 }
@@ -327,7 +345,8 @@ section[data-testid="stSidebar"] .stButton button:hover {
 /* =====================================================
    TARJETAS Y CONTENEDORES PRINCIPALES
    ===================================================== */
-.content-card {
+.content-card,
+div[data-testid="stVerticalBlockBorderWrapper"] > div {
     background: var(--card-bg) !important;
     border: 1px solid var(--border-color) !important;
     border-radius: 12px !important;

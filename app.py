@@ -14,6 +14,7 @@ from data_logic import (
     calcular_variacion_interanual,
     calcular_proyeccion,
     calcular_metricas_error,
+    preparar_datos_mapa_origen,
     TODAS,
     ETIQ,
     CORTE
@@ -26,9 +27,10 @@ from ui_components import (
     render_banner,
     render_kpis_resumen,
     crear_figura_evolucion,
-    crear_figura_mapa_regiones,
     render_detalle_region_panel,
     render_footer_leyenda,
+    crear_figura_mapa_origen,
+    titulo_seccion,
     AZUL,
     NARANJA,
     TEAL,
@@ -193,63 +195,61 @@ with tab_res:
     pr_filtro = pais[(pais.fecha.dt.year >= a0) & (pais.fecha.dt.year <= a1)]
     totales_reg = (pr_filtro if not pr_filtro.empty else pais).groupby("region")["viajeros"].sum().sort_values(ascending=False).to_dict()
 
+    
+    
+    region_activa = st.session_state.get("sel_reg_detalle", reg if reg in regiones else (regiones[0] if regiones else "Todas las regiones"))
+
     with col_mapa:
-        st.markdown("""
-        <div class='content-card' style='height: 100%;'>
-            <div class='card-header-flex'>
-                <h2 class='card-title'>
-                    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#0B6E6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;">
-                        <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
-                        <line x1="8" y1="2" x2="8" y2="18"/>
-                        <line x1="16" y1="6" x2="16" y2="22"/>
-                    </svg>
-                    Mapa por región
-                </h2>
-            </div>
-        """, unsafe_allow_html=True)
+        with st.container(border=True):
+            titulo_seccion(
+                "Mapa por región de origen",
+                "Procedencia global de visitantes hacia Guatemala",
+                "◈"
+            )
 
-        region_actual = reg if reg != TODAS else (list(totales_reg.keys())[0] if totales_reg else "América Central")
-        fig_map = crear_figura_mapa_regiones(totales_reg, region_actual)
-        mostrar_grafico(fig_map)
+            df_mapa, es_reg_esp = preparar_datos_mapa_origen(pais, a0, a1, region_activa)
+            fig_mapa = crear_figura_mapa_origen(df_mapa, es_reg_esp)
 
-        st.markdown("""
-        <div style='font-size:12px;color:#64748B;display:flex;align-items:center;gap:6px;margin-top:10px;'>
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-            </svg>
-            El mapa se enlaza con el detalle de cada región. Selecciona una región para ver sus indicadores y tendencias.
-        </div>
-        </div>
-        """, unsafe_allow_html=True)
+            mostrar_grafico(
+                fig_mapa,
+                config={
+                    "displayModeBar": False,
+                    "scrollZoom": True
+                }
+            )
+
+            st.caption(
+                "Distribución geográfica mundial. Pasa el cursor sobre cada país "
+                "para ver su región y total de viajeros a Guatemala."
+            )
 
     with col_detalle:
-        st.markdown("""
-        <div class='content-card' style='height: 100%;'>
-            <div class='card-header-flex'>
-                <h2 class='card-title'>Detalle de región</h2>
-            </div>
-        """, unsafe_allow_html=True)
+        with st.container(border=True):
+            titulo_seccion(
+                "Detalle de región",
+                "Indicadores y proyección del período",
+                "◉"
+            )
 
-        indice_reg = regiones.index(reg) if reg in regiones else 0
-        sel_reg_box = st.selectbox(
-            "Región detalle",
-            regiones,
-            index=indice_reg,
-            key="sel_reg_detalle",
-            label_visibility="collapsed"
-        )
+            indice_reg = regiones.index(reg) if reg in regiones else 0
+            sel_reg_box = st.selectbox(
+                "Región detalle",
+                regiones,
+                index=indice_reg,
+                key="sel_reg_detalle",
+                label_visibility="collapsed"
+            )
 
-        sr_det = pais[pais.region == sel_reg_box].groupby("fecha")["viajeros"].sum().reindex(idx, fill_value=0)
-        sr_rng_det = sr_det[(sr_det.index.year >= a0) & (sr_det.index.year <= a1)]
-        tot_reg = float(sr_rng_det.sum()) if not sr_rng_det.empty else 42350
-        vr_det = calcular_variacion_interanual(sr_det, a1)
-        tr_det = f"{vr_det:+.1f}%" if vr_det is not None else "+12.5%"
-        crecimiento_reg = vr_det if vr_det is not None else 12.0
-        proy_reg = max(0, int(tot_reg * (1 + crecimiento_reg / 100)))
-        sa_mini = agrupar_serie(sr_rng_det, "Anual")
+            sr_det = pais[pais.region == sel_reg_box].groupby("fecha")["viajeros"].sum().reindex(idx, fill_value=0)
+            sr_rng_det = sr_det[(sr_det.index.year >= a0) & (sr_det.index.year <= a1)]
+            tot_reg = float(sr_rng_det.sum()) if not sr_rng_det.empty else 42350
+            vr_det = calcular_variacion_interanual(sr_det, a1)
+            tr_det = f"{vr_det:+.1f}%" if vr_det is not None else "+12.5%"
+            crecimiento_reg = vr_det if vr_det is not None else 12.0
+            proy_reg = max(0, int(tot_reg * (1 + crecimiento_reg / 100)))
+            sa_mini = agrupar_serie(sr_rng_det, "Anual")
 
-        render_detalle_region_panel(tot_reg, tr_det, proy_reg, sa_mini)
+            render_detalle_region_panel(tot_reg, tr_det, proy_reg, sa_mini)
 
 
 # =====================================================

@@ -5,6 +5,10 @@ import os
 import streamlit as st
 import plotly.graph_objects as go
 import plotly.express as px
+import json
+from pathlib import Path
+import pandas as pd
+import plotly.express as px
 
 # Paleta cromática corporativa (fiel a la maqueta)
 AZUL = "#1F5F8B"
@@ -24,6 +28,19 @@ def aplicar_estilos(ruta_css="styles.css"):
     if os.path.exists(ruta_css):
         with open(ruta_css, "r", encoding="utf-8") as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+def titulo_seccion(titulo: str, subtitulo: str = "", icono: str = ""):
+    """Renderiza el encabezado estilizado de una sección o tarjeta."""
+    icono_html = f"<span style='color: #0B6E6E; margin-right: 6px;'>{icono}</span>" if icono else ""
+    sub_html = f"<div class='card-sub'>{subtitulo}</div>" if subtitulo else ""
+    st.markdown(f"""
+    <div class='card-header-flex'>
+        <div>
+            <h2 class='card-title'>{icono_html}{titulo}</h2>
+            {sub_html}
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
 
 def mostrar_grafico(fig, **kwargs):
@@ -216,140 +233,79 @@ def crear_figura_evolucion(sa_obs, s_proy):
     ))
 
 
-def crear_figura_mapa_regiones(totales_reg, region_actual):
-    """Genera la visualización del mapa coroplético estilizado idéntico al mockup."""
-    # Determinación de color por rangos
-    def get_color(val):
-        if val >= 150000:
-            return "#1A4B75"
-        elif val >= 100000:
-            return "#2A6EA6"
-        elif val >= 50000:
-            return "#4B92C9"
-        elif val >= 20000:
-            return "#82B8DF"
-        else:
-            return "#CBE3F3"
 
-    regiones_ordenadas = list(totales_reg.keys()) or ["América Central", "América del Norte", "Europa", "América del Sur", "Otros"]
+def crear_figura_mapa_origen(df_mapa, es_region_especifica=False):
+    """Genera la figura Plotly del mapa mundial coroplético de procedencia.
+    
+    Capa visual desacoplada que recibe el DataFrame procesado por data_logic.
+    """
+    if df_mapa is None or df_mapa.empty:
+        fig = go.Figure()
+        fig.update_layout(height=450, annotations=[dict(text="Sin datos de países disponibles", showarrow=False)])
+        return fig
 
-    # Definición de 5 polígonos territoriales que componen el mapa continuo
-    poligonos = [
-        # 1. Región Central / Núcleo
-        {
-            "name": regiones_ordenadas[0] if len(regiones_ordenadas) > 0 else "América Central",
-            "x": [0.26, 0.38, 0.44, 0.39, 0.28, 0.24, 0.26],
-            "y": [0.52, 0.58, 0.50, 0.32, 0.30, 0.40, 0.52],
-            "cx": 0.34, "cy": 0.44
-        },
-        # 2. Región Norte
-        {
-            "name": regiones_ordenadas[1] if len(regiones_ordenadas) > 1 else "América del Norte",
-            "x": [0.22, 0.32, 0.40, 0.45, 0.36, 0.25, 0.16, 0.22],
-            "y": [0.60, 0.78, 0.82, 0.70, 0.59, 0.58, 0.56, 0.60],
-            "cx": 0.30, "cy": 0.68
-        },
-        # 3. Región Este / Noreste
-        {
-            "name": regiones_ordenadas[2] if len(regiones_ordenadas) > 2 else "Europa",
-            "x": [0.44, 0.56, 0.60, 0.52, 0.45, 0.44],
-            "y": [0.70, 0.74, 0.56, 0.48, 0.50, 0.70],
-            "cx": 0.50, "cy": 0.60
-        },
-        # 4. Región Sureste
-        {
-            "name": regiones_ordenadas[3] if len(regiones_ordenadas) > 3 else "América del Sur",
-            "x": [0.39, 0.52, 0.58, 0.54, 0.46, 0.38, 0.39],
-            "y": [0.32, 0.48, 0.42, 0.26, 0.16, 0.20, 0.32],
-            "cx": 0.46, "cy": 0.32
-        },
-        # 5. Región Sur / Insular
-        {
-            "name": regiones_ordenadas[4] if len(regiones_ordenadas) > 4 else "Otros Países",
-            "x": [0.46, 0.54, 0.66, 0.68, 0.58, 0.48, 0.46],
-            "y": [0.16, 0.26, 0.24, 0.14, 0.10, 0.11, 0.16],
-            "cx": 0.58, "cy": 0.18
-        }
-    ]
+    if es_region_especifica:
+        escala_color = [
+            [0.0, "#CBD5E1"],
+            [0.0001, "#A7D9D1"],
+            [0.5, "#0B6E6E"],
+            [1.0, "#044E4B"]
+        ]
+    else:
+        escala_color = [
+            [0.0, "#E2E8F0"],
+            [0.05, "#B7DCD7"],
+            [0.25, "#3BA6A0"],
+            [0.6, "#1F5F8B"],
+            [1.0, "#044E4B"]
+        ]
 
-    fig = go.Figure()
-
-    # Dibujar cada región polígono
-    for poly in poligonos:
-        nom = poly["name"]
-        val = totales_reg.get(nom, 35000)
-        c = get_color(val)
-        is_sel = (nom == region_actual)
-
-        fig.add_trace(go.Scatter(
-            x=poly["x"],
-            y=poly["y"],
-            fill="toself",
-            fillcolor=c,
-            mode="lines",
-            line=dict(color="#FFFFFF", width=2.2 if not is_sel else 3),
-            name=nom,
-            text=f"<b>{nom}</b><br>Viajeros: {val:,.0f}",
-            hoverinfo="text",
-            showlegend=False
-        ))
-
-    # Etiqueta / Tooltip badge apuntando a la región seleccionada
-    target_poly = next((p for p in poligonos if p["name"] == region_actual), poligonos[0])
-    fig.add_annotation(
-        x=target_poly["cx"],
-        y=target_poly["cy"],
-        text=f"<b>{region_actual}</b>",
-        showarrow=True,
-        arrowhead=2,
-        arrowsize=1,
-        arrowwidth=1.5,
-        arrowcolor="#044E4B",
-        ax=0,
-        ay=-38,
-        bgcolor="#044E4B",
-        font=dict(color="#FFFFFF", size=12, family="Plus Jakarta Sans"),
-        borderpad=6,
-        borderwidth=0
+    fig = px.choropleth(
+        df_mapa,
+        locations="iso_alpha",
+        color="valor_grafica",
+        hover_name="pais",
+        custom_data=["region", "viajeros_fmt"],
+        color_continuous_scale=escala_color
     )
 
-    # Leyenda cromática vertical a la derecha (idéntica a la maqueta)
-    rangos_leyenda = [
-        ("> 150k", "#1A4B75"),
-        ("100k – 150k", "#2A6EA6"),
-        ("50k – 100k", "#4B92C9"),
-        ("20k – 50k", "#82B8DF"),
-        ("< 20k", "#CBE3F3")
-    ]
-    for idx_l, (lbl, col) in enumerate(rangos_leyenda):
-        # Punto de color
-        fig.add_trace(go.Scatter(
-            x=[0.82],
-            y=[0.80 - idx_l * 0.14],
-            mode="markers",
-            marker=dict(size=12, color=col, line=dict(color="#CBD5E1", width=1)),
-            hoverinfo="none",
-            showlegend=False
-        ))
-        # Texto del rango
-        fig.add_annotation(
-            x=0.85,
-            y=[0.80 - idx_l * 0.14][0],
-            text=lbl,
-            showarrow=False,
-            xanchor="left",
-            font=dict(size=11.5, color="#475569", family="Plus Jakarta Sans")
+    fig.update_traces(
+        marker_line_color="#FFFFFF",
+        marker_line_width=0.9,
+        hovertemplate=(
+            "<b>%{hovertext}</b><br>"
+            "<b>Región:</b> %{customdata[0]}<br>"
+            "<b>Viajeros a Guatemala:</b> %{customdata[1]}"
+            "<extra></extra>"
         )
+    )
+
+    fig.update_geos(
+        projection_type="natural earth",
+        showcountries=True,
+        countrycolor="#FFFFFF",
+        showcoastlines=True,
+        coastlinecolor="#CBD5E1",
+        showland=True,
+        landcolor="#F8FAFC",
+        showocean=True,
+        oceancolor="#EDF4F9",
+        showlakes=False,
+        showframe=False,
+        bgcolor="#FFFFFF"
+    )
 
     fig.update_layout(
-        height=320,
-        margin=dict(l=0, r=10, t=10, b=0),
-        plot_bgcolor="#FFFFFF",
+        height=450,
+        margin=dict(l=0, r=0, t=10, b=0),
         paper_bgcolor="#FFFFFF",
-        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0.08, 1.08]),
-        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False, range=[0.02, 0.92])
+        plot_bgcolor="#FFFFFF",
+        coloraxis_showscale=False,
+        dragmode=False
     )
     return fig
+
+
 
 
 def render_detalle_region_panel(tot_reg, tr_det, proy_reg, sa_mini):
