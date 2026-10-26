@@ -9,8 +9,8 @@
     --teal: #0B6E6E;
     --teal-dark: #044E4B;
     --blue: #1F5F8B;
-    --orange: #E07B39;
-    --green: #16A34A;
+    --orange: #A8481A;
+    --green: #15803D;
     --red: #DC2626;
     --gray-dark: #1E293B;
     --gray-text: #475569;
@@ -32,11 +32,11 @@ html, body, [class*="css"], .stMarkdown, button, input, select, textarea {
 }
 
 header[data-testid="stHeader"] { 
-    display: none; 
+    display: block;
 }
 
 .block-container {
-    padding-top: calc(76px + 1.2rem) !important;
+    padding-top: 3rem !important;
     padding-bottom: 2rem !important;
     padding-left: 2rem !important;
     padding-right: 2rem !important;
@@ -47,12 +47,13 @@ header[data-testid="stHeader"] {
    BANNER SUPERIOR (FIJO Y CUBRE TODO EL ANCHO SUPERIOR)
    ===================================================== */
 .top-banner {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100vw !important;
-    height: 76px !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    min-height: 76px !important;
+    height: auto !important;
     z-index: 999999 !important;
     background: #044E4B !important;
     color: #FFFFFF !important;
@@ -195,30 +196,7 @@ div[data-baseweb="tab-highlight"], div[data-baseweb="tab-border"] {
 /* =====================================================
    BARRA LATERAL DEBAJO DEL HEADER Y SIN BOTÓN DE CIERRE
    ===================================================== */
-section[data-testid="stSidebar"] {
-    top: 76px !important;
-    height: calc(100vh - 76px) !important;
-    min-width: 320px !important;
-    max-width: 320px !important;
-    z-index: 9999 !important;
-    background: #FFFFFF !important;
-    border-right: 1px solid var(--border-color) !important;
-    padding-top: 1rem !important;
-    transform: none !important;
-    margin-left: 0 !important;
-}
-
-/* Ocultar el botón para cerrar o colapsar el sidebar */
-[data-testid="stSidebarCollapseButton"],
-button[data-testid="stSidebarCollapseButton"],
-[data-testid="collapsedControl"],
-button[aria-label="Close sidebar"],
-button[aria-label="Collapse sidebar"],
-button[aria-label="Open sidebar"] {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-}
+section[data-testid="stSidebar"] { background: #FFFFFF; }
 
 section[data-testid="stSidebar"] .stSelectbox,
 section[data-testid="stSidebar"] .stSlider {
@@ -399,7 +377,7 @@ section[data-testid="stSidebar"] .stButton button:hover {
 }
 
 .kpi-box.blue { border-left: 5px solid #1E5A99; }
-.kpi-box.green { border-left: 5px solid #16A34A; }
+.kpi-box.green { border-left: 5px solid #15803D; }
 .kpi-box.orange { border-left: 5px solid #EA580C; }
 
 .kpi-icon {
@@ -415,7 +393,7 @@ section[data-testid="stSidebar"] .stButton button:hover {
 }
 
 .kpi-icon.bg-blue { background: #1E5A99; }
-.kpi-icon.bg-green { background: #16A34A; }
+.kpi-icon.bg-green { background: #15803D; }
 .kpi-icon.bg-orange { background: #EA580C; }
 
 .kpi-text .lbl {
@@ -439,7 +417,7 @@ section[data-testid="stSidebar"] .stButton button:hover {
 }
 
 .kpi-text .sub .up {
-    color: #16A34A;
+    color: #15803D;
     font-weight: 700;
 }
 
@@ -560,8 +538,8 @@ section[data-testid="stSidebar"] .stButton button:hover {
 }
 
 .dot-blue { background: #1F5F8B; }
-.dot-orange { background: #E07B39; }
-.dot-green { background: #16A34A; }
+.dot-orange { background: #A8481A; }
+.dot-green { background: #15803D; }
 .dot-red { background: #DC2626; }
 .dot-gray { background: #94A3B8; }
 
@@ -570,4 +548,22 @@ div[data-testid="stPlotlyChart"] {
     background: #FFFFFF;
     border-radius: 8px;
     overflow: hidden;
+}
+/* Adaptación al ancho disponible y navegación accesible. */
+.top-banner { gap: 16px; flex-wrap: wrap; margin-bottom: 1.2rem !important; border-radius: 12px !important; z-index: 1 !important; }
+.banner-left, .banner-titles { min-width: 0; }
+.banner-titles h1 { overflow-wrap: anywhere; }
+.banner-titles .sub { line-height: 1.5; }
+.kpi-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+:focus-visible { outline: 3px solid #0B6E6E !important; outline-offset: 3px; }
+@media (max-width: 700px) {
+  .block-container { padding: 4rem 1rem 1.5rem !important; }
+  .top-banner { padding: 16px !important; }
+  .banner-left { gap: 10px; }
+  .banner-titles h1 { font-size: 18px; line-height: 1.35; }
+  .banner-right { width: 100%; justify-content: flex-start; }
+  .update-box, .update-box .val { text-align: left; justify-content: flex-start; }
+  .kpi-row { grid-template-columns: minmax(0, 1fr); }
+  .content-card { padding: 16px !important; }
+  .logo-circle { flex-shrink: 0; }
 }

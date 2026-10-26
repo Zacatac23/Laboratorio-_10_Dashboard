@@ -1,0 +1,228 @@
+{
+  "Total": {
+    "ARIMA/SARIMA (mejor)": [
+      116033,
+      134416,
+      63
+    ],
+    "Holt-Winters": [
+      303212,
+      328153,
+      63
+    ],
+    "LSTM": [
+      135961,
+      153091,
+      63
+    ],
+    "Prophet": [
+      97588,
+      107975,
+      63
+    ],
+    "Seasonal Naive": [
+      235731,
+      253203,
+      63
+    ],
+    "Suav. Exp. (Holt)": [
+      196844,
+      217086,
+      63
+    ]
+  },
+  "Via_Aérea": {
+    "ARIMA/SARIMA (mejor)": [
+      28893,
+      33918,
+      63
+    ],
+    "Holt-Winters": [
+      58262,
+      62866,
+      63
+    ],
+    "Prophet": [
+      44233,
+      49111,
+      63
+    ],
+    "Seasonal Naive": [
+      75104,
+      79077,
+      63
+    ],
+    "Suav. Exp. (Holt)": [
+      40457,
+      45592,
+      63
+    ]
+  },
+  "Via_Terrestre": {
+    "ARIMA/SARIMA (mejor)": [
+      147278,
+      163110,
+      63
+    ],
+    "Holt-Winters": [
+      213203,
+      231701,
+      63
+    ],
+    "Prophet": [
+      54280,
+      71294,
+      63
+    ],
+    "Seasonal Naive": [
+      160013,
+      176653,
+      63
+    ],
+    "Suav. Exp. (Holt)": [
+      148697,
+      164746,
+      63
+    ]
+  },
+  "Via_Marítima": {
+    "ARIMA/SARIMA (mejor)": [
+      4989,
+      5371,
+      63
+    ],
+    "Holt-Winters": [
+      7540,
+      8848,
+      63
+    ],
+    "Prophet": [
+      7272,
+      8587,
+      63
+    ],
+    "Seasonal Naive": [
+      858,
+      1732,
+      63
+    ],
+    "Suav. Exp. (Holt)": [
+      3945,
+      4505,
+      63
+    ]
+  },
+  "Tipo_Cruceristas": {
+    "ARIMA/SARIMA (mejor)": [
+      4826,
+      5175,
+      63
+    ],
+    "Holt-Winters": [
+      7023,
+      8362,
+      63
+    ],
+    "Prophet": [
+      8085,
+      9315,
+      63
+    ],
+    "Seasonal Naive": [
+      475,
+      1664,
+      63
+    ],
+    "Suav. Exp. (Holt)": [
+      3335,
+      3874,
+      63
+    ]
+  },
+  "Tipo_Excursionista": {
+    "ARIMA/SARIMA (mejor)": [
+      72907,
+      77925,
+      63
+    ],
+    "Holt-Winters": [
+      65568,
+      71238,
+      63
+    ],
+    "Prophet": [
+      15619,
+      22412,
+      63
+    ],
+    "Seasonal Naive": [
+      51858,
+      56914,
+      63
+    ],
+    "Suav. Exp. (Holt)": [
+      55487,
+      61145,
+      63
+    ]
+  },
+  "Tipo_Turista": {
+    "ARIMA/SARIMA (mejor)": [
+      72286,
+      81440,
+      63
+    ],
+    "Holt-Winters": [
+      168531,
+      182775,
+      63
+    ],
+    "LSTM": [
+      54776,
+      63770,
+      63
+    ],
+    "Prophet": [
+      137187,
+      149522,
+      63
+    ],
+    "Seasonal Naive": [
+      155608,
+      164460,
+      63
+    ],
+    "Suav. Exp. (Holt)": [
+      128801,
+      140957,
+      63
+    ]
+  },
+  "Tipo_Viajero": {
+    "ARIMA/SARIMA (mejor)": [
+      19531,
+      35191,
+      63
+    ],
+    "Holt-Winters": [
+      23241,
+      34641,
+      63
+    ],
+    "Prophet": [
+      22944,
+      31876,
+      63
+    ],
+    "Seasonal Naive": [
+      28208,
+      42002,
+      63
+    ],
+    "Suav. Exp. (Holt)": [
+      19086,
+      34967,
+      63
+    ]
+  }
+}

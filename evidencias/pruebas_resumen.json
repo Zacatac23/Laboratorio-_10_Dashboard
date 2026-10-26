@@ -1,0 +1,13 @@
+{
+  "automaticas": 27,
+  "navegador_aprobadas": 12,
+  "navegador_fallidas": 0,
+  "no_concluyente": [
+    "Ocultar traza con clic en leyenda: el gesto no confirmó cambio en g.data; no se acredita ese gesto. Selector de modelos sí probado."
+  ],
+  "documentales_no_verificables": [
+    "PDF enunciado original",
+    "PDF diseño original",
+    "Procedencia de modelos L1/L2"
+  ]
+}

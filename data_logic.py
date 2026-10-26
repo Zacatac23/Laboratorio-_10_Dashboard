@@ -1,104 +1,170 @@
-"""Lógica de datos, carga, agregaciones, variaciones y proyecciones.
-Separa el procesamiento analítico de la capa visual y de presentación.
-"""
+"""Carga validada y cálculos reproducibles; nunca extrapola pronósticos."""
 import os
 import numpy as np
 import pandas as pd
 
-CORTE = pd.Timestamp("2021-04-01")  # Periodo de prueba de modelos
-TODAS = "Todas las regiones"
+CORTE = pd.Timestamp('2021-04-01')
+TODAS = 'Todas las regiones'
 ETIQ = {
-    "Total": "Total de viajeros",
-    "Via_Aérea": "Vía aérea",
-    "Via_Terrestre": "Vía terrestre",
-    "Via_Marítima": "Vía marítima",
-    "Tipo_Turista": "Turistas",
-    "Tipo_Excursionista": "Excursionistas",
-    "Tipo_Viajero": "Viajeros (tránsito y comercio fronterizo)",
-    "Tipo_Cruceristas": "Cruceristas"
+    'Total': 'Total de viajeros', 'Via_Aérea': 'Vía aérea',
+    'Via_Terrestre': 'Vía terrestre', 'Via_Marítima': 'Vía marítima',
+    'Tipo_Turista': 'Turistas', 'Tipo_Excursionista': 'Excursionistas',
+    'Tipo_Viajero': 'Viajeros (tránsito y comercio fronterizo)',
+    'Tipo_Cruceristas': 'Cruceristas',
+}
+ESQUEMAS = {
+    'series_mensuales.csv': ['serie', 'fecha', 'viajeros'],
+    'pais_mensual.csv': ['fecha', 'pais', 'region', 'viajeros'],
+    'via_frontera.csv': ['fecha', 'via', 'frontera', 'viajeros'],
+    'pronosticos.csv': ['serie', 'modelo', 'fecha', 'prediccion'],
+    'catch22_pca.csv': ['serie', 'PC1', 'PC2', 'cluster'],
+}
+CLAVES = {
+    'series_mensuales.csv': ['serie', 'fecha'],
+    'pais_mensual.csv': ['fecha', 'pais', 'region'],
+    'via_frontera.csv': ['fecha', 'via', 'frontera'],
+    'pronosticos.csv': ['serie', 'modelo', 'fecha'],
+    'catch22_pca.csv': ['serie'],
 }
 
 
-def leer_archivo(nombre, data_dir="data"):
-    """Carga un CSV normalizando codificaciones y nombres de series/regiones."""
+class ErrorDatos(ValueError):
+    """Error de entrada que se explica sin stacktrace."""
+
+
+def seleccion_vigente(puntos, opciones):
+    """La interfaz define una selección efectiva: el último punto aún disponible."""
+    valor = puntos[-1].get('y') if puntos else None
+    return valor if valor in opciones else None
+
+
+def leer_archivo(nombre, data_dir='data', diagnosticos=None):
     ruta = os.path.join(data_dir, nombre)
-    if not os.path.exists(ruta):
+    if not os.path.isfile(ruta):
         return None
     try:
-        df = pd.read_csv(ruta)
-    except Exception:
-        df = pd.read_csv(ruta, encoding="latin1")
+        try:
+            df = pd.read_csv(ruta)
+        except UnicodeDecodeError:
+            df = pd.read_csv(ruta, encoding='latin1')
+    except (OSError, ValueError, pd.errors.ParserError) as exc:
+        raise ErrorDatos(f'{nombre}: no se pudo leer el CSV. Revise su formato.') from exc
+    faltantes = set(ESQUEMAS[nombre]) - set(df.columns)
+    if faltantes:
+        raise ErrorDatos(f'{nombre}: faltan columnas: {", ".join(sorted(faltantes))}.')
+    if df.empty:
+        raise ErrorDatos(f'{nombre}: el archivo está vacío; agregue registros válidos.')
+    if df[ESQUEMAS[nombre]].isna().any().any():
+        raise ErrorDatos(f'{nombre}: hay valores nulos; no se descartaron filas.')
+    if 'fecha' in df:
+        fechas = pd.to_datetime(df.fecha, errors='coerce')
+        invalidas = int(fechas.isna().sum())
+        if invalidas:
+            raise ErrorDatos(f'{nombre}: {invalidas} fechas inválidas; no se descartaron filas.')
+        if (fechas.dt.day != 1).any() or (fechas != fechas.dt.normalize()).any():
+            raise ErrorDatos(f'{nombre}: se requieren fechas mensuales al primer día del mes.')
+        df['fecha'] = fechas
+    for col in ['viajeros', 'prediccion', 'PC1', 'PC2', 'cluster']:
+        if col in df:
+            valores = pd.to_numeric(df[col], errors='coerce')
+            if not np.isfinite(valores).all():
+                raise ErrorDatos(f'{nombre}: {col} contiene números inválidos o no finitos.')
+            if col == 'viajeros' and (valores < 0).any():
+                raise ErrorDatos(f'{nombre}: viajeros contiene conteos negativos.')
+            df[col] = valores
+    for col in ['serie', 'pais', 'region', 'via', 'frontera', 'modelo']:
+        if col in df:
+            df[col] = df[col].astype(str).str.strip()
+            if df[col].eq('').any():
+                raise ErrorDatos(f'{nombre}: {col} contiene etiquetas vacías.')
+    cambios = 0
+    for col, patrones in {
+        'serie': [('Via_A.*rea', 'Via_Aérea'), ('Via_Mar.*tima', 'Via_Marítima')],
+        'region': [('Am.*rica', 'América'), ('Ocean.*a', 'Oceanía'), ('Pa.*ses', 'Países')],
+    }.items():
+        if col in df:
+            antes = df[col].copy()
+            for patron, reemplazo in patrones:
+                df[col] = df[col].str.replace(patron, reemplazo, regex=True)
+            cambios += int((antes != df[col]).sum())
+    if cambios and diagnosticos is not None:
+        diagnosticos.append(f'{nombre}: {cambios} etiquetas normalizadas; no se eliminaron filas.')
+    if nombre in ['series_mensuales.csv', 'pronosticos.csv']:
+        desconocidas = set(df.serie) - set(ETIQ)
+        if desconocidas:
+            raise ErrorDatos(f'{nombre}: series desconocidas: {", ".join(sorted(desconocidas))}.')
+    if df.duplicated(CLAVES[nombre]).any():
+        raise ErrorDatos(f'{nombre}: hay claves duplicadas; corrija el origen antes de cargar.')
+    return df.sort_values('fecha').reset_index(drop=True) if 'fecha' in df else df
 
-    if "fecha" in df:
-        df = df[df["fecha"].astype(str).str.lower() != "fecha"]
-        df["fecha"] = pd.to_datetime(df["fecha"], errors="coerce")
-        df = df.dropna(subset=["fecha"])
-    if "prediccion" in df:
-        df["prediccion"] = pd.to_numeric(df["prediccion"], errors="coerce")
-        df = df.dropna(subset=["prediccion"])
-    if "serie" in df:
-        df["serie"] = (df["serie"]
-                       .str.replace("Via_A.*rea", "Via_Aérea", regex=True)
-                       .str.replace("Via_Mar.*tima", "Via_Marítima", regex=True))
-    if "region" in df:
-        df["region"] = (df["region"]
-                       .str.replace("Am.*rica", "América", regex=True)
-                       .str.replace("Ocean.*a", "Oceanía", regex=True)
-                       .str.replace("Pa.*ses", "Países", regex=True))
-    return df
 
-
-def cargar_todo(data_dir="data"):
-    """Carga y valida los datasets requeridos."""
-    series = leer_archivo("series_mensuales.csv", data_dir)
-    pais = leer_archivo("pais_mensual.csv", data_dir)
-    vf = leer_archivo("via_frontera.csv", data_dir)
-    pron = leer_archivo("pronosticos.csv", data_dir)
-    pca = leer_archivo("catch22_pca.csv", data_dir)
-
-    idx = pd.date_range(series.fecha.min(), series.fecha.max(), freq="MS") if series is not None else None
-    regiones = sorted([r for r in pais["region"].dropna().unique() if r not in ["0", "Sin dato"]]) if pais is not None else []
-
+def cargar_todo(data_dir='data', diagnosticos=None):
+    mensajes = diagnosticos if diagnosticos is not None else []
+    datasets = []
+    for nombre in ESQUEMAS:
+        obligatorio = nombre in ['series_mensuales.csv', 'pais_mensual.csv', 'via_frontera.csv']
+        try:
+            df = leer_archivo(nombre, data_dir, mensajes)
+        except ErrorDatos as exc:
+            if obligatorio:
+                raise
+            mensajes.append(str(exc))
+            df = None
+        if df is None:
+            if obligatorio:
+                raise ErrorDatos(f'Falta {nombre} en {data_dir}. Restaure el CSV requerido.')
+            mensajes.append(f'{nombre}: no disponible; se omitirán las vistas dependientes.')
+        datasets.append(df)
+    series, pais, vf, pron, pca = datasets
+    for serie, grupo in series.groupby('serie'):
+        esperadas = pd.date_range(grupo.fecha.min(), grupo.fecha.max(), freq='MS')
+        faltan = len(esperadas.difference(grupo.fecha))
+        if faltan:
+            mensajes.append(f'{serie}: faltan {faltan} meses; no se rellenan con ceros.')
+    idx = pd.date_range(series.fecha.min(), series.fecha.max(), freq='MS')
+    regiones = sorted(pais.region.unique())
     return series, pais, vf, pron, pca, idx, regiones
 
 
 def agrupar_serie(s, nivel):
-    """Agrupa una serie por mes o por año."""
-    return s.resample("YS" if nivel in ["Año", "Anual"] else "MS").sum()
+    if s.empty:
+        return s.copy()
+    return s.sort_index().resample('YS' if nivel in ['Año', 'Anual'] else 'MS').sum(min_count=1)
 
 
 def calcular_variacion_interanual(s, anio):
-    """Calcula el porcentaje de cambio interanual comparando los mismos meses disponibles."""
-    cur = s[s.index.year == anio]
-    prev = s[(s.index.year == anio - 1) & (s.index.month.isin(cur.index.month))]
-    return (cur.sum() / prev.sum() - 1) * 100 if len(cur) and prev.sum() > 0 else None
+    """Compara los mismos meses observados del año elegido y el anterior."""
+    actual = s[s.index.year == anio].dropna()
+    previo = s[(s.index.year == anio - 1) & s.index.month.isin(actual.index.month)].dropna()
+    if actual.empty or set(actual.index.month) != set(previo.index.month) or previo.sum() <= 0:
+        return None
+    return float((actual.sum() / previo.sum() - 1) * 100)
 
 
-def calcular_proyeccion(s, meses_adelante=18):
-    """Calcula la proyección temporal futura con factor de estacionalidad."""
-    if s.empty:
-        return pd.Series(dtype=float)
-    fechas_futuras = pd.date_range(s.index.max() + pd.DateOffset(months=1), periods=meses_adelante, freq="MS")
-    ultimos_12 = s.iloc[-12:] if len(s) >= 12 else s
-    crec = 1.05  # Crecimiento estimado anual (5%)
-    valores = []
-    for i in range(meses_adelante):
-        base = ultimos_12.iloc[i % len(ultimos_12)]
-        factor = crec ** ((i + 1) / 12)
-        valores.append(base * factor)
-    return pd.Series(valores, index=fechas_futuras)
+def errores_modelos(series, pron, ms, corte=CORTE):
+    columnas = ['fecha', 'modelo', 'observado', 'prediccion', 'error']
+    if pron is None or pron.empty:
+        return pd.DataFrame(columns=columnas)
+    real = series[(series.serie == ms) & (series.fecha >= corte)][['fecha', 'viajeros']]
+    pred = pron[(pron.serie == ms) & (pron.fecha >= corte)][['fecha', 'modelo', 'prediccion']]
+    pares = pred.merge(real.rename(columns={'viajeros': 'observado'}), on='fecha', how='inner')
+    pares = pares[np.isfinite(pares[['prediccion', 'observado']]).all(axis=1)].copy()
+    pares['error'] = pares.prediccion - pares.observado
+    return pares[columnas]
 
 
 def calcular_metricas_error(series, pron, ms, corte=CORTE):
-    """Calcula la tabla de MAE y RMSE sobre el periodo de prueba para la serie dada."""
-    real = series[(series.serie == ms) & (series.fecha >= corte)].set_index("fecha")["viajeros"]
+    columnas = ['Modelo', 'MAE (Error medio)', 'RMSE', 'N', 'Inicio', 'Fin', 'Estado']
+    if pron is None or pron.empty:
+        return pd.DataFrame(columns=columnas)
+    pares = errores_modelos(series, pron, ms, corte)
     filas = []
-    pm = pron[pron.serie == ms]
-    for m, g in pm.groupby("modelo"):
-        e = g.set_index("fecha")["prediccion"].reindex(real.index) - real
-        filas.append({
-            "Modelo": m,
-            "MAE (Error medio)": round(e.abs().mean()),
-            "RMSE": round(float(np.sqrt((e ** 2).mean())))
-        })
-    return pd.DataFrame(filas).sort_values("MAE (Error medio)").reset_index(drop=True)
+    for modelo in sorted(pron.loc[pron.serie == ms, 'modelo'].unique()):
+        g = pares[pares.modelo == modelo]
+        filas.append({'Modelo': modelo,
+            'MAE (Error medio)': round(g.error.abs().mean()) if len(g) else None,
+            'RMSE': round(float(np.sqrt((g.error ** 2).mean()))) if len(g) else None,
+            'N': len(g), 'Inicio': g.fecha.min() if len(g) else None,
+            'Fin': g.fecha.max() if len(g) else None,
+            'Estado': 'Evaluable' if len(g) else 'No evaluable: sin fechas comunes'})
+    return pd.DataFrame(filas, columns=columnas).sort_values('MAE (Error medio)', na_position='last').reset_index(drop=True)
