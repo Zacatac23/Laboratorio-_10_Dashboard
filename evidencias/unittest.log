@@ -1,0 +1,73 @@
+test_16_inicio_nueve_vistas (test_lab10.Dashboard.test_16_inicio_nueve_vistas) ... 2026-10-25 23:15:16.533 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_17_todas_las_vistas_ocultables (test_lab10.Dashboard.test_17_todas_las_vistas_ocultables) ... 2026-10-25 23:15:16.956 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-10-25 23:15:17.357 The widget with key "modelos" was created with a default value but also had its value set via the Session State API.
+Stack (most recent call last):
+  File "/usr/lib64/python3.14/threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+  File "/usr/lib64/python3.14/threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+  File "/usr/lib64/python3.14/threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+  File "/tmp/lab10-instalacion-limpia/lib64/python3.14/site-packages/streamlit/testing/v1/local_script_runner.py", line 144, in _run_script_thread
+    super()._run_script_thread()
+  File "/tmp/lab10-instalacion-limpia/lib64/python3.14/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 436, in _run_script_thread
+    self._run_script(request.rerun_data)
+  File "/tmp/lab10-instalacion-limpia/lib64/python3.14/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 949, in _run_script
+    ) = exec_func_with_error_handling(code_to_exec, ctx)
+  File "/tmp/lab10-instalacion-limpia/lib64/python3.14/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 136, in exec_func_with_error_handling
+    result = func()
+  File "/tmp/lab10-instalacion-limpia/lib64/python3.14/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 924, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+  File "/home/cisco/universidad/cuarto/segundo_semestre/data_science/lab10/Laboratorio-_10_Dashboard./app.py", line 236, in <module>
+    elegidos = st.multiselect('Modelos a comparar', modelos, default=preferidos or modelos[:3], key='modelos')
+  File "/tmp/lab10-instalacion-limpia/lib64/python3.14/site-packages/streamlit/runtime/metrics_util.py", line 725, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/tmp/lab10-instalacion-limpia/lib64/python3.14/site-packages/streamlit/elements/widgets/multiselect.py", line 676, in multiselect
+    return self._multiselect(
+  File "/tmp/lab10-instalacion-limpia/lib64/python3.14/site-packages/streamlit/elements/widgets/multiselect.py", line 732, in _multiselect
+    check_widget_policies(
+  File "/tmp/lab10-instalacion-limpia/lib64/python3.14/site-packages/streamlit/elements/lib/policies.py", line 146, in check_widget_policies
+    check_session_state_rules(
+  File "/tmp/lab10-instalacion-limpia/lib64/python3.14/site-packages/streamlit/elements/lib/policies.py", line 90, in check_session_state_rules
+    _LOGGER.warning(
+ok
+test_18_mensual_anual_regreso (test_lab10.Dashboard.test_18_mensual_anual_regreso) ... 2026-10-25 23:15:18.903 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_19_region_global_y_reset (test_lab10.Dashboard.test_19_region_global_y_reset) ... 2026-10-25 23:15:19.518 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_20_2009_no_inventa_porcentaje (test_lab10.Dashboard.test_20_2009_no_inventa_porcentaje) ... 2026-10-25 23:15:20.236 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_21_cero_modelos (test_lab10.Dashboard.test_21_cero_modelos) ... 2026-10-25 23:15:20.682 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_22_modelos_metricas_y_negativos (test_lab10.Dashboard.test_22_modelos_metricas_y_negativos) ... 2026-10-25 23:15:21.167 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_23_heatmap_anios (test_lab10.Dashboard.test_23_heatmap_anios) ... 2026-10-25 23:15:23.580 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_24_filtros_sin_filas (test_lab10.Dashboard.test_24_filtros_sin_filas) ... 2026-10-25 23:15:23.843 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_25_error_csv_sin_stacktrace (test_lab10.Dashboard.test_25_error_csv_sin_stacktrace) ... 2026-10-25 23:15:23.998 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_26_modelos_opcionales (test_lab10.Dashboard.test_26_modelos_opcionales) ... 2026-10-25 23:15:24.081 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_01_datos_actuales (test_lab10.Datos.test_01_datos_actuales) ... ok
+test_02_metricas_42_pares_sin_regresion (test_lab10.Datos.test_02_metricas_42_pares_sin_regresion) ... ok
+test_03_2009_sin_comparacion (test_lab10.Datos.test_03_2009_sin_comparacion) ... ok
+test_04_anual_sin_fechas_mensuales (test_lab10.Datos.test_04_anual_sin_fechas_mensuales) ... ok
+test_05_pronosticos_sin_solapamiento (test_lab10.Datos.test_05_pronosticos_sin_solapamiento) ... ok
+test_06_serie_sin_modelo (test_lab10.Datos.test_06_serie_sin_modelo) ... ok
+test_07_csv_vacio (test_lab10.Datos.test_07_csv_vacio) ... ok
+test_08_fecha_faltante (test_lab10.Datos.test_08_fecha_faltante) ... ok
+test_09_fecha_invalida (test_lab10.Datos.test_09_fecha_invalida) ... ok
+test_10_infinito (test_lab10.Datos.test_10_infinito) ... ok
+test_11_duplicados (test_lab10.Datos.test_11_duplicados) ... ok
+test_12_negativo_historico (test_lab10.Datos.test_12_negativo_historico) ... ok
+test_13_archivo_ausente (test_lab10.Datos.test_13_archivo_ausente) ... ok
+test_14_nulos (test_lab10.Datos.test_14_nulos) ... ok
+test_15_conciliacion (test_lab10.Datos.test_15_conciliacion) ... ok
+test_27_cero_uno_multiples_y_obsoleto (test_lab10.Datos.test_27_cero_uno_multiples_y_obsoleto) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 7.904s
+
+OK

@@ -1,0 +1,12 @@
+*** You are running in headless mode.
+WebDriver BiDi listening on ws://127.0.0.1:40353
+[WARN  rkv::backend::impl_safe::environment] `load_ratio()` is irrelevant for this storage backend.
+1792991695849	RemoteAgent	INFO	Perform WebSocket upgrade for incoming connection from 127.0.0.1:37474
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

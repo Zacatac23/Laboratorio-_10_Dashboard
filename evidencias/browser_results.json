@@ -1,0 +1,195 @@
+[
+  {
+    "test": "B00_session",
+    "result": {
+      "sessionId": "2a063845-a106-4886-8ec6-c0e195ceb2e4",
+      "capabilities": {
+        "acceptInsecureCerts": false,
+        "browserName": "firefox",
+        "browserVersion": "156.0",
+        "platformName": "linux",
+        "setWindowRect": true,
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:156.0) Gecko/20100101 Firefox/156.0",
+        "moz:buildID": "20260916065247",
+        "moz:headless": true,
+        "moz:platformVersion": "7.2.6-200.fc44.x86_64",
+        "moz:processID": 325055,
+        "moz:profile": "/tmp/lab10-firefox-ufi80sf2",
+        "moz:shutdownTimeout": 60000
+      }
+    }
+  },
+  {
+    "test": "B01_start",
+    "ready": true,
+    "charts": 9,
+    "text": "Skip to main content\nFiltros de históricos\n\nRango de años\n\n2022\n\n2026\n\n2009\n\n2026\n\nRegión de procedencia\n\nCategoría\n\nDetalle temporal\n\nGráficas a mostrar\n\nEvolución histórica\nRegiones de procedencia\nEstacionalidad regional\nPaíses de origen\nEvolución del país\nVías y fronteras\nCalendario mensual\nObser"
+  },
+  {
+    "test": "B01a_history_zoom",
+    "changed": true
+  },
+  {
+    "test": "B02_region_click",
+    "updated": true
+  },
+  {
+    "test": "B03_country_click",
+    "updated": true
+  },
+  {
+    "test": "B03a_country_zoom",
+    "changed": true
+  },
+  {
+    "test": "B04_country_clear",
+    "cleared": true
+  },
+  {
+    "test": "B05_tree_down",
+    "level": "Todas las vías/Terrestre"
+  },
+  {
+    "test": "B06_tree_up",
+    "button": {
+      "x": 408.6999816894531,
+      "y": 304.75831604003906,
+      "text": "Todas las vías"
+    },
+    "level": ""
+  },
+  {
+    "test": "B07_heatmap_hover",
+    "tooltip": [
+      "2024 · Mar: 349,965 viajeros"
+    ]
+  },
+  {
+    "test": "B08a_models_legend",
+    "visibilities": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "test": "B08b_error_hover",
+    "tooltip": [
+      "MAE (Error medio)=97.588kModelo=ProphetN=63Inicio=2021-04-01T00:00:00Fin=2026-06-01T00:00:00"
+    ]
+  },
+  {
+    "test": "B08_models",
+    "visible": true,
+    "errors": []
+  },
+  {
+    "test": "B09_mobile",
+    "buttons": [
+      {
+        "label": "Open",
+        "testid": null,
+        "html": "<button id=\"react-aria7414520392-:r2j:\" class=\"st-emotion-cache-1uf25hr e1oobldh2\" data-rac=\"\" type=\"button\" tabindex=\"-1\" data-react-aria-pressable=\"true\" aria-label=\"Open\" aria-haspopup=\"listbox\" aria-expanded=\"false\"><svg viewBox=\"0 0 24 24\" heigh"
+      },
+      {
+        "label": "Open",
+        "testid": null,
+        "html": "<button id=\"react-aria7414520392-:r31:\" class=\"st-emotion-cache-1uf25hr e1oobldh2\" data-rac=\"\" type=\"button\" tabindex=\"-1\" data-react-aria-pressable=\"true\" aria-label=\"Open\" aria-haspopup=\"listbox\" aria-expanded=\"false\"><svg viewBox=\"0 0 24 24\" heigh"
+      },
+      {
+        "label": "Open",
+        "testid": null,
+        "html": "<button id=\"react-aria7414520392-:r3f:\" class=\"st-emotion-cache-1uf25hr e1oobldh2\" data-rac=\"\" type=\"button\" tabindex=\"-1\" data-react-aria-pressable=\"true\" aria-label=\"Open\" aria-haspopup=\"listbox\" aria-expanded=\"false\"><svg viewBox=\"0 0 24 24\" heigh"
+      },
+      {
+        "label": "Remove Evolución histórica",
+        "testid": null,
+        "html": "<button aria-label=\"Remove Evolución histórica\" tabindex=\"-1\" class=\"st-emotion-cache-1goh6io ew56mvo5\"><svg aria-hidden=\"true\" height=\"0.5em\" width=\"0.5em\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 1L5 5M1 9L5 5M5 5L1 1M5 5L"
+      },
+      {
+        "label": "Remove Regiones de procedencia",
+        "testid": null,
+        "html": "<button aria-label=\"Remove Regiones de procedencia\" tabindex=\"-1\" class=\"st-emotion-cache-1goh6io ew56mvo5\"><svg aria-hidden=\"true\" height=\"0.5em\" width=\"0.5em\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 1L5 5M1 9L5 5M5 5L1 1M"
+      },
+      {
+        "label": "Remove Estacionalidad regional",
+        "testid": null,
+        "html": "<button aria-label=\"Remove Estacionalidad regional\" tabindex=\"-1\" class=\"st-emotion-cache-1goh6io ew56mvo5\"><svg aria-hidden=\"true\" height=\"0.5em\" width=\"0.5em\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 1L5 5M1 9L5 5M5 5L1 1M"
+      },
+      {
+        "label": "Remove Países de origen",
+        "testid": null,
+        "html": "<button aria-label=\"Remove Países de origen\" tabindex=\"-1\" class=\"st-emotion-cache-1goh6io ew56mvo5\"><svg aria-hidden=\"true\" height=\"0.5em\" width=\"0.5em\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 1L5 5M1 9L5 5M5 5L1 1M5 5L9 9"
+      },
+      {
+        "label": "Remove Evolución del país",
+        "testid": null,
+        "html": "<button aria-label=\"Remove Evolución del país\" tabindex=\"-1\" class=\"st-emotion-cache-1goh6io ew56mvo5\"><svg aria-hidden=\"true\" height=\"0.5em\" width=\"0.5em\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 1L5 5M1 9L5 5M5 5L1 1M5 5L9"
+      },
+      {
+        "label": "Remove Vías y fronteras",
+        "testid": null,
+        "html": "<button aria-label=\"Remove Vías y fronteras\" tabindex=\"-1\" class=\"st-emotion-cache-1goh6io ew56mvo5\"><svg aria-hidden=\"true\" height=\"0.5em\" width=\"0.5em\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 1L5 5M1 9L5 5M5 5L1 1M5 5L9 9"
+      },
+      {
+        "label": "Remove Calendario mensual",
+        "testid": null,
+        "html": "<button aria-label=\"Remove Calendario mensual\" tabindex=\"-1\" class=\"st-emotion-cache-1goh6io ew56mvo5\"><svg aria-hidden=\"true\" height=\"0.5em\" width=\"0.5em\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 1L5 5M1 9L5 5M5 5L1 1M5 5L9"
+      },
+      {
+        "label": "Remove Observado y pronósticos",
+        "testid": null,
+        "html": "<button aria-label=\"Remove Observado y pronósticos\" tabindex=\"-1\" class=\"st-emotion-cache-1goh6io ew56mvo5\"><svg aria-hidden=\"true\" height=\"0.5em\" width=\"0.5em\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 1L5 5M1 9L5 5M5 5L1 1M"
+      },
+      {
+        "label": "Remove Errores por modelo",
+        "testid": null,
+        "html": "<button aria-label=\"Remove Errores por modelo\" tabindex=\"-1\" class=\"st-emotion-cache-1goh6io ew56mvo5\"><svg aria-hidden=\"true\" height=\"0.5em\" width=\"0.5em\" viewBox=\"0 0 10 10\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M9 1L5 5M1 9L5 5M5 5L1 1M5 5L9"
+      },
+      {
+        "label": "Clear all",
+        "testid": null,
+        "html": "<button class=\"st-emotion-cache-1u4gd3l ew56mvo8\" data-rac=\"\" type=\"button\" tabindex=\"0\" data-react-aria-pressable=\"true\" aria-label=\"Clear all\" id=\"react-aria7414520392-:r48:\"><svg viewBox=\"0 0 24 24\" height=\"1rem\" width=\"1rem\" aria-hidden=\"true\" fo"
+      },
+      {
+        "label": "Open",
+        "testid": null,
+        "html": "<button id=\"react-aria7414520392-:r3t:\" class=\"st-emotion-cache-wkuodu ew56mvo7\" data-rac=\"\" type=\"button\" tabindex=\"-1\" data-react-aria-pressable=\"true\" aria-label=\"Open\" aria-haspopup=\"listbox\" aria-expanded=\"false\"><svg viewBox=\"0 0 24 24\" height="
+      },
+      {
+        "label": null,
+        "testid": "stBaseButton-secondary",
+        "html": "<button kind=\"secondary\" data-testid=\"stBaseButton-secondary\" class=\"st-emotion-cache-viejn e1w3uk7w2\"><div class=\"st-emotion-cache-1lads1q e1w3uk7w22\"><span data-has-shortcut=\"false\" class=\"st-emotion-cache-1kl7f1u e1w3uk7w23\"><span style=\"display: "
+      }
+    ],
+    "layout": {
+      "viewport": 390,
+      "bodyWidth": 390,
+      "sidebar": {
+        "x": -300,
+        "y": 0,
+        "width": 0,
+        "height": 844
+      },
+      "banner": {
+        "x": 16,
+        "y": 80,
+        "width": 352,
+        "height": 192
+      },
+      "title": {
+        "x": 32,
+        "y": 96,
+        "width": 320,
+        "height": 60.30000305175781
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 384,
+        "height": 2815.199951171875
+      }
+    }
+  }
+]

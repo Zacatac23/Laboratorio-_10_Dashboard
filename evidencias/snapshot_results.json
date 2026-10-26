@@ -1,0 +1,41 @@
+[
+  {
+    "test": "B00_session",
+    "result": {
+      "sessionId": "aef58dce-2ff4-4c14-94a4-5c9669cc4e0f",
+      "capabilities": {
+        "acceptInsecureCerts": false,
+        "browserName": "firefox",
+        "browserVersion": "156.0",
+        "platformName": "linux",
+        "setWindowRect": true,
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:156.0) Gecko/20100101 Firefox/156.0",
+        "moz:buildID": "20260916065247",
+        "moz:headless": true,
+        "moz:platformVersion": "7.2.6-200.fc44.x86_64",
+        "moz:processID": 327973,
+        "moz:profile": "/tmp/lab10-firefox-u19oi4ot",
+        "moz:shutdownTimeout": 60000
+      }
+    }
+  },
+  {
+    "test": "B01_start",
+    "ready": true,
+    "charts": 9,
+    "text": "Skip to main content\nFiltros de históricos\n\nRango de años\n\n2022\n\n2026\n\n2009\n\n2026\n\nRegión de procedencia\n\nCategoría\n\nDetalle temporal\n\nGráficas a mostrar\n\nEvolución histórica\nRegiones de procedencia\nEstacionalidad regional\nPaíses de origen\nEvolución del país\nVías y fronteras\nCalendario mensual\nObser"
+  },
+  {
+    "test": "B01a_history_zoom",
+    "changed": true
+  },
+  {
+    "test": "SNAPSHOT_mobile",
+    "title": {
+      "x": 32,
+      "y": 96,
+      "width": 320,
+      "height": 60.30000305175781
+    }
+  }
+]
