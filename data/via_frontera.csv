@@ -1,0 +1,3858 @@
+fecha,via,frontera,viajeros
+2009-01-01,Aérea,01 La Aurora,81271.0
+2009-01-01,Aérea,02 Mundo Maya,422.0
+2009-01-01,Marítima,03 Puerto Quetzal,6549.968580415471
+2009-01-01,Marítima,04 Santo Tomás de Castilla,6065.031419584529
+2009-01-01,Marítima,05 Puerto Barrios,340.0
+2009-01-01,Marítima,06 Livingston,424.0
+2009-01-01,Terrestre,07 Valle Nuevo,35022.99999999997
+2009-01-01,Terrestre,08 Pedro de Alvarado,5404.999999999981
+2009-01-01,Terrestre,09 San Cristóbal,8623.0
+2009-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),1872.25
+2009-01-01,Terrestre,11 Agua Caliente,5941.81
+2009-01-01,Terrestre,12 El Florido,4140.000000000001
+2009-01-01,Terrestre,13 El Cinchado / El Corinto,2401.700534759358
+2009-01-01,Terrestre,14 Tecún Umán,1456.3400000000001
+2009-01-01,Terrestre,15 El Carmen,5389.340000000001
+2009-01-01,Terrestre,16 La Mesilla,4196.0
+2009-01-01,Terrestre,17 El Naranjo,194.0
+2009-01-01,Terrestre,18 Bethel,1129.0
+2009-01-01,Terrestre,19 Gracias a Dios,343.0
+2009-01-01,Terrestre,20 Melchor de Mencos,12319.14999999999
+2009-02-01,Aérea,01 La Aurora,69663.0
+2009-02-01,Aérea,02 Mundo Maya,436.0
+2009-02-01,Marítima,03 Puerto Quetzal,3758.493072534638
+2009-02-01,Marítima,04 Santo Tomás de Castilla,7024.506927465363
+2009-02-01,Marítima,05 Puerto Barrios,408.0
+2009-02-01,Marítima,06 Livingston,483.0
+2009-02-01,Terrestre,07 Valle Nuevo,27295.080000000013
+2009-02-01,Terrestre,08 Pedro de Alvarado,4046.096947935366
+2009-02-01,Terrestre,09 San Cristóbal,7232.0
+2009-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),1203.8
+2009-02-01,Terrestre,11 Agua Caliente,3166.0369595782076
+2009-02-01,Terrestre,12 El Florido,3039.0
+2009-02-01,Terrestre,13 El Cinchado / El Corinto,1810.0000000000002
+2009-02-01,Terrestre,14 Tecún Umán,1167.76
+2009-02-01,Terrestre,15 El Carmen,4723.769999999999
+2009-02-01,Terrestre,16 La Mesilla,3703.0000000000005
+2009-02-01,Terrestre,17 El Naranjo,71.0
+2009-02-01,Terrestre,18 Bethel,1212.0
+2009-02-01,Terrestre,19 Gracias a Dios,308.99999999999983
+2009-02-01,Terrestre,20 Melchor de Mencos,8674.710000000001
+2009-03-01,Aérea,01 La Aurora,84051.0
+2009-03-01,Aérea,02 Mundo Maya,443.0
+2009-03-01,Marítima,03 Puerto Quetzal,4149.615384615385
+2009-03-01,Marítima,04 Santo Tomás de Castilla,6248.384615384615
+2009-03-01,Marítima,05 Puerto Barrios,610.0
+2009-03-01,Marítima,06 Livingston,514.0
+2009-03-01,Terrestre,07 Valle Nuevo,29891.620000000028
+2009-03-01,Terrestre,08 Pedro de Alvarado,4645.000000000003
+2009-03-01,Terrestre,09 San Cristóbal,12918.0
+2009-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),1625.55
+2009-03-01,Terrestre,11 Agua Caliente,2686.4199999999996
+2009-03-01,Terrestre,12 El Florido,3580.0
+2009-03-01,Terrestre,13 El Cinchado / El Corinto,2146.0
+2009-03-01,Terrestre,14 Tecún Umán,1343.0000000000002
+2009-03-01,Terrestre,15 El Carmen,5212.410000000003
+2009-03-01,Terrestre,16 La Mesilla,3564.9999999999995
+2009-03-01,Terrestre,17 El Naranjo,24.0
+2009-03-01,Terrestre,18 Bethel,1140.0
+2009-03-01,Terrestre,19 Gracias a Dios,365.0000000000002
+2009-03-01,Terrestre,20 Melchor de Mencos,9079.227095115673
+2009-04-01,Aérea,01 La Aurora,80247.0
+2009-04-01,Aérea,02 Mundo Maya,371.0
+2009-04-01,Marítima,03 Puerto Quetzal,4483.262578222778
+2009-04-01,Marítima,04 Santo Tomás de Castilla,3399.737421777221
+2009-04-01,Marítima,05 Puerto Barrios,654.0
+2009-04-01,Marítima,06 Livingston,753.0
+2009-04-01,Terrestre,07 Valle Nuevo,37893.580000000016
+2009-04-01,Terrestre,08 Pedro de Alvarado,6747.0
+2009-04-01,Terrestre,09 San Cristóbal,7834.000000000001
+2009-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),1727.7500000000002
+2009-04-01,Terrestre,11 Agua Caliente,3326.63
+2009-04-01,Terrestre,12 El Florido,4699.0
+2009-04-01,Terrestre,13 El Cinchado / El Corinto,3100.0
+2009-04-01,Terrestre,14 Tecún Umán,2048.6200000000013
+2009-04-01,Terrestre,15 El Carmen,6342.300000000002
+2009-04-01,Terrestre,16 La Mesilla,4463.0
+2009-04-01,Terrestre,18 Bethel,715.8099173553719
+2009-04-01,Terrestre,19 Gracias a Dios,429.9999999999999
+2009-04-01,Terrestre,20 Melchor de Mencos,13606.800000000008
+2009-05-01,Aérea,01 La Aurora,64456.0
+2009-05-01,Aérea,02 Mundo Maya,165.0
+2009-05-01,Marítima,03 Puerto Quetzal,5274.073881152333
+2009-05-01,Marítima,04 Santo Tomás de Castilla,262.9261188476666
+2009-05-01,Marítima,05 Puerto Barrios,554.0
+2009-05-01,Marítima,06 Livingston,426.0
+2009-05-01,Terrestre,07 Valle Nuevo,29086.590000000026
+2009-05-01,Terrestre,08 Pedro de Alvarado,5119.000000000012
+2009-05-01,Terrestre,09 San Cristóbal,5271.0
+2009-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),1362.45
+2009-05-01,Terrestre,11 Agua Caliente,2209.7376506955175
+2009-05-01,Terrestre,12 El Florido,3260.999999999999
+2009-05-01,Terrestre,13 El Cinchado / El Corinto,1788.0
+2009-05-01,Terrestre,14 Tecún Umán,844.96
+2009-05-01,Terrestre,15 El Carmen,3642.5300000000007
+2009-05-01,Terrestre,16 La Mesilla,1652.0000000000002
+2009-05-01,Terrestre,18 Bethel,256.0
+2009-05-01,Terrestre,19 Gracias a Dios,611.0
+2009-05-01,Terrestre,20 Melchor de Mencos,6952.4
+2009-06-01,Aérea,01 La Aurora,81382.0
+2009-06-01,Aérea,02 Mundo Maya,118.0
+2009-06-01,Marítima,03 Puerto Quetzal,44.0
+2009-06-01,Marítima,04 Santo Tomás de Castilla,8.0
+2009-06-01,Marítima,05 Puerto Barrios,549.0
+2009-06-01,Marítima,06 Livingston,241.0
+2009-06-01,Terrestre,07 Valle Nuevo,31602.96999999999
+2009-06-01,Terrestre,08 Pedro de Alvarado,6606.9999999999145
+2009-06-01,Terrestre,09 San Cristóbal,8466.999999999998
+2009-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),1195.9499999999998
+2009-06-01,Terrestre,11 Agua Caliente,3120.8199999999997
+2009-06-01,Terrestre,12 El Florido,3289.000000000001
+2009-06-01,Terrestre,13 El Cinchado / El Corinto,2245.0
+2009-06-01,Terrestre,14 Tecún Umán,1423.000000000001
+2009-06-01,Terrestre,15 El Carmen,4943.839999999987
+2009-06-01,Terrestre,16 La Mesilla,1931.9999999999998
+2009-06-01,Terrestre,18 Bethel,334.0
+2009-06-01,Terrestre,19 Gracias a Dios,795.4285714285718
+2009-06-01,Terrestre,20 Melchor de Mencos,7994.119999999983
+2009-07-01,Aérea,01 La Aurora,74653.0
+2009-07-01,Aérea,02 Mundo Maya,165.0
+2009-07-01,Marítima,03 Puerto Quetzal,65.0
+2009-07-01,Marítima,04 Santo Tomás de Castilla,9.0
+2009-07-01,Marítima,05 Puerto Barrios,575.0
+2009-07-01,Marítima,06 Livingston,466.0
+2009-07-01,Terrestre,07 Valle Nuevo,29261.590000000004
+2009-07-01,Terrestre,08 Pedro de Alvarado,5871.802120141349
+2009-07-01,Terrestre,09 San Cristóbal,6056.000000000004
+2009-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),1380.4500000000003
+2009-07-01,Terrestre,11 Agua Caliente,2199.0499999999993
+2009-07-01,Terrestre,12 El Florido,3142.999999999999
+2009-07-01,Terrestre,13 El Cinchado / El Corinto,1485.6813655761023
+2009-07-01,Terrestre,14 Tecún Umán,1134.9599999999998
+2009-07-01,Terrestre,15 El Carmen,4234.53
+2009-07-01,Terrestre,16 La Mesilla,1794.9999999999989
+2009-07-01,Terrestre,18 Bethel,261.0
+2009-07-01,Terrestre,19 Gracias a Dios,647.999999999998
+2009-07-01,Terrestre,20 Melchor de Mencos,6685.212206572768
+2009-08-01,Aérea,01 La Aurora,75763.0
+2009-08-01,Aérea,02 Mundo Maya,263.0
+2009-08-01,Marítima,03 Puerto Quetzal,6226.887084592145
+2009-08-01,Marítima,04 Santo Tomás de Castilla,1366.112915407855
+2009-08-01,Marítima,05 Puerto Barrios,687.0
+2009-08-01,Marítima,06 Livingston,419.0
+2009-08-01,Terrestre,07 Valle Nuevo,51934.07999999984
+2009-08-01,Terrestre,08 Pedro de Alvarado,7080.5583756345
+2009-08-01,Terrestre,09 San Cristóbal,10795.999999999995
+2009-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),3122.8
+2009-08-01,Terrestre,11 Agua Caliente,4326.3499999999985
+2009-08-01,Terrestre,12 El Florido,3463.999999999998
+2009-08-01,Terrestre,13 El Cinchado / El Corinto,2266.0000000000005
+2009-08-01,Terrestre,14 Tecún Umán,1708.3400000000004
+2009-08-01,Terrestre,15 El Carmen,5583.91
+2009-08-01,Terrestre,16 La Mesilla,3163.9999999999995
+2009-08-01,Terrestre,18 Bethel,658.0
+2009-08-01,Terrestre,19 Gracias a Dios,660.0000000000005
+2009-08-01,Terrestre,20 Melchor de Mencos,9893.150000000009
+2009-09-01,Aérea,01 La Aurora,61861.0
+2009-09-01,Aérea,02 Mundo Maya,113.0
+2009-09-01,Marítima,03 Puerto Quetzal,60.0
+2009-09-01,Marítima,04 Santo Tomás de Castilla,14.0
+2009-09-01,Marítima,05 Puerto Barrios,523.0
+2009-09-01,Marítima,06 Livingston,174.0
+2009-09-01,Terrestre,07 Valle Nuevo,33803.899999999994
+2009-09-01,Terrestre,08 Pedro de Alvarado,5297.999999999991
+2009-09-01,Terrestre,09 San Cristóbal,8506.000000000002
+2009-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),1609.1
+2009-09-01,Terrestre,11 Agua Caliente,2936.1200000000013
+2009-09-01,Terrestre,12 El Florido,3089.999999999997
+2009-09-01,Terrestre,13 El Cinchado / El Corinto,2068.2684563758394
+2009-09-01,Terrestre,14 Tecún Umán,1635.8899999999994
+2009-09-01,Terrestre,15 El Carmen,4916.669999999998
+2009-09-01,Terrestre,16 La Mesilla,2100.9999999999995
+2009-09-01,Terrestre,18 Bethel,409.0
+2009-09-01,Terrestre,19 Gracias a Dios,660.0
+2009-09-01,Terrestre,20 Melchor de Mencos,6011.239999999993
+2009-10-01,Aérea,01 La Aurora,72828.0
+2009-10-01,Aérea,02 Mundo Maya,122.0
+2009-10-01,Marítima,03 Puerto Quetzal,98.0
+2009-10-01,Marítima,04 Santo Tomás de Castilla,4.0
+2009-10-01,Marítima,05 Puerto Barrios,546.0
+2009-10-01,Marítima,06 Livingston,198.0
+2009-10-01,Terrestre,07 Valle Nuevo,35926.50000000001
+2009-10-01,Terrestre,08 Pedro de Alvarado,6336.666666666673
+2009-10-01,Terrestre,09 San Cristóbal,15301.000000000004
+2009-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),1745.3
+2009-10-01,Terrestre,11 Agua Caliente,3130.52
+2009-10-01,Terrestre,12 El Florido,2582.000000000002
+2009-10-01,Terrestre,13 El Cinchado / El Corinto,2132.0
+2009-10-01,Terrestre,14 Tecún Umán,1813.4200000000005
+2009-10-01,Terrestre,15 El Carmen,5068.409999999999
+2009-10-01,Terrestre,16 La Mesilla,2404.0
+2009-10-01,Terrestre,18 Bethel,327.0
+2009-10-01,Terrestre,19 Gracias a Dios,704.0000000000001
+2009-10-01,Terrestre,20 Melchor de Mencos,5559.150000000002
+2009-11-01,Aérea,01 La Aurora,82212.0
+2009-11-01,Aérea,02 Mundo Maya,243.0
+2009-11-01,Marítima,03 Puerto Quetzal,5045.392216172616
+2009-11-01,Marítima,04 Santo Tomás de Castilla,7071.607783827385
+2009-11-01,Marítima,05 Puerto Barrios,551.0
+2009-11-01,Marítima,06 Livingston,245.0
+2009-11-01,Terrestre,07 Valle Nuevo,38732.20000000012
+2009-11-01,Terrestre,08 Pedro de Alvarado,6550.000000000013
+2009-11-01,Terrestre,09 San Cristóbal,18709.0
+2009-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),2182.65
+2009-11-01,Terrestre,11 Agua Caliente,3227.379999999999
+2009-11-01,Terrestre,12 El Florido,2880.999999999998
+2009-11-01,Terrestre,13 El Cinchado / El Corinto,2421.0
+2009-11-01,Terrestre,14 Tecún Umán,1696.4799999999993
+2009-11-01,Terrestre,15 El Carmen,6119.29
+2009-11-01,Terrestre,16 La Mesilla,2941.9999999999995
+2009-11-01,Terrestre,18 Bethel,726.0
+2009-11-01,Terrestre,19 Gracias a Dios,672.0000000000001
+2009-11-01,Terrestre,20 Melchor de Mencos,6931.160000000003
+2009-12-01,Aérea,01 La Aurora,103686.0
+2009-12-01,Aérea,02 Mundo Maya,445.0
+2009-12-01,Marítima,03 Puerto Quetzal,5080.443795961246
+2009-12-01,Marítima,04 Santo Tomás de Castilla,9845.556204038752
+2009-12-01,Marítima,05 Puerto Barrios,870.0
+2009-12-01,Marítima,06 Livingston,340.0
+2009-12-01,Terrestre,07 Valle Nuevo,46489.69000000004
+2009-12-01,Terrestre,08 Pedro de Alvarado,9446.999999999989
+2009-12-01,Terrestre,09 San Cristóbal,15489.000000000007
+2009-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),2547.7000000000003
+2009-12-01,Terrestre,11 Agua Caliente,3487.100000000001
+2009-12-01,Terrestre,12 El Florido,4020.9999999999973
+2009-12-01,Terrestre,13 El Cinchado / El Corinto,3633.3777089783284
+2009-12-01,Terrestre,14 Tecún Umán,4331.08
+2009-12-01,Terrestre,15 El Carmen,8680.739999999994
+2009-12-01,Terrestre,16 La Mesilla,4388.000000000001
+2009-12-01,Terrestre,18 Bethel,819.0
+2009-12-01,Terrestre,19 Gracias a Dios,578.9999999999998
+2009-12-01,Terrestre,20 Melchor de Mencos,13851.900000000001
+2010-01-01,Aérea,01 La Aurora,84867.0
+2010-01-01,Aérea,02 Mundo Maya,349.0
+2010-01-01,Marítima,03 Puerto Quetzal,6350.022808732486
+2010-01-01,Marítima,04 Santo Tomás de Castilla,6899.977191267514
+2010-01-01,Marítima,05 Puerto Barrios,715.0
+2010-01-01,Marítima,06 Livingston,368.0
+2010-01-01,Terrestre,07 Valle Nuevo,39622.68999999998
+2010-01-01,Terrestre,08 Pedro de Alvarado,7499.999999999974
+2010-01-01,Terrestre,09 San Cristóbal,13239.000000000004
+2010-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),2874.1499999999996
+2010-01-01,Terrestre,11 Agua Caliente,4088.549999999999
+2010-01-01,Terrestre,12 El Florido,4847.000000000001
+2010-01-01,Terrestre,13 El Cinchado / El Corinto,3431.0
+2010-01-01,Terrestre,14 Tecún Umán,2504.53
+2010-01-01,Terrestre,15 El Carmen,6536.309999999998
+2010-01-01,Terrestre,16 La Mesilla,3566.000000000001
+2010-01-01,Terrestre,18 Bethel,777.0
+2010-01-01,Terrestre,19 Gracias a Dios,617.9558823529412
+2010-01-01,Terrestre,20 Melchor de Mencos,9977.799999999997
+2010-02-01,Aérea,01 La Aurora,68976.0
+2010-02-01,Aérea,02 Mundo Maya,376.0
+2010-02-01,Marítima,03 Puerto Quetzal,2777.190041340162
+2010-02-01,Marítima,04 Santo Tomás de Castilla,3492.809958659838
+2010-02-01,Marítima,05 Puerto Barrios,597.0
+2010-02-01,Marítima,06 Livingston,366.0
+2010-02-01,Terrestre,07 Valle Nuevo,32085.55
+2010-02-01,Terrestre,08 Pedro de Alvarado,5240.0
+2010-02-01,Terrestre,09 San Cristóbal,11036.999999999998
+2010-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),1472.45
+2010-02-01,Terrestre,11 Agua Caliente,2925.8599999999997
+2010-02-01,Terrestre,12 El Florido,3224.0000000000005
+2010-02-01,Terrestre,13 El Cinchado / El Corinto,1982.0
+2010-02-01,Terrestre,14 Tecún Umán,1820.1900000000003
+2010-02-01,Terrestre,15 El Carmen,5332.659999999997
+2010-02-01,Terrestre,16 La Mesilla,2544.0000000000005
+2010-02-01,Terrestre,18 Bethel,831.0
+2010-02-01,Terrestre,19 Gracias a Dios,660.8571428571433
+2010-02-01,Terrestre,20 Melchor de Mencos,6858.990000000001
+2010-03-01,Aérea,01 La Aurora,88502.0
+2010-03-01,Aérea,02 Mundo Maya,347.0
+2010-03-01,Marítima,03 Puerto Quetzal,3471.9858722617
+2010-03-01,Marítima,04 Santo Tomás de Castilla,5602.014127738301
+2010-03-01,Marítima,05 Puerto Barrios,736.0
+2010-03-01,Marítima,06 Livingston,470.0
+2010-03-01,Terrestre,07 Valle Nuevo,23541.000000000007
+2010-03-01,Terrestre,08 Pedro de Alvarado,7258.999999999998
+2010-03-01,Terrestre,09 San Cristóbal,8070.000000000005
+2010-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),2704.6
+2010-03-01,Terrestre,11 Agua Caliente,3449.8100000000004
+2010-03-01,Terrestre,12 El Florido,4581.95404120444
+2010-03-01,Terrestre,13 El Cinchado / El Corinto,3296.96354992076
+2010-03-01,Terrestre,14 Tecún Umán,2748.2799999999997
+2010-03-01,Terrestre,15 El Carmen,7330.4799999999905
+2010-03-01,Terrestre,16 La Mesilla,3575.9599999999978
+2010-03-01,Terrestre,18 Bethel,758.0
+2010-03-01,Terrestre,19 Gracias a Dios,660.6896551724128
+2010-03-01,Terrestre,20 Melchor de Mencos,9527.050000000003
+2010-04-01,Aérea,01 La Aurora,76253.0
+2010-04-01,Aérea,02 Mundo Maya,213.0
+2010-04-01,Marítima,03 Puerto Quetzal,2633.232084690554
+2010-04-01,Marítima,04 Santo Tomás de Castilla,2759.767915309446
+2010-04-01,Marítima,05 Puerto Barrios,660.0
+2010-04-01,Marítima,06 Livingston,639.0
+2010-04-01,Terrestre,07 Valle Nuevo,40629.690000000046
+2010-04-01,Terrestre,08 Pedro de Alvarado,8030.999999999997
+2010-04-01,Terrestre,09 San Cristóbal,11875.999999999998
+2010-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),3063.65
+2010-04-01,Terrestre,11 Agua Caliente,3554.599999999999
+2010-04-01,Terrestre,12 El Florido,4406.0
+2010-04-01,Terrestre,13 El Cinchado / El Corinto,3201.0
+2010-04-01,Terrestre,14 Tecún Umán,2354.18
+2010-04-01,Terrestre,15 El Carmen,5939.800000000001
+2010-04-01,Terrestre,16 La Mesilla,3198.9999999999995
+2010-04-01,Terrestre,18 Bethel,440.0
+2010-04-01,Terrestre,19 Gracias a Dios,541.0000000000002
+2010-04-01,Terrestre,20 Melchor de Mencos,9261.180000000013
+2010-05-01,Aérea,01 La Aurora,64915.0
+2010-05-01,Aérea,02 Mundo Maya,155.0
+2010-05-01,Marítima,03 Puerto Quetzal,1245.0
+2010-05-01,Marítima,04 Santo Tomás de Castilla,16.0
+2010-05-01,Marítima,05 Puerto Barrios,530.0
+2010-05-01,Marítima,06 Livingston,437.0
+2010-05-01,Terrestre,07 Valle Nuevo,34804.43513761465
+2010-05-01,Terrestre,08 Pedro de Alvarado,6481.0
+2010-05-01,Terrestre,09 San Cristóbal,9388.999999999998
+2010-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),1813.9
+2010-05-01,Terrestre,11 Agua Caliente,2730.1600000000003
+2010-05-01,Terrestre,12 El Florido,3821.0000000000005
+2010-05-01,Terrestre,13 El Cinchado / El Corinto,2294.0
+2010-05-01,Terrestre,14 Tecún Umán,1932.0399999999995
+2010-05-01,Terrestre,15 El Carmen,5502.830000000001
+2010-05-01,Terrestre,16 La Mesilla,2264.0000000000005
+2010-05-01,Terrestre,18 Bethel,548.0
+2010-05-01,Terrestre,19 Gracias a Dios,634.9999999999998
+2010-05-01,Terrestre,20 Melchor de Mencos,6879.169999999996
+2010-06-01,Aérea,01 La Aurora,84460.0
+2010-06-01,Aérea,02 Mundo Maya,110.0
+2010-06-01,Marítima,03 Puerto Quetzal,47.0
+2010-06-01,Marítima,04 Santo Tomás de Castilla,16.0
+2010-06-01,Marítima,05 Puerto Barrios,547.0
+2010-06-01,Marítima,06 Livingston,333.0
+2010-06-01,Terrestre,07 Valle Nuevo,35373.69999999998
+2010-06-01,Terrestre,08 Pedro de Alvarado,3029.9999999999777
+2010-06-01,Terrestre,09 San Cristóbal,8773.999999999996
+2010-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),1720.600000000001
+2010-06-01,Terrestre,11 Agua Caliente,2282.619999999999
+2010-06-01,Terrestre,12 El Florido,3615.9999999999986
+2010-06-01,Terrestre,13 El Cinchado / El Corinto,2563.999999999999
+2010-06-01,Terrestre,14 Tecún Umán,2213.319999999999
+2010-06-01,Terrestre,15 El Carmen,4608.310000000008
+2010-06-01,Terrestre,16 La Mesilla,2144.0
+2010-06-01,Terrestre,18 Bethel,485.0
+2010-06-01,Terrestre,19 Gracias a Dios,625.5
+2010-06-01,Terrestre,20 Melchor de Mencos,7451.489999999992
+2010-07-01,Aérea,01 La Aurora,102148.0
+2010-07-01,Aérea,02 Mundo Maya,169.0
+2010-07-01,Marítima,03 Puerto Quetzal,3.0
+2010-07-01,Marítima,04 Santo Tomás de Castilla,3.0
+2010-07-01,Marítima,05 Puerto Barrios,642.0
+2010-07-01,Marítima,06 Livingston,340.0
+2010-07-01,Terrestre,07 Valle Nuevo,43198.67999999996
+2010-07-01,Terrestre,08 Pedro de Alvarado,5362.632508833933
+2010-07-01,Terrestre,09 San Cristóbal,9507.999999999998
+2010-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),3393.85
+2010-07-01,Terrestre,11 Agua Caliente,2707.4600000000005
+2010-07-01,Terrestre,12 El Florido,4788.999999999997
+2010-07-01,Terrestre,13 El Cinchado / El Corinto,3154.413043478262
+2010-07-01,Terrestre,14 Tecún Umán,2967.6000000000004
+2010-07-01,Terrestre,15 El Carmen,7378.399999999997
+2010-07-01,Terrestre,16 La Mesilla,4686.000000000004
+2010-07-01,Terrestre,18 Bethel,880.0
+2010-07-01,Terrestre,19 Gracias a Dios,709.853658536587
+2010-07-01,Terrestre,20 Melchor de Mencos,11215.019999999997
+2010-08-01,Aérea,01 La Aurora,79034.0
+2010-08-01,Aérea,02 Mundo Maya,146.0
+2010-08-01,Marítima,03 Puerto Quetzal,4363.0
+2010-08-01,Marítima,04 Santo Tomás de Castilla,1945.0
+2010-08-01,Marítima,05 Puerto Barrios,738.0
+2010-08-01,Marítima,06 Livingston,417.0
+2010-08-01,Terrestre,07 Valle Nuevo,49540.49
+2010-08-01,Terrestre,08 Pedro de Alvarado,6802.695431472076
+2010-08-01,Terrestre,09 San Cristóbal,10841.000000000005
+2010-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),3911.2999999999997
+2010-08-01,Terrestre,11 Agua Caliente,3054.459999999999
+2010-08-01,Terrestre,12 El Florido,4816.0
+2010-08-01,Terrestre,13 El Cinchado / El Corinto,2851.4114832535884
+2010-08-01,Terrestre,14 Tecún Umán,3780.3699999999994
+2010-08-01,Terrestre,15 El Carmen,6392.5199999999995
+2010-08-01,Terrestre,16 La Mesilla,3622.0
+2010-08-01,Terrestre,17 El Naranjo,186.99999999999994
+2010-08-01,Terrestre,18 Bethel,796.0
+2010-08-01,Terrestre,19 Gracias a Dios,683.9189189189193
+2010-08-01,Terrestre,20 Melchor de Mencos,8970.269999999997
+2010-09-01,Aérea,01 La Aurora,62772.0
+2010-09-01,Aérea,02 Mundo Maya,81.0
+2010-09-01,Marítima,03 Puerto Quetzal,54.0
+2010-09-01,Marítima,04 Santo Tomás de Castilla,3.0
+2010-09-01,Marítima,05 Puerto Barrios,414.0
+2010-09-01,Marítima,06 Livingston,243.0
+2010-09-01,Terrestre,07 Valle Nuevo,30433.06000000003
+2010-09-01,Terrestre,08 Pedro de Alvarado,4520.709734513271
+2010-09-01,Terrestre,09 San Cristóbal,10860.0
+2010-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),1787.5000000000002
+2010-09-01,Terrestre,11 Agua Caliente,2104.7500000000005
+2010-09-01,Terrestre,12 El Florido,4040.9999999999995
+2010-09-01,Terrestre,13 El Cinchado / El Corinto,528.8489208633093
+2010-09-01,Terrestre,14 Tecún Umán,1793.7100000000003
+2010-09-01,Terrestre,15 El Carmen,4774.759999999999
+2010-09-01,Terrestre,16 La Mesilla,2263.0
+2010-09-01,Terrestre,17 El Naranjo,86.00000000000003
+2010-09-01,Terrestre,18 Bethel,455.0
+2010-09-01,Terrestre,19 Gracias a Dios,488.99999999999983
+2010-09-01,Terrestre,20 Melchor de Mencos,6143.549999999998
+2010-10-01,Aérea,01 La Aurora,76192.0
+2010-10-01,Aérea,02 Mundo Maya,80.0
+2010-10-01,Marítima,03 Puerto Quetzal,4548.0
+2010-10-01,Marítima,04 Santo Tomás de Castilla,1.0
+2010-10-01,Marítima,05 Puerto Barrios,468.0
+2010-10-01,Marítima,06 Livingston,201.0
+2010-10-01,Terrestre,07 Valle Nuevo,33460.42000000001
+2010-10-01,Terrestre,08 Pedro de Alvarado,5017.777777777781
+2010-10-01,Terrestre,09 San Cristóbal,19147.000000000004
+2010-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),2427.9132142568133
+2010-10-01,Terrestre,11 Agua Caliente,2701.4700000000007
+2010-10-01,Terrestre,12 El Florido,4004.000000000003
+2010-10-01,Terrestre,13 El Cinchado / El Corinto,728.0
+2010-10-01,Terrestre,14 Tecún Umán,2084.5499999999993
+2010-10-01,Terrestre,15 El Carmen,5637.1900000000005
+2010-10-01,Terrestre,16 La Mesilla,2452.0
+2010-10-01,Terrestre,17 El Naranjo,106.0
+2010-10-01,Terrestre,18 Bethel,470.0
+2010-10-01,Terrestre,19 Gracias a Dios,513.0000000000001
+2010-10-01,Terrestre,20 Melchor de Mencos,5995.219999999998
+2010-11-01,Aérea,01 La Aurora,84269.0
+2010-11-01,Aérea,02 Mundo Maya,176.0
+2010-11-01,Marítima,03 Puerto Quetzal,6135.0
+2010-11-01,Marítima,04 Santo Tomás de Castilla,4580.0
+2010-11-01,Marítima,05 Puerto Barrios,510.0
+2010-11-01,Marítima,06 Livingston,341.0
+2010-11-01,Terrestre,07 Valle Nuevo,39533.98000000012
+2010-11-01,Terrestre,08 Pedro de Alvarado,7301.999999999998
+2010-11-01,Terrestre,09 San Cristóbal,18903.999999999993
+2010-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),2659.4999999999995
+2010-11-01,Terrestre,11 Agua Caliente,2626.9500000000003
+2010-11-01,Terrestre,12 El Florido,3815.0000000000014
+2010-11-01,Terrestre,13 El Cinchado / El Corinto,1556.0
+2010-11-01,Terrestre,14 Tecún Umán,2423.3
+2010-11-01,Terrestre,15 El Carmen,6107.710000000001
+2010-11-01,Terrestre,16 La Mesilla,3914.0
+2010-11-01,Terrestre,17 El Naranjo,109.00000000000001
+2010-11-01,Terrestre,18 Bethel,810.0
+2010-11-01,Terrestre,19 Gracias a Dios,457.86842105263156
+2010-11-01,Terrestre,20 Melchor de Mencos,7489.779999999993
+2010-12-01,Aérea,01 La Aurora,99374.0
+2010-12-01,Aérea,02 Mundo Maya,269.0
+2010-12-01,Marítima,03 Puerto Quetzal,5847.0
+2010-12-01,Marítima,04 Santo Tomás de Castilla,10569.0
+2010-12-01,Marítima,05 Puerto Barrios,669.0
+2010-12-01,Marítima,06 Livingston,420.0
+2010-12-01,Terrestre,07 Valle Nuevo,49820.64999999997
+2010-12-01,Terrestre,08 Pedro de Alvarado,9680.000000000004
+2010-12-01,Terrestre,09 San Cristóbal,18892.000000000007
+2010-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),5451.980894055323
+2010-12-01,Terrestre,11 Agua Caliente,4371.4
+2010-12-01,Terrestre,12 El Florido,4651.83089819481
+2010-12-01,Terrestre,13 El Cinchado / El Corinto,3701.830918379599
+2010-12-01,Terrestre,14 Tecún Umán,4890.309999999999
+2010-12-01,Terrestre,15 El Carmen,11820.49
+2010-12-01,Terrestre,16 La Mesilla,4509.0
+2010-12-01,Terrestre,17 El Naranjo,321.0
+2010-12-01,Terrestre,18 Bethel,664.0
+2010-12-01,Terrestre,19 Gracias a Dios,522.9224806201548
+2010-12-01,Terrestre,20 Melchor de Mencos,11690.070000000009
+2011-01-01,Aérea,01 La Aurora,81528.0
+2011-01-01,Aérea,02 Mundo Maya,299.0
+2011-01-01,Marítima,03 Puerto Quetzal,4158.0
+2011-01-01,Marítima,04 Santo Tomás de Castilla,1290.0
+2011-01-01,Marítima,05 Puerto Barrios,750.0
+2011-01-01,Marítima,06 Livingston,451.0
+2011-01-01,Terrestre,07 Valle Nuevo,40440.340000000026
+2011-01-01,Terrestre,08 Pedro de Alvarado,8396.999999999993
+2011-01-01,Terrestre,09 San Cristóbal,17123.88235294118
+2011-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),6494.299999999998
+2011-01-01,Terrestre,11 Agua Caliente,6445.98
+2011-01-01,Terrestre,12 El Florido,4923.999999999997
+2011-01-01,Terrestre,13 El Cinchado / El Corinto,2901.9999999999995
+2011-01-01,Terrestre,14 Tecún Umán,2901.8
+2011-01-01,Terrestre,15 El Carmen,6161.489999999999
+2011-01-01,Terrestre,16 La Mesilla,3373.999999999999
+2011-01-01,Terrestre,17 El Naranjo,174.00000000000006
+2011-01-01,Terrestre,18 Bethel,797.0
+2011-01-01,Terrestre,19 Gracias a Dios,520.9779411764698
+2011-01-01,Terrestre,20 Melchor de Mencos,9987.82
+2011-02-01,Aérea,01 La Aurora,69003.0
+2011-02-01,Aérea,02 Mundo Maya,196.0
+2011-02-01,Marítima,03 Puerto Quetzal,2573.0
+2011-02-01,Marítima,04 Santo Tomás de Castilla,5071.0
+2011-02-01,Marítima,05 Puerto Barrios,522.0
+2011-02-01,Marítima,06 Livingston,413.0
+2011-02-01,Terrestre,07 Valle Nuevo,30713.279999999984
+2011-02-01,Terrestre,08 Pedro de Alvarado,6599.000000000001
+2011-02-01,Terrestre,09 San Cristóbal,14198.333333333336
+2011-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),3365.7999999999997
+2011-02-01,Terrestre,11 Agua Caliente,4034.1400000000003
+2011-02-01,Terrestre,12 El Florido,3559.000000000001
+2011-02-01,Terrestre,13 El Cinchado / El Corinto,1858.0
+2011-02-01,Terrestre,14 Tecún Umán,1986.3600000000001
+2011-02-01,Terrestre,15 El Carmen,4935.5000000000055
+2011-02-01,Terrestre,16 La Mesilla,2980.999999999998
+2011-02-01,Terrestre,17 El Naranjo,272.0
+2011-02-01,Terrestre,18 Bethel,1028.0
+2011-02-01,Terrestre,19 Gracias a Dios,488.71428571428527
+2011-02-01,Terrestre,20 Melchor de Mencos,7009.72
+2011-03-01,Aérea,01 La Aurora,77452.0
+2011-03-01,Aérea,02 Mundo Maya,416.0
+2011-03-01,Marítima,03 Puerto Quetzal,3207.0
+2011-03-01,Marítima,04 Santo Tomás de Castilla,3848.0
+2011-03-01,Marítima,05 Puerto Barrios,556.0
+2011-03-01,Marítima,06 Livingston,397.0
+2011-03-01,Terrestre,07 Valle Nuevo,34836.740000000005
+2011-03-01,Terrestre,08 Pedro de Alvarado,6775.999999999992
+2011-03-01,Terrestre,09 San Cristóbal,20528.777777777785
+2011-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),3894.95
+2011-03-01,Terrestre,11 Agua Caliente,4112.410000000001
+2011-03-01,Terrestre,12 El Florido,4216.852614896991
+2011-03-01,Terrestre,13 El Cinchado / El Corinto,2252.946117274168
+2011-03-01,Terrestre,14 Tecún Umán,2355.1399999999994
+2011-03-01,Terrestre,15 El Carmen,5585.829999999999
+2011-03-01,Terrestre,16 La Mesilla,2710.0
+2011-03-01,Terrestre,17 El Naranjo,305.0
+2011-03-01,Terrestre,18 Bethel,1031.0
+2011-03-01,Terrestre,19 Gracias a Dios,504.5862068965523
+2011-03-01,Terrestre,20 Melchor de Mencos,7598.072365038562
+2011-04-01,Aérea,01 La Aurora,76906.0
+2011-04-01,Aérea,02 Mundo Maya,214.0
+2011-04-01,Marítima,03 Puerto Quetzal,11041.0
+2011-04-01,Marítima,04 Santo Tomás de Castilla,4888.0
+2011-04-01,Marítima,05 Puerto Barrios,719.0
+2011-04-01,Marítima,06 Livingston,686.0
+2011-04-01,Terrestre,07 Valle Nuevo,44652.98
+2011-04-01,Terrestre,08 Pedro de Alvarado,9815.999999999984
+2011-04-01,Terrestre,09 San Cristóbal,15055.291970802919
+2011-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),5776.450000000003
+2011-04-01,Terrestre,11 Agua Caliente,5403.150000000001
+2011-04-01,Terrestre,12 El Florido,4924.999999999998
+2011-04-01,Terrestre,13 El Cinchado / El Corinto,3860.999999999999
+2011-04-01,Terrestre,14 Tecún Umán,3383.8199999999993
+2011-04-01,Terrestre,15 El Carmen,7694.669999999997
+2011-04-01,Terrestre,16 La Mesilla,3767.0000000000014
+2011-04-01,Terrestre,17 El Naranjo,397.99999999999994
+2011-04-01,Terrestre,18 Bethel,702.0
+2011-04-01,Terrestre,19 Gracias a Dios,283.47222222222234
+2011-04-01,Terrestre,20 Melchor de Mencos,11588.909999999998
+2011-05-01,Aérea,01 La Aurora,67989.0
+2011-05-01,Aérea,02 Mundo Maya,144.0
+2011-05-01,Marítima,03 Puerto Quetzal,6054.0
+2011-05-01,Marítima,04 Santo Tomás de Castilla,681.0
+2011-05-01,Marítima,05 Puerto Barrios,640.0
+2011-05-01,Marítima,06 Livingston,390.0
+2011-05-01,Terrestre,07 Valle Nuevo,36251.26999999996
+2011-05-01,Terrestre,08 Pedro de Alvarado,7164.000000000002
+2011-05-01,Terrestre,09 San Cristóbal,7952.0000000000055
+2011-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),3955.6999999999994
+2011-05-01,Terrestre,11 Agua Caliente,3814.7799999999993
+2011-05-01,Terrestre,12 El Florido,3365.0000000000014
+2011-05-01,Terrestre,13 El Cinchado / El Corinto,2561.0
+2011-05-01,Terrestre,14 Tecún Umán,2218.259999999999
+2011-05-01,Terrestre,15 El Carmen,4734.209999999998
+2011-05-01,Terrestre,16 La Mesilla,2386.999999999999
+2011-05-01,Terrestre,17 El Naranjo,221.00000000000003
+2011-05-01,Terrestre,18 Bethel,434.0
+2011-05-01,Terrestre,19 Gracias a Dios,211.99999999999994
+2011-05-01,Terrestre,20 Melchor de Mencos,5560.129999999999
+2011-06-01,Aérea,01 La Aurora,82227.0
+2011-06-01,Aérea,02 Mundo Maya,210.0
+2011-06-01,Marítima,03 Puerto Quetzal,929.0
+2011-06-01,Marítima,04 Santo Tomás de Castilla,465.0
+2011-06-01,Marítima,05 Puerto Barrios,597.0
+2011-06-01,Marítima,06 Livingston,279.0
+2011-06-01,Terrestre,07 Valle Nuevo,35265.81999999997
+2011-06-01,Terrestre,08 Pedro de Alvarado,7474.000000000014
+2011-06-01,Terrestre,09 San Cristóbal,9035.000000000005
+2011-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),4347.199999999999
+2011-06-01,Terrestre,11 Agua Caliente,3852.720000000001
+2011-06-01,Terrestre,12 El Florido,3338.999999999995
+2011-06-01,Terrestre,13 El Cinchado / El Corinto,3346.999999999999
+2011-06-01,Terrestre,14 Tecún Umán,2482.359999999997
+2011-06-01,Terrestre,15 El Carmen,5566.109999999998
+2011-06-01,Terrestre,16 La Mesilla,2372.0000000000005
+2011-06-01,Terrestre,17 El Naranjo,184.00000000000006
+2011-06-01,Terrestre,18 Bethel,421.0
+2011-06-01,Terrestre,19 Gracias a Dios,252.85714285714278
+2011-06-01,Terrestre,20 Melchor de Mencos,7437.29000000001
+2011-07-01,Aérea,01 La Aurora,97440.0
+2011-07-01,Aérea,02 Mundo Maya,239.0
+2011-07-01,Marítima,03 Puerto Quetzal,98.0
+2011-07-01,Marítima,04 Santo Tomás de Castilla,5.0
+2011-07-01,Marítima,05 Puerto Barrios,809.0
+2011-07-01,Marítima,06 Livingston,348.0
+2011-07-01,Terrestre,07 Valle Nuevo,42645.480000000025
+2011-07-01,Terrestre,08 Pedro de Alvarado,9150.0
+2011-07-01,Terrestre,09 San Cristóbal,9363.398601398598
+2011-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),5358.350000000001
+2011-07-01,Terrestre,11 Agua Caliente,5405.14
+2011-07-01,Terrestre,12 El Florido,3961.999999999999
+2011-07-01,Terrestre,13 El Cinchado / El Corinto,3918.9999999999995
+2011-07-01,Terrestre,14 Tecún Umán,3411.0700000000006
+2011-07-01,Terrestre,15 El Carmen,6567.590000000001
+2011-07-01,Terrestre,16 La Mesilla,3790.9999999999945
+2011-07-01,Terrestre,17 El Naranjo,347.9999999999998
+2011-07-01,Terrestre,18 Bethel,655.0
+2011-07-01,Terrestre,19 Gracias a Dios,216.7073170731707
+2011-07-01,Terrestre,20 Melchor de Mencos,10593.927394366188
+2011-08-01,Aérea,01 La Aurora,77293.0
+2011-08-01,Aérea,02 Mundo Maya,184.0
+2011-08-01,Marítima,03 Puerto Quetzal,10519.0
+2011-08-01,Marítima,04 Santo Tomás de Castilla,6.0
+2011-08-01,Marítima,05 Puerto Barrios,794.0
+2011-08-01,Marítima,06 Livingston,379.0
+2011-08-01,Terrestre,07 Valle Nuevo,40414.63000000011
+2011-08-01,Terrestre,08 Pedro de Alvarado,9260.999999999978
+2011-08-01,Terrestre,09 San Cristóbal,10029.785714285717
+2011-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),6092.65
+2011-08-01,Terrestre,11 Agua Caliente,5597.019999999998
+2011-08-01,Terrestre,12 El Florido,3683.000000000001
+2011-08-01,Terrestre,13 El Cinchado / El Corinto,3542.0000000000005
+2011-08-01,Terrestre,14 Tecún Umán,2734.0999999999995
+2011-08-01,Terrestre,15 El Carmen,5825.469999999997
+2011-08-01,Terrestre,16 La Mesilla,2946.0000000000005
+2011-08-01,Terrestre,17 El Naranjo,295.0
+2011-08-01,Terrestre,18 Bethel,710.9605338691159
+2011-08-01,Terrestre,19 Gracias a Dios,250.891891891892
+2011-08-01,Terrestre,20 Melchor de Mencos,7297.169999999998
+2011-09-01,Aérea,01 La Aurora,65207.0
+2011-09-01,Aérea,02 Mundo Maya,122.0
+2011-09-01,Marítima,03 Puerto Quetzal,28.0
+2011-09-01,Marítima,04 Santo Tomás de Castilla,6.0
+2011-09-01,Marítima,05 Puerto Barrios,470.0
+2011-09-01,Marítima,06 Livingston,137.0
+2011-09-01,Terrestre,07 Valle Nuevo,31892.89999999998
+2011-09-01,Terrestre,08 Pedro de Alvarado,7222.00000000002
+2011-09-01,Terrestre,09 San Cristóbal,8994.000000000002
+2011-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),4287.300000000001
+2011-09-01,Terrestre,11 Agua Caliente,4251.1900000000005
+2011-09-01,Terrestre,12 El Florido,2647.9999999999977
+2011-09-01,Terrestre,13 El Cinchado / El Corinto,2846.9999999999995
+2011-09-01,Terrestre,14 Tecún Umán,2714.7599999999998
+2011-09-01,Terrestre,15 El Carmen,4854.94
+2011-09-01,Terrestre,16 La Mesilla,2109.9999999999995
+2011-09-01,Terrestre,17 El Naranjo,225.00000000000003
+2011-09-01,Terrestre,18 Bethel,306.7950819672131
+2011-09-01,Terrestre,19 Gracias a Dios,243.30612244897955
+2011-09-01,Terrestre,20 Melchor de Mencos,5865.499999999999
+2011-10-01,Aérea,01 La Aurora,71504.0
+2011-10-01,Aérea,02 Mundo Maya,140.0
+2011-10-01,Marítima,03 Puerto Quetzal,4009.0
+2011-10-01,Marítima,04 Santo Tomás de Castilla,8.0
+2011-10-01,Marítima,05 Puerto Barrios,488.0
+2011-10-01,Marítima,06 Livingston,224.0
+2011-10-01,Terrestre,07 Valle Nuevo,33975.90000000007
+2011-10-01,Terrestre,08 Pedro de Alvarado,5799.00000000001
+2011-10-01,Terrestre,09 San Cristóbal,17683.96049382716
+2011-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),3529.7
+2011-10-01,Terrestre,11 Agua Caliente,4241.549999999999
+2011-10-01,Terrestre,12 El Florido,2259.0000000000005
+2011-10-01,Terrestre,13 El Cinchado / El Corinto,2283.0
+2011-10-01,Terrestre,14 Tecún Umán,2369.2200000000003
+2011-10-01,Terrestre,15 El Carmen,3868.059999999999
+2011-10-01,Terrestre,16 La Mesilla,2190.0
+2011-10-01,Terrestre,17 El Naranjo,250.99999999999997
+2011-10-01,Terrestre,18 Bethel,436.9282868525896
+2011-10-01,Terrestre,19 Gracias a Dios,316.99999999999994
+2011-10-01,Terrestre,20 Melchor de Mencos,3989.5499999999993
+2011-11-01,Aérea,01 La Aurora,85769.0
+2011-11-01,Aérea,02 Mundo Maya,271.0
+2011-11-01,Marítima,03 Puerto Quetzal,5058.0
+2011-11-01,Marítima,04 Santo Tomás de Castilla,500.0
+2011-11-01,Marítima,05 Puerto Barrios,530.0
+2011-11-01,Marítima,06 Livingston,346.0
+2011-11-01,Terrestre,07 Valle Nuevo,44031.56000000004
+2011-11-01,Terrestre,08 Pedro de Alvarado,7662.000000000003
+2011-11-01,Terrestre,09 San Cristóbal,18411.526946107784
+2011-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),5264.4
+2011-11-01,Terrestre,11 Agua Caliente,5775.620000000001
+2011-11-01,Terrestre,12 El Florido,2950.999999999999
+2011-11-01,Terrestre,13 El Cinchado / El Corinto,3198.0000000000005
+2011-11-01,Terrestre,14 Tecún Umán,3362.8900000000003
+2011-11-01,Terrestre,15 El Carmen,5500.49
+2011-11-01,Terrestre,16 La Mesilla,3405.0
+2011-11-01,Terrestre,17 El Naranjo,228.99999999999997
+2011-11-01,Terrestre,18 Bethel,629.7586206896552
+2011-11-01,Terrestre,19 Gracias a Dios,296.7894736842105
+2011-11-01,Terrestre,20 Melchor de Mencos,3458.459999999998
+2011-12-01,Aérea,01 La Aurora,100923.0
+2011-12-01,Aérea,02 Mundo Maya,288.0
+2011-12-01,Marítima,03 Puerto Quetzal,8002.0
+2011-12-01,Marítima,04 Santo Tomás de Castilla,720.0
+2011-12-01,Marítima,05 Puerto Barrios,860.0
+2011-12-01,Marítima,06 Livingston,370.0
+2011-12-01,Terrestre,07 Valle Nuevo,55278.10000000008
+2011-12-01,Terrestre,08 Pedro de Alvarado,10004.00000000001
+2011-12-01,Terrestre,09 San Cristóbal,24851.20078740157
+2011-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),7560.350000000001
+2011-12-01,Terrestre,11 Agua Caliente,8028.509999999998
+2011-12-01,Terrestre,12 El Florido,4159.999999999998
+2011-12-01,Terrestre,13 El Cinchado / El Corinto,4718.999999999999
+2011-12-01,Terrestre,14 Tecún Umán,5755.69
+2011-12-01,Terrestre,15 El Carmen,11353.74
+2011-12-01,Terrestre,16 La Mesilla,4284.999999999999
+2011-12-01,Terrestre,17 El Naranjo,477.99999999999994
+2011-12-01,Terrestre,18 Bethel,624.0
+2011-12-01,Terrestre,19 Gracias a Dios,323.98449612403107
+2011-12-01,Terrestre,20 Melchor de Mencos,8955.940000000002
+2012-01-01,Aérea,01 La Aurora,80805.0
+2012-01-01,Aérea,02 Mundo Maya,262.0
+2012-01-01,Marítima,03 Puerto Quetzal,3902.0
+2012-01-01,Marítima,04 Santo Tomás de Castilla,2183.0
+2012-01-01,Marítima,05 Puerto Barrios,719.0
+2012-01-01,Marítima,06 Livingston,446.0
+2012-01-01,Terrestre,07 Valle Nuevo,44820.29000000002
+2012-01-01,Terrestre,08 Pedro de Alvarado,10609.00000000004
+2012-01-01,Terrestre,09 San Cristóbal,17724.99999999999
+2012-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),7514.049999999999
+2012-01-01,Terrestre,11 Agua Caliente,10903.54
+2012-01-01,Terrestre,12 El Florido,4138.0
+2012-01-01,Terrestre,13 El Cinchado / El Corinto,4092.000000000001
+2012-01-01,Terrestre,14 Tecún Umán,3720.629999999999
+2012-01-01,Terrestre,15 El Carmen,6007.870000000001
+2012-01-01,Terrestre,16 La Mesilla,3637.000000000002
+2012-01-01,Terrestre,17 El Naranjo,407.9999999999998
+2012-01-01,Terrestre,18 Bethel,526.0
+2012-01-01,Terrestre,19 Gracias a Dios,328.9558823529414
+2012-01-01,Terrestre,20 Melchor de Mencos,8086.970000000002
+2012-02-01,Aérea,01 La Aurora,69673.0
+2012-02-01,Aérea,02 Mundo Maya,495.0
+2012-02-01,Marítima,03 Puerto Quetzal,4699.0
+2012-02-01,Marítima,04 Santo Tomás de Castilla,480.0
+2012-02-01,Marítima,05 Puerto Barrios,568.0
+2012-02-01,Marítima,06 Livingston,479.0
+2012-02-01,Terrestre,07 Valle Nuevo,35293.88
+2012-02-01,Terrestre,08 Pedro de Alvarado,7595.000000000013
+2012-02-01,Terrestre,09 San Cristóbal,15049.095238095244
+2012-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),4706.349999999999
+2012-02-01,Terrestre,11 Agua Caliente,5994.73
+2012-02-01,Terrestre,12 El Florido,3106.9999999999995
+2012-02-01,Terrestre,13 El Cinchado / El Corinto,2515.0
+2012-02-01,Terrestre,14 Tecún Umán,3181.7899999999995
+2012-02-01,Terrestre,15 El Carmen,5463.6500000000015
+2012-02-01,Terrestre,16 La Mesilla,2787.999999999999
+2012-02-01,Terrestre,17 El Naranjo,284.00000000000006
+2012-02-01,Terrestre,18 Bethel,558.0
+2012-02-01,Terrestre,19 Gracias a Dios,330.7142857142859
+2012-02-01,Terrestre,20 Melchor de Mencos,5740.059999999998
+2012-03-01,Aérea,01 La Aurora,84290.0
+2012-03-01,Aérea,02 Mundo Maya,274.0
+2012-03-01,Marítima,03 Puerto Quetzal,1504.0
+2012-03-01,Marítima,04 Santo Tomás de Castilla,2570.0
+2012-03-01,Marítima,05 Puerto Barrios,625.0
+2012-03-01,Marítima,06 Livingston,486.0
+2012-03-01,Terrestre,07 Valle Nuevo,36800.87
+2012-03-01,Terrestre,08 Pedro de Alvarado,7688.999999999998
+2012-03-01,Terrestre,09 San Cristóbal,21592.000000000004
+2012-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),5286.900000000001
+2012-03-01,Terrestre,11 Agua Caliente,6052.380000000001
+2012-03-01,Terrestre,12 El Florido,3732.301742532657
+2012-03-01,Terrestre,13 El Cinchado / El Corinto,2936.9191759112523
+2012-03-01,Terrestre,14 Tecún Umán,4294.58
+2012-03-01,Terrestre,15 El Carmen,6584.450000000001
+2012-03-01,Terrestre,16 La Mesilla,2946.9999999999995
+2012-03-01,Terrestre,17 El Naranjo,305.0
+2012-03-01,Terrestre,18 Bethel,720.0
+2012-03-01,Terrestre,19 Gracias a Dios,418.5862068965518
+2012-03-01,Terrestre,20 Melchor de Mencos,6984.12652956298
+2012-04-01,Aérea,01 La Aurora,74743.0
+2012-04-01,Aérea,02 Mundo Maya,379.0
+2012-04-01,Marítima,03 Puerto Quetzal,6858.0
+2012-04-01,Marítima,04 Santo Tomás de Castilla,2.0
+2012-04-01,Marítima,05 Puerto Barrios,697.0
+2012-04-01,Marítima,06 Livingston,539.0
+2012-04-01,Terrestre,07 Valle Nuevo,39344.15999999996
+2012-04-01,Terrestre,08 Pedro de Alvarado,10031.999999999984
+2012-04-01,Terrestre,09 San Cristóbal,14624.0
+2012-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),6724.499999999999
+2012-04-01,Terrestre,11 Agua Caliente,7081.209999999998
+2012-04-01,Terrestre,12 El Florido,3583.9999999999986
+2012-04-01,Terrestre,13 El Cinchado / El Corinto,4183.000000000001
+2012-04-01,Terrestre,14 Tecún Umán,3931.24
+2012-04-01,Terrestre,15 El Carmen,6794.780000000002
+2012-04-01,Terrestre,16 La Mesilla,3192.999999999999
+2012-04-01,Terrestre,17 El Naranjo,165.99999999999997
+2012-04-01,Terrestre,18 Bethel,460.0
+2012-04-01,Terrestre,19 Gracias a Dios,412.0000000000004
+2012-04-01,Terrestre,20 Melchor de Mencos,9913.859999999982
+2012-05-01,Aérea,01 La Aurora,71823.0
+2012-05-01,Aérea,02 Mundo Maya,136.0
+2012-05-01,Marítima,03 Puerto Quetzal,8777.0
+2012-05-01,Marítima,04 Santo Tomás de Castilla,15.0
+2012-05-01,Marítima,05 Puerto Barrios,622.0
+2012-05-01,Marítima,06 Livingston,365.0
+2012-05-01,Terrestre,07 Valle Nuevo,34076.92000000002
+2012-05-01,Terrestre,08 Pedro de Alvarado,7446.999999999994
+2012-05-01,Terrestre,09 San Cristóbal,8427.000000000002
+2012-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),4747.749999999999
+2012-05-01,Terrestre,11 Agua Caliente,5057.15
+2012-05-01,Terrestre,12 El Florido,3100.9999999999977
+2012-05-01,Terrestre,13 El Cinchado / El Corinto,2463.0
+2012-05-01,Terrestre,14 Tecún Umán,2992.51
+2012-05-01,Terrestre,15 El Carmen,5086.849999999999
+2012-05-01,Terrestre,16 La Mesilla,2044.0000000000002
+2012-05-01,Terrestre,17 El Naranjo,190.00000000000006
+2012-05-01,Terrestre,18 Bethel,291.0
+2012-05-01,Terrestre,19 Gracias a Dios,431.0000000000002
+2012-05-01,Terrestre,20 Melchor de Mencos,6879.279999999995
+2012-06-01,Aérea,01 La Aurora,87683.0
+2012-06-01,Aérea,02 Mundo Maya,141.0
+2012-06-01,Marítima,03 Puerto Quetzal,53.0
+2012-06-01,Marítima,04 Santo Tomás de Castilla,4.0
+2012-06-01,Marítima,05 Puerto Barrios,539.0
+2012-06-01,Marítima,06 Livingston,369.0
+2012-06-01,Terrestre,07 Valle Nuevo,37454.76
+2012-06-01,Terrestre,08 Pedro de Alvarado,8064.0
+2012-06-01,Terrestre,09 San Cristóbal,8934.999999999996
+2012-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),5098.900000000003
+2012-06-01,Terrestre,11 Agua Caliente,3843.5099999999993
+2012-06-01,Terrestre,12 El Florido,3522.999999999998
+2012-06-01,Terrestre,13 El Cinchado / El Corinto,3174.0000000000005
+2012-06-01,Terrestre,14 Tecún Umán,3786.1999999999975
+2012-06-01,Terrestre,15 El Carmen,5606.219999999989
+2012-06-01,Terrestre,16 La Mesilla,2157.0
+2012-06-01,Terrestre,17 El Naranjo,288.99999999999994
+2012-06-01,Terrestre,18 Bethel,391.0
+2012-06-01,Terrestre,19 Gracias a Dios,464.0892857142853
+2012-06-01,Terrestre,20 Melchor de Mencos,7837.79000000001
+2012-07-01,Aérea,01 La Aurora,96093.0
+2012-07-01,Aérea,02 Mundo Maya,111.0
+2012-07-01,Marítima,03 Puerto Quetzal,858.0
+2012-07-01,Marítima,04 Santo Tomás de Castilla,5.0
+2012-07-01,Marítima,05 Puerto Barrios,688.0
+2012-07-01,Marítima,06 Livingston,386.0
+2012-07-01,Terrestre,07 Valle Nuevo,41578.44999999997
+2012-07-01,Terrestre,08 Pedro de Alvarado,9160.000000000005
+2012-07-01,Terrestre,09 San Cristóbal,9167.566433566433
+2012-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),6122.0
+2012-07-01,Terrestre,11 Agua Caliente,4818.879999999999
+2012-07-01,Terrestre,12 El Florido,4176.999999999999
+2012-07-01,Terrestre,13 El Cinchado / El Corinto,3437.0
+2012-07-01,Terrestre,14 Tecún Umán,4603.9
+2012-07-01,Terrestre,15 El Carmen,6776.559999999993
+2012-07-01,Terrestre,16 La Mesilla,3861.0000000000073
+2012-07-01,Terrestre,17 El Naranjo,447.0000000000007
+2012-07-01,Terrestre,18 Bethel,595.0
+2012-07-01,Terrestre,19 Gracias a Dios,455.97560975609616
+2012-07-01,Terrestre,20 Melchor de Mencos,10641.387957746476
+2012-08-01,Aérea,01 La Aurora,72094.0
+2012-08-01,Aérea,02 Mundo Maya,143.0
+2012-08-01,Marítima,03 Puerto Quetzal,14378.0
+2012-08-01,Marítima,04 Santo Tomás de Castilla,335.0
+2012-08-01,Marítima,05 Puerto Barrios,577.0
+2012-08-01,Marítima,06 Livingston,420.0
+2012-08-01,Terrestre,07 Valle Nuevo,39986.29999999996
+2012-08-01,Terrestre,08 Pedro de Alvarado,8882.99999999999
+2012-08-01,Terrestre,09 San Cristóbal,10595.839285714286
+2012-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),6300.100000000003
+2012-08-01,Terrestre,11 Agua Caliente,5062.999999999999
+2012-08-01,Terrestre,12 El Florido,3751.999999999999
+2012-08-01,Terrestre,13 El Cinchado / El Corinto,3284.0
+2012-08-01,Terrestre,14 Tecún Umán,3959.7400000000002
+2012-08-01,Terrestre,15 El Carmen,6211.930000000006
+2012-08-01,Terrestre,16 La Mesilla,2971.9999999999995
+2012-08-01,Terrestre,17 El Naranjo,403.0000000000001
+2012-08-01,Terrestre,18 Bethel,510.96019900497515
+2012-08-01,Terrestre,19 Gracias a Dios,462.891891891892
+2012-08-01,Terrestre,20 Melchor de Mencos,7760.749999999996
+2012-09-01,Aérea,01 La Aurora,65590.0
+2012-09-01,Aérea,02 Mundo Maya,61.0
+2012-09-01,Marítima,03 Puerto Quetzal,47.0
+2012-09-01,Marítima,04 Santo Tomás de Castilla,21.0
+2012-09-01,Marítima,05 Puerto Barrios,527.0
+2012-09-01,Marítima,06 Livingston,224.0
+2012-09-01,Terrestre,07 Valle Nuevo,34705.039999999986
+2012-09-01,Terrestre,08 Pedro de Alvarado,6876.000000000004
+2012-09-01,Terrestre,09 San Cristóbal,9281.000000000002
+2012-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),4620.150000000001
+2012-09-01,Terrestre,11 Agua Caliente,3857.5599999999995
+2012-09-01,Terrestre,12 El Florido,3380.0000000000023
+2012-09-01,Terrestre,13 El Cinchado / El Corinto,2798.0000000000005
+2012-09-01,Terrestre,14 Tecún Umán,3817.5200000000013
+2012-09-01,Terrestre,15 El Carmen,5346.3
+2012-09-01,Terrestre,16 La Mesilla,2504.0
+2012-09-01,Terrestre,17 El Naranjo,264.00000000000006
+2012-09-01,Terrestre,18 Bethel,269.69262295081967
+2012-09-01,Terrestre,19 Gracias a Dios,517.9999999999999
+2012-09-01,Terrestre,20 Melchor de Mencos,6833.289999999993
+2012-10-01,Aérea,01 La Aurora,75312.0
+2012-10-01,Aérea,02 Mundo Maya,122.0
+2012-10-01,Marítima,03 Puerto Quetzal,2255.0
+2012-10-01,Marítima,04 Santo Tomás de Castilla,6.0
+2012-10-01,Marítima,05 Puerto Barrios,472.0
+2012-10-01,Marítima,06 Livingston,290.0
+2012-10-01,Terrestre,07 Valle Nuevo,37286.109999999986
+2012-10-01,Terrestre,08 Pedro de Alvarado,6574.000000000022
+2012-10-01,Terrestre,09 San Cristóbal,17155.33333333333
+2012-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),4587.349999999999
+2012-10-01,Terrestre,11 Agua Caliente,4713.799999999999
+2012-10-01,Terrestre,12 El Florido,3069.000000000001
+2012-10-01,Terrestre,13 El Cinchado / El Corinto,2752.0
+2012-10-01,Terrestre,14 Tecún Umán,4230.670000000002
+2012-10-01,Terrestre,15 El Carmen,5261.129999999998
+2012-10-01,Terrestre,16 La Mesilla,2570.0
+2012-10-01,Terrestre,17 El Naranjo,184.0
+2012-10-01,Terrestre,18 Bethel,372.7848605577689
+2012-10-01,Terrestre,19 Gracias a Dios,546.9999999999999
+2012-10-01,Terrestre,20 Melchor de Mencos,6683.78
+2012-11-01,Aérea,01 La Aurora,87621.0
+2012-11-01,Aérea,02 Mundo Maya,251.0
+2012-11-01,Marítima,03 Puerto Quetzal,5897.0
+2012-11-01,Marítima,04 Santo Tomás de Castilla,3084.0
+2012-11-01,Marítima,05 Puerto Barrios,587.0
+2012-11-01,Marítima,06 Livingston,494.0
+2012-11-01,Terrestre,07 Valle Nuevo,40097.290000000066
+2012-11-01,Terrestre,08 Pedro de Alvarado,9766.000000000002
+2012-11-01,Terrestre,09 San Cristóbal,20160.461077844313
+2012-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),7050.000000000002
+2012-11-01,Terrestre,11 Agua Caliente,4702.8499999999985
+2012-11-01,Terrestre,12 El Florido,3551.000000000002
+2012-11-01,Terrestre,13 El Cinchado / El Corinto,2455.0000000000005
+2012-11-01,Terrestre,14 Tecún Umán,4564.360000000001
+2012-11-01,Terrestre,15 El Carmen,5264.760000000002
+2012-11-01,Terrestre,16 La Mesilla,3492.0
+2012-11-01,Terrestre,17 El Naranjo,355.99999999999994
+2012-11-01,Terrestre,18 Bethel,673.7586206896551
+2012-11-01,Terrestre,19 Gracias a Dios,504.84210526315763
+2012-11-01,Terrestre,20 Melchor de Mencos,7685.430000000001
+2012-12-01,Aérea,01 La Aurora,102147.0
+2012-12-01,Aérea,02 Mundo Maya,281.0
+2012-12-01,Marítima,03 Puerto Quetzal,10821.0
+2012-12-01,Marítima,04 Santo Tomás de Castilla,4942.0
+2012-12-01,Marítima,05 Puerto Barrios,884.0
+2012-12-01,Marítima,06 Livingston,429.0
+2012-12-01,Terrestre,07 Valle Nuevo,41045.93000000001
+2012-12-01,Terrestre,08 Pedro de Alvarado,13298.999999999975
+2012-12-01,Terrestre,09 San Cristóbal,22776.999999999985
+2012-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),8509.949999999999
+2012-12-01,Terrestre,11 Agua Caliente,5338.299999999999
+2012-12-01,Terrestre,12 El Florido,4577.000000000002
+2012-12-01,Terrestre,13 El Cinchado / El Corinto,4253.0
+2012-12-01,Terrestre,14 Tecún Umán,7054.190000000001
+2012-12-01,Terrestre,15 El Carmen,10965.75
+2012-12-01,Terrestre,16 La Mesilla,5016.999999999998
+2012-12-01,Terrestre,17 El Naranjo,733.0
+2012-12-01,Terrestre,18 Bethel,1025.0
+2012-12-01,Terrestre,19 Gracias a Dios,534.9069767441858
+2012-12-01,Terrestre,20 Melchor de Mencos,14887.689999999991
+2013-01-01,Aérea,01 La Aurora,79816.0
+2013-01-01,Aérea,02 Mundo Maya,235.0
+2013-01-01,Marítima,03 Puerto Quetzal,4994.0
+2013-01-01,Marítima,04 Santo Tomás de Castilla,3765.0
+2013-01-01,Marítima,05 Puerto Barrios,667.0
+2013-01-01,Marítima,06 Livingston,548.0
+2013-01-01,Terrestre,07 Valle Nuevo,26608.03000000001
+2013-01-01,Terrestre,08 Pedro de Alvarado,10966.999999999955
+2013-01-01,Terrestre,09 San Cristóbal,17751.99999999999
+2013-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),8445.949999999999
+2013-01-01,Terrestre,11 Agua Caliente,8483.860000000008
+2013-01-01,Terrestre,12 El Florido,4245.000000000001
+2013-01-01,Terrestre,13 El Cinchado / El Corinto,3914.999999999999
+2013-01-01,Terrestre,14 Tecún Umán,3890.3899999999985
+2013-01-01,Terrestre,15 El Carmen,5145.179998399999
+2013-01-01,Terrestre,16 La Mesilla,4191.55
+2013-01-01,Terrestre,17 El Naranjo,406.0
+2013-01-01,Terrestre,18 Bethel,648.0
+2013-01-01,Terrestre,19 Gracias a Dios,471.00000000000017
+2013-01-01,Terrestre,20 Melchor de Mencos,10246.560000000014
+2013-02-01,Aérea,01 La Aurora,68700.0
+2013-02-01,Aérea,02 Mundo Maya,439.0
+2013-02-01,Marítima,03 Puerto Quetzal,3418.0
+2013-02-01,Marítima,04 Santo Tomás de Castilla,3522.0
+2013-02-01,Marítima,05 Puerto Barrios,580.0
+2013-02-01,Marítima,06 Livingston,407.0
+2013-02-01,Terrestre,07 Valle Nuevo,21970.349999999984
+2013-02-01,Terrestre,08 Pedro de Alvarado,7831.999999999976
+2013-02-01,Terrestre,09 San Cristóbal,15034.0
+2013-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),5272.550000000001
+2013-02-01,Terrestre,11 Agua Caliente,4302.249999999998
+2013-02-01,Terrestre,12 El Florido,3301.9999999999995
+2013-02-01,Terrestre,13 El Cinchado / El Corinto,2566.0
+2013-02-01,Terrestre,14 Tecún Umán,3119.6099998999994
+2013-02-01,Terrestre,15 El Carmen,4461.139999999998
+2013-02-01,Terrestre,16 La Mesilla,3139.81
+2013-02-01,Terrestre,17 El Naranjo,305.0
+2013-02-01,Terrestre,18 Bethel,614.0
+2013-02-01,Terrestre,19 Gracias a Dios,510.0000000000002
+2013-02-01,Terrestre,20 Melchor de Mencos,6898.379999999995
+2013-03-01,Aérea,01 La Aurora,90702.0
+2013-03-01,Aérea,02 Mundo Maya,191.0
+2013-03-01,Marítima,03 Puerto Quetzal,7238.0
+2013-03-01,Marítima,04 Santo Tomás de Castilla,7089.0
+2013-03-01,Marítima,05 Puerto Barrios,763.0
+2013-03-01,Marítima,06 Livingston,769.0
+2013-03-01,Terrestre,07 Valle Nuevo,44931.189999999995
+2013-03-01,Terrestre,08 Pedro de Alvarado,11909.999999999995
+2013-03-01,Terrestre,09 San Cristóbal,21482.99999999999
+2013-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),7810.849997800002
+2013-03-01,Terrestre,11 Agua Caliente,8222.5
+2013-03-01,Terrestre,12 El Florido,4823.4567474048445
+2013-03-01,Terrestre,13 El Cinchado / El Corinto,3512.9191759112528
+2013-03-01,Terrestre,14 Tecún Umán,5058.5199999999995
+2013-03-01,Terrestre,15 El Carmen,7045.129999999993
+2013-03-01,Terrestre,16 La Mesilla,3918.4899999999993
+2013-03-01,Terrestre,17 El Naranjo,589.9999999999999
+2013-03-01,Terrestre,18 Bethel,427.98071979434445
+2013-03-01,Terrestre,19 Gracias a Dios,688.9999999999998
+2013-03-01,Terrestre,20 Melchor de Mencos,11213.599991999996
+2013-04-01,Aérea,01 La Aurora,72051.0
+2013-04-01,Aérea,02 Mundo Maya,151.0
+2013-04-01,Marítima,03 Puerto Quetzal,9275.0
+2013-04-01,Marítima,04 Santo Tomás de Castilla,490.0
+2013-04-01,Marítima,05 Puerto Barrios,564.0
+2013-04-01,Marítima,06 Livingston,423.0
+2013-04-01,Terrestre,07 Valle Nuevo,51840.260000000024
+2013-04-01,Terrestre,08 Pedro de Alvarado,9476.000000000004
+2013-04-01,Terrestre,09 San Cristóbal,14389.0
+2013-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),5326.700000000001
+2013-04-01,Terrestre,11 Agua Caliente,4342.539999999999
+2013-04-01,Terrestre,12 El Florido,3479.9999999999986
+2013-04-01,Terrestre,13 El Cinchado / El Corinto,2546.0
+2013-04-01,Terrestre,14 Tecún Umán,3083.5099999999998
+2013-04-01,Terrestre,15 El Carmen,4763.519999999997
+2013-04-01,Terrestre,16 La Mesilla,2816.6000000000004
+2013-04-01,Terrestre,17 El Naranjo,334.0
+2013-04-01,Terrestre,18 Bethel,209.0
+2013-04-01,Terrestre,19 Gracias a Dios,569.9999999999999
+2013-04-01,Terrestre,20 Melchor de Mencos,6574.380000000003
+2013-05-01,Aérea,01 La Aurora,70872.0
+2013-05-01,Aérea,02 Mundo Maya,174.0
+2013-05-01,Marítima,03 Puerto Quetzal,4006.0
+2013-05-01,Marítima,04 Santo Tomás de Castilla,30.0
+2013-05-01,Marítima,05 Puerto Barrios,608.0
+2013-05-01,Marítima,06 Livingston,412.0
+2013-05-01,Terrestre,07 Valle Nuevo,62210.84999999999
+2013-05-01,Terrestre,08 Pedro de Alvarado,9201.999999999996
+2013-05-01,Terrestre,09 San Cristóbal,8443.999999999998
+2013-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),4704.4
+2013-05-01,Terrestre,11 Agua Caliente,4347.99
+2013-05-01,Terrestre,12 El Florido,3138.000000000001
+2013-05-01,Terrestre,13 El Cinchado / El Corinto,2385.9999999999995
+2013-05-01,Terrestre,14 Tecún Umán,3414.589999999999
+2013-05-01,Terrestre,15 El Carmen,4120.129999999998
+2013-05-01,Terrestre,16 La Mesilla,2437.2699999999995
+2013-05-01,Terrestre,17 El Naranjo,316.00000000000006
+2013-05-01,Terrestre,18 Bethel,360.0
+2013-05-01,Terrestre,19 Gracias a Dios,765.9999999999999
+2013-05-01,Terrestre,20 Melchor de Mencos,7006.329999999996
+2013-06-01,Aérea,01 La Aurora,89021.0
+2013-06-01,Aérea,02 Mundo Maya,159.0
+2013-06-01,Marítima,03 Puerto Quetzal,66.0
+2013-06-01,Marítima,04 Santo Tomás de Castilla,9.0
+2013-06-01,Marítima,05 Puerto Barrios,527.0
+2013-06-01,Marítima,06 Livingston,341.0
+2013-06-01,Terrestre,07 Valle Nuevo,54491.77000000003
+2013-06-01,Terrestre,08 Pedro de Alvarado,10331.999999999947
+2013-06-01,Terrestre,09 San Cristóbal,8939.999999999996
+2013-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),4996.5
+2013-06-01,Terrestre,11 Agua Caliente,7097.920000000002
+2013-06-01,Terrestre,12 El Florido,3551.999999999999
+2013-06-01,Terrestre,13 El Cinchado / El Corinto,3134.999999999999
+2013-06-01,Terrestre,14 Tecún Umán,4057.079999999999
+2013-06-01,Terrestre,15 El Carmen,4920.749999999995
+2013-06-01,Terrestre,16 La Mesilla,2270.3999999999996
+2013-06-01,Terrestre,17 El Naranjo,255.00000000000003
+2013-06-01,Terrestre,18 Bethel,289.0
+2013-06-01,Terrestre,19 Gracias a Dios,653.9999999999999
+2013-06-01,Terrestre,20 Melchor de Mencos,8408.020000000002
+2013-07-01,Aérea,01 La Aurora,95070.0
+2013-07-01,Aérea,02 Mundo Maya,136.0
+2013-07-01,Marítima,03 Puerto Quetzal,812.0
+2013-07-01,Marítima,04 Santo Tomás de Castilla,5.0
+2013-07-01,Marítima,05 Puerto Barrios,721.0
+2013-07-01,Marítima,06 Livingston,460.0
+2013-07-01,Terrestre,07 Valle Nuevo,57821.33999999998
+2013-07-01,Terrestre,08 Pedro de Alvarado,7840.999999999975
+2013-07-01,Terrestre,09 San Cristóbal,9147.0
+2013-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),6428.400001000001
+2013-07-01,Terrestre,11 Agua Caliente,4280.58
+2013-07-01,Terrestre,12 El Florido,3932.999999999998
+2013-07-01,Terrestre,13 El Cinchado / El Corinto,3867.000000000001
+2013-07-01,Terrestre,14 Tecún Umán,4055.1000000000004
+2013-07-01,Terrestre,15 El Carmen,5683.210000000002
+2013-07-01,Terrestre,16 La Mesilla,4202.300000000001
+2013-07-01,Terrestre,17 El Naranjo,494.99999999999955
+2013-07-01,Terrestre,18 Bethel,504.99178403755866
+2013-07-01,Terrestre,19 Gracias a Dios,666.9999999999977
+2013-07-01,Terrestre,20 Melchor de Mencos,10030.700000000004
+2013-08-01,Aérea,01 La Aurora,77804.0
+2013-08-01,Aérea,02 Mundo Maya,109.0
+2013-08-01,Marítima,03 Puerto Quetzal,2117.0
+2013-08-01,Marítima,04 Santo Tomás de Castilla,7.0
+2013-08-01,Marítima,05 Puerto Barrios,512.0
+2013-08-01,Marítima,06 Livingston,422.0
+2013-08-01,Terrestre,07 Valle Nuevo,61911.53000000015
+2013-08-01,Terrestre,08 Pedro de Alvarado,11936.999999999967
+2013-08-01,Terrestre,09 San Cristóbal,10764.999999999996
+2013-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),6461.649999999999
+2013-08-01,Terrestre,11 Agua Caliente,3563.24
+2013-08-01,Terrestre,12 El Florido,3944.0
+2013-08-01,Terrestre,13 El Cinchado / El Corinto,2962.0000000000005
+2013-08-01,Terrestre,14 Tecún Umán,3279.69
+2013-08-01,Terrestre,15 El Carmen,4414.500000000004
+2013-08-01,Terrestre,16 La Mesilla,2635.29
+2013-08-01,Terrestre,17 El Naranjo,350.0
+2013-08-01,Terrestre,18 Bethel,186.0
+2013-08-01,Terrestre,19 Gracias a Dios,684.9999999999998
+2013-08-01,Terrestre,20 Melchor de Mencos,7868.720000000004
+2013-09-01,Aérea,01 La Aurora,66442.0
+2013-09-01,Aérea,02 Mundo Maya,185.0
+2013-09-01,Marítima,03 Puerto Quetzal,687.0
+2013-09-01,Marítima,04 Santo Tomás de Castilla,9.0
+2013-09-01,Marítima,05 Puerto Barrios,469.0
+2013-09-01,Marítima,06 Livingston,174.0
+2013-09-01,Terrestre,07 Valle Nuevo,52317.809999999976
+2013-09-01,Terrestre,08 Pedro de Alvarado,8137.000000000035
+2013-09-01,Terrestre,09 San Cristóbal,9312.0
+2013-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),4339.1500028
+2013-09-01,Terrestre,11 Agua Caliente,2962.5
+2013-09-01,Terrestre,12 El Florido,2922.000000000003
+2013-09-01,Terrestre,13 El Cinchado / El Corinto,2602.9999999999995
+2013-09-01,Terrestre,14 Tecún Umán,3351.359999999999
+2013-09-01,Terrestre,15 El Carmen,4093.960000000001
+2013-09-01,Terrestre,16 La Mesilla,2290.2999999999997
+2013-09-01,Terrestre,17 El Naranjo,370.00000000000006
+2013-09-01,Terrestre,18 Bethel,261.0
+2013-09-01,Terrestre,19 Gracias a Dios,721.9999999999999
+2013-09-01,Terrestre,20 Melchor de Mencos,6437.169999999996
+2013-10-01,Aérea,01 La Aurora,79438.0
+2013-10-01,Aérea,02 Mundo Maya,89.0
+2013-10-01,Marítima,03 Puerto Quetzal,1186.0
+2013-10-01,Marítima,04 Santo Tomás de Castilla,5.0
+2013-10-01,Marítima,05 Puerto Barrios,480.0
+2013-10-01,Marítima,06 Livingston,219.0
+2013-10-01,Terrestre,07 Valle Nuevo,32114.24999999997
+2013-10-01,Terrestre,08 Pedro de Alvarado,10387.999999999976
+2013-10-01,Terrestre,09 San Cristóbal,17381.0
+2013-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),4877.399999999999
+2013-10-01,Terrestre,11 Agua Caliente,3476.34
+2013-10-01,Terrestre,12 El Florido,2832.0000000000023
+2013-10-01,Terrestre,13 El Cinchado / El Corinto,2379.0
+2013-10-01,Terrestre,14 Tecún Umán,3332.4600000000005
+2013-10-01,Terrestre,15 El Carmen,3899.329999999999
+2013-10-01,Terrestre,16 La Mesilla,2521.4300000000003
+2013-10-01,Terrestre,17 El Naranjo,318.0
+2013-10-01,Terrestre,18 Bethel,435.0
+2013-10-01,Terrestre,19 Gracias a Dios,729.0000000000002
+2013-10-01,Terrestre,20 Melchor de Mencos,6376.77
+2013-11-01,Aérea,01 La Aurora,92265.0
+2013-11-01,Aérea,02 Mundo Maya,250.0
+2013-11-01,Marítima,03 Puerto Quetzal,10381.0
+2013-11-01,Marítima,04 Santo Tomás de Castilla,1743.0
+2013-11-01,Marítima,05 Puerto Barrios,593.0
+2013-11-01,Marítima,06 Livingston,434.0
+2013-11-01,Terrestre,07 Valle Nuevo,41794.09999999994
+2013-11-01,Terrestre,08 Pedro de Alvarado,11541.999999999975
+2013-11-01,Terrestre,09 San Cristóbal,20320.999999999993
+2013-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),6172.249999999999
+2013-11-01,Terrestre,11 Agua Caliente,3535.669999999999
+2013-11-01,Terrestre,12 El Florido,3278.9999999999973
+2013-11-01,Terrestre,13 El Cinchado / El Corinto,3066.0000000000005
+2013-11-01,Terrestre,14 Tecún Umán,3625.59
+2013-11-01,Terrestre,15 El Carmen,5055.4
+2013-11-01,Terrestre,16 La Mesilla,3451.01
+2013-11-01,Terrestre,17 El Naranjo,729.0
+2013-11-01,Terrestre,18 Bethel,604.0
+2013-11-01,Terrestre,19 Gracias a Dios,789.9999999999999
+2013-11-01,Terrestre,20 Melchor de Mencos,9155.400000000012
+2013-12-01,Aérea,01 La Aurora,112230.0
+2013-12-01,Aérea,02 Mundo Maya,258.0
+2013-12-01,Marítima,03 Puerto Quetzal,7564.0
+2013-12-01,Marítima,04 Santo Tomás de Castilla,4177.0
+2013-12-01,Marítima,05 Puerto Barrios,839.0
+2013-12-01,Marítima,06 Livingston,405.0
+2013-12-01,Terrestre,07 Valle Nuevo,54657.509999999966
+2013-12-01,Terrestre,08 Pedro de Alvarado,15168.999999999995
+2013-12-01,Terrestre,09 San Cristóbal,22982.99999999999
+2013-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),8811.949999999999
+2013-12-01,Terrestre,11 Agua Caliente,6081.199999999999
+2013-12-01,Terrestre,12 El Florido,4439.999999999999
+2013-12-01,Terrestre,13 El Cinchado / El Corinto,3946.0000000000005
+2013-12-01,Terrestre,14 Tecún Umán,5863.88
+2013-12-01,Terrestre,15 El Carmen,10843.040000000006
+2013-12-01,Terrestre,16 La Mesilla,4696.02
+2013-12-01,Terrestre,17 El Naranjo,569.0
+2013-12-01,Terrestre,18 Bethel,648.0
+2013-12-01,Terrestre,19 Gracias a Dios,678.0000000000002
+2013-12-01,Terrestre,20 Melchor de Mencos,14459.730000000003
+2014-01-01,Aérea,01 La Aurora,89922.0
+2014-01-01,Aérea,02 Mundo Maya,278.0
+2014-01-01,Marítima,03 Puerto Quetzal,7530.0
+2014-01-01,Marítima,04 Santo Tomás de Castilla,5117.0
+2014-01-01,Marítima,05 Puerto Barrios,579.0
+2014-01-01,Marítima,06 Livingston,496.0
+2014-01-01,Terrestre,07 Valle Nuevo,46944.53999999992
+2014-01-01,Terrestre,08 Pedro de Alvarado,10214.999999999998
+2014-01-01,Terrestre,09 San Cristóbal,18323.000000000007
+2014-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),11972.0
+2014-01-01,Terrestre,11 Agua Caliente,8236.0
+2014-01-01,Terrestre,12 El Florido,4564.0
+2014-01-01,Terrestre,13 El Cinchado / El Corinto,3605.0
+2014-01-01,Terrestre,14 Tecún Umán,3880.999999999999
+2014-01-01,Terrestre,15 El Carmen,6861.000000000001
+2014-01-01,Terrestre,16 La Mesilla,3479.0
+2014-01-01,Terrestre,17 El Naranjo,500.00000000000006
+2014-01-01,Terrestre,18 Bethel,943.0
+2014-01-01,Terrestre,19 Gracias a Dios,852.9999999999997
+2014-01-01,Terrestre,20 Melchor de Mencos,10147.999999999996
+2014-02-01,Aérea,01 La Aurora,77948.0
+2014-02-01,Aérea,02 Mundo Maya,261.0
+2014-02-01,Marítima,03 Puerto Quetzal,3867.0
+2014-02-01,Marítima,04 Santo Tomás de Castilla,3386.0
+2014-02-01,Marítima,05 Puerto Barrios,657.0
+2014-02-01,Marítima,06 Livingston,567.0
+2014-02-01,Terrestre,07 Valle Nuevo,32470.74999999999
+2014-02-01,Terrestre,08 Pedro de Alvarado,9204.000000000002
+2014-02-01,Terrestre,09 San Cristóbal,15447.000000000004
+2014-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),6255.999999999996
+2014-02-01,Terrestre,11 Agua Caliente,7129.0
+2014-02-01,Terrestre,12 El Florido,3018.000000000001
+2014-02-01,Terrestre,13 El Cinchado / El Corinto,2666.0
+2014-02-01,Terrestre,14 Tecún Umán,3027.999999999999
+2014-02-01,Terrestre,15 El Carmen,4530.000000000002
+2014-02-01,Terrestre,16 La Mesilla,2757.0
+2014-02-01,Terrestre,17 El Naranjo,366.99999999999994
+2014-02-01,Terrestre,18 Bethel,1137.0
+2014-02-01,Terrestre,19 Gracias a Dios,751.0
+2014-02-01,Terrestre,20 Melchor de Mencos,7275.0
+2014-03-01,Aérea,01 La Aurora,91935.0
+2014-03-01,Aérea,02 Mundo Maya,200.0
+2014-03-01,Marítima,03 Puerto Quetzal,5996.999999999999
+2014-03-01,Marítima,04 Santo Tomás de Castilla,5662.0
+2014-03-01,Marítima,05 Puerto Barrios,629.0
+2014-03-01,Marítima,06 Livingston,548.0
+2014-03-01,Terrestre,07 Valle Nuevo,33508.77000000005
+2014-03-01,Terrestre,08 Pedro de Alvarado,11007.000000000002
+2014-03-01,Terrestre,09 San Cristóbal,22069.999999999996
+2014-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),5964.999999999999
+2014-03-01,Terrestre,11 Agua Caliente,6290.999999999999
+2014-03-01,Terrestre,12 El Florido,3470.999999999998
+2014-03-01,Terrestre,13 El Cinchado / El Corinto,2648.999999999999
+2014-03-01,Terrestre,14 Tecún Umán,3729.000000000001
+2014-03-01,Terrestre,15 El Carmen,5205.999999999999
+2014-03-01,Terrestre,16 La Mesilla,2993.0
+2014-03-01,Terrestre,17 El Naranjo,550.0
+2014-03-01,Terrestre,18 Bethel,978.964338781575
+2014-03-01,Terrestre,19 Gracias a Dios,922.0000000000002
+2014-03-01,Terrestre,20 Melchor de Mencos,10867.000000000007
+2014-04-01,Aérea,01 La Aurora,89382.0
+2014-04-01,Aérea,02 Mundo Maya,218.0
+2014-04-01,Marítima,03 Puerto Quetzal,11702.0
+2014-04-01,Marítima,04 Santo Tomás de Castilla,487.0
+2014-04-01,Marítima,05 Puerto Barrios,718.0
+2014-04-01,Marítima,06 Livingston,669.0
+2014-04-01,Terrestre,07 Valle Nuevo,63185.90000000002
+2014-04-01,Terrestre,08 Pedro de Alvarado,14232.00000000001
+2014-04-01,Terrestre,09 San Cristóbal,14893.0
+2014-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),8089.000000000001
+2014-04-01,Terrestre,11 Agua Caliente,4706.000000000001
+2014-04-01,Terrestre,12 El Florido,4096.999999999998
+2014-04-01,Terrestre,13 El Cinchado / El Corinto,3494.0000000000005
+2014-04-01,Terrestre,14 Tecún Umán,4491.999999999998
+2014-04-01,Terrestre,15 El Carmen,6454.999999999997
+2014-04-01,Terrestre,16 La Mesilla,3526.9999999999986
+2014-04-01,Terrestre,17 El Naranjo,691.9999999999997
+2014-04-01,Terrestre,18 Bethel,523.0
+2014-04-01,Terrestre,19 Gracias a Dios,782.0000000000008
+2014-04-01,Terrestre,20 Melchor de Mencos,11479.999999999995
+2014-05-01,Aérea,01 La Aurora,80202.0
+2014-05-01,Aérea,02 Mundo Maya,181.0
+2014-05-01,Marítima,03 Puerto Quetzal,1841.0
+2014-05-01,Marítima,04 Santo Tomás de Castilla,1218.0
+2014-05-01,Marítima,05 Puerto Barrios,637.0
+2014-05-01,Marítima,06 Livingston,610.0
+2014-05-01,Terrestre,07 Valle Nuevo,58664.52000000008
+2014-05-01,Terrestre,08 Pedro de Alvarado,11371.999999999998
+2014-05-01,Terrestre,09 San Cristóbal,8947.0
+2014-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),5909.999999999997
+2014-05-01,Terrestre,11 Agua Caliente,2073.0
+2014-05-01,Terrestre,12 El Florido,3185.9999999999986
+2014-05-01,Terrestre,13 El Cinchado / El Corinto,2194.0
+2014-05-01,Terrestre,14 Tecún Umán,3506.0000000000005
+2014-05-01,Terrestre,15 El Carmen,4990.0
+2014-05-01,Terrestre,16 La Mesilla,1973.0
+2014-05-01,Terrestre,17 El Naranjo,428.9999999999999
+2014-05-01,Terrestre,18 Bethel,175.0
+2014-05-01,Terrestre,19 Gracias a Dios,956.9999999999993
+2014-05-01,Terrestre,20 Melchor de Mencos,7868.0
+2014-06-01,Aérea,01 La Aurora,98962.0
+2014-06-01,Aérea,02 Mundo Maya,122.0
+2014-06-01,Marítima,03 Puerto Quetzal,26.0
+2014-06-01,Marítima,04 Santo Tomás de Castilla,8.0
+2014-06-01,Marítima,05 Puerto Barrios,528.0
+2014-06-01,Marítima,06 Livingston,375.0
+2014-06-01,Terrestre,07 Valle Nuevo,44443.34999999993
+2014-06-01,Terrestre,08 Pedro de Alvarado,12888.000000000002
+2014-06-01,Terrestre,09 San Cristóbal,9365.0
+2014-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),5199.999999999999
+2014-06-01,Terrestre,11 Agua Caliente,3789.0
+2014-06-01,Terrestre,12 El Florido,3084.000000000001
+2014-06-01,Terrestre,13 El Cinchado / El Corinto,3252.9999999999995
+2014-06-01,Terrestre,14 Tecún Umán,2836.0
+2014-06-01,Terrestre,15 El Carmen,5082.000000000001
+2014-06-01,Terrestre,16 La Mesilla,2376.0
+2014-06-01,Terrestre,17 El Naranjo,401.0
+2014-06-01,Terrestre,18 Bethel,290.0
+2014-06-01,Terrestre,19 Gracias a Dios,925.0
+2014-06-01,Terrestre,20 Melchor de Mencos,8471.999999859996
+2014-07-01,Aérea,01 La Aurora,102567.0
+2014-07-01,Aérea,02 Mundo Maya,162.0
+2014-07-01,Marítima,03 Puerto Quetzal,34.0
+2014-07-01,Marítima,04 Santo Tomás de Castilla,10.0
+2014-07-01,Marítima,05 Puerto Barrios,561.0
+2014-07-01,Marítima,06 Livingston,472.0
+2014-07-01,Terrestre,07 Valle Nuevo,66486.68999999997
+2014-07-01,Terrestre,08 Pedro de Alvarado,11267.000000000002
+2014-07-01,Terrestre,09 San Cristóbal,9755.999999999998
+2014-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),7862.999999999998
+2014-07-01,Terrestre,11 Agua Caliente,7412.0
+2014-07-01,Terrestre,12 El Florido,3718.000000000001
+2014-07-01,Terrestre,13 El Cinchado / El Corinto,3302.0
+2014-07-01,Terrestre,14 Tecún Umán,3143.0000000000005
+2014-07-01,Terrestre,15 El Carmen,4554.0
+2014-07-01,Terrestre,16 La Mesilla,3198.0
+2014-07-01,Terrestre,17 El Naranjo,616.0000000000001
+2014-07-01,Terrestre,18 Bethel,522.0
+2014-07-01,Terrestre,19 Gracias a Dios,971.9999999999992
+2014-07-01,Terrestre,20 Melchor de Mencos,12757.999999999987
+2014-08-01,Aérea,01 La Aurora,86299.0
+2014-08-01,Aérea,02 Mundo Maya,193.0
+2014-08-01,Marítima,03 Puerto Quetzal,1895.0
+2014-08-01,Marítima,04 Santo Tomás de Castilla,4.0
+2014-08-01,Marítima,05 Puerto Barrios,583.0
+2014-08-01,Marítima,06 Livingston,533.0
+2014-08-01,Terrestre,07 Valle Nuevo,71240.76999999997
+2014-08-01,Terrestre,08 Pedro de Alvarado,12569.999999999984
+2014-08-01,Terrestre,09 San Cristóbal,11127.0
+2014-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),6383.999999999999
+2014-08-01,Terrestre,11 Agua Caliente,4953.0
+2014-08-01,Terrestre,12 El Florido,3948.0
+2014-08-01,Terrestre,13 El Cinchado / El Corinto,3505.0
+2014-08-01,Terrestre,14 Tecún Umán,3802.0
+2014-08-01,Terrestre,15 El Carmen,5016.000000000001
+2014-08-01,Terrestre,16 La Mesilla,2855.0
+2014-08-01,Terrestre,17 El Naranjo,406.0
+2014-08-01,Terrestre,18 Bethel,454.0
+2014-08-01,Terrestre,19 Gracias a Dios,1001.0000000000007
+2014-08-01,Terrestre,20 Melchor de Mencos,12839.000000000002
+2014-09-01,Aérea,01 La Aurora,73502.0
+2014-09-01,Aérea,02 Mundo Maya,100.0
+2014-09-01,Marítima,03 Puerto Quetzal,32.0
+2014-09-01,Marítima,04 Santo Tomás de Castilla,6.0
+2014-09-01,Marítima,05 Puerto Barrios,440.0
+2014-09-01,Marítima,06 Livingston,340.0
+2014-09-01,Terrestre,07 Valle Nuevo,59415.10999999995
+2014-09-01,Terrestre,08 Pedro de Alvarado,9597.000000000025
+2014-09-01,Terrestre,09 San Cristóbal,9643.0
+2014-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),7940.0
+2014-09-01,Terrestre,11 Agua Caliente,4721.0
+2014-09-01,Terrestre,12 El Florido,2770.0000000000014
+2014-09-01,Terrestre,13 El Cinchado / El Corinto,2716.0000000000005
+2014-09-01,Terrestre,14 Tecún Umán,3163.0
+2014-09-01,Terrestre,15 El Carmen,3826.9999999999986
+2014-09-01,Terrestre,16 La Mesilla,2844.9999999999995
+2014-09-01,Terrestre,17 El Naranjo,391.0000000000001
+2014-09-01,Terrestre,18 Bethel,213.0
+2014-09-01,Terrestre,19 Gracias a Dios,788.0
+2014-09-01,Terrestre,20 Melchor de Mencos,8364.999999999995
+2014-10-01,Aérea,01 La Aurora,86176.0
+2014-10-01,Aérea,02 Mundo Maya,89.0
+2014-10-01,Marítima,03 Puerto Quetzal,38.0
+2014-10-01,Marítima,04 Santo Tomás de Castilla,9.0
+2014-10-01,Marítima,05 Puerto Barrios,456.0
+2014-10-01,Marítima,06 Livingston,215.0
+2014-10-01,Terrestre,07 Valle Nuevo,74405.01000000007
+2014-10-01,Terrestre,08 Pedro de Alvarado,8692.999999999998
+2014-10-01,Terrestre,09 San Cristóbal,19803.999999999993
+2014-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),6399.0
+2014-10-01,Terrestre,11 Agua Caliente,3934.0
+2014-10-01,Terrestre,12 El Florido,3425.0
+2014-10-01,Terrestre,13 El Cinchado / El Corinto,3231.0
+2014-10-01,Terrestre,14 Tecún Umán,3269.0
+2014-10-01,Terrestre,15 El Carmen,4084.9999999999986
+2014-10-01,Terrestre,16 La Mesilla,3118.0
+2014-10-01,Terrestre,17 El Naranjo,427.0
+2014-10-01,Terrestre,18 Bethel,349.0
+2014-10-01,Terrestre,19 Gracias a Dios,782.0000000000003
+2014-10-01,Terrestre,20 Melchor de Mencos,7725.999999999991
+2014-11-01,Aérea,01 La Aurora,95629.0
+2014-11-01,Aérea,02 Mundo Maya,147.0
+2014-11-01,Marítima,03 Puerto Quetzal,9177.0
+2014-11-01,Marítima,04 Santo Tomás de Castilla,2864.0
+2014-11-01,Marítima,05 Puerto Barrios,462.0
+2014-11-01,Marítima,06 Livingston,348.0
+2014-11-01,Terrestre,07 Valle Nuevo,67945.28999999957
+2014-11-01,Terrestre,08 Pedro de Alvarado,11308.999999999998
+2014-11-01,Terrestre,09 San Cristóbal,29861.000000000004
+2014-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),8433.000000000002
+2014-11-01,Terrestre,11 Agua Caliente,5556.0
+2014-11-01,Terrestre,12 El Florido,3498.9999999999986
+2014-11-01,Terrestre,13 El Cinchado / El Corinto,2648.0000000000005
+2014-11-01,Terrestre,14 Tecún Umán,3647.0
+2014-11-01,Terrestre,15 El Carmen,4586.999999999998
+2014-11-01,Terrestre,16 La Mesilla,4320.0
+2014-11-01,Terrestre,17 El Naranjo,448.99999999999994
+2014-11-01,Terrestre,18 Bethel,738.0
+2014-11-01,Terrestre,19 Gracias a Dios,799.9999999999997
+2014-11-01,Terrestre,20 Melchor de Mencos,9934.000000000004
+2014-12-01,Aérea,01 La Aurora,117614.0
+2014-12-01,Aérea,02 Mundo Maya,264.0
+2014-12-01,Marítima,03 Puerto Quetzal,4754.0
+2014-12-01,Marítima,04 Santo Tomás de Castilla,5706.0
+2014-12-01,Marítima,05 Puerto Barrios,705.0
+2014-12-01,Marítima,06 Livingston,359.0
+2014-12-01,Terrestre,07 Valle Nuevo,94078.29999999994
+2014-12-01,Terrestre,08 Pedro de Alvarado,15612.0
+2014-12-01,Terrestre,09 San Cristóbal,29508.000000000036
+2014-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),11254.999999999998
+2014-12-01,Terrestre,11 Agua Caliente,6681.0
+2014-12-01,Terrestre,12 El Florido,4663.0
+2014-12-01,Terrestre,13 El Cinchado / El Corinto,4448.000000000001
+2014-12-01,Terrestre,14 Tecún Umán,6186.999999999999
+2014-12-01,Terrestre,15 El Carmen,10695.999999999998
+2014-12-01,Terrestre,16 La Mesilla,6152.0
+2014-12-01,Terrestre,17 El Naranjo,830.0000000000002
+2014-12-01,Terrestre,18 Bethel,687.0
+2014-12-01,Terrestre,19 Gracias a Dios,911.9999999999999
+2014-12-01,Terrestre,20 Melchor de Mencos,17182.000000000015
+2015-01-01,Aérea,01 La Aurora,94819.0
+2015-01-01,Aérea,02 Mundo Maya,245.0
+2015-01-01,Marítima,03 Puerto Quetzal,1666.0
+2015-01-01,Marítima,04 Santo Tomás de Castilla,4411.0
+2015-01-01,Marítima,05 Puerto Barrios,579.0
+2015-01-01,Marítima,06 Livingston,538.0
+2015-01-01,Terrestre,07 Valle Nuevo,65988.99999999996
+2015-01-01,Terrestre,08 Pedro de Alvarado,11936.000000000007
+2015-01-01,Terrestre,09 San Cristóbal,20155.000001625056
+2015-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),6959.999999999999
+2015-01-01,Terrestre,11 Agua Caliente,7577.0000000000055
+2015-01-01,Terrestre,12 El Florido,5085.000000000006
+2015-01-01,Terrestre,13 El Cinchado / El Corinto,4205.999999999994
+2015-01-01,Terrestre,14 Tecún Umán,4208.000000000001
+2015-01-01,Terrestre,15 El Carmen,6057.000000000001
+2015-01-01,Terrestre,16 La Mesilla,4074.9999999999964
+2015-01-01,Terrestre,17 El Naranjo,695.9999999999995
+2015-01-01,Terrestre,18 Bethel,636.0
+2015-01-01,Terrestre,19 Gracias a Dios,809.9999999999984
+2015-01-01,Terrestre,20 Melchor de Mencos,12626.99999999999
+2015-02-01,Aérea,01 La Aurora,79713.0
+2015-02-01,Aérea,02 Mundo Maya,165.0
+2015-02-01,Marítima,03 Puerto Quetzal,4374.0
+2015-02-01,Marítima,04 Santo Tomás de Castilla,3280.0
+2015-02-01,Marítima,05 Puerto Barrios,435.0
+2015-02-01,Marítima,06 Livingston,425.0
+2015-02-01,Terrestre,07 Valle Nuevo,54034.000000000044
+2015-02-01,Terrestre,08 Pedro de Alvarado,9393.999999999956
+2015-02-01,Terrestre,09 San Cristóbal,17737.99999823695
+2015-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),5457.999999999996
+2015-02-01,Terrestre,11 Agua Caliente,4124.999999999998
+2015-02-01,Terrestre,12 El Florido,3649.9999999999955
+2015-02-01,Terrestre,13 El Cinchado / El Corinto,2364.9999999999973
+2015-02-01,Terrestre,14 Tecún Umán,3175.9999999999973
+2015-02-01,Terrestre,15 El Carmen,4823.000000000001
+2015-02-01,Terrestre,16 La Mesilla,3392.0000000000014
+2015-02-01,Terrestre,17 El Naranjo,433.00000000000085
+2015-02-01,Terrestre,18 Bethel,703.0000000000001
+2015-02-01,Terrestre,19 Gracias a Dios,1056.0000000000023
+2015-02-01,Terrestre,20 Melchor de Mencos,9237.499999999995
+2015-03-01,Aérea,01 La Aurora,97898.0
+2015-03-01,Aérea,02 Mundo Maya,223.0
+2015-03-01,Marítima,03 Puerto Quetzal,4412.0
+2015-03-01,Marítima,04 Santo Tomás de Castilla,7231.000000000001
+2015-03-01,Marítima,05 Puerto Barrios,516.0
+2015-03-01,Marítima,06 Livingston,514.0
+2015-03-01,Terrestre,07 Valle Nuevo,70069.00000000023
+2015-03-01,Terrestre,08 Pedro de Alvarado,12102.999999999995
+2015-03-01,Terrestre,09 San Cristóbal,20046.999997402974
+2015-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),8919.000000000002
+2015-03-01,Terrestre,11 Agua Caliente,5595.000000000006
+2015-03-01,Terrestre,12 El Florido,4406.999999999997
+2015-03-01,Terrestre,13 El Cinchado / El Corinto,3592.0000000000005
+2015-03-01,Terrestre,14 Tecún Umán,5066.999999999998
+2015-03-01,Terrestre,15 El Carmen,7031.000000000005
+2015-03-01,Terrestre,16 La Mesilla,3569.999999999993
+2015-03-01,Terrestre,17 El Naranjo,529.9999999999997
+2015-03-01,Terrestre,18 Bethel,470.0000000000003
+2015-03-01,Terrestre,19 Gracias a Dios,938.9999999999982
+2015-03-01,Terrestre,20 Melchor de Mencos,11894.28445006321
+2015-04-01,Aérea,01 La Aurora,87359.0
+2015-04-01,Aérea,02 Mundo Maya,181.0
+2015-04-01,Marítima,03 Puerto Quetzal,17430.0
+2015-04-01,Marítima,04 Santo Tomás de Castilla,3060.0
+2015-04-01,Marítima,05 Puerto Barrios,589.0
+2015-04-01,Marítima,06 Livingston,664.0
+2015-04-01,Terrestre,07 Valle Nuevo,70067.0000000007
+2015-04-01,Terrestre,08 Pedro de Alvarado,14838.999999999874
+2015-04-01,Terrestre,09 San Cristóbal,20236.999999987962
+2015-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),14653.000000000013
+2015-04-01,Terrestre,11 Agua Caliente,5323.999999999998
+2015-04-01,Terrestre,12 El Florido,4406.000000000007
+2015-04-01,Terrestre,13 El Cinchado / El Corinto,3773.0000000000055
+2015-04-01,Terrestre,14 Tecún Umán,4692.000000000001
+2015-04-01,Terrestre,15 El Carmen,7169.000000000007
+2015-04-01,Terrestre,16 La Mesilla,3616.0000000000027
+2015-04-01,Terrestre,17 El Naranjo,573.0000000000003
+2015-04-01,Terrestre,18 Bethel,261.0000000000001
+2015-04-01,Terrestre,19 Gracias a Dios,1247.9999999999998
+2015-04-01,Terrestre,20 Melchor de Mencos,11327.500000000002
+2015-05-01,Aérea,01 La Aurora,84177.0
+2015-05-01,Aérea,02 Mundo Maya,157.0
+2015-05-01,Marítima,03 Puerto Quetzal,7716.0
+2015-05-01,Marítima,04 Santo Tomás de Castilla,8.0
+2015-05-01,Marítima,05 Puerto Barrios,442.0
+2015-05-01,Marítima,06 Livingston,498.0
+2015-05-01,Terrestre,07 Valle Nuevo,65858.0000000001
+2015-05-01,Terrestre,08 Pedro de Alvarado,12767.999999999929
+2015-05-01,Terrestre,09 San Cristóbal,20314.000001677057
+2015-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),10467.00000000003
+2015-05-01,Terrestre,11 Agua Caliente,4888.0
+2015-05-01,Terrestre,12 El Florido,3454.000000000002
+2015-05-01,Terrestre,13 El Cinchado / El Corinto,3041.999999999999
+2015-05-01,Terrestre,14 Tecún Umán,3880.000000000001
+2015-05-01,Terrestre,15 El Carmen,5407.000000000003
+2015-05-01,Terrestre,16 La Mesilla,2764.0000000000064
+2015-05-01,Terrestre,17 El Naranjo,469.00000000000085
+2015-05-01,Terrestre,18 Bethel,188.00000000000009
+2015-05-01,Terrestre,19 Gracias a Dios,1401.9999999999945
+2015-05-01,Terrestre,20 Melchor de Mencos,10164.298232695144
+2015-06-01,Aérea,01 La Aurora,104714.0
+2015-06-01,Aérea,02 Mundo Maya,179.0
+2015-06-01,Marítima,03 Puerto Quetzal,1232.0
+2015-06-01,Marítima,04 Santo Tomás de Castilla,6.0
+2015-06-01,Marítima,05 Puerto Barrios,414.0
+2015-06-01,Marítima,06 Livingston,377.0
+2015-06-01,Terrestre,07 Valle Nuevo,64463.99999999994
+2015-06-01,Terrestre,08 Pedro de Alvarado,15323.999999999964
+2015-06-01,Terrestre,09 San Cristóbal,20086.999999162013
+2015-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),9256.999999999982
+2015-06-01,Terrestre,11 Agua Caliente,4047.0000000000086
+2015-06-01,Terrestre,12 El Florido,3567.999999999997
+2015-06-01,Terrestre,13 El Cinchado / El Corinto,3896.999999999996
+2015-06-01,Terrestre,14 Tecún Umán,4390.0
+2015-06-01,Terrestre,15 El Carmen,5962.000000000003
+2015-06-01,Terrestre,16 La Mesilla,2651.9999999999986
+2015-06-01,Terrestre,17 El Naranjo,422.0000000000002
+2015-06-01,Terrestre,18 Bethel,116.00000000000001
+2015-06-01,Terrestre,19 Gracias a Dios,1571.0000000000002
+2015-06-01,Terrestre,20 Melchor de Mencos,9669.000000000015
+2015-07-01,Aérea,01 La Aurora,106690.0
+2015-07-01,Aérea,02 Mundo Maya,237.0
+2015-07-01,Marítima,03 Puerto Quetzal,1048.0
+2015-07-01,Marítima,04 Santo Tomás de Castilla,11.0
+2015-07-01,Marítima,05 Puerto Barrios,476.0
+2015-07-01,Marítima,06 Livingston,466.0
+2015-07-01,Terrestre,07 Valle Nuevo,64913.00000000022
+2015-07-01,Terrestre,08 Pedro de Alvarado,10913.000000000002
+2015-07-01,Terrestre,09 San Cristóbal,18777.999998906016
+2015-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),11544.000000000011
+2015-07-01,Terrestre,11 Agua Caliente,4886.999999999994
+2015-07-01,Terrestre,12 El Florido,3959.999999999998
+2015-07-01,Terrestre,13 El Cinchado / El Corinto,3800.9999999999914
+2015-07-01,Terrestre,14 Tecún Umán,4009.999999999998
+2015-07-01,Terrestre,15 El Carmen,5885.999999999991
+2015-07-01,Terrestre,16 La Mesilla,3328.0000000000023
+2015-07-01,Terrestre,17 El Naranjo,654.0000000000008
+2015-07-01,Terrestre,18 Bethel,340.00000000000006
+2015-07-01,Terrestre,19 Gracias a Dios,1126.0000000000005
+2015-07-01,Terrestre,20 Melchor de Mencos,14114.000000000036
+2015-08-01,Aérea,01 La Aurora,90393.0
+2015-08-01,Aérea,02 Mundo Maya,207.0
+2015-08-01,Marítima,03 Puerto Quetzal,6744.0
+2015-08-01,Marítima,04 Santo Tomás de Castilla,6.0
+2015-08-01,Marítima,05 Puerto Barrios,523.0
+2015-08-01,Marítima,06 Livingston,517.0
+2015-08-01,Terrestre,07 Valle Nuevo,75619.99999999959
+2015-08-01,Terrestre,08 Pedro de Alvarado,12691.999999999998
+2015-08-01,Terrestre,09 San Cristóbal,17954.000000283148
+2015-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),15308.999999999993
+2015-08-01,Terrestre,11 Agua Caliente,6129.000000000011
+2015-08-01,Terrestre,12 El Florido,4170.000000000005
+2015-08-01,Terrestre,13 El Cinchado / El Corinto,3568.9999999999977
+2015-08-01,Terrestre,14 Tecún Umán,3719.999999999998
+2015-08-01,Terrestre,15 El Carmen,6557.999999999992
+2015-08-01,Terrestre,16 La Mesilla,2794.9999999999964
+2015-08-01,Terrestre,17 El Naranjo,553.0000000000001
+2015-08-01,Terrestre,18 Bethel,235.99999999999997
+2015-08-01,Terrestre,19 Gracias a Dios,1310.0000000000007
+2015-08-01,Terrestre,20 Melchor de Mencos,11582.500000000033
+2015-09-01,Aérea,01 La Aurora,82741.0
+2015-09-01,Aérea,02 Mundo Maya,147.0
+2015-09-01,Marítima,03 Puerto Quetzal,53.0
+2015-09-01,Marítima,04 Santo Tomás de Castilla,6.0
+2015-09-01,Marítima,05 Puerto Barrios,371.0
+2015-09-01,Marítima,06 Livingston,232.0
+2015-09-01,Terrestre,07 Valle Nuevo,59061.00000000024
+2015-09-01,Terrestre,08 Pedro de Alvarado,10325.999999999984
+2015-09-01,Terrestre,09 San Cristóbal,15535.999999344029
+2015-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),9255.000000000004
+2015-09-01,Terrestre,11 Agua Caliente,4292.999999999995
+2015-09-01,Terrestre,12 El Florido,3273.000000000001
+2015-09-01,Terrestre,13 El Cinchado / El Corinto,2707.999999999995
+2015-09-01,Terrestre,14 Tecún Umán,3797.9999999999995
+2015-09-01,Terrestre,15 El Carmen,5367.9999999999945
+2015-09-01,Terrestre,16 La Mesilla,2084.9999999999995
+2015-09-01,Terrestre,17 El Naranjo,427.0000000000001
+2015-09-01,Terrestre,18 Bethel,207.0
+2015-09-01,Terrestre,19 Gracias a Dios,1232.0000000000005
+2015-09-01,Terrestre,20 Melchor de Mencos,7885.500000000026
+2015-10-01,Aérea,01 La Aurora,97079.0
+2015-10-01,Aérea,02 Mundo Maya,164.0
+2015-10-01,Marítima,03 Puerto Quetzal,2645.0
+2015-10-01,Marítima,04 Santo Tomás de Castilla,5.0
+2015-10-01,Marítima,05 Puerto Barrios,393.0
+2015-10-01,Marítima,06 Livingston,182.0
+2015-10-01,Terrestre,07 Valle Nuevo,64658.999999999876
+2015-10-01,Terrestre,08 Pedro de Alvarado,10738.999999999996
+2015-10-01,Terrestre,09 San Cristóbal,18376.99999686202
+2015-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),7768.999999999989
+2015-10-01,Terrestre,11 Agua Caliente,5125.000000000008
+2015-10-01,Terrestre,12 El Florido,3490.000000000012
+2015-10-01,Terrestre,13 El Cinchado / El Corinto,3533.9999999999936
+2015-10-01,Terrestre,14 Tecún Umán,3540.9999999999964
+2015-10-01,Terrestre,15 El Carmen,5686.999999999998
+2015-10-01,Terrestre,16 La Mesilla,2536.0000000000023
+2015-10-01,Terrestre,17 El Naranjo,465.0000000000001
+2015-10-01,Terrestre,18 Bethel,287.99999999999994
+2015-10-01,Terrestre,19 Gracias a Dios,1167.9999999999993
+2015-10-01,Terrestre,20 Melchor de Mencos,7172.000000000028
+2015-11-01,Aérea,01 La Aurora,109966.0
+2015-11-01,Aérea,02 Mundo Maya,207.0
+2015-11-01,Marítima,03 Puerto Quetzal,5969.0
+2015-11-01,Marítima,04 Santo Tomás de Castilla,1.0
+2015-11-01,Marítima,05 Puerto Barrios,470.0
+2015-11-01,Marítima,06 Livingston,340.0
+2015-11-01,Terrestre,07 Valle Nuevo,60400.999999999985
+2015-11-01,Terrestre,08 Pedro de Alvarado,13978.999999999998
+2015-11-01,Terrestre,09 San Cristóbal,20291.000002216002
+2015-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),3764.0000000000055
+2015-11-01,Terrestre,11 Agua Caliente,7333.9999999999945
+2015-11-01,Terrestre,12 El Florido,3594.000000000007
+2015-11-01,Terrestre,13 El Cinchado / El Corinto,2215.9999999999955
+2015-11-01,Terrestre,14 Tecún Umán,4198.9999999999945
+2015-11-01,Terrestre,15 El Carmen,6416.99999999999
+2015-11-01,Terrestre,16 La Mesilla,3264.0
+2015-11-01,Terrestre,17 El Naranjo,625.9999999999999
+2015-11-01,Terrestre,18 Bethel,513.0
+2015-11-01,Terrestre,19 Gracias a Dios,1090.999999999998
+2015-11-01,Terrestre,20 Melchor de Mencos,8317.500000000005
+2015-12-01,Aérea,01 La Aurora,129455.0
+2015-12-01,Aérea,02 Mundo Maya,296.0
+2015-12-01,Marítima,03 Puerto Quetzal,4408.0
+2015-12-01,Marítima,04 Santo Tomás de Castilla,2340.0
+2015-12-01,Marítima,05 Puerto Barrios,658.0
+2015-12-01,Marítima,06 Livingston,395.0
+2015-12-01,Terrestre,07 Valle Nuevo,90124.00000000006
+2015-12-01,Terrestre,08 Pedro de Alvarado,19925.999999999996
+2015-12-01,Terrestre,09 San Cristóbal,28149.00000362199
+2015-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),3702.000000000002
+2015-12-01,Terrestre,11 Agua Caliente,9227.999999999998
+2015-12-01,Terrestre,12 El Florido,5156.000000000005
+2015-12-01,Terrestre,13 El Cinchado / El Corinto,2923.9999999999945
+2015-12-01,Terrestre,14 Tecún Umán,7843.999999999999
+2015-12-01,Terrestre,15 El Carmen,13706.999999999984
+2015-12-01,Terrestre,16 La Mesilla,5020.999999999996
+2015-12-01,Terrestre,17 El Naranjo,814.000000082002
+2015-12-01,Terrestre,18 Bethel,383.0
+2015-12-01,Terrestre,19 Gracias a Dios,1125.0000000000007
+2015-12-01,Terrestre,20 Melchor de Mencos,13077.5
+2016-01-01,Aérea,01 La Aurora,108808.0
+2016-01-01,Aérea,02 Mundo Maya,244.0
+2016-01-01,Marítima,03 Puerto Quetzal,3848.0
+2016-01-01,Marítima,04 Santo Tomás de Castilla,4013.0
+2016-01-01,Marítima,05 Puerto Barrios,588.0
+2016-01-01,Marítima,06 Livingston,504.0
+2016-01-01,Terrestre,07 Valle Nuevo,61749.9999999998
+2016-01-01,Terrestre,08 Pedro de Alvarado,16708.99999999999
+2016-01-01,Terrestre,09 San Cristóbal,25763.000000000087
+2016-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),9739.99999999999
+2016-01-01,Terrestre,11 Agua Caliente,5643.999999999988
+2016-01-01,Terrestre,12 El Florido,5177.0000000000055
+2016-01-01,Terrestre,13 El Cinchado / El Corinto,4020.9999999999986
+2016-01-01,Terrestre,14 Tecún Umán,5621.999999999995
+2016-01-01,Terrestre,15 El Carmen,7409.000000000002
+2016-01-01,Terrestre,16 La Mesilla,4058.000000000002
+2016-01-01,Terrestre,17 El Naranjo,678.0000000000005
+2016-01-01,Terrestre,18 Bethel,364.0
+2016-01-01,Terrestre,19 Gracias a Dios,1117.0
+2016-01-01,Terrestre,20 Melchor de Mencos,13234.000000000002
+2016-02-01,Aérea,01 La Aurora,90711.0
+2016-02-01,Aérea,02 Mundo Maya,233.0
+2016-02-01,Marítima,03 Puerto Quetzal,6116.999999999999
+2016-02-01,Marítima,04 Santo Tomás de Castilla,4647.0
+2016-02-01,Marítima,05 Puerto Barrios,523.0
+2016-02-01,Marítima,06 Livingston,421.0
+2016-02-01,Terrestre,07 Valle Nuevo,51677.999999999956
+2016-02-01,Terrestre,08 Pedro de Alvarado,13016.999999999973
+2016-02-01,Terrestre,09 San Cristóbal,24112.999999999887
+2016-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),7308.00000000003
+2016-02-01,Terrestre,11 Agua Caliente,2632.9999999999986
+2016-02-01,Terrestre,12 El Florido,3707.0000000000045
+2016-02-01,Terrestre,13 El Cinchado / El Corinto,2371.999999999999
+2016-02-01,Terrestre,14 Tecún Umán,4894.00000000001
+2016-02-01,Terrestre,15 El Carmen,6388.00000000001
+2016-02-01,Terrestre,16 La Mesilla,3660.000000000006
+2016-02-01,Terrestre,17 El Naranjo,550.9999999999997
+2016-02-01,Terrestre,18 Bethel,598.0
+2016-02-01,Terrestre,19 Gracias a Dios,1056.0000000000011
+2016-02-01,Terrestre,20 Melchor de Mencos,9991.0
+2016-03-01,Aérea,01 La Aurora,116938.0
+2016-03-01,Aérea,02 Mundo Maya,234.0
+2016-03-01,Marítima,03 Puerto Quetzal,6031.0
+2016-03-01,Marítima,04 Santo Tomás de Castilla,7132.0
+2016-03-01,Marítima,05 Puerto Barrios,637.0
+2016-03-01,Marítima,06 Livingston,434.0
+2016-03-01,Terrestre,07 Valle Nuevo,73686.99999999993
+2016-03-01,Terrestre,08 Pedro de Alvarado,18073.999999999956
+2016-03-01,Terrestre,09 San Cristóbal,36592.00000000012
+2016-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),35120.00000000003
+2016-03-01,Terrestre,11 Agua Caliente,4996.000000000001
+2016-03-01,Terrestre,12 El Florido,4999.999999999999
+2016-03-01,Terrestre,13 El Cinchado / El Corinto,3945.0000000000014
+2016-03-01,Terrestre,14 Tecún Umán,8299.00000000001
+2016-03-01,Terrestre,15 El Carmen,9514.000000000002
+2016-03-01,Terrestre,16 La Mesilla,4309.000000000002
+2016-03-01,Terrestre,17 El Naranjo,724.9999999999998
+2016-03-01,Terrestre,18 Bethel,630.0000000000001
+2016-03-01,Terrestre,19 Gracias a Dios,1280.9999999999968
+2016-03-01,Terrestre,20 Melchor de Mencos,13505.999999999996
+2016-04-01,Aérea,01 La Aurora,90733.0
+2016-04-01,Aérea,02 Mundo Maya,205.0
+2016-04-01,Marítima,03 Puerto Quetzal,10550.0
+2016-04-01,Marítima,04 Santo Tomás de Castilla,627.0
+2016-04-01,Marítima,05 Puerto Barrios,449.0
+2016-04-01,Marítima,06 Livingston,402.0
+2016-04-01,Terrestre,07 Valle Nuevo,50373.00000000001
+2016-04-01,Terrestre,08 Pedro de Alvarado,12390.000000000033
+2016-04-01,Terrestre,09 San Cristóbal,30424.000000000007
+2016-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),23647.000000000007
+2016-04-01,Terrestre,11 Agua Caliente,2508.000000000001
+2016-04-01,Terrestre,12 El Florido,3400.000000000004
+2016-04-01,Terrestre,13 El Cinchado / El Corinto,2653.9999999999986
+2016-04-01,Terrestre,14 Tecún Umán,5187.999999999996
+2016-04-01,Terrestre,15 El Carmen,5131.0
+2016-04-01,Terrestre,16 La Mesilla,1910.9999999999993
+2016-04-01,Terrestre,17 El Naranjo,490.0000000000001
+2016-04-01,Terrestre,18 Bethel,263.0
+2016-04-01,Terrestre,19 Gracias a Dios,1446.0000000000023
+2016-04-01,Terrestre,20 Melchor de Mencos,5647.999999999999
+2016-05-01,Aérea,01 La Aurora,96208.0
+2016-05-01,Aérea,02 Mundo Maya,171.0
+2016-05-01,Marítima,03 Puerto Quetzal,5344.0
+2016-05-01,Marítima,04 Santo Tomás de Castilla,3447.0
+2016-05-01,Marítima,05 Puerto Barrios,376.0
+2016-05-01,Marítima,06 Livingston,351.0
+2016-05-01,Terrestre,07 Valle Nuevo,54549.99999999991
+2016-05-01,Terrestre,08 Pedro de Alvarado,13903.00000000002
+2016-05-01,Terrestre,09 San Cristóbal,31838.00000000006
+2016-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),21931.99999999999
+2016-05-01,Terrestre,11 Agua Caliente,2324.0000000000014
+2016-05-01,Terrestre,12 El Florido,3401.9999999999986
+2016-05-01,Terrestre,13 El Cinchado / El Corinto,2676.000000000002
+2016-05-01,Terrestre,14 Tecún Umán,5565.000000000001
+2016-05-01,Terrestre,15 El Carmen,5929.000000000005
+2016-05-01,Terrestre,16 La Mesilla,1647.0000000000005
+2016-05-01,Terrestre,17 El Naranjo,407.00000000000006
+2016-05-01,Terrestre,18 Bethel,115.00000000000001
+2016-05-01,Terrestre,19 Gracias a Dios,1249.9999999999998
+2016-05-01,Terrestre,20 Melchor de Mencos,5646.0
+2016-06-01,Aérea,01 La Aurora,112889.0
+2016-06-01,Aérea,02 Mundo Maya,254.0
+2016-06-01,Marítima,03 Puerto Quetzal,713.0
+2016-06-01,Marítima,04 Santo Tomás de Castilla,1.0
+2016-06-01,Marítima,05 Puerto Barrios,453.0
+2016-06-01,Marítima,06 Livingston,199.0
+2016-06-01,Terrestre,07 Valle Nuevo,59261.999999999985
+2016-06-01,Terrestre,08 Pedro de Alvarado,13674.999999999998
+2016-06-01,Terrestre,09 San Cristóbal,31111.00000000018
+2016-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),20531.000000000004
+2016-06-01,Terrestre,11 Agua Caliente,2844.9999999999986
+2016-06-01,Terrestre,12 El Florido,3465.0000000000036
+2016-06-01,Terrestre,13 El Cinchado / El Corinto,2917.999999999999
+2016-06-01,Terrestre,14 Tecún Umán,4380.000000000003
+2016-06-01,Terrestre,15 El Carmen,6140.0
+2016-06-01,Terrestre,16 La Mesilla,1848.0000000000011
+2016-06-01,Terrestre,17 El Naranjo,442.9999999999999
+2016-06-01,Terrestre,18 Bethel,105.0
+2016-06-01,Terrestre,19 Gracias a Dios,1083.0000000000007
+2016-06-01,Terrestre,20 Melchor de Mencos,5753.656250000002
+2016-07-01,Aérea,01 La Aurora,129819.0
+2016-07-01,Aérea,02 Mundo Maya,243.0
+2016-07-01,Marítima,03 Puerto Quetzal,916.0
+2016-07-01,Marítima,04 Santo Tomás de Castilla,3.0
+2016-07-01,Marítima,05 Puerto Barrios,453.0
+2016-07-01,Marítima,06 Livingston,336.0
+2016-07-01,Terrestre,07 Valle Nuevo,60797.00000000087
+2016-07-01,Terrestre,08 Pedro de Alvarado,20541.000000000025
+2016-07-01,Terrestre,09 San Cristóbal,33521.999999999905
+2016-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),23616.000000000004
+2016-07-01,Terrestre,11 Agua Caliente,3361.000000000003
+2016-07-01,Terrestre,12 El Florido,4347.999999999996
+2016-07-01,Terrestre,13 El Cinchado / El Corinto,3998.9999999999973
+2016-07-01,Terrestre,14 Tecún Umán,5637.000000000004
+2016-07-01,Terrestre,15 El Carmen,7284.999999999999
+2016-07-01,Terrestre,16 La Mesilla,2304.0000000000005
+2016-07-01,Terrestre,17 El Naranjo,676.0000000000006
+2016-07-01,Terrestre,18 Bethel,301.99999999999994
+2016-07-01,Terrestre,19 Gracias a Dios,1171.9999999999977
+2016-07-01,Terrestre,20 Melchor de Mencos,9041.759398496239
+2016-08-01,Aérea,01 La Aurora,100692.0
+2016-08-01,Aérea,02 Mundo Maya,294.0
+2016-08-01,Marítima,03 Puerto Quetzal,10456.2360934952
+2016-08-01,Marítima,04 Santo Tomás de Castilla,652.7639065048016
+2016-08-01,Marítima,05 Puerto Barrios,474.0
+2016-08-01,Marítima,06 Livingston,311.0
+2016-08-01,Terrestre,07 Valle Nuevo,58020.99999999991
+2016-08-01,Terrestre,08 Pedro de Alvarado,46220.999999999905
+2016-08-01,Terrestre,09 San Cristóbal,32433.999999999916
+2016-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),24299.000000000004
+2016-08-01,Terrestre,11 Agua Caliente,3503.0000000000014
+2016-08-01,Terrestre,12 El Florido,4508.0
+2016-08-01,Terrestre,13 El Cinchado / El Corinto,3444.000000000002
+2016-08-01,Terrestre,14 Tecún Umán,5261.999999999999
+2016-08-01,Terrestre,15 El Carmen,6790.000000000002
+2016-08-01,Terrestre,16 La Mesilla,2162.0000000000005
+2016-08-01,Terrestre,17 El Naranjo,459.00000000000006
+2016-08-01,Terrestre,18 Bethel,269.0
+2016-08-01,Terrestre,19 Gracias a Dios,1270.0000000000025
+2016-08-01,Terrestre,20 Melchor de Mencos,7507.999999999998
+2016-09-01,Aérea,01 La Aurora,80492.85714285722
+2016-09-01,Aérea,02 Mundo Maya,144.57142857142824
+2016-09-01,Marítima,03 Puerto Quetzal,53.0
+2016-09-01,Marítima,04 Santo Tomás de Castilla,6.0
+2016-09-01,Marítima,05 Puerto Barrios,371.0
+2016-09-01,Marítima,06 Livingston,232.0
+2016-09-01,Terrestre,07 Valle Nuevo,65112.23209841516
+2016-09-01,Terrestre,08 Pedro de Alvarado,11161.12460927462
+2016-09-01,Terrestre,09 San Cristóbal,13015.142589399491
+2016-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),9876.111859410415
+2016-09-01,Terrestre,11 Agua Caliente,4734.252499682598
+2016-09-01,Terrestre,12 El Florido,2915.001751798984
+2016-09-01,Terrestre,13 El Cinchado / El Corinto,3188.718407494148
+2016-09-01,Terrestre,14 Tecún Umán,4304.663282949417
+2016-09-01,Terrestre,15 El Carmen,4554.185306051357
+2016-09-01,Terrestre,16 La Mesilla,2499.1345925533087
+2016-09-01,Terrestre,17 El Naranjo,542.0864500716713
+2016-09-01,Terrestre,18 Bethel,140.58689655172412
+2016-09-01,Terrestre,19 Gracias a Dios,1063.5720535714267
+2016-09-01,Terrestre,20 Melchor de Mencos,10859.157867541619
+2016-10-01,Aérea,01 La Aurora,102044.0
+2016-10-01,Aérea,02 Mundo Maya,170.0
+2016-10-01,Marítima,03 Puerto Quetzal,2363.0
+2016-10-01,Marítima,04 Santo Tomás de Castilla,18.0
+2016-10-01,Marítima,05 Puerto Barrios,436.0
+2016-10-01,Marítima,06 Livingston,200.0
+2016-10-01,Terrestre,07 Valle Nuevo,48856.00000000007
+2016-10-01,Terrestre,08 Pedro de Alvarado,40644.99999999997
+2016-10-01,Terrestre,09 San Cristóbal,50588.99999999991
+2016-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),22708.000000000004
+2016-10-01,Terrestre,11 Agua Caliente,3691.9999999999986
+2016-10-01,Terrestre,12 El Florido,4071.000000000002
+2016-10-01,Terrestre,13 El Cinchado / El Corinto,3350.999999999999
+2016-10-01,Terrestre,14 Tecún Umán,3641.0000000000023
+2016-10-01,Terrestre,15 El Carmen,6155.000000000018
+2016-10-01,Terrestre,16 La Mesilla,2049.0
+2016-10-01,Terrestre,17 El Naranjo,452.0
+2016-10-01,Terrestre,18 Bethel,153.0
+2016-10-01,Terrestre,19 Gracias a Dios,1491.000000000001
+2016-10-01,Terrestre,20 Melchor de Mencos,6606.000000000001
+2016-11-01,Aérea,01 La Aurora,111728.0
+2016-11-01,Aérea,02 Mundo Maya,226.0
+2016-11-01,Marítima,03 Puerto Quetzal,12440.87460511895
+2016-11-01,Marítima,04 Santo Tomás de Castilla,3138.125394881052
+2016-11-01,Marítima,05 Puerto Barrios,419.0
+2016-11-01,Marítima,06 Livingston,221.0
+2016-11-01,Terrestre,07 Valle Nuevo,24411.999999999975
+2016-11-01,Terrestre,08 Pedro de Alvarado,56697.00000000001
+2016-11-01,Terrestre,09 San Cristóbal,60157.00000000003
+2016-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),23401.99999999998
+2016-11-01,Terrestre,11 Agua Caliente,3131.0000000000005
+2016-11-01,Terrestre,12 El Florido,3616.000000000003
+2016-11-01,Terrestre,13 El Cinchado / El Corinto,2810.9999999999995
+2016-11-01,Terrestre,14 Tecún Umán,4109.000000000014
+2016-11-01,Terrestre,15 El Carmen,7993.999999999987
+2016-11-01,Terrestre,16 La Mesilla,2544.999999999999
+2016-11-01,Terrestre,17 El Naranjo,601.9999999999993
+2016-11-01,Terrestre,18 Bethel,493.0
+2016-11-01,Terrestre,19 Gracias a Dios,1207.0000000000011
+2016-11-01,Terrestre,20 Melchor de Mencos,6574.0
+2016-12-01,Aérea,01 La Aurora,111577.0
+2016-12-01,Aérea,02 Mundo Maya,265.0
+2016-12-01,Marítima,03 Puerto Quetzal,10803.0
+2016-12-01,Marítima,04 Santo Tomás de Castilla,11324.0
+2016-12-01,Marítima,05 Puerto Barrios,575.0
+2016-12-01,Marítima,06 Livingston,281.0
+2016-12-01,Terrestre,07 Valle Nuevo,62145.9999999999
+2016-12-01,Terrestre,08 Pedro de Alvarado,55071.99999999994
+2016-12-01,Terrestre,09 San Cristóbal,74412.02185792361
+2016-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),29045.0
+2016-12-01,Terrestre,11 Agua Caliente,3475.9999999999986
+2016-12-01,Terrestre,12 El Florido,4876.0
+2016-12-01,Terrestre,13 El Cinchado / El Corinto,4489.000000000001
+2016-12-01,Terrestre,14 Tecún Umán,7590.999999999994
+2016-12-01,Terrestre,15 El Carmen,11447.999999999998
+2016-12-01,Terrestre,16 La Mesilla,4267.999999999997
+2016-12-01,Terrestre,17 El Naranjo,1072.0000000000002
+2016-12-01,Terrestre,18 Bethel,359.0
+2016-12-01,Terrestre,19 Gracias a Dios,1159.0000000000005
+2016-12-01,Terrestre,20 Melchor de Mencos,9117.000000000002
+2017-01-01,Aérea,01 La Aurora,98917.0
+2017-01-01,Aérea,02 Mundo Maya,300.0
+2017-01-01,Marítima,03 Puerto Quetzal,13046.26698194325
+2017-01-01,Marítima,04 Santo Tomás de Castilla,5239.73301805675
+2017-01-01,Terrestre,07 Valle Nuevo,50099.999999999854
+2017-01-01,Terrestre,08 Pedro de Alvarado,45093.00000000614
+2017-01-01,Terrestre,09 San Cristóbal,56817.000000000065
+2017-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),12759.34880405164
+2017-01-01,Terrestre,11 Agua Caliente,4779.0
+2017-01-01,Terrestre,12 El Florido,4634.000000000005
+2017-01-01,Terrestre,13 El Cinchado / El Corinto,4249.0
+2017-01-01,Terrestre,14 Tecún Umán,4006.0000000000005
+2017-01-01,Terrestre,15 El Carmen,5748.999999999999
+2017-01-01,Terrestre,16 La Mesilla,2919.000000000005
+2017-01-01,Terrestre,17 El Naranjo,742.0000000000001
+2017-01-01,Terrestre,18 Bethel,388.99999999999665
+2017-01-01,Terrestre,19 Gracias a Dios,1217.000000000003
+2017-01-01,Terrestre,20 Melchor de Mencos,16131.870810616128
+2017-02-01,Aérea,01 La Aurora,94381.0
+2017-02-01,Aérea,02 Mundo Maya,223.0
+2017-02-01,Marítima,03 Puerto Quetzal,8832.102173913043
+2017-02-01,Marítima,04 Santo Tomás de Castilla,4032.897826086956
+2017-02-01,Terrestre,07 Valle Nuevo,50140.9999999997
+2017-02-01,Terrestre,08 Pedro de Alvarado,36881.000000000044
+2017-02-01,Terrestre,09 San Cristóbal,39577.00000000007
+2017-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),8615.67307869066
+2017-02-01,Terrestre,11 Agua Caliente,2844.0
+2017-02-01,Terrestre,12 El Florido,3321.0000000000027
+2017-02-01,Terrestre,13 El Cinchado / El Corinto,3017.999999999999
+2017-02-01,Terrestre,14 Tecún Umán,2892.999999999998
+2017-02-01,Terrestre,15 El Carmen,5650.000000000005
+2017-02-01,Terrestre,16 La Mesilla,2502.0000000000077
+2017-02-01,Terrestre,17 El Naranjo,746.9999999999999
+2017-02-01,Terrestre,18 Bethel,398.0
+2017-02-01,Terrestre,19 Gracias a Dios,1118.9999999999948
+2017-02-01,Terrestre,20 Melchor de Mencos,11667.2055039581
+2017-03-01,Aérea,01 La Aurora,106087.0
+2017-03-01,Aérea,02 Mundo Maya,252.0
+2017-03-01,Marítima,03 Puerto Quetzal,4475.813207875936
+2017-03-01,Marítima,04 Santo Tomás de Castilla,6736.186792124064
+2017-03-01,Terrestre,07 Valle Nuevo,67641.00000000044
+2017-03-01,Terrestre,08 Pedro de Alvarado,41412.99999999986
+2017-03-01,Terrestre,09 San Cristóbal,42134.99999999999
+2017-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),32815.999999999985
+2017-03-01,Terrestre,11 Agua Caliente,2631.0000000000005
+2017-03-01,Terrestre,12 El Florido,3711.000000000003
+2017-03-01,Terrestre,13 El Cinchado / El Corinto,3579.000000000004
+2017-03-01,Terrestre,14 Tecún Umán,4101.000000000001
+2017-03-01,Terrestre,15 El Carmen,6965.000000000011
+2017-03-01,Terrestre,16 La Mesilla,2407.9999999999973
+2017-03-01,Terrestre,17 El Naranjo,742.9999999999994
+2017-03-01,Terrestre,18 Bethel,421.0000000000012
+2017-03-01,Terrestre,19 Gracias a Dios,1239.9999999999975
+2017-03-01,Terrestre,20 Melchor de Mencos,12370.373219705089
+2017-04-01,Aérea,01 La Aurora,109982.00000000001
+2017-04-01,Aérea,02 Mundo Maya,248.0
+2017-04-01,Marítima,03 Puerto Quetzal,17690.6933855953
+2017-04-01,Marítima,04 Santo Tomás de Castilla,2580.306614404703
+2017-04-01,Terrestre,07 Valle Nuevo,85000.0999999983
+2017-04-01,Terrestre,08 Pedro de Alvarado,52758.399999999965
+2017-04-01,Terrestre,09 San Cristóbal,53127.00000000005
+2017-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),36562.19999999994
+2017-04-01,Terrestre,11 Agua Caliente,3900.9999999999945
+2017-04-01,Terrestre,12 El Florido,4404.000000000002
+2017-04-01,Terrestre,13 El Cinchado / El Corinto,4123.0
+2017-04-01,Terrestre,14 Tecún Umán,4962.000000000002
+2017-04-01,Terrestre,15 El Carmen,7917.999999999984
+2017-04-01,Terrestre,16 La Mesilla,4269.863636313121
+2017-04-01,Terrestre,17 El Naranjo,834.999999999999
+2017-04-01,Terrestre,18 Bethel,221.99999999999974
+2017-04-01,Terrestre,19 Gracias a Dios,1173.9999999999995
+2017-04-01,Terrestre,20 Melchor de Mencos,8350.36754649832
+2017-05-01,Aérea,01 La Aurora,89609.0
+2017-05-01,Aérea,02 Mundo Maya,141.0
+2017-05-01,Marítima,03 Puerto Quetzal,5908.0
+2017-05-01,Terrestre,07 Valle Nuevo,65324.99999999985
+2017-05-01,Terrestre,08 Pedro de Alvarado,33005.58964777575
+2017-05-01,Terrestre,09 San Cristóbal,41359.99999999999
+2017-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),16125.658641198153
+2017-05-01,Terrestre,11 Agua Caliente,2350.9999999999977
+2017-05-01,Terrestre,12 El Florido,2510.999999999997
+2017-05-01,Terrestre,13 El Cinchado / El Corinto,1902.999999999998
+2017-05-01,Terrestre,14 Tecún Umán,2708.999999999998
+2017-05-01,Terrestre,15 El Carmen,6060.999999999991
+2017-05-01,Terrestre,16 La Mesilla,1366.0000000000023
+2017-05-01,Terrestre,17 El Naranjo,561.0000000000001
+2017-05-01,Terrestre,18 Bethel,156.00000000000017
+2017-05-01,Terrestre,19 Gracias a Dios,1108.0000000000034
+2017-05-01,Terrestre,20 Melchor de Mencos,10411.127066062527
+2017-06-01,Aérea,01 La Aurora,113862.99999999999
+2017-06-01,Aérea,02 Mundo Maya,265.0000000000002
+2017-06-01,Marítima,03 Puerto Quetzal,1460.0
+2017-06-01,Terrestre,07 Valle Nuevo,71184.59780000003
+2017-06-01,Terrestre,08 Pedro de Alvarado,24438.61200000003
+2017-06-01,Terrestre,09 San Cristóbal,24900.48509999997
+2017-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),20892.53600000003
+2017-06-01,Terrestre,11 Agua Caliente,1936.000000000002
+2017-06-01,Terrestre,12 El Florido,3044.6674999999955
+2017-06-01,Terrestre,13 El Cinchado / El Corinto,2945.0000000000005
+2017-06-01,Terrestre,14 Tecún Umán,1714.9999999999993
+2017-06-01,Terrestre,15 El Carmen,6424.000000000003
+2017-06-01,Terrestre,16 La Mesilla,1076.0000000000018
+2017-06-01,Terrestre,17 El Naranjo,396.0
+2017-06-01,Terrestre,18 Bethel,80.99999999999999
+2017-06-01,Terrestre,19 Gracias a Dios,1125.9999999999995
+2017-06-01,Terrestre,20 Melchor de Mencos,24470.88699999992
+2017-07-01,Aérea,01 La Aurora,134157.0
+2017-07-01,Aérea,02 Mundo Maya,292.0
+2017-07-01,Marítima,03 Puerto Quetzal,1543.0
+2017-07-01,Terrestre,07 Valle Nuevo,78266.17649999971
+2017-07-01,Terrestre,08 Pedro de Alvarado,16711.216300000015
+2017-07-01,Terrestre,09 San Cristóbal,26403.852899999998
+2017-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),23727.336800000016
+2017-07-01,Terrestre,11 Agua Caliente,4364.858200000001
+2017-07-01,Terrestre,12 El Florido,4564.999999999997
+2017-07-01,Terrestre,13 El Cinchado / El Corinto,5750.3870000000015
+2017-07-01,Terrestre,14 Tecún Umán,7932.975999999997
+2017-07-01,Terrestre,15 El Carmen,6429.131100000004
+2017-07-01,Terrestre,16 La Mesilla,2505.8783999999964
+2017-07-01,Terrestre,17 El Naranjo,623.0924999999988
+2017-07-01,Terrestre,18 Bethel,308.1104000000005
+2017-07-01,Terrestre,19 Gracias a Dios,1158.0770000000016
+2017-07-01,Terrestre,20 Melchor de Mencos,44268.48060000008
+2017-08-01,Aérea,01 La Aurora,100248.0
+2017-08-01,Aérea,02 Mundo Maya,288.0
+2017-08-01,Terrestre,07 Valle Nuevo,70907.82360000002
+2017-08-01,Terrestre,08 Pedro de Alvarado,29621.28599999992
+2017-08-01,Terrestre,09 San Cristóbal,34044.182700000034
+2017-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),26437.52259999994
+2017-08-01,Terrestre,11 Agua Caliente,4872.999999999998
+2017-08-01,Terrestre,12 El Florido,4377.13989999999
+2017-08-01,Terrestre,13 El Cinchado / El Corinto,3895.3342000000025
+2017-08-01,Terrestre,14 Tecún Umán,6624.231299999998
+2017-08-01,Terrestre,15 El Carmen,6893.000000000009
+2017-08-01,Terrestre,16 La Mesilla,1973.6060999999947
+2017-08-01,Terrestre,17 El Naranjo,275.00000000000097
+2017-08-01,Terrestre,18 Bethel,93.07709999999972
+2017-08-01,Terrestre,19 Gracias a Dios,1369.9999999999964
+2017-08-01,Terrestre,20 Melchor de Mencos,108197.81310000099
+2017-09-01,Aérea,01 La Aurora,90876.0
+2017-09-01,Aérea,02 Mundo Maya,215.0
+2017-09-01,Marítima,03 Puerto Quetzal,4268.0
+2017-09-01,Terrestre,07 Valle Nuevo,68495.67709999993
+2017-09-01,Terrestre,08 Pedro de Alvarado,12895.218399999976
+2017-09-01,Terrestre,09 San Cristóbal,14650.101400000005
+2017-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),14721.405100000004
+2017-09-01,Terrestre,11 Agua Caliente,5167.128000000002
+2017-09-01,Terrestre,12 El Florido,4337.000000000005
+2017-09-01,Terrestre,13 El Cinchado / El Corinto,2235.731299999998
+2017-09-01,Terrestre,14 Tecún Umán,5259.368999999988
+2017-09-01,Terrestre,15 El Carmen,5708.00000000001
+2017-09-01,Terrestre,16 La Mesilla,2203.902799999999
+2017-09-01,Terrestre,17 El Naranjo,214.99999999999966
+2017-09-01,Terrestre,18 Bethel,126.15039999999985
+2017-09-01,Terrestre,19 Gracias a Dios,1305.9999999999961
+2017-09-01,Terrestre,20 Melchor de Mencos,11361.621200000018
+2017-10-01,Aérea,01 La Aurora,108942.00000000001
+2017-10-01,Aérea,02 Mundo Maya,163.00000000000614
+2017-10-01,Marítima,03 Puerto Quetzal,11827.32504764272
+2017-10-01,Marítima,04 Santo Tomás de Castilla,591.674952357279
+2017-10-01,Terrestre,07 Valle Nuevo,67128.99999999993
+2017-10-01,Terrestre,08 Pedro de Alvarado,14169.87649999995
+2017-10-01,Terrestre,09 San Cristóbal,17871.515099999986
+2017-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),10636.409200000002
+2017-10-01,Terrestre,11 Agua Caliente,4737.105999999998
+2017-10-01,Terrestre,12 El Florido,4658.000000000009
+2017-10-01,Terrestre,13 El Cinchado / El Corinto,5042.742721702127
+2017-10-01,Terrestre,14 Tecún Umán,6539.739900000003
+2017-10-01,Terrestre,15 El Carmen,6133.9153999999935
+2017-10-01,Terrestre,16 La Mesilla,3384.147900000008
+2017-10-01,Terrestre,17 El Naranjo,497.06240000000037
+2017-10-01,Terrestre,18 Bethel,207.04919999999998
+2017-10-01,Terrestre,19 Gracias a Dios,1470.3204000000007
+2017-10-01,Terrestre,20 Melchor de Mencos,10806.21969999999
+2017-11-01,Aérea,01 La Aurora,121191.99999999999
+2017-11-01,Aérea,02 Mundo Maya,200.00000000000486
+2017-11-01,Marítima,03 Puerto Quetzal,9867.742765273311
+2017-11-01,Marítima,04 Santo Tomás de Castilla,5400.257234726689
+2017-11-01,Terrestre,07 Valle Nuevo,72925.00000000065
+2017-11-01,Terrestre,08 Pedro de Alvarado,18629.20760000003
+2017-11-01,Terrestre,09 San Cristóbal,26916.336699999945
+2017-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),12815.838100000015
+2017-11-01,Terrestre,11 Agua Caliente,4726.999999999998
+2017-11-01,Terrestre,12 El Florido,6198.645000000003
+2017-11-01,Terrestre,13 El Cinchado / El Corinto,7145.335700000006
+2017-11-01,Terrestre,14 Tecún Umán,7332.087650000001
+2017-11-01,Terrestre,15 El Carmen,7210.000000000023
+2017-11-01,Terrestre,16 La Mesilla,2272.9564000000137
+2017-11-01,Terrestre,17 El Naranjo,550.9999999999992
+2017-11-01,Terrestre,18 Bethel,220.99999999999952
+2017-11-01,Terrestre,19 Gracias a Dios,1301.0
+2017-11-01,Terrestre,20 Melchor de Mencos,11702.834980000012
+2017-12-01,Aérea,01 La Aurora,142567.0
+2017-12-01,Aérea,02 Mundo Maya,382.0
+2017-12-01,Marítima,03 Puerto Quetzal,11403.26669727687
+2017-12-01,Marítima,04 Santo Tomás de Castilla,14159.73330272313
+2017-12-01,Terrestre,07 Valle Nuevo,95797.00000000051
+2017-12-01,Terrestre,08 Pedro de Alvarado,28613.778799999945
+2017-12-01,Terrestre,09 San Cristóbal,35353.22779999989
+2017-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),15655.763000000006
+2017-12-01,Terrestre,11 Agua Caliente,4358.0
+2017-12-01,Terrestre,12 El Florido,4200.999999999994
+2017-12-01,Terrestre,13 El Cinchado / El Corinto,6616.951599999999
+2017-12-01,Terrestre,14 Tecún Umán,7255.999999999987
+2017-12-01,Terrestre,15 El Carmen,13663.999999999984
+2017-12-01,Terrestre,16 La Mesilla,7235.567000000012
+2017-12-01,Terrestre,17 El Naranjo,999.9999999999998
+2017-12-01,Terrestre,18 Bethel,356.0
+2017-12-01,Terrestre,19 Gracias a Dios,1163.0000000000007
+2017-12-01,Terrestre,20 Melchor de Mencos,14501.207899999981
+2018-01-01,Aérea,01 La Aurora,117165.0
+2018-01-01,Aérea,02 Mundo Maya,281.00000000000057
+2018-01-01,Marítima,03 Puerto Quetzal,17678.65257494235
+2018-01-01,Marítima,04 Santo Tomás de Castilla,11827.34742505765
+2018-01-01,Terrestre,07 Valle Nuevo,75071.00000000023
+2018-01-01,Terrestre,08 Pedro de Alvarado,36182.52000000011
+2018-01-01,Terrestre,09 San Cristóbal,32530.202799999974
+2018-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),14360.598132000001
+2018-01-01,Terrestre,11 Agua Caliente,6467.000000000008
+2018-01-01,Terrestre,12 El Florido,5640.771500000005
+2018-01-01,Terrestre,13 El Cinchado / El Corinto,6441.927999999996
+2018-01-01,Terrestre,14 Tecún Umán,5162.819099999998
+2018-01-01,Terrestre,15 El Carmen,7697.192599999999
+2018-01-01,Terrestre,16 La Mesilla,3593.3255999999965
+2018-01-01,Terrestre,17 El Naranjo,752.000000000002
+2018-01-01,Terrestre,18 Bethel,279.999999999999
+2018-01-01,Terrestre,19 Gracias a Dios,1334.0000000000023
+2018-01-01,Terrestre,20 Melchor de Mencos,14468.534599999999
+2018-02-01,Aérea,01 La Aurora,95580.0
+2018-02-01,Aérea,02 Mundo Maya,757.0000000000007
+2018-02-01,Marítima,03 Puerto Quetzal,9142.466457815706
+2018-02-01,Marítima,04 Santo Tomás de Castilla,7348.533542184293
+2018-02-01,Terrestre,07 Valle Nuevo,59730.000000000124
+2018-02-01,Terrestre,08 Pedro de Alvarado,37459.00000000014
+2018-02-01,Terrestre,09 San Cristóbal,29705.602509999942
+2018-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),9596.884968000002
+2018-02-01,Terrestre,11 Agua Caliente,5191.000000000001
+2018-02-01,Terrestre,12 El Florido,4168.000000000001
+2018-02-01,Terrestre,13 El Cinchado / El Corinto,4093.9392099999955
+2018-02-01,Terrestre,14 Tecún Umán,3095.0
+2018-02-01,Terrestre,15 El Carmen,4657.00000000001
+2018-02-01,Terrestre,16 La Mesilla,2449.0000000000005
+2018-02-01,Terrestre,17 El Naranjo,523.000000000002
+2018-02-01,Terrestre,18 Bethel,312.0000000000007
+2018-02-01,Terrestre,19 Gracias a Dios,1226.0000000000002
+2018-02-01,Terrestre,20 Melchor de Mencos,12088.999999999965
+2018-03-01,Aérea,01 La Aurora,123800.0
+2018-03-01,Aérea,02 Mundo Maya,466.0000000000061
+2018-03-01,Marítima,03 Puerto Quetzal,6685.470493389229
+2018-03-01,Marítima,04 Santo Tomás de Castilla,10918.52950661077
+2018-03-01,Terrestre,07 Valle Nuevo,86451.99999999913
+2018-03-01,Terrestre,08 Pedro de Alvarado,54806.99999999987
+2018-03-01,Terrestre,09 San Cristóbal,47126.99999999983
+2018-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),39427.99999999993
+2018-03-01,Terrestre,11 Agua Caliente,6425.999999999996
+2018-03-01,Terrestre,12 El Florido,6363.999999999995
+2018-03-01,Terrestre,13 El Cinchado / El Corinto,15242.000000000015
+2018-03-01,Terrestre,14 Tecún Umán,5526.999999999999
+2018-03-01,Terrestre,15 El Carmen,9358.000000000062
+2018-03-01,Terrestre,16 La Mesilla,3292.0000000000114
+2018-03-01,Terrestre,17 El Naranjo,771.9999999999985
+2018-03-01,Terrestre,18 Bethel,313.99999999999955
+2018-03-01,Terrestre,19 Gracias a Dios,1436.9999999999934
+2018-03-01,Terrestre,20 Melchor de Mencos,16648.0
+2018-04-01,Aérea,01 La Aurora,104723.0
+2018-04-01,Aérea,02 Mundo Maya,228.0
+2018-04-01,Marítima,03 Puerto Quetzal,16979.49516716844
+2018-04-01,Marítima,04 Santo Tomás de Castilla,2394.504832831564
+2018-04-01,Terrestre,07 Valle Nuevo,70969.00000000029
+2018-04-01,Terrestre,08 Pedro de Alvarado,42589.999999999905
+2018-04-01,Terrestre,09 San Cristóbal,42441.00000000005
+2018-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),30240.528799999982
+2018-04-01,Terrestre,11 Agua Caliente,5538.0
+2018-04-01,Terrestre,12 El Florido,14287.863199999993
+2018-04-01,Terrestre,13 El Cinchado / El Corinto,5710.555734999996
+2018-04-01,Terrestre,14 Tecún Umán,5062.7992
+2018-04-01,Terrestre,15 El Carmen,7413.165400000008
+2018-04-01,Terrestre,16 La Mesilla,2696.833900000004
+2018-04-01,Terrestre,17 El Naranjo,663.9999999999986
+2018-04-01,Terrestre,18 Bethel,112.00000000000063
+2018-04-01,Terrestre,19 Gracias a Dios,1322.9999999999982
+2018-04-01,Terrestre,20 Melchor de Mencos,37114.914000000004
+2018-05-01,Aérea,01 La Aurora,103663.0
+2018-05-01,Aérea,02 Mundo Maya,152.0000000000051
+2018-05-01,Marítima,03 Puerto Quetzal,8936.0
+2018-05-01,Terrestre,07 Valle Nuevo,67928.99999999913
+2018-05-01,Terrestre,08 Pedro de Alvarado,30708.485900000018
+2018-05-01,Terrestre,09 San Cristóbal,32000.39639999996
+2018-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),21917.00000000006
+2018-05-01,Terrestre,11 Agua Caliente,4792.872499999997
+2018-05-01,Terrestre,12 El Florido,3945.4230999999972
+2018-05-01,Terrestre,13 El Cinchado / El Corinto,4746.578400000006
+2018-05-01,Terrestre,14 Tecún Umán,3087.0
+2018-05-01,Terrestre,15 El Carmen,5707.000000000003
+2018-05-01,Terrestre,16 La Mesilla,1730.9999999999982
+2018-05-01,Terrestre,17 El Naranjo,433.0
+2018-05-01,Terrestre,18 Bethel,102.99999999999997
+2018-05-01,Terrestre,19 Gracias a Dios,1207.0000000000002
+2018-05-01,Terrestre,20 Melchor de Mencos,12861.000000000036
+2018-06-01,Aérea,01 La Aurora,120538.00000000009
+2018-06-01,Aérea,02 Mundo Maya,180.00000000060004
+2018-06-01,Marítima,03 Puerto Quetzal,1565.674740484429
+2018-06-01,Marítima,04 Santo Tomás de Castilla,454.325259515571
+2018-06-01,Terrestre,07 Valle Nuevo,64755.00000002482
+2018-06-01,Terrestre,08 Pedro de Alvarado,39536.00000000983
+2018-06-01,Terrestre,09 San Cristóbal,43161.999999997104
+2018-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),23032.63769999222
+2018-06-01,Terrestre,11 Agua Caliente,5245.999999995499
+2018-06-01,Terrestre,12 El Florido,4597.999999993413
+2018-06-01,Terrestre,13 El Cinchado / El Corinto,11342.999999995289
+2018-06-01,Terrestre,14 Tecún Umán,3518.0000000132954
+2018-06-01,Terrestre,15 El Carmen,6318.000000001449
+2018-06-01,Terrestre,16 La Mesilla,1704.0000000088578
+2018-06-01,Terrestre,17 El Naranjo,462.0000000042999
+2018-06-01,Terrestre,18 Bethel,105.00000000219995
+2018-06-01,Terrestre,19 Gracias a Dios,1230.0000000000985
+2018-06-01,Terrestre,20 Melchor de Mencos,16262.208092979328
+2018-07-01,Aérea,01 La Aurora,134593.0
+2018-07-01,Aérea,02 Mundo Maya,340.0000000000013
+2018-07-01,Terrestre,07 Valle Nuevo,79332.0
+2018-07-01,Terrestre,08 Pedro de Alvarado,32538.09290000007
+2018-07-01,Terrestre,09 San Cristóbal,35404.654800000026
+2018-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),22591.00000000001
+2018-07-01,Terrestre,11 Agua Caliente,6006.999999999995
+2018-07-01,Terrestre,12 El Florido,6136.999999999998
+2018-07-01,Terrestre,13 El Cinchado / El Corinto,8593.094
+2018-07-01,Terrestre,14 Tecún Umán,4401.999999999998
+2018-07-01,Terrestre,15 El Carmen,7332.999999999994
+2018-07-01,Terrestre,16 La Mesilla,2414.0000000000005
+2018-07-01,Terrestre,17 El Naranjo,703.0000000000003
+2018-07-01,Terrestre,18 Bethel,227.000000000001
+2018-07-01,Terrestre,19 Gracias a Dios,1399.9999999999977
+2018-07-01,Terrestre,20 Melchor de Mencos,17305.999999999964
+2018-08-01,Aérea,01 La Aurora,110390.00000000073
+2018-08-01,Aérea,02 Mundo Maya,178.000000000002
+2018-08-01,Marítima,03 Puerto Quetzal,743.0
+2018-08-01,Terrestre,07 Valle Nuevo,85062.99999999994
+2018-08-01,Terrestre,08 Pedro de Alvarado,48207.9999999999
+2018-08-01,Terrestre,09 San Cristóbal,46531.00000000014
+2018-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),27225.000000000084
+2018-08-01,Terrestre,11 Agua Caliente,6649.000000000001
+2018-08-01,Terrestre,12 El Florido,7412.0
+2018-08-01,Terrestre,13 El Cinchado / El Corinto,13025.000000000016
+2018-08-01,Terrestre,14 Tecún Umán,4074.0960000000014
+2018-08-01,Terrestre,15 El Carmen,7211.999999999999
+2018-08-01,Terrestre,16 La Mesilla,3119.677599999996
+2018-08-01,Terrestre,17 El Naranjo,570.0000000000009
+2018-08-01,Terrestre,18 Bethel,107.00000000000053
+2018-08-01,Terrestre,19 Gracias a Dios,1441.9999999999982
+2018-08-01,Terrestre,20 Melchor de Mencos,16703.000000000047
+2018-09-01,Aérea,01 La Aurora,94811.29173150646
+2018-09-01,Aérea,02 Mundo Maya,120.00000000000307
+2018-09-01,Marítima,03 Puerto Quetzal,2149.0
+2018-09-01,Terrestre,07 Valle Nuevo,72770.99999999949
+2018-09-01,Terrestre,08 Pedro de Alvarado,27129.05000000005
+2018-09-01,Terrestre,09 San Cristóbal,28023.54999999999
+2018-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),14873.20000000002
+2018-09-01,Terrestre,11 Agua Caliente,5853.9999999999945
+2018-09-01,Terrestre,12 El Florido,5408.000000000002
+2018-09-01,Terrestre,13 El Cinchado / El Corinto,11949.999999999984
+2018-09-01,Terrestre,14 Tecún Umán,3716.9999999999973
+2018-09-01,Terrestre,15 El Carmen,5739.000000000002
+2018-09-01,Terrestre,16 La Mesilla,1830.9999999999995
+2018-09-01,Terrestre,17 El Naranjo,429.00000000000006
+2018-09-01,Terrestre,18 Bethel,91.00000000000001
+2018-09-01,Terrestre,19 Gracias a Dios,1544.0
+2018-09-01,Terrestre,20 Melchor de Mencos,11634.999999999996
+2018-10-01,Aérea,01 La Aurora,114884.9962847312
+2018-10-01,Aérea,02 Mundo Maya,118.99999987000099
+2018-10-01,Marítima,03 Puerto Quetzal,13227.15763424895
+2018-10-01,Marítima,04 Santo Tomás de Castilla,1636.842365751052
+2018-10-01,Terrestre,07 Valle Nuevo,74857.00000092921
+2018-10-01,Terrestre,08 Pedro de Alvarado,22061.710002319927
+2018-10-01,Terrestre,09 San Cristóbal,29107.25000083999
+2018-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),15636.199999069968
+2018-10-01,Terrestre,11 Agua Caliente,5157.448301049998
+2018-10-01,Terrestre,12 El Florido,5887.552599320005
+2018-10-01,Terrestre,13 El Cinchado / El Corinto,5871.092403460005
+2018-10-01,Terrestre,14 Tecún Umán,6129.555799522566
+2018-10-01,Terrestre,15 El Carmen,5847.8068006799995
+2018-10-01,Terrestre,16 La Mesilla,4012.1557998899953
+2018-10-01,Terrestre,17 El Naranjo,488.99999934999977
+2018-10-01,Terrestre,18 Bethel,100.00000086000004
+2018-10-01,Terrestre,19 Gracias a Dios,1711.99999996
+2018-10-01,Terrestre,20 Melchor de Mencos,8038.478798812296
+2018-11-01,Aérea,01 La Aurora,135243.36194730835
+2018-11-01,Aérea,02 Mundo Maya,166.00000000000145
+2018-11-01,Marítima,03 Puerto Quetzal,11995.70229434807
+2018-11-01,Marítima,04 Santo Tomás de Castilla,5764.297705651931
+2018-11-01,Terrestre,07 Valle Nuevo,82147.99999999972
+2018-11-01,Terrestre,08 Pedro de Alvarado,18786.930030999953
+2018-11-01,Terrestre,09 San Cristóbal,27832.228518000014
+2018-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),14314.017919999978
+2018-11-01,Terrestre,11 Agua Caliente,8266.000000000002
+2018-11-01,Terrestre,12 El Florido,7357.999999999996
+2018-11-01,Terrestre,13 El Cinchado / El Corinto,6491.652200000001
+2018-11-01,Terrestre,14 Tecún Umán,3276.4994320000037
+2018-11-01,Terrestre,15 El Carmen,8656.000000000011
+2018-11-01,Terrestre,16 La Mesilla,3261.0000000000005
+2018-11-01,Terrestre,17 El Naranjo,886.0
+2018-11-01,Terrestre,18 Bethel,249.99999999999991
+2018-11-01,Terrestre,19 Gracias a Dios,1291.0000000000023
+2018-11-01,Terrestre,20 Melchor de Mencos,10815.855330000002
+2018-12-01,Aérea,01 La Aurora,156190.3959668107
+2018-12-01,Aérea,02 Mundo Maya,417.0000000000036
+2018-12-01,Marítima,03 Puerto Quetzal,9654.441575209814
+2018-12-01,Marítima,04 Santo Tomás de Castilla,11290.55842479019
+2018-12-01,Terrestre,07 Valle Nuevo,102661.69393161318
+2018-12-01,Terrestre,08 Pedro de Alvarado,31198.214035901743
+2018-12-01,Terrestre,09 San Cristóbal,41720.43893876273
+2018-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),16610.19134030875
+2018-12-01,Terrestre,11 Agua Caliente,7563.528827999984
+2018-12-01,Terrestre,12 El Florido,7864.704898912007
+2018-12-01,Terrestre,13 El Cinchado / El Corinto,8177.383604999985
+2018-12-01,Terrestre,14 Tecún Umán,9901.027559146825
+2018-12-01,Terrestre,15 El Carmen,16860.08908915785
+2018-12-01,Terrestre,16 La Mesilla,7741.211877698708
+2018-12-01,Terrestre,17 El Naranjo,1253.9999999999993
+2018-12-01,Terrestre,18 Bethel,180.99999999999983
+2018-12-01,Terrestre,19 Gracias a Dios,1285.9999999999989
+2018-12-01,Terrestre,20 Melchor de Mencos,20611.695843637142
+2019-01-01,Aérea,01 La Aurora,126438.70492856001
+2019-01-01,Aérea,02 Mundo Maya,127.42857142857142
+2019-01-01,Marítima,03 Puerto Quetzal,14012.14513468939
+2019-01-01,Marítima,04 Santo Tomás de Castilla,9500.85486531061
+2019-01-01,Terrestre,07 Valle Nuevo,81167.0
+2019-01-01,Terrestre,08 Pedro de Alvarado,45304.0
+2019-01-01,Terrestre,09 San Cristóbal,42856.0
+2019-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),19244.0
+2019-01-01,Terrestre,11 Agua Caliente,13983.0
+2019-01-01,Terrestre,12 El Florido,8447.0
+2019-01-01,Terrestre,13 El Cinchado / El Corinto,13392.036496350365
+2019-01-01,Terrestre,14 Tecún Umán,7270.29268292683
+2019-01-01,Terrestre,15 El Carmen,8721.72619047619
+2019-01-01,Terrestre,16 La Mesilla,4524.0
+2019-01-01,Terrestre,17 El Naranjo,401.0
+2019-01-01,Terrestre,18 Bethel,190.3230643402399
+2019-01-01,Terrestre,19 Gracias a Dios,453.0
+2019-01-01,Terrestre,20 Melchor de Mencos,13037.672188755021
+2019-02-01,Aérea,01 La Aurora,106444.17419556303
+2019-02-01,Aérea,02 Mundo Maya,129.94736842105263
+2019-02-01,Marítima,03 Puerto Quetzal,8097.543324552891
+2019-02-01,Marítima,04 Santo Tomás de Castilla,5587.456675447109
+2019-02-01,Terrestre,07 Valle Nuevo,64784.00689655173
+2019-02-01,Terrestre,08 Pedro de Alvarado,37376.0
+2019-02-01,Terrestre,09 San Cristóbal,36382.0
+2019-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),14611.0
+2019-02-01,Terrestre,11 Agua Caliente,11103.095238095239
+2019-02-01,Terrestre,12 El Florido,5773.0
+2019-02-01,Terrestre,13 El Cinchado / El Corinto,10044.29347826087
+2019-02-01,Terrestre,14 Tecún Umán,2553.0
+2019-02-01,Terrestre,15 El Carmen,5491.0
+2019-02-01,Terrestre,16 La Mesilla,2378.0
+2019-02-01,Terrestre,17 El Naranjo,603.0
+2019-02-01,Terrestre,18 Bethel,235.28735632183907
+2019-02-01,Terrestre,19 Gracias a Dios,856.0
+2019-02-01,Terrestre,20 Melchor de Mencos,9618.771241830065
+2019-03-01,Aérea,01 La Aurora,118787.0220572801
+2019-03-01,Aérea,02 Mundo Maya,108.9148936170213
+2019-03-01,Marítima,03 Puerto Quetzal,12692.65484429066
+2019-03-01,Marítima,04 Santo Tomás de Castilla,8298.345155709343
+2019-03-01,Terrestre,07 Valle Nuevo,78573.0
+2019-03-01,Terrestre,08 Pedro de Alvarado,43481.0
+2019-03-01,Terrestre,09 San Cristóbal,42390.0
+2019-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),36921.57142857143
+2019-03-01,Terrestre,11 Agua Caliente,9169.0
+2019-03-01,Terrestre,12 El Florido,7179.1
+2019-03-01,Terrestre,13 El Cinchado / El Corinto,11787.0
+2019-03-01,Terrestre,14 Tecún Umán,3618.0
+2019-03-01,Terrestre,15 El Carmen,6575.0
+2019-03-01,Terrestre,16 La Mesilla,2957.0
+2019-03-01,Terrestre,17 El Naranjo,810.8571428571428
+2019-03-01,Terrestre,18 Bethel,333.53846153846155
+2019-03-01,Terrestre,19 Gracias a Dios,1258.0
+2019-03-01,Terrestre,20 Melchor de Mencos,14293.160872173392
+2019-04-01,Aérea,01 La Aurora,125251.99999999897
+2019-04-01,Aérea,02 Mundo Maya,58.0
+2019-04-01,Marítima,03 Puerto Quetzal,12337.23321082526
+2019-04-01,Marítima,04 Santo Tomás de Castilla,5055.766789174741
+2019-04-01,Terrestre,07 Valle Nuevo,100209.0
+2019-04-01,Terrestre,08 Pedro de Alvarado,46829.0
+2019-04-01,Terrestre,09 San Cristóbal,44432.0
+2019-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),37039.0
+2019-04-01,Terrestre,11 Agua Caliente,10217.0
+2019-04-01,Terrestre,12 El Florido,9411.382352941177
+2019-04-01,Terrestre,13 El Cinchado / El Corinto,8162.0
+2019-04-01,Terrestre,14 Tecún Umán,6033.236220472441
+2019-04-01,Terrestre,15 El Carmen,9851.0
+2019-04-01,Terrestre,16 La Mesilla,3088.0
+2019-04-01,Terrestre,17 El Naranjo,876.0000000000001
+2019-04-01,Terrestre,18 Bethel,118.0
+2019-04-01,Terrestre,19 Gracias a Dios,1357.0
+2019-04-01,Terrestre,20 Melchor de Mencos,17800.407142857144
+2019-05-01,Aérea,01 La Aurora,109451.99999999949
+2019-05-01,Aérea,02 Mundo Maya,72.0
+2019-05-01,Marítima,03 Puerto Quetzal,1992.0
+2019-05-01,Terrestre,07 Valle Nuevo,74334.0
+2019-05-01,Terrestre,08 Pedro de Alvarado,32587.0
+2019-05-01,Terrestre,09 San Cristóbal,35043.0
+2019-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),22732.0
+2019-05-01,Terrestre,11 Agua Caliente,8079.0
+2019-05-01,Terrestre,12 El Florido,6636.0
+2019-05-01,Terrestre,13 El Cinchado / El Corinto,7093.250694444445
+2019-05-01,Terrestre,14 Tecún Umán,3177.134969325153
+2019-05-01,Terrestre,15 El Carmen,5751.0
+2019-05-01,Terrestre,16 La Mesilla,1791.0000000000002
+2019-05-01,Terrestre,17 El Naranjo,320.0
+2019-05-01,Terrestre,18 Bethel,65.0
+2019-05-01,Terrestre,19 Gracias a Dios,1229.0
+2019-05-01,Terrestre,20 Melchor de Mencos,12485.333333333332
+2019-06-01,Aérea,01 La Aurora,127541.99999999904
+2019-06-01,Aérea,02 Mundo Maya,63.0
+2019-06-01,Terrestre,07 Valle Nuevo,71284.71604938273
+2019-06-01,Terrestre,08 Pedro de Alvarado,38165.0
+2019-06-01,Terrestre,09 San Cristóbal,44031.0
+2019-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),25191.0
+2019-06-01,Terrestre,11 Agua Caliente,7758.0
+2019-06-01,Terrestre,12 El Florido,7699.0
+2019-06-01,Terrestre,13 El Cinchado / El Corinto,11719.0
+2019-06-01,Terrestre,14 Tecún Umán,4249.0
+2019-06-01,Terrestre,15 El Carmen,6540.952380952381
+2019-06-01,Terrestre,16 La Mesilla,2186.0
+2019-06-01,Terrestre,17 El Naranjo,410.0
+2019-06-01,Terrestre,18 Bethel,8.0
+2019-06-01,Terrestre,19 Gracias a Dios,1199.0
+2019-06-01,Terrestre,20 Melchor de Mencos,12677.95652173913
+2019-07-01,Aérea,01 La Aurora,138480.64109759167
+2019-07-01,Aérea,02 Mundo Maya,82.00000000000001
+2019-07-01,Marítima,03 Puerto Quetzal,1966.0
+2019-07-01,Terrestre,07 Valle Nuevo,83287.0
+2019-07-01,Terrestre,08 Pedro de Alvarado,42296.0
+2019-07-01,Terrestre,09 San Cristóbal,44010.0
+2019-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),25064.0
+2019-07-01,Terrestre,11 Agua Caliente,8304.081481481482
+2019-07-01,Terrestre,12 El Florido,8582.0
+2019-07-01,Terrestre,13 El Cinchado / El Corinto,14157.496147919877
+2019-07-01,Terrestre,14 Tecún Umán,4562.0
+2019-07-01,Terrestre,15 El Carmen,7078.0
+2019-07-01,Terrestre,16 La Mesilla,2697.0
+2019-07-01,Terrestre,17 El Naranjo,557.1
+2019-07-01,Terrestre,18 Bethel,454.0
+2019-07-01,Terrestre,19 Gracias a Dios,1470.0
+2019-07-01,Terrestre,20 Melchor de Mencos,41501.91037402964
+2019-08-01,Aérea,01 La Aurora,114840.99999999999
+2019-08-01,Aérea,02 Mundo Maya,204.0
+2019-08-01,Terrestre,07 Valle Nuevo,91114.66592427617
+2019-08-01,Terrestre,08 Pedro de Alvarado,49415.0
+2019-08-01,Terrestre,09 San Cristóbal,49341.393939393936
+2019-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),29907.0
+2019-08-01,Terrestre,11 Agua Caliente,33492.0
+2019-08-01,Terrestre,12 El Florido,10047.0
+2019-08-01,Terrestre,13 El Cinchado / El Corinto,12898.823529411764
+2019-08-01,Terrestre,14 Tecún Umán,4094.0
+2019-08-01,Terrestre,15 El Carmen,10488.0
+2019-08-01,Terrestre,16 La Mesilla,2765.0
+2019-08-01,Terrestre,17 El Naranjo,632.0
+2019-08-01,Terrestre,18 Bethel,86.33333333333333
+2019-08-01,Terrestre,19 Gracias a Dios,1290.0
+2019-08-01,Terrestre,20 Melchor de Mencos,24540.0
+2019-09-01,Aérea,01 La Aurora,101114.99999999949
+2019-09-01,Aérea,02 Mundo Maya,125.07692307692308
+2019-09-01,Marítima,03 Puerto Quetzal,1294.0
+2019-09-01,Terrestre,07 Valle Nuevo,74310.20360824742
+2019-09-01,Terrestre,08 Pedro de Alvarado,35888.0
+2019-09-01,Terrestre,09 San Cristóbal,39556.0
+2019-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),18526.865384615387
+2019-09-01,Terrestre,11 Agua Caliente,7922.0
+2019-09-01,Terrestre,12 El Florido,7742.416666666667
+2019-09-01,Terrestre,13 El Cinchado / El Corinto,12815.555555555555
+2019-09-01,Terrestre,14 Tecún Umán,3632.0
+2019-09-01,Terrestre,15 El Carmen,5650.0
+2019-09-01,Terrestre,16 La Mesilla,2025.0000000000002
+2019-09-01,Terrestre,17 El Naranjo,307.0
+2019-09-01,Terrestre,18 Bethel,98.88888888888889
+2019-09-01,Terrestre,19 Gracias a Dios,972.0
+2019-09-01,Terrestre,20 Melchor de Mencos,14398.546666666667
+2019-10-01,Aérea,01 La Aurora,118992.99999999866
+2019-10-01,Aérea,02 Mundo Maya,136.0
+2019-10-01,Marítima,03 Puerto Quetzal,17004.0
+2019-10-01,Terrestre,07 Valle Nuevo,79883.53014553015
+2019-10-01,Terrestre,08 Pedro de Alvarado,21830.454545454544
+2019-10-01,Terrestre,09 San Cristóbal,27417.0
+2019-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),14153.0
+2019-10-01,Terrestre,11 Agua Caliente,8688.0
+2019-10-01,Terrestre,12 El Florido,9269.0
+2019-10-01,Terrestre,13 El Cinchado / El Corinto,5537.19696969697
+2019-10-01,Terrestre,14 Tecún Umán,4078.0
+2019-10-01,Terrestre,15 El Carmen,6350.0
+2019-10-01,Terrestre,16 La Mesilla,3109.0
+2019-10-01,Terrestre,17 El Naranjo,377.0
+2019-10-01,Terrestre,18 Bethel,55.400000000000006
+2019-10-01,Terrestre,19 Gracias a Dios,1432.0
+2019-10-01,Terrestre,20 Melchor de Mencos,14910.0
+2019-11-01,Aérea,01 La Aurora,136891.00000000227
+2019-11-01,Aérea,02 Mundo Maya,201.0
+2019-11-01,Marítima,03 Puerto Quetzal,21680.93357285429
+2019-11-01,Marítima,04 Santo Tomás de Castilla,1918.066427145709
+2019-11-01,Terrestre,07 Valle Nuevo,89887.04554865425
+2019-11-01,Terrestre,08 Pedro de Alvarado,20729.833333333332
+2019-11-01,Terrestre,09 San Cristóbal,26881.0
+2019-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),15878.0
+2019-11-01,Terrestre,11 Agua Caliente,36976.0
+2019-11-01,Terrestre,12 El Florido,9605.0
+2019-11-01,Terrestre,13 El Cinchado / El Corinto,6447.0
+2019-11-01,Terrestre,14 Tecún Umán,4008.0
+2019-11-01,Terrestre,15 El Carmen,8987.0
+2019-11-01,Terrestre,16 La Mesilla,3389.9999999999995
+2019-11-01,Terrestre,17 El Naranjo,1017.0
+2019-11-01,Terrestre,18 Bethel,197.0
+2019-11-01,Terrestre,19 Gracias a Dios,1027.0
+2019-11-01,Terrestre,20 Melchor de Mencos,18913.0
+2019-12-01,Aérea,01 La Aurora,157465.00000000003
+2019-12-01,Aérea,02 Mundo Maya,377.0
+2019-12-01,Marítima,03 Puerto Quetzal,6621.174822375663
+2019-12-01,Marítima,04 Santo Tomás de Castilla,2730.825177624337
+2019-12-01,Terrestre,07 Valle Nuevo,111436.0
+2019-12-01,Terrestre,08 Pedro de Alvarado,34478.0
+2019-12-01,Terrestre,09 San Cristóbal,44705.75
+2019-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),23760.0
+2019-12-01,Terrestre,11 Agua Caliente,45108.0
+2019-12-01,Terrestre,12 El Florido,11780.0
+2019-12-01,Terrestre,13 El Cinchado / El Corinto,19338.037037037036
+2019-12-01,Terrestre,14 Tecún Umán,8916.0
+2019-12-01,Terrestre,15 El Carmen,14588.0
+2019-12-01,Terrestre,16 La Mesilla,6657.0
+2019-12-01,Terrestre,17 El Naranjo,1310.0
+2019-12-01,Terrestre,18 Bethel,115.0
+2019-12-01,Terrestre,19 Gracias a Dios,1428.0
+2019-12-01,Terrestre,20 Melchor de Mencos,25006.658914728683
+2020-01-01,Aérea,01 La Aurora,130440.00219828535
+2020-01-01,Aérea,02 Mundo Maya,257.0
+2020-01-01,Marítima,03 Puerto Quetzal,13228.0
+2020-01-01,Marítima,04 Santo Tomás de Castilla,5800.0
+2020-01-01,Terrestre,07 Valle Nuevo,84022.0
+2020-01-01,Terrestre,08 Pedro de Alvarado,42730.0
+2020-01-01,Terrestre,09 San Cristóbal,50828.0
+2020-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),21211.585365853658
+2020-01-01,Terrestre,11 Agua Caliente,54484.551724137935
+2020-01-01,Terrestre,12 El Florido,11485.345394736842
+2020-01-01,Terrestre,13 El Cinchado / El Corinto,16494.0
+2020-01-01,Terrestre,14 Tecún Umán,4038.0
+2020-01-01,Terrestre,15 El Carmen,7526.0
+2020-01-01,Terrestre,16 La Mesilla,3453.045248868778
+2020-01-01,Terrestre,17 El Naranjo,756.0
+2020-01-01,Terrestre,18 Bethel,182.45454545454544
+2020-01-01,Terrestre,19 Gracias a Dios,494.0
+2020-01-01,Terrestre,20 Melchor de Mencos,18310.190206591622
+2020-02-01,Aérea,01 La Aurora,112587.99999999996
+2020-02-01,Aérea,02 Mundo Maya,298.0
+2020-02-01,Marítima,03 Puerto Quetzal,15283.0
+2020-02-01,Marítima,04 Santo Tomás de Castilla,1136.0
+2020-02-01,Terrestre,07 Valle Nuevo,70386.0
+2020-02-01,Terrestre,08 Pedro de Alvarado,36437.9381443299
+2020-02-01,Terrestre,09 San Cristóbal,39907.87096774194
+2020-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),15300.816593886462
+2020-02-01,Terrestre,11 Agua Caliente,42035.0
+2020-02-01,Terrestre,12 El Florido,9212.0
+2020-02-01,Terrestre,13 El Cinchado / El Corinto,12355.0
+2020-02-01,Terrestre,14 Tecún Umán,4329.0
+2020-02-01,Terrestre,15 El Carmen,12880.0
+2020-02-01,Terrestre,16 La Mesilla,2323.0
+2020-02-01,Terrestre,17 El Naranjo,414.99999999999994
+2020-02-01,Terrestre,18 Bethel,139.0
+2020-02-01,Terrestre,19 Gracias a Dios,1240.0
+2020-02-01,Terrestre,20 Melchor de Mencos,12996.0
+2020-03-01,Aérea,01 La Aurora,54740.992130115425
+2020-03-01,Aérea,02 Mundo Maya,90.0
+2020-03-01,Marítima,03 Puerto Quetzal,1874.0
+2020-03-01,Marítima,04 Santo Tomás de Castilla,4671.0
+2020-03-01,Terrestre,07 Valle Nuevo,25685.0
+2020-03-01,Terrestre,08 Pedro de Alvarado,22419.0
+2020-03-01,Terrestre,09 San Cristóbal,18549.0
+2020-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),14219.0
+2020-03-01,Terrestre,11 Agua Caliente,3997.25
+2020-03-01,Terrestre,12 El Florido,4921.722789115646
+2020-03-01,Terrestre,13 El Cinchado / El Corinto,6281.0
+2020-03-01,Terrestre,14 Tecún Umán,2667.0
+2020-03-01,Terrestre,15 El Carmen,4349.0
+2020-03-01,Terrestre,16 La Mesilla,1119.0
+2020-03-01,Terrestre,17 El Naranjo,314.0
+2020-03-01,Terrestre,18 Bethel,53.1764705882353
+2020-03-01,Terrestre,19 Gracias a Dios,1072.0
+2020-03-01,Terrestre,20 Melchor de Mencos,9848.148648648648
+2020-04-01,Aérea,01 La Aurora,484.0
+2020-04-01,Aérea,02 Mundo Maya,5.0
+2020-04-01,Terrestre,07 Valle Nuevo,201.0
+2020-04-01,Terrestre,08 Pedro de Alvarado,3191.0
+2020-04-01,Terrestre,09 San Cristóbal,1898.0
+2020-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),370.0
+2020-04-01,Terrestre,11 Agua Caliente,137.0
+2020-04-01,Terrestre,12 El Florido,1217.0
+2020-04-01,Terrestre,13 El Cinchado / El Corinto,1247.0
+2020-04-01,Terrestre,14 Tecún Umán,283.0
+2020-04-01,Terrestre,15 El Carmen,216.0
+2020-04-01,Terrestre,16 La Mesilla,133.0
+2020-04-01,Terrestre,17 El Naranjo,13.0
+2020-04-01,Terrestre,18 Bethel,2.0
+2020-04-01,Terrestre,19 Gracias a Dios,352.0
+2020-04-01,Terrestre,20 Melchor de Mencos,290.0
+2020-05-01,Aérea,01 La Aurora,608.0
+2020-05-01,Aérea,02 Mundo Maya,2.0
+2020-05-01,Terrestre,07 Valle Nuevo,193.0
+2020-05-01,Terrestre,08 Pedro de Alvarado,3366.0
+2020-05-01,Terrestre,09 San Cristóbal,2139.0
+2020-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),351.0
+2020-05-01,Terrestre,11 Agua Caliente,162.0
+2020-05-01,Terrestre,12 El Florido,1203.0
+2020-05-01,Terrestre,13 El Cinchado / El Corinto,1002.0
+2020-05-01,Terrestre,14 Tecún Umán,285.0
+2020-05-01,Terrestre,15 El Carmen,33.0
+2020-05-01,Terrestre,16 La Mesilla,197.0
+2020-05-01,Terrestre,17 El Naranjo,3.0
+2020-05-01,Terrestre,19 Gracias a Dios,76.0
+2020-05-01,Terrestre,20 Melchor de Mencos,159.0
+2020-06-01,Aérea,01 La Aurora,1418.0
+2020-06-01,Terrestre,07 Valle Nuevo,208.0
+2020-06-01,Terrestre,08 Pedro de Alvarado,3636.0
+2020-06-01,Terrestre,09 San Cristóbal,2600.0
+2020-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),456.0
+2020-06-01,Terrestre,11 Agua Caliente,130.0
+2020-06-01,Terrestre,12 El Florido,1348.0
+2020-06-01,Terrestre,13 El Cinchado / El Corinto,1055.0
+2020-06-01,Terrestre,14 Tecún Umán,605.0
+2020-06-01,Terrestre,15 El Carmen,76.0
+2020-06-01,Terrestre,16 La Mesilla,131.0
+2020-06-01,Terrestre,17 El Naranjo,13.0
+2020-06-01,Terrestre,19 Gracias a Dios,22.0
+2020-06-01,Terrestre,20 Melchor de Mencos,119.0
+2020-07-01,Aérea,01 La Aurora,1047.0
+2020-07-01,Terrestre,07 Valle Nuevo,314.0
+2020-07-01,Terrestre,08 Pedro de Alvarado,4545.0
+2020-07-01,Terrestre,09 San Cristóbal,2662.0
+2020-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),496.0
+2020-07-01,Terrestre,11 Agua Caliente,132.0
+2020-07-01,Terrestre,12 El Florido,1606.0
+2020-07-01,Terrestre,13 El Cinchado / El Corinto,1281.0
+2020-07-01,Terrestre,14 Tecún Umán,595.0
+2020-07-01,Terrestre,15 El Carmen,431.0
+2020-07-01,Terrestre,16 La Mesilla,174.0
+2020-07-01,Terrestre,17 El Naranjo,15.0
+2020-07-01,Terrestre,19 Gracias a Dios,18.0
+2020-07-01,Terrestre,20 Melchor de Mencos,168.0
+2020-08-01,Aérea,01 La Aurora,1259.0
+2020-08-01,Terrestre,07 Valle Nuevo,325.0
+2020-08-01,Terrestre,08 Pedro de Alvarado,4815.0
+2020-08-01,Terrestre,09 San Cristóbal,2735.0
+2020-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),452.0
+2020-08-01,Terrestre,11 Agua Caliente,124.0
+2020-08-01,Terrestre,12 El Florido,1968.0
+2020-08-01,Terrestre,13 El Cinchado / El Corinto,1454.0
+2020-08-01,Terrestre,14 Tecún Umán,959.0
+2020-08-01,Terrestre,15 El Carmen,1008.0
+2020-08-01,Terrestre,16 La Mesilla,83.0
+2020-08-01,Terrestre,17 El Naranjo,12.0
+2020-08-01,Terrestre,18 Bethel,2.0
+2020-08-01,Terrestre,19 Gracias a Dios,23.0
+2020-08-01,Terrestre,20 Melchor de Mencos,138.0
+2020-09-01,Aérea,01 La Aurora,5598.0
+2020-09-01,Aérea,02 Mundo Maya,8.0
+2020-09-01,Terrestre,07 Valle Nuevo,1986.7368421052631
+2020-09-01,Terrestre,08 Pedro de Alvarado,6737.917073170732
+2020-09-01,Terrestre,09 San Cristóbal,3504.0
+2020-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),2191.0
+2020-09-01,Terrestre,11 Agua Caliente,229.0
+2020-09-01,Terrestre,12 El Florido,1363.0
+2020-09-01,Terrestre,13 El Cinchado / El Corinto,1575.0
+2020-09-01,Terrestre,14 Tecún Umán,758.0
+2020-09-01,Terrestre,15 El Carmen,1183.0
+2020-09-01,Terrestre,16 La Mesilla,115.875
+2020-09-01,Terrestre,17 El Naranjo,81.0
+2020-09-01,Terrestre,19 Gracias a Dios,6.0
+2020-09-01,Terrestre,20 Melchor de Mencos,53.0
+2020-10-01,Aérea,01 La Aurora,9471.702618453864
+2020-10-01,Aérea,02 Mundo Maya,3.0
+2020-10-01,Terrestre,07 Valle Nuevo,3776.865268428001
+2020-10-01,Terrestre,08 Pedro de Alvarado,7175.957028647569
+2020-10-01,Terrestre,09 San Cristóbal,2210.9500000000057
+2020-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),1884.400000000005
+2020-10-01,Terrestre,11 Agua Caliente,299.25
+2020-10-01,Terrestre,12 El Florido,1524.6
+2020-10-01,Terrestre,13 El Cinchado / El Corinto,1636.8500000000008
+2020-10-01,Terrestre,14 Tecún Umán,851.4124999999996
+2020-10-01,Terrestre,15 El Carmen,1338.6870370370368
+2020-10-01,Terrestre,16 La Mesilla,171.49999999999997
+2020-10-01,Terrestre,17 El Naranjo,102.70000000000006
+2020-10-01,Terrestre,19 Gracias a Dios,0.7
+2020-10-01,Terrestre,20 Melchor de Mencos,89.95
+2020-11-01,Aérea,01 La Aurora,38988.0
+2020-11-01,Aérea,02 Mundo Maya,6.0
+2020-11-01,Terrestre,07 Valle Nuevo,5614.0
+2020-11-01,Terrestre,08 Pedro de Alvarado,7933.0
+2020-11-01,Terrestre,09 San Cristóbal,1129.0
+2020-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),507.0
+2020-11-01,Terrestre,11 Agua Caliente,735.0
+2020-11-01,Terrestre,12 El Florido,630.0
+2020-11-01,Terrestre,13 El Cinchado / El Corinto,601.0
+2020-11-01,Terrestre,14 Tecún Umán,1036.0
+2020-11-01,Terrestre,15 El Carmen,1083.0
+2020-11-01,Terrestre,16 La Mesilla,191.0
+2020-11-01,Terrestre,17 El Naranjo,96.0
+2020-11-01,Terrestre,18 Bethel,19.0
+2020-11-01,Terrestre,19 Gracias a Dios,17.0
+2020-11-01,Terrestre,20 Melchor de Mencos,47.0
+2020-12-01,Aérea,01 La Aurora,53707.0
+2020-12-01,Aérea,02 Mundo Maya,10.0
+2020-12-01,Terrestre,07 Valle Nuevo,80.0
+2020-12-01,Terrestre,08 Pedro de Alvarado,78.0
+2020-12-01,Terrestre,09 San Cristóbal,14.0
+2020-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),26.0
+2020-12-01,Terrestre,11 Agua Caliente,1166.0
+2020-12-01,Terrestre,12 El Florido,172.0
+2020-12-01,Terrestre,13 El Cinchado / El Corinto,518.0
+2020-12-01,Terrestre,14 Tecún Umán,359.0
+2020-12-01,Terrestre,15 El Carmen,2726.0
+2020-12-01,Terrestre,16 La Mesilla,126.0
+2020-12-01,Terrestre,17 El Naranjo,217.0
+2020-12-01,Terrestre,19 Gracias a Dios,22.0
+2020-12-01,Terrestre,20 Melchor de Mencos,211.0
+2021-01-01,Aérea,01 La Aurora,43644.0
+2021-01-01,Aérea,02 Mundo Maya,4.0
+2021-01-01,Terrestre,07 Valle Nuevo,12463.0
+2021-01-01,Terrestre,08 Pedro de Alvarado,17064.0
+2021-01-01,Terrestre,09 San Cristóbal,5348.0
+2021-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),1727.0
+2021-01-01,Terrestre,11 Agua Caliente,2070.0
+2021-01-01,Terrestre,12 El Florido,5442.0
+2021-01-01,Terrestre,13 El Cinchado / El Corinto,9890.0
+2021-01-01,Terrestre,14 Tecún Umán,2262.0
+2021-01-01,Terrestre,15 El Carmen,3309.0
+2021-01-01,Terrestre,16 La Mesilla,854.0
+2021-01-01,Terrestre,17 El Naranjo,338.0
+2021-01-01,Terrestre,18 Bethel,5.0
+2021-01-01,Terrestre,19 Gracias a Dios,1.0
+2021-01-01,Terrestre,20 Melchor de Mencos,199.0
+2021-02-01,Aérea,01 La Aurora,28780.0
+2021-02-01,Aérea,02 Mundo Maya,4.0
+2021-02-01,Terrestre,07 Valle Nuevo,9054.0
+2021-02-01,Terrestre,08 Pedro de Alvarado,9006.0
+2021-02-01,Terrestre,09 San Cristóbal,7649.0
+2021-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),1581.0
+2021-02-01,Terrestre,11 Agua Caliente,1052.0
+2021-02-01,Terrestre,12 El Florido,4158.0
+2021-02-01,Terrestre,13 El Cinchado / El Corinto,20.0
+2021-02-01,Terrestre,15 El Carmen,836.0
+2021-02-01,Terrestre,16 La Mesilla,166.0
+2021-02-01,Terrestre,17 El Naranjo,115.0
+2021-02-01,Terrestre,19 Gracias a Dios,3.0
+2021-02-01,Terrestre,20 Melchor de Mencos,3039.0
+2021-03-01,Aérea,01 La Aurora,60159.41466618583
+2021-03-01,Aérea,02 Mundo Maya,1.0
+2021-03-01,Terrestre,07 Valle Nuevo,6684.436935480299
+2021-03-01,Terrestre,08 Pedro de Alvarado,11600.665932856356
+2021-03-01,Terrestre,09 San Cristóbal,18742.0
+2021-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),799.0
+2021-03-01,Terrestre,11 Agua Caliente,500.2307692307692
+2021-03-01,Terrestre,12 El Florido,1174.1527913809991
+2021-03-01,Terrestre,13 El Cinchado / El Corinto,4147.0
+2021-03-01,Terrestre,15 El Carmen,1011.0
+2021-03-01,Terrestre,16 La Mesilla,40.15384615384615
+2021-03-01,Terrestre,19 Gracias a Dios,222.0
+2021-03-01,Terrestre,20 Melchor de Mencos,64.0
+2021-04-01,Aérea,01 La Aurora,34535.691431401676
+2021-04-01,Aérea,02 Mundo Maya,6.0
+2021-04-01,Terrestre,07 Valle Nuevo,5843.0
+2021-04-01,Terrestre,08 Pedro de Alvarado,10230.0
+2021-04-01,Terrestre,09 San Cristóbal,19174.0
+2021-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),1695.0
+2021-04-01,Terrestre,11 Agua Caliente,638.0
+2021-04-01,Terrestre,12 El Florido,1953.0
+2021-04-01,Terrestre,13 El Cinchado / El Corinto,5933.178229056203
+2021-04-01,Terrestre,14 Tecún Umán,664.0
+2021-04-01,Terrestre,15 El Carmen,713.0
+2021-04-01,Terrestre,16 La Mesilla,50.0
+2021-04-01,Terrestre,17 El Naranjo,262.0
+2021-04-01,Terrestre,18 Bethel,3.0
+2021-04-01,Terrestre,20 Melchor de Mencos,368.0
+2021-05-01,Aérea,01 La Aurora,59517.0
+2021-05-01,Aérea,02 Mundo Maya,1.0
+2021-05-01,Terrestre,07 Valle Nuevo,2213.0
+2021-05-01,Terrestre,08 Pedro de Alvarado,7892.0
+2021-05-01,Terrestre,09 San Cristóbal,4303.0
+2021-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),663.0
+2021-05-01,Terrestre,11 Agua Caliente,489.0
+2021-05-01,Terrestre,12 El Florido,1105.0
+2021-05-01,Terrestre,13 El Cinchado / El Corinto,2292.0
+2021-05-01,Terrestre,14 Tecún Umán,554.0
+2021-05-01,Terrestre,15 El Carmen,749.0
+2021-05-01,Terrestre,16 La Mesilla,98.0
+2021-05-01,Terrestre,17 El Naranjo,57.0
+2021-05-01,Terrestre,19 Gracias a Dios,5.0
+2021-05-01,Terrestre,20 Melchor de Mencos,36.0
+2021-06-01,Aérea,01 La Aurora,75980.0
+2021-06-01,Aérea,02 Mundo Maya,7.0
+2021-06-01,Terrestre,07 Valle Nuevo,6512.0
+2021-06-01,Terrestre,08 Pedro de Alvarado,7653.0
+2021-06-01,Terrestre,09 San Cristóbal,4955.0
+2021-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),1177.0
+2021-06-01,Terrestre,11 Agua Caliente,766.0
+2021-06-01,Terrestre,12 El Florido,4289.0
+2021-06-01,Terrestre,13 El Cinchado / El Corinto,3409.0
+2021-06-01,Terrestre,14 Tecún Umán,702.0
+2021-06-01,Terrestre,15 El Carmen,765.0
+2021-06-01,Terrestre,16 La Mesilla,142.0
+2021-06-01,Terrestre,17 El Naranjo,40.0
+2021-06-01,Terrestre,20 Melchor de Mencos,39.0
+2021-07-01,Aérea,01 La Aurora,71178.0
+2021-07-01,Aérea,02 Mundo Maya,2.0
+2021-07-01,Terrestre,07 Valle Nuevo,8112.0
+2021-07-01,Terrestre,08 Pedro de Alvarado,8722.664333592564
+2021-07-01,Terrestre,09 San Cristóbal,5717.0
+2021-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),1167.0
+2021-07-01,Terrestre,11 Agua Caliente,655.0
+2021-07-01,Terrestre,12 El Florido,6588.0
+2021-07-01,Terrestre,13 El Cinchado / El Corinto,4499.0
+2021-07-01,Terrestre,14 Tecún Umán,563.0
+2021-07-01,Terrestre,15 El Carmen,962.0
+2021-07-01,Terrestre,16 La Mesilla,104.0
+2021-07-01,Terrestre,17 El Naranjo,5.0
+2021-07-01,Terrestre,20 Melchor de Mencos,71.0
+2021-08-01,Aérea,01 La Aurora,55680.0
+2021-08-01,Terrestre,07 Valle Nuevo,5906.0
+2021-08-01,Terrestre,08 Pedro de Alvarado,7979.0
+2021-08-01,Terrestre,09 San Cristóbal,4490.0
+2021-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),819.0
+2021-08-01,Terrestre,11 Agua Caliente,570.0
+2021-08-01,Terrestre,12 El Florido,2593.0
+2021-08-01,Terrestre,13 El Cinchado / El Corinto,4137.0
+2021-08-01,Terrestre,14 Tecún Umán,241.0
+2021-08-01,Terrestre,15 El Carmen,633.0
+2021-08-01,Terrestre,16 La Mesilla,19.0
+2021-08-01,Terrestre,17 El Naranjo,13.0
+2021-08-01,Terrestre,19 Gracias a Dios,5.0
+2021-08-01,Terrestre,20 Melchor de Mencos,166.0
+2021-09-01,Aérea,01 La Aurora,46047.99999999996
+2021-09-01,Terrestre,07 Valle Nuevo,7205.0
+2021-09-01,Terrestre,08 Pedro de Alvarado,6704.0
+2021-09-01,Terrestre,09 San Cristóbal,5656.0
+2021-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),1258.0
+2021-09-01,Terrestre,11 Agua Caliente,291.0
+2021-09-01,Terrestre,12 El Florido,3517.0
+2021-09-01,Terrestre,13 El Cinchado / El Corinto,3236.0
+2021-09-01,Terrestre,14 Tecún Umán,420.0
+2021-09-01,Terrestre,15 El Carmen,516.0
+2021-09-01,Terrestre,16 La Mesilla,6.0
+2021-09-01,Terrestre,19 Gracias a Dios,3.0
+2021-09-01,Terrestre,20 Melchor de Mencos,54.0
+2021-10-01,Aérea,01 La Aurora,53386.0
+2021-10-01,Aérea,02 Mundo Maya,34.0
+2021-10-01,Terrestre,01 La Aurora,4828.0
+2021-10-01,Terrestre,02 Mundo Maya,2.0
+2021-10-01,Terrestre,07 Valle Nuevo,5680.0
+2021-10-01,Terrestre,08 Pedro de Alvarado,4959.0
+2021-10-01,Terrestre,09 San Cristóbal,4195.0
+2021-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),7475.0
+2021-10-01,Terrestre,11 Agua Caliente,616.0
+2021-10-01,Terrestre,12 El Florido,6560.0
+2021-10-01,Terrestre,13 El Cinchado / El Corinto,4820.0
+2021-10-01,Terrestre,14 Tecún Umán,557.0
+2021-10-01,Terrestre,15 El Carmen,251.0
+2021-10-01,Terrestre,16 La Mesilla,38.0
+2021-10-01,Terrestre,17 El Naranjo,89.0
+2021-10-01,Terrestre,18 Bethel,92.0
+2021-10-01,Terrestre,19 Gracias a Dios,7.0
+2021-10-01,Terrestre,20 Melchor de Mencos,156.0
+2021-11-01,Aérea,01 La Aurora,72663.0
+2021-11-01,Aérea,02 Mundo Maya,10.0
+2021-11-01,Marítima,03 Puerto Quetzal,892.0
+2021-11-01,Marítima,04 Santo Tomás de Castilla,421.0
+2021-11-01,Terrestre,07 Valle Nuevo,10140.445843828715
+2021-11-01,Terrestre,08 Pedro de Alvarado,11509.0
+2021-11-01,Terrestre,09 San Cristóbal,5148.0
+2021-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),2385.0
+2021-11-01,Terrestre,11 Agua Caliente,447.0
+2021-11-01,Terrestre,12 El Florido,3365.0
+2021-11-01,Terrestre,13 El Cinchado / El Corinto,3967.0
+2021-11-01,Terrestre,14 Tecún Umán,1898.0
+2021-11-01,Terrestre,15 El Carmen,1710.7317073170732
+2021-11-01,Terrestre,16 La Mesilla,1370.0
+2021-11-01,Terrestre,17 El Naranjo,126.0
+2021-11-01,Terrestre,18 Bethel,32.0
+2021-11-01,Terrestre,20 Melchor de Mencos,824.0
+2021-12-01,Aérea,01 La Aurora,122055.0
+2021-12-01,Aérea,02 Mundo Maya,199.0
+2021-12-01,Marítima,03 Puerto Quetzal,85.0
+2021-12-01,Marítima,04 Santo Tomás de Castilla,2510.0
+2021-12-01,Terrestre,07 Valle Nuevo,45070.0
+2021-12-01,Terrestre,08 Pedro de Alvarado,24722.0
+2021-12-01,Terrestre,09 San Cristóbal,21215.0
+2021-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),13658.0
+2021-12-01,Terrestre,11 Agua Caliente,722.0
+2021-12-01,Terrestre,12 El Florido,3051.0
+2021-12-01,Terrestre,13 El Cinchado / El Corinto,4983.0
+2021-12-01,Terrestre,14 Tecún Umán,2352.0
+2021-12-01,Terrestre,15 El Carmen,2710.0
+2021-12-01,Terrestre,16 La Mesilla,1609.0
+2021-12-01,Terrestre,17 El Naranjo,473.0
+2021-12-01,Terrestre,18 Bethel,134.0
+2021-12-01,Terrestre,20 Melchor de Mencos,1350.0
+2022-01-01,Aérea,01 La Aurora,97425.0
+2022-01-01,Aérea,02 Mundo Maya,312.0
+2022-01-01,Aérea,20 Melchor de Mencos,15.0
+2022-01-01,Marítima,Cruceros,676.0
+2022-01-01,Terrestre,07 Valle Nuevo,12731.0
+2022-01-01,Terrestre,08 Pedro de Alvarado,11620.0
+2022-01-01,Terrestre,09 San Cristóbal,7550.0
+2022-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),4131.0
+2022-01-01,Terrestre,11 Agua Caliente,900.0
+2022-01-01,Terrestre,12 El Florido,7818.0
+2022-01-01,Terrestre,13 El Cinchado / El Corinto,3673.0
+2022-01-01,Terrestre,14 Tecún Umán,838.0
+2022-01-01,Terrestre,15 El Carmen,695.0
+2022-01-01,Terrestre,16 La Mesilla,1753.0
+2022-01-01,Terrestre,17 El Naranjo,358.0
+2022-01-01,Terrestre,18 Bethel,71.0
+2022-01-01,Terrestre,19 Gracias a Dios,5.0
+2022-01-01,Terrestre,20 Melchor de Mencos,1138.0
+2022-02-01,Aérea,01 La Aurora,84463.0
+2022-02-01,Aérea,02 Mundo Maya,112.0
+2022-02-01,Marítima,Cruceros,448.0
+2022-02-01,Terrestre,07 Valle Nuevo,38368.4
+2022-02-01,Terrestre,08 Pedro de Alvarado,31142.8
+2022-02-01,Terrestre,09 San Cristóbal,27447.4
+2022-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),13043.8
+2022-02-01,Terrestre,11 Agua Caliente,2832.0
+2022-02-01,Terrestre,12 El Florido,9629.0
+2022-02-01,Terrestre,13 El Cinchado / El Corinto,15491.0
+2022-02-01,Terrestre,14 Tecún Umán,2273.0
+2022-02-01,Terrestre,15 El Carmen,1753.0
+2022-02-01,Terrestre,16 La Mesilla,1625.0
+2022-02-01,Terrestre,17 El Naranjo,274.0
+2022-02-01,Terrestre,18 Bethel,158.0
+2022-02-01,Terrestre,19 Gracias a Dios,1.0
+2022-02-01,Terrestre,20 Melchor de Mencos,3137.0
+2022-03-01,Aérea,01 La Aurora,106039.0
+2022-03-01,Aérea,02 Mundo Maya,102.0
+2022-03-01,Marítima,Cruceros,852.0
+2022-03-01,Terrestre,07 Valle Nuevo,50078.0
+2022-03-01,Terrestre,08 Pedro de Alvarado,38846.0
+2022-03-01,Terrestre,09 San Cristóbal,35219.0
+2022-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),16047.0
+2022-03-01,Terrestre,11 Agua Caliente,3763.0
+2022-03-01,Terrestre,12 El Florido,12308.0
+2022-03-01,Terrestre,13 El Cinchado / El Corinto,16582.0
+2022-03-01,Terrestre,14 Tecún Umán,2374.0
+2022-03-01,Terrestre,15 El Carmen,2962.0
+2022-03-01,Terrestre,16 La Mesilla,1723.0
+2022-03-01,Terrestre,17 El Naranjo,199.0
+2022-03-01,Terrestre,18 Bethel,107.0
+2022-03-01,Terrestre,19 Gracias a Dios,1.0
+2022-03-01,Terrestre,20 Melchor de Mencos,8928.0
+2022-04-01,Aérea,01 La Aurora,124433.0
+2022-04-01,Aérea,02 Mundo Maya,349.0
+2022-04-01,Marítima,Cruceros,3902.0
+2022-04-01,Terrestre,07 Valle Nuevo,71751.0
+2022-04-01,Terrestre,08 Pedro de Alvarado,47048.0
+2022-04-01,Terrestre,09 San Cristóbal,41903.0
+2022-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),24975.0
+2022-04-01,Terrestre,11 Agua Caliente,6120.0
+2022-04-01,Terrestre,12 El Florido,17114.0
+2022-04-01,Terrestre,13 El Cinchado / El Corinto,22243.0
+2022-04-01,Terrestre,14 Tecún Umán,4282.0
+2022-04-01,Terrestre,15 El Carmen,5927.0
+2022-04-01,Terrestre,16 La Mesilla,1864.0
+2022-04-01,Terrestre,17 El Naranjo,837.0
+2022-04-01,Terrestre,18 Bethel,73.0
+2022-04-01,Terrestre,19 Gracias a Dios,72.0
+2022-04-01,Terrestre,20 Melchor de Mencos,13885.0
+2022-05-01,Aérea,01 La Aurora,111743.0
+2022-05-01,Aérea,02 Mundo Maya,96.0
+2022-05-01,Marítima,Cruceros,897.0
+2022-05-01,Terrestre,07 Valle Nuevo,70057.0
+2022-05-01,Terrestre,08 Pedro de Alvarado,39143.0
+2022-05-01,Terrestre,09 San Cristóbal,57759.0
+2022-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),28195.0
+2022-05-01,Terrestre,11 Agua Caliente,5292.0
+2022-05-01,Terrestre,12 El Florido,12448.0
+2022-05-01,Terrestre,13 El Cinchado / El Corinto,12572.0
+2022-05-01,Terrestre,14 Tecún Umán,3088.0
+2022-05-01,Terrestre,15 El Carmen,4478.0
+2022-05-01,Terrestre,16 La Mesilla,1113.0
+2022-05-01,Terrestre,17 El Naranjo,336.0
+2022-05-01,Terrestre,18 Bethel,29.0
+2022-05-01,Terrestre,19 Gracias a Dios,6.0
+2022-05-01,Terrestre,20 Melchor de Mencos,9148.0
+2022-06-01,Aérea,01 La Aurora,125316.0
+2022-06-01,Terrestre,07 Valle Nuevo,64402.0
+2022-06-01,Terrestre,08 Pedro de Alvarado,27645.0
+2022-06-01,Terrestre,09 San Cristóbal,73970.0
+2022-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),14820.0
+2022-06-01,Terrestre,12 El Florido,35991.0
+2022-06-01,Terrestre,15 El Carmen,6700.0
+2022-06-01,Terrestre,16 La Mesilla,3167.0
+2022-06-01,Terrestre,20 Melchor de Mencos,8272.0
+2022-07-01,Aérea,01 La Aurora,131361.0
+2022-07-01,Aérea,02 Mundo Maya,97.0
+2022-07-01,Terrestre,07 Valle Nuevo,72943.0
+2022-07-01,Terrestre,08 Pedro de Alvarado,48681.0
+2022-07-01,Terrestre,09 San Cristóbal,56007.0
+2022-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),26476.0
+2022-07-01,Terrestre,11 Agua Caliente,5587.0
+2022-07-01,Terrestre,12 El Florido,14867.0
+2022-07-01,Terrestre,13 El Cinchado / El Corinto,21922.0
+2022-07-01,Terrestre,14 Tecún Umán,3938.0
+2022-07-01,Terrestre,15 El Carmen,6126.0
+2022-07-01,Terrestre,16 La Mesilla,1346.0
+2022-07-01,Terrestre,17 El Naranjo,829.0
+2022-07-01,Terrestre,18 Bethel,65.0
+2022-07-01,Terrestre,19 Gracias a Dios,66.0
+2022-07-01,Terrestre,20 Melchor de Mencos,7462.0
+2022-08-01,Aérea,01 La Aurora,108814.0
+2022-08-01,Aérea,02 Mundo Maya,82.0
+2022-08-01,Terrestre,07 Valle Nuevo,78343.0
+2022-08-01,Terrestre,08 Pedro de Alvarado,54462.0
+2022-08-01,Terrestre,09 San Cristóbal,55144.0
+2022-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),28310.0
+2022-08-01,Terrestre,11 Agua Caliente,5793.0
+2022-08-01,Terrestre,12 El Florido,18013.0
+2022-08-01,Terrestre,13 El Cinchado / El Corinto,22256.0
+2022-08-01,Terrestre,14 Tecún Umán,3578.0
+2022-08-01,Terrestre,15 El Carmen,5141.0
+2022-08-01,Terrestre,16 La Mesilla,1182.0
+2022-08-01,Terrestre,17 El Naranjo,567.0
+2022-08-01,Terrestre,18 Bethel,47.0
+2022-08-01,Terrestre,19 Gracias a Dios,10.0
+2022-08-01,Terrestre,20 Melchor de Mencos,17451.0
+2022-09-01,Aérea,01 La Aurora,103185.0
+2022-09-01,Aérea,02 Mundo Maya,24.0
+2022-09-01,Terrestre,07 Valle Nuevo,62118.0
+2022-09-01,Terrestre,08 Pedro de Alvarado,45536.0
+2022-09-01,Terrestre,09 San Cristóbal,50296.0
+2022-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),21489.0
+2022-09-01,Terrestre,11 Agua Caliente,5736.0
+2022-09-01,Terrestre,12 El Florido,15658.0
+2022-09-01,Terrestre,13 El Cinchado / El Corinto,22513.0
+2022-09-01,Terrestre,14 Tecún Umán,3354.0
+2022-09-01,Terrestre,15 El Carmen,3064.0
+2022-09-01,Terrestre,16 La Mesilla,1092.0
+2022-09-01,Terrestre,17 El Naranjo,509.0
+2022-09-01,Terrestre,18 Bethel,35.0
+2022-09-01,Terrestre,19 Gracias a Dios,19.0
+2022-09-01,Terrestre,20 Melchor de Mencos,13990.0
+2022-10-01,Aérea,01 La Aurora,122906.0
+2022-10-01,Aérea,02 Mundo Maya,33.0
+2022-10-01,Marítima,Cruceros,2975.0
+2022-10-01,Terrestre,07 Valle Nuevo,65851.0
+2022-10-01,Terrestre,08 Pedro de Alvarado,51046.0
+2022-10-01,Terrestre,09 San Cristóbal,52310.0
+2022-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),25139.0
+2022-10-01,Terrestre,11 Agua Caliente,6741.0
+2022-10-01,Terrestre,12 El Florido,25587.0
+2022-10-01,Terrestre,13 El Cinchado / El Corinto,29965.0
+2022-10-01,Terrestre,14 Tecún Umán,3627.0
+2022-10-01,Terrestre,15 El Carmen,5651.0
+2022-10-01,Terrestre,16 La Mesilla,462.0
+2022-10-01,Terrestre,17 El Naranjo,120.0
+2022-10-01,Terrestre,18 Bethel,12.0
+2022-10-01,Terrestre,19 Gracias a Dios,822.0
+2022-10-01,Terrestre,20 Melchor de Mencos,14468.0
+2022-11-01,Aérea,01 La Aurora,131130.0
+2022-11-01,Aérea,02 Mundo Maya,280.0
+2022-11-01,Marítima,Cruceros,6238.0
+2022-11-01,Terrestre,07 Valle Nuevo,85513.0
+2022-11-01,Terrestre,08 Pedro de Alvarado,53730.0
+2022-11-01,Terrestre,09 San Cristóbal,53115.0
+2022-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),26336.0
+2022-11-01,Terrestre,11 Agua Caliente,6641.0
+2022-11-01,Terrestre,12 El Florido,28953.0
+2022-11-01,Terrestre,13 El Cinchado / El Corinto,30296.0
+2022-11-01,Terrestre,14 Tecún Umán,4481.0
+2022-11-01,Terrestre,15 El Carmen,6627.0
+2022-11-01,Terrestre,16 La Mesilla,2472.0
+2022-11-01,Terrestre,17 El Naranjo,844.0
+2022-11-01,Terrestre,18 Bethel,380.0
+2022-11-01,Terrestre,19 Gracias a Dios,874.0
+2022-11-01,Terrestre,20 Melchor de Mencos,15267.0
+2022-12-01,Aérea,01 La Aurora,158073.0
+2022-12-01,Aérea,02 Mundo Maya,390.0
+2022-12-01,Marítima,Cruceros,10042.0
+2022-12-01,Terrestre,07 Valle Nuevo,94005.0
+2022-12-01,Terrestre,08 Pedro de Alvarado,67903.0
+2022-12-01,Terrestre,09 San Cristóbal,63312.0
+2022-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),32045.0
+2022-12-01,Terrestre,11 Agua Caliente,7082.0
+2022-12-01,Terrestre,12 El Florido,18385.0
+2022-12-01,Terrestre,13 El Cinchado / El Corinto,28600.0
+2022-12-01,Terrestre,14 Tecún Umán,6480.0
+2022-12-01,Terrestre,15 El Carmen,9881.0
+2022-12-01,Terrestre,16 La Mesilla,2091.0
+2022-12-01,Terrestre,17 El Naranjo,1256.0
+2022-12-01,Terrestre,18 Bethel,259.0
+2022-12-01,Terrestre,19 Gracias a Dios,106.0
+2022-12-01,Terrestre,20 Melchor de Mencos,26280.0
+2023-01-01,Aérea,01 La Aurora,76213.0
+2023-01-01,Aérea,02 Mundo Maya,188.0
+2023-01-01,Marítima,03 Puerto Quetzal,120.0
+2023-01-01,Marítima,04 Santo Tomás de Castilla,17.0
+2023-01-01,Marítima,05 Puerto Barrios,252.0
+2023-01-01,Marítima,06 Livingston,293.0
+2023-01-01,Terrestre,07 Valle Nuevo,47310.999999999956
+2023-01-01,Terrestre,08 Pedro de Alvarado,32845.999999999956
+2023-01-01,Terrestre,09 San Cristóbal,28168.999999999956
+2023-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),49332.00000000004
+2023-01-01,Terrestre,11 Agua Caliente,9927.999999999995
+2023-01-01,Terrestre,12 El Florido,10280.0
+2023-01-01,Terrestre,13 El Cinchado / El Corinto,19097.0
+2023-01-01,Terrestre,14 Tecún Umán,683.0
+2023-01-01,Terrestre,20 Melchor de Mencos,16784.00000000008
+2023-02-01,Aérea,01 La Aurora,75139.0
+2023-02-01,Aérea,02 Mundo Maya,267.0
+2023-02-01,Marítima,03 Puerto Quetzal,52.0
+2023-02-01,Marítima,04 Santo Tomás de Castilla,9.0
+2023-02-01,Marítima,05 Puerto Barrios,196.0
+2023-02-01,Marítima,06 Livingston,272.0
+2023-02-01,Terrestre,07 Valle Nuevo,39350.99999999993
+2023-02-01,Terrestre,08 Pedro de Alvarado,27759.00000000008
+2023-02-01,Terrestre,09 San Cristóbal,25957.000000000113
+2023-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),33184.99999999995
+2023-02-01,Terrestre,14 Tecún Umán,2166.0
+2023-02-01,Terrestre,15 El Carmen,1919.9999999999995
+2023-02-01,Terrestre,16 La Mesilla,1328.9999999999998
+2023-02-01,Terrestre,18 Bethel,199.99999999999991
+2023-02-01,Terrestre,19 Gracias a Dios,51.0
+2023-02-01,Terrestre,20 Melchor de Mencos,13477.999999999958
+2023-03-01,Aérea,01 La Aurora,92427.0
+2023-03-01,Aérea,02 Mundo Maya,306.0
+2023-03-01,Marítima,03 Puerto Quetzal,58.0
+2023-03-01,Marítima,04 Santo Tomás de Castilla,7.0
+2023-03-01,Marítima,05 Puerto Barrios,246.0
+2023-03-01,Marítima,06 Livingston,394.0
+2023-03-01,Terrestre,07 Valle Nuevo,46132.99999999973
+2023-03-01,Terrestre,08 Pedro de Alvarado,30621.99999999997
+2023-03-01,Terrestre,09 San Cristóbal,28257.0
+2023-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),28402.999999999975
+2023-03-01,Terrestre,11 Agua Caliente,6498.000000000008
+2023-03-01,Terrestre,12 El Florido,7588.0
+2023-03-01,Terrestre,13 El Cinchado / El Corinto,16202.999999999996
+2023-03-01,Terrestre,14 Tecún Umán,2368.000000000001
+2023-03-01,Terrestre,15 El Carmen,2633.0000000000005
+2023-03-01,Terrestre,16 La Mesilla,1216.999999999999
+2023-03-01,Terrestre,18 Bethel,288.9999999999999
+2023-03-01,Terrestre,19 Gracias a Dios,38.99999999999997
+2023-03-01,Terrestre,20 Melchor de Mencos,16102.000000000022
+2023-04-01,Aérea,01 La Aurora,79177.0
+2023-04-01,Aérea,02 Mundo Maya,177.0
+2023-04-01,Marítima,03 Puerto Quetzal,58.0
+2023-04-01,Marítima,04 Santo Tomás de Castilla,1.0
+2023-04-01,Marítima,05 Puerto Barrios,154.0
+2023-04-01,Marítima,06 Livingston,461.0
+2023-04-01,Terrestre,07 Valle Nuevo,63970.00000000018
+2023-04-01,Terrestre,08 Pedro de Alvarado,39489.00000000006
+2023-04-01,Terrestre,09 San Cristóbal,33788.00000000007
+2023-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),30010.999999999978
+2023-04-01,Terrestre,11 Agua Caliente,8611.999999999985
+2023-04-01,Terrestre,12 El Florido,8749.999999999995
+2023-04-01,Terrestre,13 El Cinchado / El Corinto,17629.000000000033
+2023-04-01,Terrestre,14 Tecún Umán,2578.0
+2023-04-01,Terrestre,15 El Carmen,2549.999999999999
+2023-04-01,Terrestre,16 La Mesilla,1334.0
+2023-04-01,Terrestre,18 Bethel,173.0
+2023-04-01,Terrestre,19 Gracias a Dios,23.0
+2023-04-01,Terrestre,20 Melchor de Mencos,17679.999999999993
+2023-04-01,Terrestre,22 Otra frontera,39.0
+2023-05-01,Aérea,01 La Aurora,71800.0
+2023-05-01,Aérea,02 Mundo Maya,2.0
+2023-05-01,Marítima,03 Puerto Quetzal,21.0
+2023-05-01,Marítima,04 Santo Tomás de Castilla,3.0
+2023-05-01,Marítima,05 Puerto Barrios,240.0
+2023-05-01,Marítima,06 Livingston,281.0
+2023-05-01,Terrestre,07 Valle Nuevo,43625.00000000004
+2023-05-01,Terrestre,08 Pedro de Alvarado,26898.000000000025
+2023-05-01,Terrestre,09 San Cristóbal,34300.99999999987
+2023-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),17856.000000000025
+2023-05-01,Terrestre,11 Agua Caliente,5835.999999999999
+2023-05-01,Terrestre,12 El Florido,5521.000000000009
+2023-05-01,Terrestre,13 El Cinchado / El Corinto,13898.000000000018
+2023-05-01,Terrestre,14 Tecún Umán,1488.0
+2023-05-01,Terrestre,15 El Carmen,1472.0
+2023-05-01,Terrestre,16 La Mesilla,965.0
+2023-05-01,Terrestre,18 Bethel,107.0
+2023-05-01,Terrestre,19 Gracias a Dios,78.0
+2023-05-01,Terrestre,20 Melchor de Mencos,14861.000000000087
+2023-06-01,Aérea,01 La Aurora,87748.0
+2023-06-01,Aérea,02 Mundo Maya,32.0
+2023-06-01,Marítima,03 Puerto Quetzal,60.0
+2023-06-01,Marítima,04 Santo Tomás de Castilla,1.0
+2023-06-01,Marítima,05 Puerto Barrios,216.0
+2023-06-01,Marítima,06 Livingston,321.0
+2023-06-01,Terrestre,07 Valle Nuevo,44801.999999999985
+2023-06-01,Terrestre,08 Pedro de Alvarado,26159.00000000001
+2023-06-01,Terrestre,09 San Cristóbal,33732.00000000015
+2023-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),17427.999999999967
+2023-06-01,Terrestre,11 Agua Caliente,5247.000000000005
+2023-06-01,Terrestre,12 El Florido,6472.999999999987
+2023-06-01,Terrestre,13 El Cinchado / El Corinto,15173.000000000035
+2023-06-01,Terrestre,14 Tecún Umán,1064.0
+2023-06-01,Terrestre,15 El Carmen,979.0
+2023-06-01,Terrestre,16 La Mesilla,339.0
+2023-06-01,Terrestre,18 Bethel,45.0
+2023-06-01,Terrestre,19 Gracias a Dios,6.0
+2023-06-01,Terrestre,20 Melchor de Mencos,13444.999999999964
+2023-07-01,Aérea,01 La Aurora,98942.0
+2023-07-01,Aérea,02 Mundo Maya,90.0
+2023-07-01,Marítima,03 Puerto Quetzal,49.0
+2023-07-01,Marítima,04 Santo Tomás de Castilla,5.0
+2023-07-01,Marítima,05 Puerto Barrios,245.0
+2023-07-01,Marítima,06 Livingston,325.0
+2023-07-01,Terrestre,07 Valle Nuevo,53265.99999999985
+2023-07-01,Terrestre,08 Pedro de Alvarado,27066.99999999997
+2023-07-01,Terrestre,09 San Cristóbal,34839.00000000002
+2023-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),21765.999999999996
+2023-07-01,Terrestre,11 Agua Caliente,7549.000000000001
+2023-07-01,Terrestre,12 El Florido,7168.999999999996
+2023-07-01,Terrestre,13 El Cinchado / El Corinto,19497.0
+2023-07-01,Terrestre,14 Tecún Umán,1557.0
+2023-07-01,Terrestre,15 El Carmen,2239.0
+2023-07-01,Terrestre,16 La Mesilla,443.99999999999994
+2023-07-01,Terrestre,18 Bethel,60.99999999999999
+2023-07-01,Terrestre,19 Gracias a Dios,43.0
+2023-08-01,Aérea,01 La Aurora,79084.0
+2023-08-01,Aérea,02 Mundo Maya,68.0
+2023-08-01,Marítima,03 Puerto Quetzal,28.0
+2023-08-01,Marítima,05 Puerto Barrios,235.0
+2023-08-01,Marítima,06 Livingston,329.0
+2023-08-01,Terrestre,07 Valle Nuevo,60430.00000000003
+2023-08-01,Terrestre,08 Pedro de Alvarado,35787.99999999994
+2023-08-01,Terrestre,09 San Cristóbal,34841.00000000013
+2023-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),22460.000000000025
+2023-08-01,Terrestre,11 Agua Caliente,6545.999999999998
+2023-08-01,Terrestre,12 El Florido,8081.999999999996
+2023-08-01,Terrestre,13 El Cinchado / El Corinto,20524.999999999996
+2023-08-01,Terrestre,14 Tecún Umán,1674.0
+2023-08-01,Terrestre,15 El Carmen,1583.0
+2023-08-01,Terrestre,16 La Mesilla,587.0
+2023-08-01,Terrestre,18 Bethel,60.0
+2023-08-01,Terrestre,19 Gracias a Dios,32.0
+2023-08-01,Terrestre,20 Melchor de Mencos,20509.999999999964
+2023-09-01,Aérea,01 La Aurora,67300.0
+2023-09-01,Aérea,02 Mundo Maya,6.0
+2023-09-01,Marítima,03 Puerto Quetzal,38.0
+2023-09-01,Marítima,04 Santo Tomás de Castilla,6.0
+2023-09-01,Marítima,05 Puerto Barrios,129.0
+2023-09-01,Marítima,06 Livingston,173.0
+2023-09-01,Terrestre,07 Valle Nuevo,52744.99999999994
+2023-09-01,Terrestre,08 Pedro de Alvarado,27995.000000000015
+2023-09-01,Terrestre,09 San Cristóbal,33878.99999999993
+2023-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),18721.000000000004
+2023-09-01,Terrestre,11 Agua Caliente,6719.000000000007
+2023-09-01,Terrestre,12 El Florido,4205.999999999999
+2023-09-01,Terrestre,13 El Cinchado / El Corinto,20968.999999999985
+2023-09-01,Terrestre,14 Tecún Umán,1012.0000000000001
+2023-09-01,Terrestre,15 El Carmen,1055.0
+2023-09-01,Terrestre,16 La Mesilla,206.0
+2023-09-01,Terrestre,18 Bethel,21.0
+2023-09-01,Terrestre,19 Gracias a Dios,71.0
+2023-09-01,Terrestre,20 Melchor de Mencos,12417.999999999978
+2023-10-01,Aérea,01 La Aurora,59320.0
+2023-10-01,Aérea,02 Mundo Maya,6.0
+2023-10-01,Marítima,03 Puerto Quetzal,26.0
+2023-10-01,Marítima,04 Santo Tomás de Castilla,1.0
+2023-10-01,Marítima,05 Puerto Barrios,115.0
+2023-10-01,Marítima,06 Livingston,137.0
+2023-10-01,Terrestre,07 Valle Nuevo,28389.99999999999
+2023-10-01,Terrestre,08 Pedro de Alvarado,21034.999999999996
+2023-10-01,Terrestre,09 San Cristóbal,30900.000000000007
+2023-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),10803.0
+2023-10-01,Terrestre,11 Agua Caliente,5422.999999999997
+2023-10-01,Terrestre,12 El Florido,4530.0
+2023-10-01,Terrestre,13 El Cinchado / El Corinto,19351.000000000004
+2023-10-01,Terrestre,14 Tecún Umán,905.0
+2023-10-01,Terrestre,15 El Carmen,721.0
+2023-10-01,Terrestre,16 La Mesilla,176.0
+2023-10-01,Terrestre,18 Bethel,2.0
+2023-10-01,Terrestre,19 Gracias a Dios,22.0
+2023-10-01,Terrestre,20 Melchor de Mencos,9440.000000000011
+2023-10-01,Terrestre,22 Otra frontera,1.0
+2023-11-01,Aérea,01 La Aurora,89115.0
+2023-11-01,Aérea,02 Mundo Maya,25.0
+2023-11-01,Marítima,03 Puerto Quetzal,63.0
+2023-11-01,Marítima,04 Santo Tomás de Castilla,7.0
+2023-11-01,Marítima,05 Puerto Barrios,141.0
+2023-11-01,Marítima,06 Livingston,327.0
+2023-11-01,Terrestre,07 Valle Nuevo,56427.99999999994
+2023-11-01,Terrestre,08 Pedro de Alvarado,32596.000000000095
+2023-11-01,Terrestre,09 San Cristóbal,37930.000000000044
+2023-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),19815.999999999945
+2023-11-01,Terrestre,11 Agua Caliente,5303.999999999997
+2023-11-01,Terrestre,12 El Florido,7892.999999999994
+2023-11-01,Terrestre,13 El Cinchado / El Corinto,19937.99999999999
+2023-11-01,Terrestre,14 Tecún Umán,942.0000000000001
+2023-11-01,Terrestre,20 Melchor de Mencos,13559.999999999975
+2023-12-01,Aérea,01 La Aurora,108287.0
+2023-12-01,Aérea,02 Mundo Maya,121.0
+2023-12-01,Marítima,03 Puerto Quetzal,53.0
+2023-12-01,Marítima,04 Santo Tomás de Castilla,9.0
+2023-12-01,Marítima,05 Puerto Barrios,198.0
+2023-12-01,Marítima,06 Livingston,245.0
+2023-12-01,Terrestre,07 Valle Nuevo,82961.99999999984
+2023-12-01,Terrestre,08 Pedro de Alvarado,35986.99999999997
+2023-12-01,Terrestre,09 San Cristóbal,57032.00000000007
+2023-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),25864.99999999995
+2023-12-01,Terrestre,11 Agua Caliente,5779.000000000008
+2023-12-01,Terrestre,12 El Florido,8079.000000000007
+2023-12-01,Terrestre,13 El Cinchado / El Corinto,19769.999999999993
+2023-12-01,Terrestre,14 Tecún Umán,903.0000000000002
+2023-12-01,Terrestre,20 Melchor de Mencos,20534.00000000001
+2023-12-01,Terrestre,22 Otra frontera,1.0
+2024-01-01,Aérea,01 La Aurora,95943.0
+2024-01-01,Aérea,02 Mundo Maya,96.0
+2024-01-01,Marítima,03 Puerto Quetzal,68.0
+2024-01-01,Marítima,04 Santo Tomás de Castilla,12.0
+2024-01-01,Marítima,05 Puerto Barrios,143.0
+2024-01-01,Marítima,06 Livingston,349.0
+2024-01-01,Terrestre,07 Valle Nuevo,56899.00000000004
+2024-01-01,Terrestre,08 Pedro de Alvarado,31829.000000000044
+2024-01-01,Terrestre,09 San Cristóbal,39284.00000000002
+2024-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),48360.999999999956
+2024-01-01,Terrestre,11 Agua Caliente,9738.99999999999
+2024-01-01,Terrestre,12 El Florido,10898.0
+2024-01-01,Terrestre,13 El Cinchado / El Corinto,21588.999999999985
+2024-01-01,Terrestre,14 Tecún Umán,900.0
+2024-01-01,Terrestre,20 Melchor de Mencos,17379.999999999985
+2024-01-01,Terrestre,22 Otra frontera,1.0
+2024-02-01,Aérea,01 La Aurora,98780.0
+2024-02-01,Aérea,02 Mundo Maya,91.0
+2024-02-01,Marítima,03 Puerto Quetzal,66.0
+2024-02-01,Marítima,04 Santo Tomás de Castilla,13.0
+2024-02-01,Marítima,05 Puerto Barrios,158.0
+2024-02-01,Marítima,06 Livingston,398.0
+2024-02-01,Terrestre,07 Valle Nuevo,48242.999999999876
+2024-02-01,Terrestre,08 Pedro de Alvarado,27529.000000000025
+2024-02-01,Terrestre,09 San Cristóbal,35123.99999999997
+2024-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),37825.00000000002
+2024-02-01,Terrestre,11 Agua Caliente,6193.000000000001
+2024-02-01,Terrestre,12 El Florido,8378.000000000004
+2024-02-01,Terrestre,13 El Cinchado / El Corinto,15383.999999999996
+2024-02-01,Terrestre,14 Tecún Umán,1249.0000000000002
+2024-02-01,Terrestre,15 El Carmen,558.0
+2024-02-01,Terrestre,16 La Mesilla,978.0000000000002
+2024-02-01,Terrestre,19 Gracias a Dios,44.0
+2024-02-01,Terrestre,20 Melchor de Mencos,13514.000000000002
+2024-02-01,Terrestre,22 Otra frontera,5.0
+2024-03-01,Aérea,01 La Aurora,108306.0
+2024-03-01,Aérea,02 Mundo Maya,185.0
+2024-03-01,Marítima,03 Puerto Quetzal,56.0
+2024-03-01,Marítima,04 Santo Tomás de Castilla,11.0
+2024-03-01,Marítima,05 Puerto Barrios,152.0
+2024-03-01,Marítima,06 Livingston,498.0
+2024-03-01,Terrestre,07 Valle Nuevo,70708.00000000007
+2024-03-01,Terrestre,08 Pedro de Alvarado,38043.00000000005
+2024-03-01,Terrestre,09 San Cristóbal,37807.00000000003
+2024-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),35463.99999999999
+2024-03-01,Terrestre,11 Agua Caliente,8002.0
+2024-03-01,Terrestre,12 El Florido,10646.999999999998
+2024-03-01,Terrestre,13 El Cinchado / El Corinto,17806.99999999999
+2024-03-01,Terrestre,14 Tecún Umán,2545.0
+2024-03-01,Terrestre,15 El Carmen,1864.0
+2024-03-01,Terrestre,16 La Mesilla,779.9999999999998
+2024-03-01,Terrestre,18 Bethel,6.0
+2024-03-01,Terrestre,19 Gracias a Dios,148.0
+2024-03-01,Terrestre,20 Melchor de Mencos,16936.000000000004
+2024-04-01,Aérea,01 La Aurora,87832.0
+2024-04-01,Aérea,02 Mundo Maya,25.0
+2024-04-01,Marítima,03 Puerto Quetzal,74.0
+2024-04-01,Marítima,04 Santo Tomás de Castilla,8.0
+2024-04-01,Marítima,05 Puerto Barrios,142.0
+2024-04-01,Marítima,06 Livingston,328.0
+2024-04-01,Terrestre,07 Valle Nuevo,46532.00000000007
+2024-04-01,Terrestre,08 Pedro de Alvarado,27455.00000000003
+2024-04-01,Terrestre,09 San Cristóbal,34177.99999999996
+2024-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),24871.000000000007
+2024-04-01,Terrestre,11 Agua Caliente,5088.000000000003
+2024-04-01,Terrestre,12 El Florido,7143.9999999999945
+2024-04-01,Terrestre,13 El Cinchado / El Corinto,14917.00000000002
+2024-04-01,Terrestre,14 Tecún Umán,1574.0
+2024-04-01,Terrestre,15 El Carmen,1362.0
+2024-04-01,Terrestre,16 La Mesilla,312.0
+2024-04-01,Terrestre,18 Bethel,20.0
+2024-04-01,Terrestre,19 Gracias a Dios,309.0
+2024-04-01,Terrestre,20 Melchor de Mencos,13012.000000000005
+2024-05-01,Aérea,01 La Aurora,87971.0
+2024-05-01,Aérea,02 Mundo Maya,26.0
+2024-05-01,Marítima,03 Puerto Quetzal,49.0
+2024-05-01,Marítima,04 Santo Tomás de Castilla,7.0
+2024-05-01,Marítima,05 Puerto Barrios,126.0
+2024-05-01,Marítima,06 Livingston,341.0
+2024-05-01,Terrestre,07 Valle Nuevo,52709.9999999999
+2024-05-01,Terrestre,08 Pedro de Alvarado,28132.000000000007
+2024-05-01,Terrestre,09 San Cristóbal,35304.00000000007
+2024-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),21219.000000000047
+2024-05-01,Terrestre,11 Agua Caliente,5483.999999999995
+2024-05-01,Terrestre,12 El Florido,6999.000000000001
+2024-05-01,Terrestre,13 El Cinchado / El Corinto,15077.000000000007
+2024-05-01,Terrestre,14 Tecún Umán,529.0000000000001
+2024-05-01,Terrestre,16 La Mesilla,552.0
+2024-05-01,Terrestre,20 Melchor de Mencos,11461.000000000007
+2024-05-01,Terrestre,22 Otra frontera,2.0
+2024-06-01,Aérea,01 La Aurora,104432.0
+2024-06-01,Aérea,02 Mundo Maya,32.0
+2024-06-01,Marítima,03 Puerto Quetzal,70.0
+2024-06-01,Marítima,04 Santo Tomás de Castilla,7.0
+2024-06-01,Marítima,05 Puerto Barrios,143.0
+2024-06-01,Marítima,06 Livingston,335.0
+2024-06-01,Terrestre,07 Valle Nuevo,43951.00000000006
+2024-06-01,Terrestre,08 Pedro de Alvarado,23835.0
+2024-06-01,Terrestre,09 San Cristóbal,30739.999999999985
+2024-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),16423.0
+2024-06-01,Terrestre,11 Agua Caliente,4556.000000000002
+2024-06-01,Terrestre,12 El Florido,6315.999999999998
+2024-06-01,Terrestre,13 El Cinchado / El Corinto,14572.000000000022
+2024-06-01,Terrestre,14 Tecún Umán,1396.0
+2024-06-01,Terrestre,15 El Carmen,1409.0
+2024-06-01,Terrestre,16 La Mesilla,498.0
+2024-06-01,Terrestre,18 Bethel,3.0
+2024-06-01,Terrestre,19 Gracias a Dios,47.0
+2024-06-01,Terrestre,20 Melchor de Mencos,13848.000000000002
+2024-07-01,Aérea,01 La Aurora,110289.0
+2024-07-01,Aérea,02 Mundo Maya,90.0
+2024-07-01,Marítima,03 Puerto Quetzal,58.0
+2024-07-01,Marítima,04 Santo Tomás de Castilla,24.0
+2024-07-01,Marítima,05 Puerto Barrios,200.0
+2024-07-01,Marítima,06 Livingston,255.0
+2024-07-01,Terrestre,07 Valle Nuevo,53258.00000000016
+2024-07-01,Terrestre,08 Pedro de Alvarado,27793.999999999967
+2024-07-01,Terrestre,09 San Cristóbal,33739.000000000015
+2024-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),21497.000000000022
+2024-07-01,Terrestre,11 Agua Caliente,5036.999999999999
+2024-07-01,Terrestre,12 El Florido,7498.000000000013
+2024-07-01,Terrestre,13 El Cinchado / El Corinto,16060.999999999965
+2024-07-01,Terrestre,14 Tecún Umán,2035.9999999999998
+2024-07-01,Terrestre,15 El Carmen,2651.0
+2024-07-01,Terrestre,16 La Mesilla,587.0
+2024-07-01,Terrestre,18 Bethel,7.999999999999999
+2024-07-01,Terrestre,19 Gracias a Dios,119.00000000000001
+2024-07-01,Terrestre,20 Melchor de Mencos,14276.0
+2024-08-01,Aérea,01 La Aurora,88601.0
+2024-08-01,Aérea,02 Mundo Maya,34.0
+2024-08-01,Marítima,03 Puerto Quetzal,45.0
+2024-08-01,Marítima,04 Santo Tomás de Castilla,7.0
+2024-08-01,Marítima,05 Puerto Barrios,139.0
+2024-08-01,Marítima,06 Livingston,369.0
+2024-08-01,Terrestre,07 Valle Nuevo,73878.99999999997
+2024-08-01,Terrestre,08 Pedro de Alvarado,37268.00000000008
+2024-08-01,Terrestre,09 San Cristóbal,38487.00000000004
+2024-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),25799.000000000022
+2024-08-01,Terrestre,11 Agua Caliente,4966.0
+2024-08-01,Terrestre,12 El Florido,7740.0000000000055
+2024-08-01,Terrestre,13 El Cinchado / El Corinto,15186.000000000004
+2024-08-01,Terrestre,14 Tecún Umán,1648.0
+2024-08-01,Terrestre,15 El Carmen,1693.0
+2024-08-01,Terrestre,16 La Mesilla,803.9999999999999
+2024-08-01,Terrestre,18 Bethel,1.0000000000000004
+2024-08-01,Terrestre,19 Gracias a Dios,106.0
+2024-08-01,Terrestre,20 Melchor de Mencos,15725.000000000004
+2024-09-01,Aérea,01 La Aurora,69259.0
+2024-09-01,Aérea,02 Mundo Maya,10.0
+2024-09-01,Marítima,03 Puerto Quetzal,42.0
+2024-09-01,Marítima,04 Santo Tomás de Castilla,1.0
+2024-09-01,Marítima,05 Puerto Barrios,141.0
+2024-09-01,Marítima,06 Livingston,137.0
+2024-09-01,Terrestre,07 Valle Nuevo,48615.99999999989
+2024-09-01,Terrestre,08 Pedro de Alvarado,31055.00000000005
+2024-09-01,Terrestre,09 San Cristóbal,34799.00000000001
+2024-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),17885.0
+2024-09-01,Terrestre,11 Agua Caliente,4436.999999999998
+2024-09-01,Terrestre,12 El Florido,6467.999999999998
+2024-09-01,Terrestre,13 El Cinchado / El Corinto,14571.999999999996
+2024-09-01,Terrestre,14 Tecún Umán,1219.0000000000002
+2024-09-01,Terrestre,15 El Carmen,1195.0
+2024-09-01,Terrestre,16 La Mesilla,503.00000000000006
+2024-09-01,Terrestre,18 Bethel,1.0
+2024-09-01,Terrestre,19 Gracias a Dios,55.999999999999986
+2024-09-01,Terrestre,20 Melchor de Mencos,9426.0
+2024-10-01,Aérea,01 La Aurora,81163.0
+2024-10-01,Aérea,02 Mundo Maya,24.0
+2024-10-01,Marítima,03 Puerto Quetzal,77.0
+2024-10-01,Marítima,04 Santo Tomás de Castilla,4.0
+2024-10-01,Marítima,05 Puerto Barrios,177.0
+2024-10-01,Marítima,06 Livingston,128.0
+2024-10-01,Terrestre,07 Valle Nuevo,55821.00000000017
+2024-10-01,Terrestre,08 Pedro de Alvarado,32088.999999999996
+2024-10-01,Terrestre,09 San Cristóbal,36603.00000000002
+2024-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),19394.0
+2024-10-01,Terrestre,11 Agua Caliente,6370.000000000003
+2024-10-01,Terrestre,12 El Florido,8545.00000000001
+2024-10-01,Terrestre,13 El Cinchado / El Corinto,17021.999999999993
+2024-10-01,Terrestre,14 Tecún Umán,1386.0000000000002
+2024-10-01,Terrestre,15 El Carmen,1659.9999999999998
+2024-10-01,Terrestre,16 La Mesilla,602.0
+2024-10-01,Terrestre,18 Bethel,1.9999999999999996
+2024-10-01,Terrestre,19 Gracias a Dios,39.0
+2024-10-01,Terrestre,20 Melchor de Mencos,10465.0
+2024-11-01,Aérea,01 La Aurora,97101.0
+2024-11-01,Aérea,02 Mundo Maya,36.0
+2024-11-01,Marítima,03 Puerto Quetzal,67.0
+2024-11-01,Marítima,04 Santo Tomás de Castilla,5.0
+2024-11-01,Marítima,05 Puerto Barrios,126.0
+2024-11-01,Marítima,06 Livingston,403.0
+2024-11-01,Terrestre,07 Valle Nuevo,71121.00000000012
+2024-11-01,Terrestre,08 Pedro de Alvarado,43539.99999999998
+2024-11-01,Terrestre,09 San Cristóbal,39151.99999999995
+2024-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),21971.0
+2024-11-01,Terrestre,11 Agua Caliente,4948.0
+2024-11-01,Terrestre,12 El Florido,8611.000000000002
+2024-11-01,Terrestre,13 El Cinchado / El Corinto,14260.0
+2024-11-01,Terrestre,14 Tecún Umán,2046.9999999999993
+2024-11-01,Terrestre,15 El Carmen,2039.9999999999986
+2024-11-01,Terrestre,16 La Mesilla,1262.0000000000005
+2024-11-01,Terrestre,18 Bethel,3.0000000000000013
+2024-11-01,Terrestre,19 Gracias a Dios,91.99999999999997
+2024-11-01,Terrestre,20 Melchor de Mencos,12037.0
+2024-12-01,Aérea,01 La Aurora,112947.0
+2024-12-01,Aérea,02 Mundo Maya,80.0
+2024-12-01,Marítima,03 Puerto Quetzal,65.0
+2024-12-01,Marítima,04 Santo Tomás de Castilla,4.0
+2024-12-01,Marítima,05 Puerto Barrios,197.0
+2024-12-01,Marítima,06 Livingston,380.0
+2024-12-01,Terrestre,07 Valle Nuevo,93741.99999999984
+2024-12-01,Terrestre,08 Pedro de Alvarado,38000.999999999985
+2024-12-01,Terrestre,09 San Cristóbal,57473.00000000003
+2024-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),28880.0
+2024-12-01,Terrestre,11 Agua Caliente,4735.000000000001
+2024-12-01,Terrestre,12 El Florido,8004.999999999999
+2024-12-01,Terrestre,13 El Cinchado / El Corinto,13948.999999999996
+2024-12-01,Terrestre,14 Tecún Umán,2950.9999999999995
+2024-12-01,Terrestre,15 El Carmen,3053.0
+2024-12-01,Terrestre,16 La Mesilla,716.9999999999999
+2024-12-01,Terrestre,18 Bethel,52.0
+2024-12-01,Terrestre,19 Gracias a Dios,113.0
+2024-12-01,Terrestre,20 Melchor de Mencos,18572.000000000004
+2025-01-01,Aérea,01 La Aurora,101100.0
+2025-01-01,Aérea,02 Mundo Maya,24.0
+2025-01-01,Marítima,03 Puerto Quetzal,69.0
+2025-01-01,Marítima,04 Santo Tomás de Castilla,6.0
+2025-01-01,Marítima,05 Puerto Barrios,165.0
+2025-01-01,Marítima,06 Livingston,363.0
+2025-01-01,Terrestre,07 Valle Nuevo,59040.99999999992
+2025-01-01,Terrestre,08 Pedro de Alvarado,32859.99999999998
+2025-01-01,Terrestre,09 San Cristóbal,35184.00000000001
+2025-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),48908.0
+2025-01-01,Terrestre,12 El Florido,10500.0
+2025-01-01,Terrestre,14 Tecún Umán,1671.9999999999995
+2025-01-01,Terrestre,15 El Carmen,1766.9999999999986
+2025-01-01,Terrestre,16 La Mesilla,1093.0000000000002
+2025-01-01,Terrestre,18 Bethel,42.00000000000002
+2025-01-01,Terrestre,19 Gracias a Dios,49.000000000000014
+2025-01-01,Terrestre,20 Melchor de Mencos,13753.0
+2025-02-01,Aérea,01 La Aurora,92669.0
+2025-02-01,Aérea,02 Mundo Maya,34.0
+2025-02-01,Marítima,03 Puerto Quetzal,96.0
+2025-02-01,Marítima,04 Santo Tomás de Castilla,8.0
+2025-02-01,Marítima,05 Puerto Barrios,117.0
+2025-02-01,Marítima,06 Livingston,391.0
+2025-02-01,Terrestre,07 Valle Nuevo,46054.000000000015
+2025-02-01,Terrestre,08 Pedro de Alvarado,23803.000000000007
+2025-02-01,Terrestre,09 San Cristóbal,33626.00000000003
+2025-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),35759.00000000001
+2025-02-01,Terrestre,11 Agua Caliente,2993.9999999999986
+2025-02-01,Terrestre,12 El Florido,5857.999999999999
+2025-02-01,Terrestre,13 El Cinchado / El Corinto,10190.999999999996
+2025-02-01,Terrestre,14 Tecún Umán,2103.0
+2025-02-01,Terrestre,15 El Carmen,1598.9999999999998
+2025-02-01,Terrestre,16 La Mesilla,1032.0
+2025-02-01,Terrestre,18 Bethel,65.0
+2025-02-01,Terrestre,19 Gracias a Dios,20.000000000000004
+2025-02-01,Terrestre,20 Melchor de Mencos,11946.0
+2025-03-01,Aérea,01 La Aurora,107158.0
+2025-03-01,Aérea,02 Mundo Maya,86.0
+2025-03-01,Marítima,03 Puerto Quetzal,80.0
+2025-03-01,Marítima,04 Santo Tomás de Castilla,5.0
+2025-03-01,Marítima,05 Puerto Barrios,159.0
+2025-03-01,Marítima,06 Livingston,351.0
+2025-03-01,Terrestre,07 Valle Nuevo,53035.0
+2025-03-01,Terrestre,08 Pedro de Alvarado,26887.999999999996
+2025-03-01,Terrestre,09 San Cristóbal,36180.99999999998
+2025-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),33973.999999999985
+2025-03-01,Terrestre,11 Agua Caliente,3463.9999999999973
+2025-03-01,Terrestre,12 El Florido,8245.000000000005
+2025-03-01,Terrestre,13 El Cinchado / El Corinto,10733.0
+2025-03-01,Terrestre,14 Tecún Umán,2231.0000000000005
+2025-03-01,Terrestre,15 El Carmen,1912.0000000000002
+2025-03-01,Terrestre,16 La Mesilla,1043.0
+2025-03-01,Terrestre,18 Bethel,22.99999999999998
+2025-03-01,Terrestre,19 Gracias a Dios,71.0
+2025-03-01,Terrestre,20 Melchor de Mencos,14269.999999999995
+2025-04-01,Aérea,01 La Aurora,93445.0
+2025-04-01,Aérea,02 Mundo Maya,21.0
+2025-04-01,Marítima,03 Puerto Quetzal,158.0
+2025-04-01,Marítima,04 Santo Tomás de Castilla,6.0
+2025-04-01,Marítima,05 Puerto Barrios,273.0
+2025-04-01,Marítima,06 Livingston,500.0
+2025-04-01,Terrestre,07 Valle Nuevo,67497.00000000019
+2025-04-01,Terrestre,08 Pedro de Alvarado,37499.999999999956
+2025-04-01,Terrestre,09 San Cristóbal,36871.0
+2025-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),29917.0
+2025-04-01,Terrestre,11 Agua Caliente,7055.999999999999
+2025-04-01,Terrestre,12 El Florido,9787.0
+2025-04-01,Terrestre,13 El Cinchado / El Corinto,14703.99999999999
+2025-04-01,Terrestre,14 Tecún Umán,2097.0000000000005
+2025-04-01,Terrestre,15 El Carmen,2121.9999999999995
+2025-04-01,Terrestre,16 La Mesilla,1020.0
+2025-04-01,Terrestre,18 Bethel,52.000000000000014
+2025-04-01,Terrestre,19 Gracias a Dios,39.99999999999998
+2025-04-01,Terrestre,20 Melchor de Mencos,18008.000000000004
+2025-05-01,Aérea,01 La Aurora,87746.0
+2025-05-01,Aérea,02 Mundo Maya,7.0
+2025-05-01,Marítima,03 Puerto Quetzal,91.0
+2025-05-01,Marítima,04 Santo Tomás de Castilla,6.0
+2025-05-01,Marítima,05 Puerto Barrios,149.0
+2025-05-01,Marítima,06 Livingston,330.0
+2025-05-01,Terrestre,07 Valle Nuevo,51231.99999999975
+2025-05-01,Terrestre,08 Pedro de Alvarado,30318.000000000015
+2025-05-01,Terrestre,09 San Cristóbal,38489.000000000015
+2025-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),21824.000000000025
+2025-05-01,Terrestre,11 Agua Caliente,3978.0
+2025-05-01,Terrestre,12 El Florido,7081.000000000001
+2025-05-01,Terrestre,13 El Cinchado / El Corinto,10673.999999999993
+2025-05-01,Terrestre,14 Tecún Umán,1754.0
+2025-05-01,Terrestre,15 El Carmen,1462.9999999999993
+2025-05-01,Terrestre,16 La Mesilla,818.9999999999998
+2025-05-01,Terrestre,18 Bethel,2.0
+2025-05-01,Terrestre,19 Gracias a Dios,33.00000000000003
+2025-05-01,Terrestre,20 Melchor de Mencos,14319.000000000005
+2025-06-01,Aérea,01 La Aurora,99386.0
+2025-06-01,Aérea,02 Mundo Maya,25.0
+2025-06-01,Marítima,03 Puerto Quetzal,90.0
+2025-06-01,Marítima,04 Santo Tomás de Castilla,5.0
+2025-06-01,Marítima,05 Puerto Barrios,117.0
+2025-06-01,Marítima,06 Livingston,280.0
+2025-06-01,Terrestre,07 Valle Nuevo,50795.99999999996
+2025-06-01,Terrestre,08 Pedro de Alvarado,27747.000000000004
+2025-06-01,Terrestre,09 San Cristóbal,37227.0
+2025-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),21158.999999999953
+2025-06-01,Terrestre,11 Agua Caliente,3075.0000000000027
+2025-06-01,Terrestre,12 El Florido,6623.999999999999
+2025-06-01,Terrestre,13 El Cinchado / El Corinto,11086.0
+2025-06-01,Terrestre,14 Tecún Umán,370.0
+2025-06-01,Terrestre,16 La Mesilla,435.0
+2025-06-01,Terrestre,20 Melchor de Mencos,15404.000000000002
+2025-07-01,Aérea,01 La Aurora,117314.0
+2025-07-01,Aérea,02 Mundo Maya,47.0
+2025-07-01,Marítima,03 Puerto Quetzal,133.0
+2025-07-01,Marítima,04 Santo Tomás de Castilla,3.0
+2025-07-01,Marítima,05 Puerto Barrios,192.0
+2025-07-01,Marítima,06 Livingston,278.0
+2025-07-01,Terrestre,07 Valle Nuevo,51123.00000000008
+2025-07-01,Terrestre,08 Pedro de Alvarado,28186.000000000015
+2025-07-01,Terrestre,09 San Cristóbal,36559.000000000015
+2025-07-01,Terrestre,10 La Ermita (Nueva Anguiatú),20261.999999999975
+2025-07-01,Terrestre,11 Agua Caliente,4213.000000000004
+2025-07-01,Terrestre,12 El Florido,8297.000000000004
+2025-07-01,Terrestre,13 El Cinchado / El Corinto,14472.999999999995
+2025-07-01,Terrestre,14 Tecún Umán,2276.0000000000005
+2025-07-01,Terrestre,15 El Carmen,2457.0
+2025-07-01,Terrestre,16 La Mesilla,889.9999999999999
+2025-07-01,Terrestre,18 Bethel,5.999999999999999
+2025-07-01,Terrestre,19 Gracias a Dios,69.99999999999997
+2025-07-01,Terrestre,20 Melchor de Mencos,20512.0
+2025-08-01,Aérea,01 La Aurora,90568.0
+2025-08-01,Aérea,02 Mundo Maya,75.0
+2025-08-01,Marítima,03 Puerto Quetzal,91.0
+2025-08-01,Marítima,04 Santo Tomás de Castilla,5.0
+2025-08-01,Marítima,05 Puerto Barrios,112.0
+2025-08-01,Marítima,06 Livingston,358.0
+2025-08-01,Terrestre,07 Valle Nuevo,72925.00000000001
+2025-08-01,Terrestre,08 Pedro de Alvarado,35416.00000000014
+2025-08-01,Terrestre,09 San Cristóbal,40455.99999999992
+2025-08-01,Terrestre,10 La Ermita (Nueva Anguiatú),25117.000000000007
+2025-08-01,Terrestre,11 Agua Caliente,3819.9999999999964
+2025-08-01,Terrestre,12 El Florido,8773.000000000011
+2025-08-01,Terrestre,13 El Cinchado / El Corinto,13247.00000000002
+2025-08-01,Terrestre,14 Tecún Umán,2570.0000000000005
+2025-08-01,Terrestre,15 El Carmen,1801.0
+2025-08-01,Terrestre,16 La Mesilla,787.9999999999998
+2025-08-01,Terrestre,18 Bethel,56.00000000000001
+2025-08-01,Terrestre,19 Gracias a Dios,43.0
+2025-08-01,Terrestre,20 Melchor de Mencos,19350.999999999996
+2025-09-01,Aérea,01 La Aurora,70415.0
+2025-09-01,Aérea,02 Mundo Maya,1.0
+2025-09-01,Marítima,03 Puerto Quetzal,88.0
+2025-09-01,Marítima,04 Santo Tomás de Castilla,1.0
+2025-09-01,Marítima,05 Puerto Barrios,114.0
+2025-09-01,Marítima,06 Livingston,163.0
+2025-09-01,Terrestre,07 Valle Nuevo,48393.99999999993
+2025-09-01,Terrestre,08 Pedro de Alvarado,26808.0
+2025-09-01,Terrestre,09 San Cristóbal,35525.99999999999
+2025-09-01,Terrestre,10 La Ermita (Nueva Anguiatú),16611.999999999996
+2025-09-01,Terrestre,11 Agua Caliente,3477.9999999999914
+2025-09-01,Terrestre,12 El Florido,7028.000000000012
+2025-09-01,Terrestre,13 El Cinchado / El Corinto,12531.000000000011
+2025-09-01,Terrestre,14 Tecún Umán,2278.0000000000005
+2025-09-01,Terrestre,15 El Carmen,1728.0
+2025-09-01,Terrestre,16 La Mesilla,653.0
+2025-09-01,Terrestre,18 Bethel,6.000000000000002
+2025-09-01,Terrestre,19 Gracias a Dios,62.99999999999999
+2025-09-01,Terrestre,20 Melchor de Mencos,10586.000000000002
+2025-10-01,Aérea,01 La Aurora,89989.0
+2025-10-01,Aérea,02 Mundo Maya,11.0
+2025-10-01,Marítima,03 Puerto Quetzal,101.0
+2025-10-01,Marítima,04 Santo Tomás de Castilla,5.0
+2025-10-01,Marítima,05 Puerto Barrios,131.0
+2025-10-01,Marítima,06 Livingston,156.0
+2025-10-01,Terrestre,07 Valle Nuevo,52299.00000000002
+2025-10-01,Terrestre,08 Pedro de Alvarado,31358.000000000004
+2025-10-01,Terrestre,09 San Cristóbal,39205.00000000006
+2025-10-01,Terrestre,10 La Ermita (Nueva Anguiatú),18077.000000000015
+2025-10-01,Terrestre,11 Agua Caliente,4978.999999999992
+2025-10-01,Terrestre,12 El Florido,9394.000000000007
+2025-10-01,Terrestre,13 El Cinchado / El Corinto,15272.000000000015
+2025-10-01,Terrestre,14 Tecún Umán,2469.9999999999995
+2025-10-01,Terrestre,15 El Carmen,1719.9999999999998
+2025-10-01,Terrestre,16 La Mesilla,747.0
+2025-10-01,Terrestre,18 Bethel,30.0
+2025-10-01,Terrestre,19 Gracias a Dios,43.00000000000001
+2025-10-01,Terrestre,20 Melchor de Mencos,11312.0
+2025-11-01,Aérea,01 La Aurora,111541.0
+2025-11-01,Aérea,02 Mundo Maya,26.0
+2025-11-01,Marítima,03 Puerto Quetzal,102.0
+2025-11-01,Marítima,04 Santo Tomás de Castilla,2.0
+2025-11-01,Marítima,05 Puerto Barrios,101.0
+2025-11-01,Marítima,06 Livingston,329.0
+2025-11-01,Terrestre,07 Valle Nuevo,66624.99999999993
+2025-11-01,Terrestre,08 Pedro de Alvarado,39336.99999999998
+2025-11-01,Terrestre,09 San Cristóbal,40919.99999999996
+2025-11-01,Terrestre,10 La Ermita (Nueva Anguiatú),23101.999999999978
+2025-11-01,Terrestre,11 Agua Caliente,3600.9999999999973
+2025-11-01,Terrestre,12 El Florido,9181.999999999993
+2025-11-01,Terrestre,13 El Cinchado / El Corinto,12826.000000000007
+2025-11-01,Terrestre,14 Tecún Umán,3027.9999999999995
+2025-11-01,Terrestre,15 El Carmen,2458.0000000000014
+2025-11-01,Terrestre,16 La Mesilla,1492.9999999999995
+2025-11-01,Terrestre,18 Bethel,47.99999999999999
+2025-11-01,Terrestre,19 Gracias a Dios,62.99999999999999
+2025-11-01,Terrestre,20 Melchor de Mencos,13646.999999999995
+2025-12-01,Aérea,01 La Aurora,127274.0
+2025-12-01,Aérea,02 Mundo Maya,9.0
+2025-12-01,Marítima,03 Puerto Quetzal,91.0
+2025-12-01,Marítima,04 Santo Tomás de Castilla,11.0
+2025-12-01,Marítima,05 Puerto Barrios,231.0
+2025-12-01,Marítima,06 Livingston,331.0
+2025-12-01,Terrestre,07 Valle Nuevo,89989.99999999981
+2025-12-01,Terrestre,08 Pedro de Alvarado,36928.99999999999
+2025-12-01,Terrestre,09 San Cristóbal,57036.99999999987
+2025-12-01,Terrestre,10 La Ermita (Nueva Anguiatú),24823.0
+2025-12-01,Terrestre,11 Agua Caliente,4548.999999999997
+2025-12-01,Terrestre,12 El Florido,8759.999999999995
+2025-12-01,Terrestre,13 El Cinchado / El Corinto,13168.000000000002
+2025-12-01,Terrestre,14 Tecún Umán,4072.000000000001
+2025-12-01,Terrestre,15 El Carmen,3747.0
+2025-12-01,Terrestre,16 La Mesilla,1257.9999999999998
+2025-12-01,Terrestre,18 Bethel,57.0
+2025-12-01,Terrestre,19 Gracias a Dios,66.0
+2025-12-01,Terrestre,20 Melchor de Mencos,19684.000000000004
+2026-01-01,Aérea,01 La Aurora,113422.0
+2026-01-01,Aérea,02 Mundo Maya,13.0
+2026-01-01,Marítima,03 Puerto Quetzal,111.0
+2026-01-01,Marítima,04 Santo Tomás de Castilla,21.0
+2026-01-01,Marítima,05 Puerto Barrios,161.0
+2026-01-01,Marítima,06 Livingston,351.0
+2026-01-01,Terrestre,07 Valle Nuevo,53452.000000000175
+2026-01-01,Terrestre,08 Pedro de Alvarado,31335.000000000004
+2026-01-01,Terrestre,09 San Cristóbal,38706.99999999991
+2026-01-01,Terrestre,10 La Ermita (Nueva Anguiatú),33910.99999999999
+2026-01-01,Terrestre,11 Agua Caliente,8222.999999999998
+2026-01-01,Terrestre,12 El Florido,10902.000000000002
+2026-01-01,Terrestre,13 El Cinchado / El Corinto,13301.00000000001
+2026-01-01,Terrestre,14 Tecún Umán,674.0
+2026-01-01,Terrestre,16 La Mesilla,1261.0
+2026-01-01,Terrestre,20 Melchor de Mencos,13261.000000000002
+2026-02-01,Aérea,01 La Aurora,106723.0
+2026-02-01,Aérea,02 Mundo Maya,98.0
+2026-02-01,Marítima,03 Puerto Quetzal,219.0
+2026-02-01,Marítima,04 Santo Tomás de Castilla,8.0
+2026-02-01,Marítima,05 Puerto Barrios,141.0
+2026-02-01,Marítima,06 Livingston,390.0
+2026-02-01,Terrestre,07 Valle Nuevo,36711.00000000002
+2026-02-01,Terrestre,08 Pedro de Alvarado,23558.0
+2026-02-01,Terrestre,09 San Cristóbal,31772.99999999997
+2026-02-01,Terrestre,10 La Ermita (Nueva Anguiatú),17698.99999999999
+2026-02-01,Terrestre,11 Agua Caliente,4226.999999999994
+2026-02-01,Terrestre,12 El Florido,8649.000000000002
+2026-02-01,Terrestre,13 El Cinchado / El Corinto,9516.999999999998
+2026-02-01,Terrestre,14 Tecún Umán,614.0
+2026-02-01,Terrestre,16 La Mesilla,1119.9999999999998
+2026-02-01,Terrestre,20 Melchor de Mencos,12601.0
+2026-03-01,Aérea,01 La Aurora,127510.0
+2026-03-01,Aérea,02 Mundo Maya,30.0
+2026-03-01,Marítima,03 Puerto Quetzal,117.0
+2026-03-01,Marítima,04 Santo Tomás de Castilla,17.0
+2026-03-01,Marítima,05 Puerto Barrios,170.0
+2026-03-01,Marítima,06 Livingston,368.0
+2026-03-01,Terrestre,07 Valle Nuevo,46254.000000000044
+2026-03-01,Terrestre,08 Pedro de Alvarado,30016.000000000015
+2026-03-01,Terrestre,09 San Cristóbal,37553.00000000011
+2026-03-01,Terrestre,10 La Ermita (Nueva Anguiatú),18879.0
+2026-03-01,Terrestre,11 Agua Caliente,6206.000000000005
+2026-03-01,Terrestre,12 El Florido,10238.000000000007
+2026-03-01,Terrestre,13 El Cinchado / El Corinto,11922.999999999998
+2026-03-01,Terrestre,14 Tecún Umán,2871.0000000000005
+2026-03-01,Terrestre,15 El Carmen,2125.0
+2026-03-01,Terrestre,16 La Mesilla,1236.0
+2026-03-01,Terrestre,18 Bethel,97.0
+2026-03-01,Terrestre,19 Gracias a Dios,111.99999999999999
+2026-03-01,Terrestre,20 Melchor de Mencos,15504.000000000007
+2026-04-01,Aérea,01 La Aurora,102021.0
+2026-04-01,Aérea,02 Mundo Maya,8.0
+2026-04-01,Marítima,03 Puerto Quetzal,102.0
+2026-04-01,Marítima,04 Santo Tomás de Castilla,30.0
+2026-04-01,Marítima,05 Puerto Barrios,194.0
+2026-04-01,Marítima,06 Livingston,394.0
+2026-04-01,Terrestre,07 Valle Nuevo,49472.999999999905
+2026-04-01,Terrestre,08 Pedro de Alvarado,28400.0
+2026-04-01,Terrestre,09 San Cristóbal,33655.000000000044
+2026-04-01,Terrestre,10 La Ermita (Nueva Anguiatú),15507.000000000005
+2026-04-01,Terrestre,11 Agua Caliente,7263.000000000004
+2026-04-01,Terrestre,12 El Florido,10075.000000000005
+2026-04-01,Terrestre,13 El Cinchado / El Corinto,14114.999999999987
+2026-04-01,Terrestre,14 Tecún Umán,687.0000000000001
+2026-04-01,Terrestre,16 La Mesilla,824.9999999999998
+2026-04-01,Terrestre,20 Melchor de Mencos,15450.000000000013
+2026-05-01,Aérea,01 La Aurora,95801.0
+2026-05-01,Aérea,02 Mundo Maya,3.0
+2026-05-01,Marítima,03 Puerto Quetzal,114.0
+2026-05-01,Marítima,04 Santo Tomás de Castilla,9.0
+2026-05-01,Marítima,05 Puerto Barrios,130.0
+2026-05-01,Marítima,06 Livingston,350.0
+2026-05-01,Terrestre,07 Valle Nuevo,45751.999999999796
+2026-05-01,Terrestre,08 Pedro de Alvarado,27318.000000000004
+2026-05-01,Terrestre,09 San Cristóbal,36862.000000000015
+2026-05-01,Terrestre,10 La Ermita (Nueva Anguiatú),15631.999999999989
+2026-05-01,Terrestre,11 Agua Caliente,4858.000000000001
+2026-05-01,Terrestre,12 El Florido,7694.999999999986
+2026-05-01,Terrestre,13 El Cinchado / El Corinto,11439.999999999982
+2026-05-01,Terrestre,14 Tecún Umán,767.0
+2026-05-01,Terrestre,15 El Carmen,480.0
+2026-05-01,Terrestre,16 La Mesilla,745.9999999999997
+2026-05-01,Terrestre,18 Bethel,2.0
+2026-05-01,Terrestre,19 Gracias a Dios,4.0
+2026-05-01,Terrestre,20 Melchor de Mencos,12703.000000000002
+2026-06-01,Aérea,01 La Aurora,98198.0
+2026-06-01,Aérea,02 Mundo Maya,13.0
+2026-06-01,Marítima,03 Puerto Quetzal,157.0
+2026-06-01,Marítima,04 Santo Tomás de Castilla,12.0
+2026-06-01,Marítima,05 Puerto Barrios,143.0
+2026-06-01,Marítima,06 Livingston,264.0
+2026-06-01,Terrestre,07 Valle Nuevo,44803.000000000065
+2026-06-01,Terrestre,08 Pedro de Alvarado,26824.999999999996
+2026-06-01,Terrestre,09 San Cristóbal,35491.99999999995
+2026-06-01,Terrestre,10 La Ermita (Nueva Anguiatú),15672.000000000013
+2026-06-01,Terrestre,11 Agua Caliente,3680.0000000000045
+2026-06-01,Terrestre,12 El Florido,6194.000000000006
+2026-06-01,Terrestre,13 El Cinchado / El Corinto,10322.000000000025
+2026-06-01,Terrestre,14 Tecún Umán,491.0
+2026-06-01,Terrestre,20 Melchor de Mencos,17124.999999999975
