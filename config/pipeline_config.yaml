@@ -1,0 +1,87 @@
+# ==============================================================================
+# Configuración del Pipeline MLOps - Observatorio de Inteligencia Turística
+# Laboratorio 11: Flujo reproducible, gobernanza y publicación controlada
+# ==============================================================================
+
+pipeline:
+  name: "observatorio_turismo_pipeline"
+  destination: "Guatemala"
+  random_seed: 42
+  version: "1.0.0"
+
+paths:
+  raw_data_dir: "data"
+  series_file: "series_mensuales.csv"
+  pais_file: "pais_mensual.csv"
+  via_frontera_file: "via_frontera.csv"
+  historical_forecasts_file: "pronosticos.csv"
+  output_dir: "data"
+  approved_file: "estimaciones_aprobadas.csv"
+  backup_dir: "data/backup_aprobadas"
+  reports_dir: "reports"
+  logs_dir: "logs"
+
+scope:
+  target_variable: "viajeros"
+  target_series: "Total"
+  secondary_series:
+    - "Via_Aérea"
+    - "Via_Terrestre"
+    - "Via_Marítima"
+    - "Tipo_Turista"
+    - "Tipo_Excursionista"
+    - "Tipo_Cruceristas"
+    - "Tipo_Viajero"
+  unit_of_measure: "viajeros/mes"
+  aggregation_level: "mensual"
+  date_column: "fecha"
+
+temporal_split:
+  train_start: "2009-01-01"
+  train_end: "2021-03-01"
+  eval_start: "2021-04-01"
+  eval_end: "2026-06-01"
+  # Periodo reciente con limitaciones de comparación identificadas
+  unobserved_period_note: "Enero-Febrero 2026 sujeto a limitaciones metodológicas; evaluación retrospectiva en meses coincidentes"
+
+repartition_factors:
+  method: "historical_mean_share"
+  calculation_period: "train"
+  description: "Proporción histórica promedio de cada serie respecto al Total calculada exclusivamente en el periodo de ajuste"
+
+models:
+  active_model: "historical_mean"  # Opciones: "historical_mean", "holt_winters", "seasonal_naive"
+  baseline_seasonal_naive:
+    enabled: true
+    lag: 12
+    description: "Último valor observado en el mismo mes del año anterior"
+  baseline_historical_mean:
+    enabled: true
+    description: "Promedio histórico mensual calculado solo con datos previos de entrenamiento"
+  holt_winters:
+    enabled: true
+    seasonal_periods: 12
+    trend: "add"
+    seasonal: "add"
+    damped_trend: false
+    use_boxcox: false
+    description: "Suavizamiento exponencial Holt-Winters aditivo"
+
+quality_thresholds:
+  critical_checks:
+    require_all_passed: true
+  metrics_acceptance:
+    max_mae_tolerance: 150000.0  # Umbral máximo permitido para escala Total de viajeros
+    max_rmse_tolerance: 180000.0
+    require_better_than_baseline: false  # Por instrucción 5.5: no obligatorio superar referencia, pero debe evaluarse
+    permit_negative_forecasts: false    # Prohíbe predicciones negativas de viajeros en versión aprobada
+
+monitoring:
+  max_relative_variation_alert: 0.50  # Variación interanual > 50% genera alerta de revisión
+  expected_monthly_frequency: "MS"
+  retention_versions_count: 5
+
+mlflow:
+  experiment_name: "Observatorio_Turismo_Guatemala"
+  tracking_uri: "sqlite:///mlflow.db"
+  artifact_location: "./mlruns"

@@ -170,6 +170,20 @@ def calcular_metricas_error(series, pron, ms, corte=CORTE):
     return pd.DataFrame(filas, columns=columnas).sort_values('MAE (Error medio)', na_position='last').reset_index(drop=True)
 
 
+def cargar_estimaciones_aprobadas(data_dir='data'):
+    """Carga el archivo de estimaciones aprobadas por el pipeline de MLOps con metadatos de gobernanza (Laboratorio 11)."""
+    ruta = os.path.join(data_dir, 'estimaciones_aprobadas.csv')
+    if not os.path.isfile(ruta):
+        return None
+    try:
+        df = pd.read_csv(ruta)
+        if 'fecha' in df:
+            df['fecha'] = pd.to_datetime(df['fecha'])
+        return df
+    except Exception:
+        return None
+
+
 # =====================================================
 # LÓGICA DE DATOS: MAPA MUNDIAL DE ORIGEN
 # =====================================================

@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.venv
+venv/
+env/
+.git
+.gitignore
+.dockerignore
+mlruns/
+mlflow.db
+evidencias/
+reporte_final_lab10/
+.pytest_cache/
+

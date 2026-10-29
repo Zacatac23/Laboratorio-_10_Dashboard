@@ -7,7 +7,7 @@ import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 from data_logic import (cargar_todo, agrupar_serie, calcular_variacion_interanual,
-    calcular_metricas_error, preparar_datos_mapa_origen, seleccion_vigente, ErrorDatos, ETIQ, TODAS, CORTE)
+    calcular_metricas_error, cargar_estimaciones_aprobadas, preparar_datos_mapa_origen, seleccion_vigente, ErrorDatos, ETIQ, TODAS, CORTE)
 from ui_components import (aplicar_estilos, mostrar_grafico, estilo_plotly,
     render_banner, render_kpis_resumen, crear_figura_evolucion, crear_figura_mapa_origen,
     titulo_seccion, render_footer_leyenda,
@@ -226,11 +226,26 @@ with tab_exp:
             mostrar(fig, 'V07')
 
 with tab_mod:
-    st.subheader('Modelos de pronóstico: evaluación histórica')
-    st.caption('Esta sección utiliza su propia serie y todos los pares de evaluación desde abril de 2021; '
+    st.subheader('Modelos y Estimaciones: Gobernanza MLOps y Evaluación')
+    st.caption('Esta sección consulta la versión aprobada y el banco de evaluación retrospectiva desde abril de 2021; '
                'los filtros laterales de históricos no cambian sus métricas. No son pronósticos para fechas posteriores al archivo exportado.')
-    st.info('Origen L1/L2 declarado en la guía de exportación; pendiente de verificar con notebooks o enlaces versionados. '
-            'No se entrenan modelos en este dashboard. No hay intervalos de confianza exportados.')
+
+    # Integración de versión aprobada oficial (Ejercicio 6)
+    aprobadas = cargar_estimaciones_aprobadas(os.environ.get('DATA_DIR', str(ROOT / 'data')))
+    if aprobadas is not None and not aprobadas.empty:
+        ap_first = aprobadas.iloc[0]
+        st.success(
+            f"**Versión Oficial Aprobada (MLOps):** Procedimiento v{ap_first.get('version_procedimiento', '1.0.0')} | "
+            f"**Estado:** {ap_first.get('estado_aprobacion', 'APROBADO')} | "
+            f"**Run ID:** `{ap_first.get('run_id', 'N/A')}` | "
+            f"**Actualizado:** {ap_first.get('fecha_generacion', 'N/A')}"
+        )
+    else:
+        st.warning('Las estimaciones aprobadas no están disponibles en este momento o la última ejecución fue rechazada por controles de calidad. '
+                   'Se preserva la visualización histórica segura sin reemplazo de datos.')
+
+    st.info('Origen L1/L2 declarado en la guía de exportación; trazabilidad gobernada mediante MLflow Tracking. '
+            'Los directivos consultan versiones aprobadas verificables; los detalles de runs y parámetros residen en MLflow.')
     if pron is None or pron.empty:
         st.info('No hay pronósticos válidos disponibles. Revise data/pronosticos.csv y los avisos de carga.')
     else:
@@ -266,7 +281,12 @@ with tab_mod:
                 st.subheader('Observado frente a pronósticos exportados')
                 st.caption('¿Qué modelos reproducen mejor la trayectoria observada? Las curvas son evaluación retrospectiva; no demuestran causalidad.')
                 full = series[(series.serie == ms) & (series.fecha >= CORTE)]
-                fig = go.Figure(go.Scatter(x=full.fecha, y=full.viajeros, name='Observado', line=dict(color=AZUL, width=2.8)))
+                fig = go.Figure(go.Scatter(x=full.fecha, y=full.viajeros, name='Observado (Oficial)', line=dict(color=AZUL, width=2.8)))
+                if aprobadas is not None and ms in set(aprobadas['serie']):
+                    ap_serie = aprobadas[aprobadas['serie'] == ms].sort_values('fecha')
+                    fig.add_trace(go.Scatter(x=ap_serie.fecha, y=ap_serie.prediccion,
+                        name=f"Estimación Aprobada MLOps ({ap_serie.iloc[0].get('modelo', 'Oficial')})",
+                        line=dict(color=VERDE, width=3.2)))
                 for i, modelo in enumerate(elegidos):
                     g = pm[pm.modelo == modelo]
                     fig.add_trace(go.Scatter(x=g.fecha, y=g.prediccion, name=f'{modelo} (evaluación)',

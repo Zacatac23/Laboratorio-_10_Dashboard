@@ -51,3 +51,56 @@ python -B tests/browser_smoke.py "$PWD"
 ```
 
 La prueba abre servidor/perfil temporales y escribe capturas en `evidencias/`. Consultar `PRUEBAS_LAB10.md`, `VISUALIZACIONES_FINAL.md`, `MODELOS_Y_FUENTES.md`, `AUDITORIA_CORRECCIONES_LAB10.md` y `AJUSTES_PENDIENTES_DOCUMENTO_DISENO.md`. No se certifican entrega administrativa ni PDF de diseño.
+
+
+---
+
+# MLOps aplicado al Observatorio — Laboratorio 11
+
+Flujo reproducible de preparación de datos, ejecución de modelos, controles automáticos de calidad, evaluación temporal, trazabilidad en MLflow y publicación controlada de resultados para el Observatorio de Inteligencia Turística de Guatemala.
+
+Consulte la memoria técnica completa en [AVANCE_LABORATORIO_11.md](file:///c:/Users/jonat/Desktop/Laboratorio-_10_Dashboard/AVANCE_LABORATORIO_11.md).
+
+## Ejecución del Pipeline MLOps
+
+El pipeline desacopla totalmente el cómputo y calibración de la interfaz de usuario:
+
+```bash
+# 1. Ejecución completa con validación, evaluación y publicación controlada
+python pipeline.py --config config/pipeline_config.yaml --publish
+
+# 2. Modo evaluación sin alterar la versión aprobada vigente (dry-run)
+python pipeline.py --config config/pipeline_config.yaml --no-publish
+```
+
+## Servidor de Trazabilidad MLflow Tracking
+
+Para consultar los experimentos, parámetros, métricas, huellas SHA-256 de datos, commit Git y artefactos:
+
+```bash
+mlflow ui --port 5000 --backend-store-uri sqlite:///mlflow.db
+```
+Abrir http://localhost:5000 en el navegador.
+
+## Despliegue Contenerizado con Docker Compose
+
+```bash
+# Construir y levantar el Tablero (puerto 8501) y MLflow UI (puerto 5000)
+docker compose up -d
+
+# Ejecutar el pipeline dentro del contenedor
+docker compose run --rm pipeline
+
+# Detener los servicios
+docker compose down
+```
+
+## Pruebas de Calidad, Fallo Controlado y Recuperación
+
+```bash
+# Ejecutar todas las pruebas unitarias (41 pruebas de Lab 10 y Lab 11)
+python -B -m unittest discover -s tests -v
+
+# Demostración controlada de inyección de anomalías, contención y recuperación (Ej. 7.4)
+python -m src.test_controlled_failure
+```

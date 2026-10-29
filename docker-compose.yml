@@ -1,0 +1,54 @@
+version: "3.8"
+
+services:
+  # Servicio 1: Tablero Streamlit para directivos
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: observatorio_turismo_dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - DATA_DIR=/app/data
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+    restart: unless-stopped
+    depends_on:
+      - mlflow
+
+  # Servicio 2: Servidor de MLflow Tracking UI
+  mlflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: observatorio_turismo_mlflow
+    ports:
+      - "5000:5000"
+    command: >
+      mlflow ui --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:////app/data/mlflow.db --artifacts-destination /app/mlruns
+    volumes:
+      - ./data:/app/data
+      - ./mlruns:/app/mlruns
+      - ./logs:/app/logs
+    restart: unless-stopped
+
+  # Servicio 3: Ejecución batch del Pipeline reproducible (bajo demanda)
+  # Uso: docker compose run --rm pipeline
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: observatorio_turismo_pipeline
+    command: python pipeline.py --config config/pipeline_config.yaml --publish
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+      - ./mlruns:/app/mlruns
+      - ./config:/app/config
+    profiles:
+      - tools
+
