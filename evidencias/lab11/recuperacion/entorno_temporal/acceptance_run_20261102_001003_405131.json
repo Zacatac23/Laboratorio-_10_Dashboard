@@ -1,0 +1,30 @@
+{
+  "is_accepted": true,
+  "reasons": [],
+  "metrics_model": {
+    "mae": 80365.74,
+    "rmse": 94175.26,
+    "ape_eps_pct": 38.67,
+    "mape_note": "ape_eps_pct usa |y|+epsilon; no es MAPE convencional",
+    "n": 63
+  },
+  "metrics_baseline": {
+    "mae": 235730.91,
+    "rmse": 253203.39,
+    "ape_eps_pct": 83.86,
+    "mape_note": "ape_eps_pct usa |y|+epsilon; no es MAPE convencional",
+    "n": 63
+  },
+  "beats_baseline": true,
+  "max_mae_threshold": 150000.0,
+  "max_rmse_threshold": 180000.0,
+  "negative_predictions_in_eval": 0,
+  "frame_validation": {
+    "ok": true,
+    "reasons": [],
+    "n_rows": 504
+  },
+  "note": "No es obligatorio superar el baseline; beats_baseline queda documentado. Umbral MAE inicial 150000 según configuración, sin ajuste post-hoc.",
+  "baseline_model": "Seasonal Naive (Lag 12)",
+  "comparacion_mismos_meses": true
+}

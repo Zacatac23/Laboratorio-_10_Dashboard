@@ -1,0 +1,54 @@
+{
+  "run_id": "run_20261102_001003_553f9b",
+  "git_commit": "4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302",
+  "start_time": "2026-11-02T00:10:03.104313",
+  "end_time": "2026-11-02T00:10:03.245921",
+  "duration_seconds": 0.14,
+  "stages": [
+    {
+      "stage_name": "Verificación de trazabilidad (MLflow)",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T00:10:03.133293",
+      "end_time": "2026-11-02T00:10:03.147114",
+      "details": "http://127.0.0.1:5001 (config:mlflow.tracking_uri)"
+    },
+    {
+      "stage_name": "Lectura de fuentes",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T00:10:03.184915",
+      "end_time": "2026-11-02T00:10:03.220089",
+      "details": "series_mensuales.csv=5077acdf11d0, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566"
+    },
+    {
+      "stage_name": "Controles de calidad QC-A…F",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T00:10:03.220098",
+      "end_time": "2026-11-02T00:10:03.237179",
+      "details": "QC críticos aprobados"
+    },
+    {
+      "stage_name": "Preparación y división temporal",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T00:10:03.237188",
+      "end_time": "2026-11-02T00:10:03.245566",
+      "details": ""
+    },
+    {
+      "stage_name": "Ajuste de modelo, baselines y factores",
+      "status": "FAILED",
+      "start_time": "2026-11-02T00:10:03.245571",
+      "end_time": "2026-11-02T00:10:03.245911",
+      "details": "Total de viajeros en entrenamiento es 0.0; denominador inválido."
+    }
+  ],
+  "warnings": [],
+  "errors": [
+    "Total de viajeros en entrenamiento es 0.0; denominador inválido."
+  ],
+  "published": false,
+  "status": "FALLIDO",
+  "failed_stage": "Ajuste de modelo, baselines y factores",
+  "publication_decision": "NO_PUBLICADO: fallido en etapa 'Ajuste de modelo, baselines y factores'",
+  "mlflow_run_id": "2c3ca0b765534d7c83997d95074e0aaf",
+  "tracking_uri": "http://127.0.0.1:5001"
+}

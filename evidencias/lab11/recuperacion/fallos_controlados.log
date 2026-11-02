@@ -1,0 +1,263 @@
+Versión aprobada inicial A: {'sha256_csv': 'd5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872', 'sha256_manifiesto': 'afcaa960a4136c4c5d73ec113b99be876efa5f45cc928e512465b362179b6ccc', 'run_id': 'run_20261101_222030_d65c3b'}
+
+=== Inyección: columna_indispensable_ausente (viajeros)
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001002_4cea5b
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Publicación solicitada: True
+=======================================================
+[0/9] MLflow: http://127.0.0.1:5001 (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala_pruebas_controladas'
+[1/9] Lectura: series_mensuales.csv=268f3b9c1e0e, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566
+[2/9] Controles automáticos de calidad...
+  - [FAILED] QC-A Columnas y tipos requeridos: Faltan columnas indispensables en series_mensuales.csv: ['viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (1680 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [NO_VERIFICABLE] QC-F Regla metodológica del observatorio: Faltan columnas indispensables (serie/fecha/viajeros) para verificar la regla.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (23887 registros).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (3857 registros).
+
+[FALLIDO_CALIDAD] Etapa 'Controles de calidad QC-A…F': Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.
+Se conserva la versión aprobada vigente sin alteraciones.
+
+🏃 View run run_20261102_001002_4cea5b at: http://127.0.0.1:5001/#/experiments/2/runs/b42ac0cdfc9a4bfcb2749404490ce4a0
+🧪 View experiment at: http://127.0.0.1:5001/#/experiments/2
+{'estado': 'FALLIDO_CALIDAD', 'excepcion': 'QualityControlError: Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.', 'aprobado_intacto': True}
+
+=== Inyección: clave_duplicada (serie,fecha)
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001002_5ddc24
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Publicación solicitada: True
+=======================================================
+[0/9] MLflow: http://127.0.0.1:5001 (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala_pruebas_controladas'
+[1/9] Lectura: series_mensuales.csv=fda116996b56, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.
+  - [FAILED] QC-C Unicidad de clave primaria: Se detectaron 2 filas con clave duplicada en series_mensuales.csv.
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [FAILED] QC-F Regla metodológica del observatorio: 1 meses con discrepancia > 2.0% entre Total y suma de vías (ej. ['2009-11']). Invalidaría estimaciones que asumen esa identidad mensual.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (23887 registros).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (3857 registros).
+
+[FALLIDO_CALIDAD] Etapa 'Controles de calidad QC-A…F': Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.
+Se conserva la versión aprobada vigente sin alteraciones.
+
+🏃 View run run_20261102_001002_5ddc24 at: http://127.0.0.1:5001/#/experiments/2/runs/89a42a1837ec40b09e0881cfd5c4597a
+🧪 View experiment at: http://127.0.0.1:5001/#/experiments/2
+{'estado': 'FALLIDO_CALIDAD', 'excepcion': 'QualityControlError: Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.', 'aprobado_intacto': True}
+
+=== Inyección: conteo_negativo (Total 2015-03 = -500)
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001002_ee857d
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Publicación solicitada: True
+=======================================================
+[0/9] MLflow: http://127.0.0.1:5001 (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala_pruebas_controladas'
+[1/9] Lectura: series_mensuales.csv=1df2e05be306, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (1680 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [FAILED] QC-E Valores válidos y denominadores seguros: Conteos negativos no válidos en series_mensuales.csv: {'viajeros': 1}.
+  - [FAILED] QC-F Regla metodológica del observatorio: 1 meses con discrepancia > 2.0% entre Total y suma de vías (ej. ['2015-03']). Invalidaría estimaciones que asumen esa identidad mensual.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (23887 registros).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (3857 registros).
+
+[FALLIDO_CALIDAD] Etapa 'Controles de calidad QC-A…F': Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.
+Se conserva la versión aprobada vigente sin alteraciones.
+
+🏃 View run run_20261102_001002_ee857d at: http://127.0.0.1:5001/#/experiments/2/runs/5774563eddd440e5aac630044317c95c
+🧪 View experiment at: http://127.0.0.1:5001/#/experiments/2
+{'estado': 'FALLIDO_CALIDAD', 'excepcion': 'QualityControlError: Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.', 'aprobado_intacto': True}
+
+=== Inyección: denominador_cero (todas las series = 0 en Train)
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001003_553f9b
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Publicación solicitada: True
+=======================================================
+[0/9] MLflow: http://127.0.0.1:5001 (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala_pruebas_controladas'
+[1/9] Lectura: series_mensuales.csv=5077acdf11d0, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (1680 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (23887 registros).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (3857 registros).
+[3/9] Preparación y división temporal (YAML)...
+  Train: 2009-01–2021-03 (N=147)
+  Eval (backtest origen fijo): 2021-04–2026-06 (N=63)
+[4/9] Modelo, baselines y factores de reparto...
+
+[FALLIDO] Etapa 'Ajuste de modelo, baselines y factores': Total de viajeros en entrenamiento es 0.0; denominador inválido.
+Se conserva la versión aprobada vigente sin alteraciones.
+
+🏃 View run run_20261102_001003_553f9b at: http://127.0.0.1:5001/#/experiments/2/runs/2c3ca0b765534d7c83997d95074e0aaf
+🧪 View experiment at: http://127.0.0.1:5001/#/experiments/2
+{'estado': 'FALLIDO', 'excepcion': 'ValueError: Total de viajeros en entrenamiento es 0.0; denominador inválido.', 'aprobado_intacto': True}
+
+=== Corrección: se restituye series_mensuales.csv original y se re-ejecuta
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001003_405131
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Publicación solicitada: True
+=======================================================
+[0/9] MLflow: http://127.0.0.1:5001 (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala_pruebas_controladas'
+[1/9] Lectura: series_mensuales.csv=bb14cb7e8367, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (1680 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (23887 registros).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (3857 registros).
+[3/9] Preparación y división temporal (YAML)...
+  Train: 2009-01–2021-03 (N=147)
+  Eval (backtest origen fijo): 2021-04–2026-06 (N=63)
+[4/9] Modelo, baselines y factores de reparto...
+[5/9] Evaluación temporal (meses comparables)...
+  Promedio Histórico Mensual: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+  HW: MAE=303,201.01 | RMSE=328,143.27 | APE_eps%=104.11 (N=63)
+  Seasonal Naive: MAE=235,730.91 | RMSE=253,203.39 | APE_eps%=83.86 (N=63)
+  Promedio histórico: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+[6/9] Candidato, integridad y regla de aceptación...
+  Decisión: APROBADO (beats_baseline=True, no obligatorio)
+[7/9] Monitoreo...
+[8/9] Registro y verificación de artefactos en MLflow...
+[9/9] Publicación atómica...
+  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos_v48sbhxa/data/estimaciones_aprobadas.csv
+  Respaldo de la versión previa: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos_v48sbhxa/data/backup_aprobadas/estimaciones_aprobadas_backup_20261102_001003_773187_run_20261101_222030_d65c3b.csv
+
+Pipeline APROBADO_PUBLICADO en 0.49s | publicado=True
+=======================================================
+
+🏃 View run run_20261102_001003_405131 at: http://127.0.0.1:5001/#/experiments/2/runs/b535b622c9824a118f0ba25dfbfb8736
+🧪 View experiment at: http://127.0.0.1:5001/#/experiments/2
+APROBADO_PUBLICADO {'sha256_csv': '594b7cff56ebcc2f3168a0a709af43aebf4ab6721311b2eee44505ee0e6377a0', 'sha256_manifiesto': '590c3f1b9f88bbd8ee7de8b34ca9e761858e80de4cb2daec467a885a7ca3c8bb', 'run_id': 'run_20261102_001003_405131'}
+
+=== Fallo de escritura simulado (os.replace) durante la publicación
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001003_ec1d34
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Publicación solicitada: True
+=======================================================
+[0/9] MLflow: http://127.0.0.1:5001 (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala_pruebas_controladas'
+[1/9] Lectura: series_mensuales.csv=bb14cb7e8367, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (1680 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (23887 registros).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (3857 registros).
+[3/9] Preparación y división temporal (YAML)...
+  Train: 2009-01–2021-03 (N=147)
+  Eval (backtest origen fijo): 2021-04–2026-06 (N=63)
+[4/9] Modelo, baselines y factores de reparto...
+[5/9] Evaluación temporal (meses comparables)...
+  Promedio Histórico Mensual: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+  HW: MAE=303,201.01 | RMSE=328,143.27 | APE_eps%=104.11 (N=63)
+  Seasonal Naive: MAE=235,730.91 | RMSE=253,203.39 | APE_eps%=83.86 (N=63)
+  Promedio histórico: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+[6/9] Candidato, integridad y regla de aceptación...
+  Decisión: APROBADO (beats_baseline=True, no obligatorio)
+[7/9] Monitoreo...
+[8/9] Registro y verificación de artefactos en MLflow...
+[9/9] Publicación atómica...
+
+[FALLIDO] Etapa 'Publicación atómica': fallo simulado de escritura
+Se conserva la versión aprobada vigente sin alteraciones.
+
+🏃 View run run_20261102_001003_ec1d34 at: http://127.0.0.1:5001/#/experiments/2/runs/0c3d2078424f405aa9cbe487ee5fe70b
+🧪 View experiment at: http://127.0.0.1:5001/#/experiments/2
+{'estado': 'FALLIDO', 'excepcion': 'OSError: fallo simulado de escritura', 'aprobado_intacto': True, 'temporales_residuales': []}
+
+=== MLflow inaccesible (trazabilidad no garantizada)
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001004_d59228
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Publicación solicitada: True
+=======================================================
+  [MLflow] intento 1/1 sin conexión a http://127.0.0.1:9: <urlopen error [Errno 61] Connection refused>
+
+[BLOQUEADO] MLflow no disponible en http://127.0.0.1:9 tras 1 intentos: <urlopen error [Errno 61] Connection refused>. Se bloquea la ejecución para no publicar una versión sin trazabilidad.
+Auditoría local: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos_v48sbhxa/logs/audit_run_20261102_001004_d59228.json
+
+{'estado': 'BLOQUEADO_TRAZABILIDAD', 'excepcion': 'TraceabilityError: MLflow no disponible en http://127.0.0.1:9 tras 1 intentos: <urlopen error [Errno 61] Connection refused>. Se bloquea la ejecución para no publicar una versión sin trazabilidad.', 'aprobado_intacto': True}
+
+=== Fallo al persistir artefactos en MLflow
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001004_4cceaf
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Publicación solicitada: True
+=======================================================
+[0/9] MLflow: http://127.0.0.1:5001 (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala_pruebas_controladas'
+[1/9] Lectura: series_mensuales.csv=bb14cb7e8367, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (1680 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (23887 registros).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (3857 registros).
+[3/9] Preparación y división temporal (YAML)...
+  Train: 2009-01–2021-03 (N=147)
+  Eval (backtest origen fijo): 2021-04–2026-06 (N=63)
+[4/9] Modelo, baselines y factores de reparto...
+[5/9] Evaluación temporal (meses comparables)...
+  Promedio Histórico Mensual: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+  HW: MAE=303,201.01 | RMSE=328,143.27 | APE_eps%=104.11 (N=63)
+  Seasonal Naive: MAE=235,730.91 | RMSE=253,203.39 | APE_eps%=83.86 (N=63)
+  Promedio histórico: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+[6/9] Candidato, integridad y regla de aceptación...
+  Decisión: APROBADO (beats_baseline=True, no obligatorio)
+[7/9] Monitoreo...
+[8/9] Registro y verificación de artefactos en MLflow...
+
+[FALLIDO] Etapa 'Registro verificado en MLflow': artefacto no persistido (simulado)
+Se conserva la versión aprobada vigente sin alteraciones.
+
+🏃 View run run_20261102_001004_4cceaf at: http://127.0.0.1:5001/#/experiments/2/runs/874856115ca34fa79d88dd0286628cc9
+🧪 View experiment at: http://127.0.0.1:5001/#/experiments/2
+{'estado': 'FALLIDO', 'excepcion': 'RuntimeError: artefacto no persistido (simulado)', 'aprobado_intacto': True}
+
+=== Monitoreo
+linea_base_datos_vigentes -> 0 alertas; []
+actualizacion (series truncada a 2026-04; cobertura esperada 2026-06) -> 1 alertas; ['actualizacion']
+calidad (25 filas duplicadas vs ejecución previa) -> 1 alertas; ['calidad']
+resultados (Total 2024-07 multiplicado x3) -> 1 alertas; ['resultados']
+
+=== Restauración de la versión A
+{'respaldo_restaurado': 'estimaciones_aprobadas_backup_20261102_001003_773187_run_20261101_222030_d65c3b.csv', 'coincide_con_A': True, 'manifiesto_coincide_con_A': True} {'estado': 'ok', 'sha256': 'd5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872', 'metadatos_verificados': True, 'run_id': 'run_20261101_222030_d65c3b'}
+
+data/ del repositorio intacta: True
+Evidencia: /Users/mariorocha/Documents/Programacion/DataScience/Laboratorio-_10_Dashboard./evidencias/lab11/recuperacion/fallos_controlados.json

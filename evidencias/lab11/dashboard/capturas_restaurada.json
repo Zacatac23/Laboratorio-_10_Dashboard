@@ -1,0 +1,25 @@
+{
+  "escenario": "restaurada",
+  "url": "http://127.0.0.1:8501",
+  "datos_leidos_por_tablero": "/private/tmp/claude-501/-Users-mariorocha-Documents-Programacion-DataScience-Laboratorio--10-Dashboard-/fbfd37b0-8af7-4146-b38e-dfbacf25375d/scratchpad/copia_limpia/data",
+  "generado": "2026-11-02T00:28:41-06:00",
+  "version_en_disco": {
+    "run_id": "run_20261101_222030_d65c3b",
+    "fecha_generacion": "2026-11-01 22:20:30",
+    "sha256_csv": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872"
+  },
+  "navegador": "Google Chrome headless (CDP)",
+  "capturas": [
+    {
+      "archivo": "evidencias/lab11/dashboard/restaurada_01_modelos_version_restaurada.png",
+      "descripcion": "Tras restaurar el respaldo anterior: el tablero muestra la versión restaurada (fecha de generación y MAE de esa versión).",
+      "run_id_version_aprobada": "run_20261101_222030_d65c3b",
+      "metricas": [
+        "Error medio (MAE) — Total de viajeros | 80,366 viajeros/mes",
+        "Periodo evaluado | Abr 2021 – Jun 2026",
+        "Generada el | 2026-11-01 22:20",
+        "Versión del procedimiento | v1.0.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+### 2026-11-02T00:28:25-0600 Versión vigente antes de restaurar
+f201419b9efe1054e60c9f79c7d513a70523dfaf030268561c1c06a50b2376ec  data/estimaciones_aprobadas.csv
+18fa67817c5ae3138d2f2bba9132c260615b9d9353f8d63e927615c3a9ea74e4  data/estimaciones_aprobadas.manifest.json
+run_id,fecha_generacion
+run_20261102_001416_15b4a2,2026-11-02 00:14:16
+### 2026-11-02T00:28:25-0600 $ docker compose run --rm --no-deps pipeline python -m src.restore_version --list
+ Container observatorio_turismo-pipeline-run-03cbe20cf414 Creating 
+ Container observatorio_turismo-pipeline-run-03cbe20cf414 Created 
+Respaldos en data/backup_aprobadas (más reciente primero):
+- estimaciones_aprobadas_backup_20261102_001417_554541_run_20261101_222030_d65c3b.csv
+    run_id=run_20261101_222030_d65c3b | generado=2026-11-01 22:20:30 | con manifiesto | sha256=d5795b8c1b305fa4… | VÁLIDO
+### 2026-11-02T00:28:27-0600 $ docker compose run --rm --no-deps pipeline python -m src.restore_version --backup estimaciones_aprobadas_backup_20261102_001417_554541_run_20261101_222030_d65c3b.csv --reason ... --operator verificacion_lab11
+ Container observatorio_turismo-pipeline-run-5d0ea62d2f79 Creating 
+ Container observatorio_turismo-pipeline-run-5d0ea62d2f79 Created 
+Restauración completada:
+  evento: RESTAURACION
+  fecha: 2026-11-02T00:28:28
+  operador: verificacion_lab11
+  motivo: Verificacion Lab 11: volver a la version aprobada anterior
+  respaldo_origen: estimaciones_aprobadas_backup_20261102_001417_554541_run_20261101_222030_d65c3b.csv
+  run_id_restaurado: run_20261101_222030_d65c3b
+  sha256_restaurado: d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872
+  manifiesto_restaurado: True
+  run_id_reemplazado: run_20261102_001416_15b4a2
+  sha256_reemplazado: f201419b9efe1054e60c9f79c7d513a70523dfaf030268561c1c06a50b2376ec
+  respaldo_seguridad: estimaciones_aprobadas_backup_20261102_002828_158952_run_20261102_001416_15b4a2_prerestauracion.csv
+  sha256_vigente_verificado: d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872
+[código de salida: 0]
+### 2026-11-02T00:28:28-0600 Versión vigente después de restaurar
+d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872  data/estimaciones_aprobadas.csv
+afcaa960a4136c4c5d73ec113b99be876efa5f45cc928e512465b362179b6ccc  data/estimaciones_aprobadas.manifest.json
+run_id,fecha_generacion
+run_20261101_222030_d65c3b,2026-11-01 22:20:30
+### logs/restore_audit.jsonl
+{"evento": "RESTAURACION", "fecha": "2026-11-02T00:28:28", "operador": "verificacion_lab11", "motivo": "Verificacion Lab 11: volver a la version aprobada anterior", "respaldo_origen": "estimaciones_aprobadas_backup_20261102_001417_554541_run_20261101_222030_d65c3b.csv", "run_id_restaurado": "run_20261101_222030_d65c3b", "sha256_restaurado": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872", "manifiesto_restaurado": true, "run_id_reemplazado": "run_20261102_001416_15b4a2", "sha256_reemplazado": "f201419b9efe1054e60c9f79c7d513a70523dfaf030268561c1c06a50b2376ec", "respaldo_seguridad": "estimaciones_aprobadas_backup_20261102_002828_158952_run_20261102_001416_15b4a2_prerestauracion.csv", "sha256_vigente_verificado": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872"}

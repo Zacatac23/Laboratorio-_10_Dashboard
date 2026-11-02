@@ -1,0 +1,517 @@
+{
+  "resumen": {
+    "comando": "python -B -m unittest discover -s tests -v",
+    "RUN_DOCKER_TESTS": "1",
+    "inicio": "2026-11-02T00:44:03-06:00",
+    "fin": "2026-11-02T00:44:45-06:00",
+    "python": "3.12.13",
+    "plataforma": "macOS-26.6.2-arm64-arm-64bit",
+    "tests_ejecutados_unittest": 99,
+    "duracion_s": 38.223,
+    "PASS": 99,
+    "FAIL": 0,
+    "ERROR": 0,
+    "tests_runner_estructurado": 99,
+    "codigo_salida_runner_estructurado": 0,
+    "SKIP": 0,
+    "codigo_salida": 0,
+    "log": "evidencias/lab11/tests_unitarios_docker.txt"
+  },
+  "resultados": [
+    {
+      "test": "test_lab10.Dashboard.test_16_inicio_nueve_vistas",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Dashboard.test_17_todas_las_vistas_ocultables",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Dashboard.test_18_mensual_anual_regreso",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Dashboard.test_19_region_global_y_reset",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Dashboard.test_20_2009_no_inventa_porcentaje",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Dashboard.test_21_cero_modelos",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Dashboard.test_22_modelos_metricas_y_negativos",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Dashboard.test_23_heatmap_anios",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Dashboard.test_24_filtros_sin_filas",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Dashboard.test_25_error_csv_sin_stacktrace",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Dashboard.test_26_modelos_opcionales",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_01_datos_actuales",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_02_metricas_42_pares_sin_regresion",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_03_2009_sin_comparacion",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_04_anual_sin_fechas_mensuales",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_05_pronosticos_sin_solapamiento",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_06_serie_sin_modelo",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_07_csv_vacio",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_08_fecha_faltante",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_09_fecha_invalida",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_10_infinito",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_11_duplicados",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_12_negativo_historico",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_13_archivo_ausente",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_14_nulos",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_15_conciliacion",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab10.Datos.test_27_cero_uno_multiples_y_obsoleto",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.AislamientoTrackingURI.test_segunda_corrida_respeta_su_config_y_bloquea_si_mlflow_cae",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.ComposePuertoMLflow.test_allowed_hosts_incluye_puerto_publicado_configurable",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.DryRun.test_no_publish_no_altera_version_aprobada",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.FuentesMultiples.test_duplicado_en_fuente_de_contexto_advierte_sin_bloquear",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.FuentesMultiples.test_tres_fuentes_registradas_con_hash_y_qc_de_contexto",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.MetricasYBaseline.test_baseline_y_modelo_activo_en_los_mismos_meses",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.MetricasYBaseline.test_mae_rmse_contra_calculo_manual",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.MetricasYBaseline.test_meses_sin_observacion_no_se_evaluan",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.SinFugaTemporal.test_parametros_y_predicciones_no_dependen_de_meses_evaluados",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.SinFugaTemporal.test_pipeline_completo_sin_fuga",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.DockerCompose.test_pipeline_en_contenedor_registra_en_mlflow_compose_y_persiste",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.DockerConfiguracion.test_dependencias_fijadas",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.DockerConfiguracion.test_imagen_sin_datos_y_montajes_configurables",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Monitoreo.test_actualizacion_detecta_serie_atrasada_y_salida_corta",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Monitoreo.test_actualizacion_usa_cobertura_configurada_y_no_hoy",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Monitoreo.test_calidad_nulos_duplicados_cobertura_y_ejecucion_previa",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Monitoreo.test_error_predictivo_solo_con_observaciones_comparables",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Monitoreo.test_resultados_base_cero_sin_division",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Monitoreo.test_resultados_negativos_no_finitos_e_interanual",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Monitoreo.test_resultados_variacion_extrema_es_alerta_de_revision",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Monitoreo.test_run_monitoring_sin_salida_reporta_fuentes",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Restauracion.test_cli_list_y_backup",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Restauracion.test_motivo_obligatorio_y_version_ya_vigente",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Restauracion.test_rechaza_enlace_que_sale_del_directorio",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Restauracion.test_rechaza_respaldos_invalidos_sin_tocar_vigente",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Restauracion.test_rechaza_rutas_inseguras",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.Restauracion.test_restauracion_valida_atomica_con_auditoria",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.ServidorMLflowHTTP.test_artefactos_por_http_persisten_tras_reiniciar_servidor",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.TableroVersionAprobada.test_sin_version_aprobada_aviso_informativo",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.TableroVersionAprobada.test_version_invalida_o_manifiesto_inconsistente",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.TableroVersionAprobada.test_version_valida_actualizacion_y_restauracion",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.TrazabilidadMLflow.test_codigos_de_salida_del_cli",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.TrazabilidadMLflow.test_corrida_aprobada_publicada_registra_trazabilidad_completa",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.TrazabilidadMLflow.test_corrida_fallida_por_calidad_no_inventa_metricas",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.TrazabilidadMLflow.test_corrida_rechazada_registra_metricas_reales_sin_publicar",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.TrazabilidadMLflow.test_dos_versiones_respaldo_restauracion_y_lectura_del_tablero",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.TrazabilidadMLflow.test_fallo_al_persistir_artefactos_impide_publicacion_no_trazable",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_integracion.TrazabilidadMLflow.test_mlflow_no_disponible_bloquea_publicacion",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_acceptance_documenta_baseline_sin_exigirlo",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_acceptance_rule_rejection_on_high_mae",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_cli_requiere_publish_o_no_publish",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_compute_metrics_ape_eps_no_es_mape_clasico",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_compute_metrics_n_cero_sin_ceros_inventados",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_exclusion_fundamentada_de_meses",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_fallo_escritura_preserva_hash_aprobado",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_holt_winters_no_recorta_en_evaluacion",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_no_excluye_mes_comparable_automaticamente",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_publicacion_atomica_crea_respaldo",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_repartition_denominador_cero",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_repartition_factors_deterministic",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_repartition_sin_fallback_silencioso",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_reproducibility_runs_identical",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_seasonal_naive_sin_fuga_futuro",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_mlops_pipeline.TestMLOpsPipeline.test_validate_estimates_requiere_series_secundarias",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_execute_all_bloquea_por_qc_f",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_a_columnas_y_tipos_valido",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_a_falta_columna_indispensable",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_a_nulo_no_se_acepta_como_texto_nan",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_a_tipo_incompatible",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_b_cero_legitimo_permitido",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_b_fechas_dia_no_primero",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_b_hueco_no_se_imputa_cero",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_b_hueco_temporal_en_secuencia",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_b_ventana_requerida_faltante",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_c_unicidad_detecta_duplicados",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_d_valores_faltantes_en_target",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_e_conteo_negativo_historico",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_e_denominador_igual_a_cero",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_e_infinito",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_f_discrepancia_material_bloquea",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_f_regla_metodologica_conciliacion",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_quality_checks.TestQualityChecks.test_qc_f_sin_insumos_no_verificable",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    }
+  ]
+}

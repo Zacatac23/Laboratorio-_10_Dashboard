@@ -1,0 +1,26 @@
+{
+  "run_id": "run_20261102_001004_d59228",
+  "git_commit": "4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302",
+  "start_time": "2026-11-02T00:10:04.342301",
+  "end_time": "2026-11-02T00:10:04.379418",
+  "duration_seconds": 0.04,
+  "stages": [
+    {
+      "stage_name": "Verificación de trazabilidad (MLflow)",
+      "status": "FAILED",
+      "start_time": "2026-11-02T00:10:04.378948",
+      "end_time": "2026-11-02T00:10:04.379404",
+      "details": "MLflow no disponible en http://127.0.0.1:9 tras 1 intentos: <urlopen error [Errno 61] Connection refused>. Se bloquea la ejecución para no publicar una versión sin trazabilidad."
+    }
+  ],
+  "warnings": [],
+  "errors": [
+    "MLflow no disponible en http://127.0.0.1:9 tras 1 intentos: <urlopen error [Errno 61] Connection refused>. Se bloquea la ejecución para no publicar una versión sin trazabilidad."
+  ],
+  "published": false,
+  "status": "BLOQUEADO_TRAZABILIDAD",
+  "failed_stage": "Verificación de trazabilidad (MLflow)",
+  "publication_decision": "NO_PUBLICADO: MLflow no disponible (trazabilidad no garantizada)",
+  "mlflow_run_id": null,
+  "tracking_uri": "http://127.0.0.1:9"
+}

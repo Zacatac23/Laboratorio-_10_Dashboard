@@ -1,0 +1,609 @@
+Verificación Docker — copia limpia: /private/tmp/claude-501/-Users-mariorocha-Documents-Programacion-DataScience-Laboratorio--10-Dashboard-/fbfd37b0-8af7-4146-b38e-dfbacf25375d/scratchpad/copia_limpia — MLFLOW_PORT=5001 DASHBOARD_PORT=8501
+
+### 2026-11-02T00:13:58-0600 $ docker version --format Cliente {{.Client.Version}} / Engine {{.Server.Version}}
+Cliente 28.0.4 / Engine 29.8.0
+[código de salida: 0]
+
+### 2026-11-02T00:13:59-0600 $ docker compose version
+Docker Compose version v5.5.1
+[código de salida: 0]
+
+### 2026-11-02T00:13:59-0600 $ git clone --no-local --quiet /Users/mariorocha/Documents/Programacion/DataScience/Laboratorio-_10_Dashboard. /private/tmp/claude-501/-Users-mariorocha-Documents-Programacion-DataScience-Laboratorio--10-Dashboard-/fbfd37b0-8af7-4146-b38e-dfbacf25375d/scratchpad/copia_limpia
+[código de salida: 0]
+MODO SNAPSHOT: commit base 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 + cambios sin commitear del directorio de trabajo
+
+### 2026-11-02T00:13:59-0600 $ git -C /private/tmp/claude-501/-Users-mariorocha-Documents-Programacion-DataScience-Laboratorio--10-Dashboard-/fbfd37b0-8af7-4146-b38e-dfbacf25375d/scratchpad/copia_limpia log --oneline -1
+4d8f5ba feat: integrar MLflow en Compose, monitoreo, restauración y tablero
+[código de salida: 0]
+
+### 2026-11-02T00:13:59-0600 $ git -C /private/tmp/claude-501/-Users-mariorocha-Documents-Programacion-DataScience-Laboratorio--10-Dashboard-/fbfd37b0-8af7-4146-b38e-dfbacf25375d/scratchpad/copia_limpia status --short
+ M docker-compose.yml
+ M src/pipeline.py
+ M styles.css
+ M tests/test_mlops_integracion.py
+?? .DS_Store
+?? EXPORTAR_DESDE_NOTEBOOKS.md
+?? evidencias/lab11/
+?? instrucciones.md
+?? scripts/
+?? tests/test_lab11_verificacion.py
+[código de salida: 0]
+
+### 2026-11-02T00:13:59-0600 $ grep -n allowed-hosts docker-compose.yml
+37:      - --allowed-hosts=mlflow,mlflow:5000,localhost,localhost:5000,127.0.0.1,127.0.0.1:5000,localhost:${MLFLOW_PORT:-5000},127.0.0.1:${MLFLOW_PORT:-5000}
+[código de salida: 0]
+
+### 2026-11-02T00:13:59-0600 $ docker compose build
+ Image observatorio-turismo:lab11 Building 
+ Image observatorio-turismo:lab11 Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.53kB done
+#1 DONE 0.0s
+
+#2 [mlflow internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.19kB done
+#2 DONE 0.0s
+
+#3 [dashboard internal] load metadata for docker.io/library/python:3.12.10-slim
+#3 DONE 0.5s
+
+#4 [dashboard internal] load .dockerignore
+#4 transferring context: 691B done
+#4 DONE 0.0s
+
+#5 [mlflow 1/9] FROM docker.io/library/python:3.12.10-slim@sha256:fd95fa221297a88e1cf49c55ec1828edd7c5a428187e67b5d1805692d11588db
+#5 resolve docker.io/library/python:3.12.10-slim@sha256:fd95fa221297a88e1cf49c55ec1828edd7c5a428187e67b5d1805692d11588db done
+#5 DONE 0.0s
+
+#6 [dashboard internal] load build context
+#6 transferring context: 15.75kB done
+#6 DONE 0.0s
+
+#7 [dashboard 3/9] COPY requirements.txt requirements.lock ./
+#7 CACHED
+
+#8 [dashboard 2/9] WORKDIR /app
+#8 CACHED
+
+#9 [dashboard 4/9] RUN pip install --no-cache-dir -r requirements.txt -c requirements.lock && pip check
+#9 CACHED
+
+#10 [dashboard 5/9] COPY app.py data_logic.py ui_components.py mapa_guatemala.py pipeline.py styles.css guatemala-departments.geojson ./
+#10 DONE 0.0s
+
+#11 [mlflow 6/9] COPY .streamlit/config.toml .streamlit/config.toml
+#11 DONE 0.0s
+
+#12 [dashboard 7/9] COPY config/ config/
+#12 DONE 0.0s
+
+#13 [mlflow 8/9] COPY src/ src/
+#13 DONE 0.0s
+
+#14 [mlflow 9/9] RUN useradd --create-home --uid 1000 app     && mkdir -p data logs reports /mlflow     && chown -R app:app /app/data /app/logs /app/reports /mlflow
+#14 DONE 0.1s
+
+#15 [mlflow] exporting to image
+#15 exporting layers 0.1s done
+#15 exporting manifest sha256:506e00796ee44a49cdb8f75996382e025bef1d99d0219ad9443a4316707c16ec done
+#15 exporting config sha256:14672af60552d03d136978dcef24862c382d417e19e8cf585838fe59eea844da done
+#15 exporting attestation manifest sha256:f8f96153c83b899d54e752a6ca5e7131a89ae696d1dac18b33a23b72c9f52ecb done
+#15 exporting manifest list sha256:d30331e8762f724d90e03c0b7914b6b229580e864fa3075f9606ff6028a74c04 done
+#15 naming to docker.io/library/observatorio-turismo:lab11 done
+#15 unpacking to docker.io/library/observatorio-turismo:lab11 0.0s done
+#15 DONE 0.1s
+
+#16 [dashboard] exporting to image
+#16 exporting layers 0.1s done
+#16 exporting manifest sha256:d1f7bfb0a531ed9262f8d0f9c64e34710a1d01434d7bddfb7eb455617d1ab6bd done
+#16 exporting config sha256:0703f1de3862290f20a6453aff8861f914b34915f8afc8a2bb53f6e864eb6183 done
+#16 exporting attestation manifest sha256:abb8f1d0fa3fb297911b67db6549f9f37853eb074bf6f4b5e1b5ca5b64957e5a done
+#16 exporting manifest list sha256:f0fcb81bae5f3bd1f212e47b09dbc987693aff8a8d7b6ca18cc4a9ac1eb28443 done
+#16 naming to docker.io/library/observatorio-turismo:lab11 done
+#16 unpacking to docker.io/library/observatorio-turismo:lab11 0.0s done
+#16 DONE 0.1s
+
+#17 [dashboard] resolving provenance for metadata file
+#17 DONE 0.0s
+
+#18 [mlflow] resolving provenance for metadata file
+#18 DONE 0.0s
+ Image observatorio-turismo:lab11 Built 
+ Image observatorio-turismo:lab11 Built 
+[código de salida: 0]
+
+### 2026-11-02T00:14:01-0600 $ docker run --rm --entrypoint sh observatorio-turismo:lab11 -c echo "usuario: $(id)"; echo "--- /app"; ls -la /app; echo "--- /app/data (debe estar vacío)"; ls -la /app/data; echo "--- CSV/DB/secretos/.git en la imagen:"; find / -xdev \( -name "*.csv" -o -name "mlflow.db" -o -name "*.db" -o -name ".env" -o -name "*.pem" -o -name "*.key" -o -name ".git" -o -name "mlruns" \) -not -path "/proc/*" -not -path "/usr/*" -not -path "/etc/ssl/*" 2>/dev/null; echo "(fin de búsqueda)"; pip list 2>/dev/null | grep -iE "^(mlflow|statsmodels|streamlit|pandas|numpy) "
+usuario: uid=1000(app) gid=1000(app) groups=1000(app)
+--- /app
+total 436
+drwxr-xr-x 1 root root   4096 Nov  2 06:14 .
+drwxr-xr-x 1 root root   4096 Nov  2 06:14 ..
+drwxr-xr-x 2 root root   4096 Nov  2 06:14 .streamlit
+-rw-r--r-- 1 root root  25111 Nov  2 05:44 app.py
+drwxr-xr-x 2 root root   4096 Nov  2 06:05 config
+drwxr-xr-x 2 app  app    4096 Nov  2 06:14 data
+-rw-r--r-- 1 root root  19167 Nov  2 05:44 data_logic.py
+-rw-r--r-- 1 root root 318586 Nov  2 05:44 guatemala-departments.geojson
+drwxr-xr-x 2 app  app    4096 Nov  2 06:14 logs
+-rw-r--r-- 1 root root   5660 Nov  2 05:44 mapa_guatemala.py
+-rw-r--r-- 1 root root    284 Nov  2 05:44 pipeline.py
+drwxr-xr-x 2 app  app    4096 Nov  2 06:14 reports
+-rw-r--r-- 1 root root   2128 Nov  2 05:58 requirements.lock
+-rw-r--r-- 1 root root    320 Nov  2 05:58 requirements.txt
+drwxr-xr-x 2 root root   4096 Nov  2 06:11 src
+-rw-r--r-- 1 root root  14973 Nov  2 06:13 styles.css
+-rw-r--r-- 1 root root   6684 Nov  2 05:44 ui_components.py
+--- /app/data (debe estar vacío)
+total 8
+drwxr-xr-x 2 app  app  4096 Nov  2 06:14 .
+drwxr-xr-x 1 root root 4096 Nov  2 06:14 ..
+--- CSV/DB/secretos/.git en la imagen:
+(fin de búsqueda)
+mlflow                             3.17.2
+numpy                              2.5.1
+pandas                             2.3.3
+statsmodels                        0.15.0
+streamlit                          1.66.1
+[código de salida: 0]
+
+### 2026-11-02T00:14:02-0600 $ docker compose up -d --wait
+ Network observatorio_turismo_default Creating 
+ Network observatorio_turismo_default Creating 
+ Network observatorio_turismo_default Created 
+ Network observatorio_turismo_default Created 
+ Container observatorio_turismo_mlflow Creating 
+ Container observatorio_turismo_dashboard Creating 
+ Container observatorio_turismo_mlflow Created 
+ Container observatorio_turismo_dashboard Created 
+ Container observatorio_turismo_mlflow Starting 
+ Container observatorio_turismo_dashboard Starting 
+ Container observatorio_turismo_mlflow Started 
+ Container observatorio_turismo_dashboard Started 
+ Container observatorio_turismo_mlflow Waiting 
+ Container observatorio_turismo_dashboard Waiting 
+ Container observatorio_turismo_dashboard Healthy 
+ Container observatorio_turismo_mlflow Healthy 
+[código de salida: 0]
+
+### 2026-11-02T00:14:08-0600 $ docker compose ps
+NAME                             IMAGE                        COMMAND                  SERVICE     CREATED         STATUS                   PORTS
+observatorio_turismo_dashboard   observatorio-turismo:lab11   "streamlit run app.p…"   dashboard   6 seconds ago   Up 5 seconds             127.0.0.1:8501->8501/tcp
+observatorio_turismo_mlflow      observatorio-turismo:lab11   "mlflow server --hos…"   mlflow      6 seconds ago   Up 5 seconds (healthy)   127.0.0.1:5001->5000/tcp
+[código de salida: 0]
+
+### 2026-11-02T00:14:08-0600 $ curl -s -o /dev/null -w dashboard /_stcore/health HTTP %{http_code}\n http://127.0.0.1:8501/_stcore/health
+dashboard /_stcore/health HTTP 200
+[código de salida: 0]
+
+### 2026-11-02T00:14:08-0600 $ curl -s -w \nmlflow /health HTTP %{http_code}\n http://127.0.0.1:5001/health
+OK
+mlflow /health HTTP 200
+[código de salida: 0]
+
+### 2026-11-02T00:14:08-0600 $ shasum -a 256 data/estimaciones_aprobadas.csv data/estimaciones_aprobadas.manifest.json
+d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872  data/estimaciones_aprobadas.csv
+afcaa960a4136c4c5d73ec113b99be876efa5f45cc928e512465b362179b6ccc  data/estimaciones_aprobadas.manifest.json
+[código de salida: 0]
+
+### 2026-11-02T00:14:08-0600 $ docker compose run --rm pipeline python pipeline.py --config config/pipeline_config.yaml --no-publish
+ Container observatorio_turismo_mlflow Running 
+ Container observatorio_turismo_mlflow Waiting 
+ Container observatorio_turismo_mlflow Healthy 
+ Container observatorio_turismo-pipeline-run-a3513b2aa97e Creating 
+ Container observatorio_turismo-pipeline-run-a3513b2aa97e Created 
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001410_ce7eea
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (declarado en GIT_COMMIT (no verificado en contenedor))
+Publicación solicitada: False
+=======================================================
+[0/9] MLflow: http://mlflow:5000 (entorno:MLFLOW_TRACKING_URI), experimento 'Observatorio_Turismo_Guatemala'
+2026/11/02 00:14:10 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+2026/11/02 00:14:10 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git branch is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+2026/11/02 00:14:10 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git repository URL is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+[1/9] Lectura: series_mensuales.csv=a178eb020754, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (1680 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (23887 registros).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (3857 registros).
+[3/9] Preparación y división temporal (YAML)...
+  Train: 2009-01–2021-03 (N=147)
+  Eval (backtest origen fijo): 2021-04–2026-06 (N=63)
+[4/9] Modelo, baselines y factores de reparto...
+[5/9] Evaluación temporal (meses comparables)...
+  Promedio Histórico Mensual: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+  HW: MAE=302,827.47 | RMSE=327,720.16 | APE_eps%=103.99 (N=63)
+  Seasonal Naive: MAE=235,730.91 | RMSE=253,203.39 | APE_eps%=83.86 (N=63)
+  Promedio histórico: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+[6/9] Candidato, integridad y regla de aceptación...
+  Decisión: APROBADO (beats_baseline=True, no obligatorio)
+[7/9] Monitoreo...
+[8/9] Registro y verificación de artefactos en MLflow...
+[9/9] NO_PUBLICADO: ejecución --no-publish (dry-run). Versión aprobada intacta.
+
+Pipeline APROBADO_NO_PUBLICADO en 0.64s | publicado=False
+=======================================================
+
+🏃 View run run_20261102_001410_ce7eea at: http://mlflow:5000/#/experiments/1/runs/7787c39f59d64cf69394bde8de3ea709
+🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[código de salida: 0]
+
+### 2026-11-02T00:14:11-0600 $ docker compose run --rm pipeline python pipeline.py --config config/pipeline_config.yaml --no-publish
+ Container observatorio_turismo_mlflow Running 
+ Container observatorio_turismo_mlflow Waiting 
+ Container observatorio_turismo_mlflow Healthy 
+ Container observatorio_turismo-pipeline-run-63a1d6062a60 Creating 
+ Container observatorio_turismo-pipeline-run-63a1d6062a60 Created 
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001413_338a6e
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (declarado en GIT_COMMIT (no verificado en contenedor))
+Publicación solicitada: False
+=======================================================
+[0/9] MLflow: http://mlflow:5000 (entorno:MLFLOW_TRACKING_URI), experimento 'Observatorio_Turismo_Guatemala'
+2026/11/02 00:14:13 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+2026/11/02 00:14:13 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git branch is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+2026/11/02 00:14:13 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git repository URL is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+[1/9] Lectura: series_mensuales.csv=a178eb020754, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (1680 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (23887 registros).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (3857 registros).
+[3/9] Preparación y división temporal (YAML)...
+  Train: 2009-01–2021-03 (N=147)
+  Eval (backtest origen fijo): 2021-04–2026-06 (N=63)
+[4/9] Modelo, baselines y factores de reparto...
+[5/9] Evaluación temporal (meses comparables)...
+  Promedio Histórico Mensual: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+  HW: MAE=302,827.47 | RMSE=327,720.16 | APE_eps%=103.99 (N=63)
+  Seasonal Naive: MAE=235,730.91 | RMSE=253,203.39 | APE_eps%=83.86 (N=63)
+  Promedio histórico: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+[6/9] Candidato, integridad y regla de aceptación...
+  Decisión: APROBADO (beats_baseline=True, no obligatorio)
+[7/9] Monitoreo...
+[8/9] Registro y verificación de artefactos en MLflow...
+[9/9] NO_PUBLICADO: ejecución --no-publish (dry-run). Versión aprobada intacta.
+
+Pipeline APROBADO_NO_PUBLICADO en 0.6s | publicado=False
+=======================================================
+
+🏃 View run run_20261102_001413_338a6e at: http://mlflow:5000/#/experiments/1/runs/575d18e094f245f1bf51697e3cd11381
+🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[código de salida: 0]
+
+### 2026-11-02T00:14:14-0600 $ shasum -a 256 data/estimaciones_aprobadas.csv data/estimaciones_aprobadas.manifest.json
+d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872  data/estimaciones_aprobadas.csv
+afcaa960a4136c4c5d73ec113b99be876efa5f45cc928e512465b362179b6ccc  data/estimaciones_aprobadas.manifest.json
+[código de salida: 0]
+
+### 2026-11-02T00:14:14-0600 $ docker compose run --rm pipeline
+ Container observatorio_turismo_mlflow Running 
+ Container observatorio_turismo_mlflow Waiting 
+ Container observatorio_turismo_mlflow Healthy 
+ Container observatorio_turismo-pipeline-run-742f6d73c835 Creating 
+ Container observatorio_turismo-pipeline-run-742f6d73c835 Created 
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_001416_15b4a2
+Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (declarado en GIT_COMMIT (no verificado en contenedor))
+Publicación solicitada: True
+=======================================================
+[0/9] MLflow: http://mlflow:5000 (entorno:MLFLOW_TRACKING_URI), experimento 'Observatorio_Turismo_Guatemala'
+2026/11/02 00:14:17 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+2026/11/02 00:14:17 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git branch is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+2026/11/02 00:14:17 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git repository URL is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+[1/9] Lectura: series_mensuales.csv=a178eb020754, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (1680 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (23887 registros).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (3857 registros).
+[3/9] Preparación y división temporal (YAML)...
+  Train: 2009-01–2021-03 (N=147)
+  Eval (backtest origen fijo): 2021-04–2026-06 (N=63)
+[4/9] Modelo, baselines y factores de reparto...
+[5/9] Evaluación temporal (meses comparables)...
+  Promedio Histórico Mensual: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+  HW: MAE=302,827.47 | RMSE=327,720.16 | APE_eps%=103.99 (N=63)
+  Seasonal Naive: MAE=235,730.91 | RMSE=253,203.39 | APE_eps%=83.86 (N=63)
+  Promedio histórico: MAE=80,365.74 | RMSE=94,175.26 | APE_eps%=38.67 (N=63)
+[6/9] Candidato, integridad y regla de aceptación...
+  Decisión: APROBADO (beats_baseline=True, no obligatorio)
+[7/9] Monitoreo...
+[8/9] Registro y verificación de artefactos en MLflow...
+[9/9] Publicación atómica...
+  Publicado: data/estimaciones_aprobadas.csv
+  Respaldo de la versión previa: data/backup_aprobadas/estimaciones_aprobadas_backup_20261102_001417_554541_run_20261101_222030_d65c3b.csv
+
+Pipeline APROBADO_PUBLICADO en 0.58s | publicado=True
+=======================================================
+
+🏃 View run run_20261102_001416_15b4a2 at: http://mlflow:5000/#/experiments/1/runs/255d7914ecb045edb435d5a6a7458da0
+🧪 View experiment at: http://mlflow:5000/#/experiments/1
+[código de salida: 0]
+
+### 2026-11-02T00:14:17-0600 $ shasum -a 256 data/estimaciones_aprobadas.csv data/estimaciones_aprobadas.manifest.json
+f201419b9efe1054e60c9f79c7d513a70523dfaf030268561c1c06a50b2376ec  data/estimaciones_aprobadas.csv
+18fa67817c5ae3138d2f2bba9132c260615b9d9353f8d63e927615c3a9ea74e4  data/estimaciones_aprobadas.manifest.json
+[código de salida: 0]
+
+### 2026-11-02T00:14:17-0600 $ ls -la data/backup_aprobadas
+total 184
+drwxr-xr-x   4 mariorocha  wheel    128 Nov  2 00:14 .
+drwxrwxrwx@ 10 mariorocha  wheel    320 Nov  2 00:14 ..
+-rw-r--r--   1 mariorocha  wheel  83171 Nov  1 23:44 estimaciones_aprobadas_backup_20261102_001417_554541_run_20261101_222030_d65c3b.csv
+-rw-r--r--   1 mariorocha  wheel   4249 Nov  1 23:44 estimaciones_aprobadas_backup_20261102_001417_554541_run_20261101_222030_d65c3b.manifest.json
+[código de salida: 0]
+
+### 2026-11-02T00:14:17-0600 $ docker compose run --rm --no-deps pipeline python -m src.restore_version --list
+ Container observatorio_turismo-pipeline-run-bcf3c4fae93c Creating 
+ Container observatorio_turismo-pipeline-run-bcf3c4fae93c Created 
+Respaldos en data/backup_aprobadas (más reciente primero):
+- estimaciones_aprobadas_backup_20261102_001417_554541_run_20261101_222030_d65c3b.csv
+    run_id=run_20261101_222030_d65c3b | generado=2026-11-01 22:20:30 | con manifiesto | sha256=d5795b8c1b305fa4… | VÁLIDO
+[código de salida: 0]
+
+### 2026-11-02T00:14:19-0600 $ curl -s -X POST -H Content-Type: application/json -d {"experiment_ids":["1"],"max_results":100} http://127.0.0.1:5001/api/2.0/mlflow/runs/search -o /Users/mariorocha/Documents/Programacion/DataScience/Laboratorio-_10_Dashboard./evidencias/lab11/docker/runs_antes_down.json
+[código de salida: 0]
+
+### 2026-11-02T00:14:19-0600 $ docker compose down
+ Container observatorio_turismo_dashboard Stopping 
+ Container observatorio_turismo_mlflow Stopping 
+ Container observatorio_turismo_dashboard Stopped 
+ Container observatorio_turismo_dashboard Removing 
+ Container observatorio_turismo_dashboard Removed 
+ Container observatorio_turismo_mlflow Stopped 
+ Container observatorio_turismo_mlflow Removing 
+ Container observatorio_turismo_mlflow Removed 
+ Network observatorio_turismo_default Removing 
+ Network observatorio_turismo_default Removed 
+[código de salida: 0]
+
+### 2026-11-02T00:14:20-0600 $ docker volume ls --filter name=observatorio_turismo
+DRIVER    VOLUME NAME
+local     observatorio_turismo_mlflow_store
+[código de salida: 0]
+
+### 2026-11-02T00:14:20-0600 $ docker compose up -d --wait
+ Network observatorio_turismo_default Creating 
+ Network observatorio_turismo_default Creating 
+ Network observatorio_turismo_default Created 
+ Network observatorio_turismo_default Created 
+ Container observatorio_turismo_mlflow Creating 
+ Container observatorio_turismo_dashboard Creating 
+ Container observatorio_turismo_dashboard Created 
+ Container observatorio_turismo_mlflow Created 
+ Container observatorio_turismo_dashboard Starting 
+ Container observatorio_turismo_mlflow Starting 
+ Container observatorio_turismo_dashboard Started 
+ Container observatorio_turismo_mlflow Started 
+ Container observatorio_turismo_dashboard Waiting 
+ Container observatorio_turismo_mlflow Waiting 
+ Container observatorio_turismo_dashboard Healthy 
+ Container observatorio_turismo_mlflow Healthy 
+[código de salida: 0]
+
+### 2026-11-02T00:14:26-0600 $ curl -s -X POST -H Content-Type: application/json -d {"experiment_ids":["1"],"max_results":100} http://127.0.0.1:5001/api/2.0/mlflow/runs/search -o /Users/mariorocha/Documents/Programacion/DataScience/Laboratorio-_10_Dashboard./evidencias/lab11/docker/runs_despues_up.json
+[código de salida: 0]
+
+### 2026-11-02T00:14:26-0600 $ python3 -c import json,sys; a=json.load(open('/Users/mariorocha/Documents/Programacion/DataScience/Laboratorio-_10_Dashboard./evidencias/lab11/docker/runs_antes_down.json')).get('runs',[]); b=json.load(open('/Users/mariorocha/Documents/Programacion/DataScience/Laboratorio-_10_Dashboard./evidencias/lab11/docker/runs_despues_up.json')).get('runs',[]); ia={r['info']['run_id'] for r in a}; ib={r['info']['run_id'] for r in b}; print('runs antes:',len(ia),'después:',len(ib),'iguales:',ia==ib)
+runs antes: 9 después: 9 iguales: True
+[código de salida: 0]
+
+### 2026-11-02T00:14:26-0600 $ ls -la data/backup_aprobadas logs reports
+data/backup_aprobadas:
+total 184
+drwxr-xr-x   4 mariorocha  wheel    128 Nov  2 00:14 .
+drwxrwxrwx@ 10 mariorocha  wheel    320 Nov  2 00:14 ..
+-rw-r--r--   1 mariorocha  wheel  83171 Nov  1 23:44 estimaciones_aprobadas_backup_20261102_001417_554541_run_20261101_222030_d65c3b.csv
+-rw-r--r--   1 mariorocha  wheel   4249 Nov  1 23:44 estimaciones_aprobadas_backup_20261102_001417_554541_run_20261101_222030_d65c3b.manifest.json
+
+logs:
+total 24
+drwxr-xr-x   6 mariorocha  wheel   192 Nov  2 00:14 .
+drwxr-xr-x@ 34 mariorocha  wheel  1088 Nov  2 00:14 ..
+-rw-r--r--   1 mariorocha  wheel  2739 Nov  2 00:14 audit_run_20261102_001410_ce7eea.json
+-rw-r--r--   1 mariorocha  wheel  2738 Nov  2 00:14 audit_run_20261102_001413_338a6e.json
+-rw-r--r--   1 mariorocha  wheel  3041 Nov  2 00:14 audit_run_20261102_001416_15b4a2.json
+-rw-r--r--   1 mariorocha  wheel     0 Nov  2 00:14 publish.lock
+
+reports:
+total 760
+drwxr-xr-x  29 mariorocha  wheel    928 Nov  2 00:14 .
+drwxr-xr-x@ 34 mariorocha  wheel   1088 Nov  2 00:14 ..
+-rw-r--r--   1 mariorocha  wheel    858 Nov  2 00:14 acceptance_run_20261102_001410_ce7eea.json
+-rw-r--r--   1 mariorocha  wheel    858 Nov  2 00:14 acceptance_run_20261102_001413_338a6e.json
+-rw-r--r--   1 mariorocha  wheel    858 Nov  2 00:14 acceptance_run_20261102_001416_15b4a2.json
+-rw-r--r--   1 mariorocha  wheel    896 Nov  2 00:14 code_fingerprint_run_20261102_001410_ce7eea.json
+-rw-r--r--   1 mariorocha  wheel    896 Nov  2 00:14 code_fingerprint_run_20261102_001413_338a6e.json
+-rw-r--r--   1 mariorocha  wheel    896 Nov  2 00:14 code_fingerprint_run_20261102_001416_15b4a2.json
+-rw-r--r--   1 mariorocha  wheel    349 Nov  2 00:14 environment_run_20261102_001410_ce7eea.json
+-rw-r--r--   1 mariorocha  wheel    349 Nov  2 00:14 environment_run_20261102_001413_338a6e.json
+-rw-r--r--   1 mariorocha  wheel    349 Nov  2 00:14 environment_run_20261102_001416_15b4a2.json
+-rw-r--r--   1 mariorocha  wheel  83171 Nov  2 00:14 estimaciones_candidatas_run_20261102_001410_ce7eea.csv
+-rw-r--r--   1 mariorocha  wheel  83171 Nov  2 00:14 estimaciones_candidatas_run_20261102_001413_338a6e.csv
+-rw-r--r--   1 mariorocha  wheel  83171 Nov  2 00:14 estimaciones_candidatas_run_20261102_001416_15b4a2.csv
+-rw-r--r--   1 mariorocha  wheel   4249 Nov  2 00:14 manifest_run_20261102_001410_ce7eea.json
+-rw-r--r--   1 mariorocha  wheel   4249 Nov  2 00:14 manifest_run_20261102_001413_338a6e.json
+-rw-r--r--   1 mariorocha  wheel   4249 Nov  2 00:14 manifest_run_20261102_001416_15b4a2.json
+-rw-r--r--   1 mariorocha  wheel   1930 Nov  2 00:14 model_run_20261102_001410_ce7eea.json
+-rw-r--r--   1 mariorocha  wheel   1930 Nov  2 00:14 model_run_20261102_001413_338a6e.json
+-rw-r--r--   1 mariorocha  wheel   1930 Nov  2 00:14 model_run_20261102_001416_15b4a2.json
+-rw-r--r--   1 mariorocha  wheel   8052 Nov  2 00:14 monitoring_run_20261102_001410_ce7eea.json
+-rw-r--r--   1 mariorocha  wheel   8541 Nov  2 00:14 monitoring_run_20261102_001413_338a6e.json
+-rw-r--r--   1 mariorocha  wheel   8858 Nov  2 00:14 monitoring_run_20261102_001416_15b4a2.json
+-rw-r--r--   1 mariorocha  wheel   3864 Nov  2 00:14 quality_report_run_20261102_001410_ce7eea.json
+-rw-r--r--   1 mariorocha  wheel   3864 Nov  2 00:14 quality_report_run_20261102_001413_338a6e.json
+-rw-r--r--   1 mariorocha  wheel   3864 Nov  2 00:14 quality_report_run_20261102_001416_15b4a2.json
+-rw-r--r--   1 mariorocha  wheel    875 Nov  2 00:14 sources_run_20261102_001410_ce7eea.json
+-rw-r--r--   1 mariorocha  wheel    875 Nov  2 00:14 sources_run_20261102_001413_338a6e.json
+-rw-r--r--   1 mariorocha  wheel    875 Nov  2 00:14 sources_run_20261102_001416_15b4a2.json
+[código de salida: 0]
+
+### 2026-11-02T00:14:26-0600 $ docker compose ps
+NAME                             IMAGE                        COMMAND                  SERVICE     CREATED         STATUS                   PORTS
+observatorio_turismo_dashboard   observatorio-turismo:lab11   "streamlit run app.p…"   dashboard   7 seconds ago   Up 6 seconds             127.0.0.1:8501->8501/tcp
+observatorio_turismo_mlflow      observatorio-turismo:lab11   "mlflow server --hos…"   mlflow      7 seconds ago   Up 6 seconds (healthy)   127.0.0.1:5001->5000/tcp
+[código de salida: 0]
+FIN 2026-11-02T00:14:27-0600

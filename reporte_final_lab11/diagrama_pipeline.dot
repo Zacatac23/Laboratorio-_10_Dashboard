@@ -1,0 +1,55 @@
+// Diagrama del pipeline real (src/pipeline.py). Generar: dot -Tpdf diagrama_pipeline.dot -o diagrama_pipeline.pdf
+digraph pipeline {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=11, nodesep=0.35, ranksep=0.32, bgcolor="white"];
+  node  [shape=box, style="rounded,filled", fillcolor="#F4F7F9", color="#0B6E6E", fontname="Helvetica", fontsize=10, width=3.6];
+  edge  [color="#333333", fontname="Helvetica", fontsize=9];
+
+  fuentes [label="Fuentes: series_mensuales.csv (modelado)\npais_mensual.csv, via_frontera.csv (contexto)"];
+  huellas [label="SHA-256 de fuentes, YAML y código · commit"];
+  mlf     [label="¿MLflow disponible? (reintentos)", shape=diamond, fillcolor="#FFFFFF", width=2.8];
+  qc      [label="Compuerta 1: QC-A…F (críticos) + QC de contexto"];
+  split   [label="Split temporal del YAML\nAjuste 2009-01–2021-03 · Evaluación 2021-04–2026-06"];
+  modelos [label="Factores de reparto (solo ajuste)\nPromedio Histórico (activo) · Seasonal Naive · Holt-Winters"];
+  evalu   [label="Evaluación en meses comparables (N=63)\nMAE, RMSE, ape_eps · mismos meses para el baseline"];
+  regla   [label="Compuerta 2: regla de aceptación\nQC ok · salida íntegra · MAE≤150k · RMSE≤180k", shape=diamond, fillcolor="#FFFFFF", width=3.8];
+  traza   [label="Registro en MLflow y relectura de artefactos"];
+  pub     [label="¿Publicación solicitada?", shape=diamond, fillcolor="#FFFFFF", width=1.8];
+  publica [label="Respaldo + reemplazo atómico\nestimaciones_aprobadas.csv + manifiesto"];
+  monit   [label="Monitoreo: actualización · calidad · resultados"];
+  tablero [label="Tablero Streamlit: lee solo la versión\naprobada con SHA-256 y run_id verificados", fillcolor="#E8F4F4"];
+  restaura[label="src.restore_version: restaurar respaldo", fillcolor="#E8F4F4"];
+
+  node [fillcolor="#FBEAEA", color="#9B2C2C"];
+  bloq   [label="BLOQUEADO_TRAZABILIDAD (código 3)"];
+  fallq  [label="FALLIDO_CALIDAD (código 2)\nsin métricas · aprobado intacto"];
+  rech   [label="RECHAZADO (código 1)\nmétricas reales · aprobado intacto"];
+  node [fillcolor="#EEF6EE", color="#2F6B2F"];
+  dry    [label="APROBADO_NO_PUBLICADO (dry-run)"];
+  ok     [label="APROBADO_PUBLICADO (código 0)"];
+  node [fillcolor="#FBEAEA", color="#9B2C2C"];
+  fall2  [label="FALLIDO (código 2)\nartefacto no persistido o error de escritura\naprobado intacto"];
+
+  fuentes -> huellas -> mlf;
+  mlf -> bloq [label=" no"];
+  mlf -> qc [label=" sí"];
+  qc -> fallq [label=" fallo crítico"];
+  qc -> split [label=" ok"];
+  split -> modelos -> evalu -> regla;
+  regla -> rech [label=" no"];
+  regla -> traza [label=" sí"];
+  traza -> pub;
+  traza -> fall2 [label=" artefacto no persistido", style=dashed];
+  publica -> fall2 [label=" error de escritura", style=dashed];
+  pub -> dry [label=" no"];
+  pub -> publica [label=" sí"];
+  publica -> ok;
+  publica -> monit;
+  ok -> tablero;
+  restaura -> tablero [style=dashed];
+  {rank=same; mlf; bloq}
+  {rank=same; qc; fallq}
+  {rank=same; regla; rech}
+  {rank=same; pub; dry}
+  {rank=same; traza; fall2}
+  {rank=same; tablero; restaura}
+}

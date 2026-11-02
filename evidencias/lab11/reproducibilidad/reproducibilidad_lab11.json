@@ -1,0 +1,273 @@
+{
+  "generado": "2026-11-02T00:28:00-06:00",
+  "tracking_uri": "http://127.0.0.1:5001",
+  "experimento": {
+    "nombre": "Observatorio_Turismo_Guatemala",
+    "id": "1"
+  },
+  "runs": [
+    {
+      "run_id_pipeline": "run_20261102_001410_ce7eea",
+      "mlflow_run_id": "7787c39f59d64cf69394bde8de3ea709",
+      "pipeline.status": "APROBADO_NO_PUBLICADO",
+      "inicio": "2026-11-02T00:14:10"
+    },
+    {
+      "run_id_pipeline": "run_20261102_001413_338a6e",
+      "mlflow_run_id": "575d18e094f245f1bf51697e3cd11381",
+      "pipeline.status": "APROBADO_NO_PUBLICADO",
+      "inicio": "2026-11-02T00:14:13"
+    }
+  ],
+  "commit": {
+    "run_1": "4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302",
+    "run_2": "4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302",
+    "fuente": "declarado en GIT_COMMIT (no verificado en contenedor)",
+    "igual": true
+  },
+  "huellas_sha256": {
+    "candidate.sha256": {
+      "run_1": "42bbfb70e5470a527fd6a041c92d680d29074454f97f76319e7aa2dd8346754d",
+      "run_2": "7c5d8ac0157af4dd07058cea6c46909f6dd18415f6b918f0faf156fbbd002510",
+      "igual": false,
+      "nota": "Incluye run_id y fecha_generacion: distinto por diseño (volátil)",
+      "igual_requerido": false
+    },
+    "code.sha256": {
+      "run_1": "54c040972bbd601e5c8c83fadee4c03fd8f28bc19c01d73f3ad0eee63cc7800a",
+      "run_2": "54c040972bbd601e5c8c83fadee4c03fd8f28bc19c01d73f3ad0eee63cc7800a",
+      "igual": true
+    },
+    "config.sha256": {
+      "run_1": "d12e42c69a09d6da2733b4b54ce518d661b71eba164b131b818ea1f4ec1fc0c7",
+      "run_2": "d12e42c69a09d6da2733b4b54ce518d661b71eba164b131b818ea1f4ec1fc0c7",
+      "igual": true
+    },
+    "source.pais.sha256": {
+      "run_1": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8",
+      "run_2": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8",
+      "igual": true
+    },
+    "source.series.sha256": {
+      "run_1": "a178eb0207546ad92e7c64451ac00d353eaca1d0a2e91e46e9dace4536fba259",
+      "run_2": "a178eb0207546ad92e7c64451ac00d353eaca1d0a2e91e46e9dace4536fba259",
+      "igual": true
+    },
+    "source.via.sha256": {
+      "run_1": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359",
+      "run_2": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359",
+      "igual": true
+    },
+    "candidate_sin_volatiles.sha256 (recalculado)": {
+      "run_1": "9a8840c53d52d812a9efee065566dfaf81c538e5b2be4450acf85d5ce433a654",
+      "run_2": "9a8840c53d52d812a9efee065566dfaf81c538e5b2be4450acf85d5ce433a654",
+      "igual": true,
+      "nota": "CSV candidato descargado de MLflow sin las columnas ['run_id', 'fecha_generacion']"
+    }
+  },
+  "parametros_no_volatiles_distintos": {},
+  "rango_temporal_estimaciones": {
+    "inicio": "2021-04-01",
+    "fin": "2026-06-01"
+  },
+  "tolerancia": {
+    "atol": 1e-06,
+    "rtol": 0.0,
+    "justificacion": "Las predicciones se publican redondeadas a 2 decimales (round_predictions_decimals=2); 1e-6 viajeros es muy inferior a esa resolución, así que cualquier diferencia real sería detectada."
+  },
+  "filas_solo_en_un_run": 0,
+  "comparacion_por_serie": [
+    {
+      "serie": "Tipo_Cruceristas",
+      "n": 63,
+      "max_abs_diff": 0.0,
+      "allclose": true
+    },
+    {
+      "serie": "Tipo_Excursionista",
+      "n": 63,
+      "max_abs_diff": 0.0,
+      "allclose": true
+    },
+    {
+      "serie": "Tipo_Turista",
+      "n": 63,
+      "max_abs_diff": 0.0,
+      "allclose": true
+    },
+    {
+      "serie": "Tipo_Viajero",
+      "n": 63,
+      "max_abs_diff": 0.0,
+      "allclose": true
+    },
+    {
+      "serie": "Total",
+      "n": 63,
+      "max_abs_diff": 0.0,
+      "allclose": true
+    },
+    {
+      "serie": "Via_Aérea",
+      "n": 63,
+      "max_abs_diff": 0.0,
+      "allclose": true
+    },
+    {
+      "serie": "Via_Marítima",
+      "n": 63,
+      "max_abs_diff": 0.0,
+      "allclose": true
+    },
+    {
+      "serie": "Via_Terrestre",
+      "n": 63,
+      "max_abs_diff": 0.0,
+      "allclose": true
+    }
+  ],
+  "max_abs_diff_global": 0.0,
+  "metricas": {
+    "acceptance.is_accepted": {
+      "run_1": 1.0,
+      "run_2": 1.0,
+      "igual": true
+    },
+    "eval.active.ape_eps_pct": {
+      "run_1": 38.67,
+      "run_2": 38.67,
+      "igual": true
+    },
+    "eval.active.mae": {
+      "run_1": 80365.74,
+      "run_2": 80365.74,
+      "igual": true
+    },
+    "eval.active.n": {
+      "run_1": 63.0,
+      "run_2": 63.0,
+      "igual": true
+    },
+    "eval.active.rmse": {
+      "run_1": 94175.26,
+      "run_2": 94175.26,
+      "igual": true
+    },
+    "eval.active_minus_baseline.mae": {
+      "run_1": -155365.16999999998,
+      "run_2": -155365.16999999998,
+      "igual": true
+    },
+    "eval.hmean.ape_eps_pct": {
+      "run_1": 38.67,
+      "run_2": 38.67,
+      "igual": true
+    },
+    "eval.hmean.mae": {
+      "run_1": 80365.74,
+      "run_2": 80365.74,
+      "igual": true
+    },
+    "eval.hmean.n": {
+      "run_1": 63.0,
+      "run_2": 63.0,
+      "igual": true
+    },
+    "eval.hmean.rmse": {
+      "run_1": 94175.26,
+      "run_2": 94175.26,
+      "igual": true
+    },
+    "eval.hw.ape_eps_pct": {
+      "run_1": 103.99,
+      "run_2": 103.99,
+      "igual": true
+    },
+    "eval.hw.mae": {
+      "run_1": 302827.47,
+      "run_2": 302827.47,
+      "igual": true
+    },
+    "eval.hw.n": {
+      "run_1": 63.0,
+      "run_2": 63.0,
+      "igual": true
+    },
+    "eval.hw.rmse": {
+      "run_1": 327720.16,
+      "run_2": 327720.16,
+      "igual": true
+    },
+    "eval.n_evaluable": {
+      "run_1": 63.0,
+      "run_2": 63.0,
+      "igual": true
+    },
+    "eval.n_total": {
+      "run_1": 63.0,
+      "run_2": 63.0,
+      "igual": true
+    },
+    "eval.snaive.ape_eps_pct": {
+      "run_1": 83.86,
+      "run_2": 83.86,
+      "igual": true
+    },
+    "eval.snaive.mae": {
+      "run_1": 235730.91,
+      "run_2": 235730.91,
+      "igual": true
+    },
+    "eval.snaive.n": {
+      "run_1": 63.0,
+      "run_2": 63.0,
+      "igual": true
+    },
+    "eval.snaive.rmse": {
+      "run_1": 253203.39,
+      "run_2": 253203.39,
+      "igual": true
+    },
+    "monitoring.alerts_count": {
+      "run_1": 0.0,
+      "run_2": 0.0,
+      "igual": true
+    },
+    "monitoring.healthy": {
+      "run_1": 1.0,
+      "run_2": 1.0,
+      "igual": true
+    },
+    "qc.critical_passed": {
+      "run_1": 1.0,
+      "run_2": 1.0,
+      "igual": true
+    },
+    "qc.errors_count": {
+      "run_1": 0.0,
+      "run_2": 0.0,
+      "igual": true
+    },
+    "qc.warnings_count": {
+      "run_1": 0.0,
+      "run_2": 0.0,
+      "igual": true
+    }
+  },
+  "campos_ignorados_por_volatiles": [
+    "candidate.sha256",
+    "mlflow.runName",
+    "mlflow.source.git.commit",
+    "mlflow.source.name",
+    "mlflow.source.type",
+    "mlflow.user",
+    "pipeline.duration_seconds",
+    "publication.timestamp",
+    "run.end",
+    "run.start",
+    "run_id",
+    "columna CSV run_id",
+    "columna CSV fecha_generacion"
+  ],
+  "estado": "REPRODUCIBLE"
+}

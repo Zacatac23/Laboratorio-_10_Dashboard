@@ -1,321 +1,206 @@
-# Observatorio de Inteligencia Turística — Laboratorio 11: MLOps y Pipeline Reproducible
+# Observatorio de Inteligencia Turística — Laboratorio 11: MLOps y pipeline reproducible
 
-**Facultad de Ingeniería — Departamento de Ciencias de la Computación**  
-**CC3066 – Data Science | Ciclo 2026**  
-**Entrega:** Avance de Laboratorio 11 (Alcance, Diagrama, Pipeline Inicial, Controles de Calidad Funcionales y Trazabilidad MLOps)
+**Universidad del Valle de Guatemala — Facultad de Ingeniería — Departamento de Ciencias de la Computación**
+**CC3066 Data Science | 2026**
+**Memoria técnica** (actualizada el 2026-11-02 con resultados verificados; reemplaza el avance del 2026-10-29)
 
----
-
-## 1. Definición del Alcance del Flujo (Ejercicio 1)
-
-### 1.1. Especificación Técnica de la Estimación y Fuentes
-
-* **Variable que se estima:** Conteo de ingreso mensual de viajeros a Guatemala (`viajeros`), estructurado en la serie principal nacional (`Total`) y desglosado metodológicamente en siete subseries sectoriales:
-  * Por vía de ingreso: Vía Aérea (`Via_Aérea`), Vía Terrestre (`Via_Terrestre`), Vía Marítima (`Via_Marítima`).
-  * Por categoría migratoria: Turistas (`Tipo_Turista`), Excursionistas (`Tipo_Excursionista`), Cruceristas (`Tipo_Cruceristas`), Viajeros en tránsito y comercio fronterizo (`Tipo_Viajero`).
-* **Unidad de medida:** Conteo entero de viajeros por mes (`viajeros/mes`). Físicamente no acotado superiormente pero estrictamente no negativo ($\ge 0$).
-* **Nivel de agregación:** Temporal mensual regularizado (`YYYY-MM-01`, primer día de cada mes).
-* **Fuentes institucionales y columnas utilizadas:**
-  1. `data/series_mensuales.csv`: Serie primaria histórica. Columnas: `serie` (string), `fecha` (ISO-8601 `YYYY-MM-01`), `viajeros` (float/int). Cobertura: 2009-01 a 2026-06 (210 meses continuos, 1,680 registros).
-  2. `data/pais_mensual.csv`: Desagregación geográfica de procedencia. Columnas: `fecha`, `pais`, `region`, `viajeros`.
-  3. `data/via_frontera.csv`: Desagregación por puesto aduanal y vía. Columnas: `fecha`, `via`, `frontera`, `viajeros`.
-* **Períodos de ajuste y evaluación:**
-  * **Período de ajuste / entrenamiento ($T_{\text{train}}$):** Enero 2009 a Marzo 2021 (147 meses). Comprende la serie histórica base y el shock inicial de la pandemia COVID-19.
-  * **Período de evaluación / backtesting ($T_{\text{eval}}$):** Abril 2021 a Junio 2026 (63 meses coincidentes con los datos observados de validación).
-  * **Período reciente con limitaciones de comparación:** Enero y Febrero de 2026 (y datos del año parcial 2026), debido al cambio en la consolidación institucional y falta de cierres definitivos anuales.
-* **Parámetros, supuestos y Factores de Reparto ($f_i$):**
-  * **Principio de causalidad temporal:** Todo parámetro y factor de reparto se calcula **exclusivamente con información previa a la fecha evaluada** ($t \le t_{\text{corte}}$). Queda estrictamente prohibida cualquier fuga de información (*data leakage*) del futuro.
-  * **Factor de Reparto Histórico ($f_i$):** Representa la proporción esperada de cada serie secundaria $i$ respecto al flujo migratorio total del país. Se estima de forma transparente y determinística como:
-    $$f_i = \frac{\sum_{t \in T_{\text{train}}} \text{viajeros}_{i, t}}{\sum_{t \in T_{\text{train}}} \text{viajeros}_{\text{Total}, t}}$$
-    *Valores calculados en el período de ajuste:*
-    * `Tipo_Turista`: $0.7408$ (74.08% del flujo total)
-    * `Via_Terrestre`: $0.5904$ (59.04% de las entradas)
-    * `Via_Aérea`: $0.3759$ (37.59% de las entradas)
-    * `Tipo_Excursionista`: $0.1626$ (16.26%)
-    * `Tipo_Viajero`: $0.0658$ (6.58%)
-    * `Via_Marítima`: $0.0337$ (3.37%)
-    * `Tipo_Cruceristas`: $0.0308$ (3.08%)
-* **Archivo de resultados que utiliza el tablero:**
-  * Archivo aprobado: `data/estimaciones_aprobadas.csv`.
-  * Esquema de gobernanza: `destino`, `serie`, `modelo`, `fecha`, `prediccion`, `unidad_medida`, `run_id`, `fecha_generacion`, `version_procedimiento`, `estado_aprobacion`.
+> Todas las cifras de esta memoria provienen de ejecuciones reales registradas en `evidencias/lab11/` (ver [docs/guia_evidencias_lab11.md](docs/guia_evidencias_lab11.md)). Los identificadores `run_20261029_*` del avance anterior se conservan solo como **históricos**: sus artefactos no están disponibles en el entorno verificado y no se usan como prueba. El estado inciso por inciso está en [docs/auditoria_final_lab11.md](docs/auditoria_final_lab11.md).
 
 ---
 
-### 1.2. Diagrama Arquitectónico del Pipeline MLOps
+## 1. Alcance del flujo (Ejercicio 1)
 
-El flujo implementa una separación estricta entre el procesamiento por lotes (*batch pipeline*) y la interfaz de usuario (*Streamlit*), garantizando que las consultas o filtros interactivos nunca reentrenen modelos. Cuenta con dos compuertas de seguridad (*Quality Gate* y *Acceptance Gate*):
+### 1.1 Especificación de la estimación y fuentes
+
+- **Variable estimada:** ingreso mensual de viajeros a Guatemala (`viajeros`) para la serie `Total` y siete subseries: `Via_Aérea`, `Via_Terrestre`, `Via_Marítima`, `Tipo_Turista`, `Tipo_Excursionista`, `Tipo_Cruceristas`, `Tipo_Viajero`.
+- **Unidad:** viajeros/mes (no negativa). **Agregación:** mensual, fecha `YYYY-MM-01`.
+- **Fuentes y uso real en el código:**
+
+| Archivo | Columnas | Uso |
+|---|---|---|
+| `data/series_mensuales.csv` | `serie`, `fecha`, `viajeros` | Modelado y QC-A…F (2009-01 a 2026-06, 8 series × 210 meses) |
+| `data/pais_mensual.csv` | `fecha`, `pais`, `region`, `viajeros` | Contexto: QC de unicidad y valores (no bloqueante) y monitoreo; no alimenta el modelo |
+| `data/via_frontera.csv` | `fecha`, `via`, `frontera`, `viajeros` | Contexto: QC de unicidad (no bloqueante) y monitoreo; no alimenta el modelo |
+
+- **Periodos (`config/pipeline_config.yaml`):** ajuste 2009-01 a 2021-03 (147 meses); evaluación por *backtest* de origen fijo 2021-04 a 2026-06 (63 meses). `excluded_evaluation_periods` está vacío: **enero y febrero de 2026 sí se evalúan** porque tienen observación en la fuente. La memoria anterior afirmaba que se excluían; eso no correspondía al código.
+- **Limitaciones de 2026:** año parcial (datos hasta junio). El tablero advierte que no se compara como año completo. La comparabilidad institucional de ene–feb 2026 no está certificada por la fuente; si la institución la declarara no comparable, debe agregarse una exclusión en el YAML con su motivo, **antes** de evaluar.
+- **Modelo activo:** Promedio Histórico Mensual (promedio por mes calendario en el periodo de ajuste). Referencias: Seasonal Naive lag 12 (baseline de aceptación) y Holt-Winters aditivo (referencia, no activo).
+- **Factores de reparto** (proporción de cada subserie sobre el Total, calculada solo en el periodo de ajuste; valores del run `run_20261102_001410_ce7eea`): `Tipo_Turista` 0.740787, `Via_Terrestre` 0.590367, `Via_Aérea` 0.375932, `Tipo_Excursionista` 0.162625, `Tipo_Viajero` 0.065763, `Via_Marítima` 0.033701, `Tipo_Cruceristas` 0.030825.
+- **Archivo que usa el tablero:** `data/estimaciones_aprobadas.csv` y su manifiesto `data/estimaciones_aprobadas.manifest.json` (SHA-256, `run_id`, métricas y periodo evaluado).
+
+### 1.2 Diagrama del pipeline
 
 ```mermaid
 flowchart TD
-    subgraph Fuentes ["1. Ingesta de Fuentes Institucionales"]
-        F1["data/series_mensuales.csv"]
-        F2["data/pais_mensual.csv"]
-        F3["data/via_frontera.csv"]
-        HASH["Cálculo de Huella Digital SHA-256"]
-        F1 & F2 & F3 --> HASH
-    end
-
-    subgraph Gate1 ["2. Compuerta de Calidad: Controles Automáticos (Gate 1)"]
-        QCA["QC-A: Columnas y Tipos"]
-        QCB["QC-B: Fechas y Cobertura"]
-        QCC["QC-C: Unicidad de Claves"]
-        QCD["QC-D: Valores Faltantes"]
-        QCE["QC-E: Conteos y Denominadores"]
-        QCF["QC-F: Regla Metodológica"]
-        HASH --> QCA & QCB & QCC & QCD & QCE & QCF
-        QCA & QCB & QCC & QCD & QCE & QCF --> REP["Reporte Estructurado de Calidad (JSON)"]
-        DEC_Q{"¿Supera controles críticos?"}
-        REP --> DEC_Q
-    end
-
-    subgraph FalloQ ["Manejo de Excepciones"]
-        ABORT["Detener Pipeline Inmediatamente"]
-        PRESERV_Q["Conservar Versión Aprobada Previa Intacta"]
-        ALERT_Q["Registrar Error Fatal en Auditoría y MLflow"]
-        DEC_Q -- NO --> ABORT --> PRESERV_Q --> ALERT_Q
-    end
-
-    subgraph Prep ["3. Preparación y Split Temporal"]
-        DEC_Q -- SÍ --> SPLIT["División Temporal Estricta: Train (2009-01 a 2021-03) | Eval (2021-04 a 2026-06)"]
-    end
-
-    subgraph Modelado ["4. Modelado y Factores de Reparto"]
-        SPLIT --> FACT["Cálculo de Factores de Reparto f_i en Train"]
-        SPLIT --> B1["Baseline 1: Seasonal Naive (Lag 12)"]
-        SPLIT --> B2["Baseline 2: Promedio Histórico Mensual"]
-        SPLIT --> HW["Modelo Principal: Holt-Winters Aditivo"]
-    end
-
-    subgraph Evaluacion ["5. Evaluación Temporal Retrospectiva"]
-        HW & B1 & B2 & FACT --> METRICAS["Cálculo de Métricas Formales: MAE, RMSE, MAPE (con epsilon)"]
-    end
-
-    subgraph Gate2 ["6. Compuerta de Aceptación: Regla Verificable (Gate 2)"]
-        METRICAS --> REGLA{"Regla de Aceptación:
-        - 100% Controles Críticos OK
-        - 0 Valores No Finitos / Nulos
-        - 0 Negativos
-        - MAE <= Tolerancia Admisible"}
-    end
-
-    subgraph Rechazo ["Rechazo de Candidato"]
-        LOG_REJ["Registrar Run como RECHAZADO en MLflow"]
-        PRESERV_R["Mantener Versión Anterior en Tablero"]
-        REGLA -- NO --> LOG_REJ --> PRESERV_R
-    end
-
-    subgraph Publicacion ["7. Publicación Controlada"]
-        REGLA -- SÍ --> BACKUP["Copia de Seguridad a data/backup_aprobadas/"]
-        BACKUP --> ATOMIC["Escritura Atómica a data/estimaciones_aprobadas.csv"]
-    end
-
-    subgraph Trazabilidad ["8. Monitoreo y MLOps Tracking"]
-        ATOMIC --> MLF["MLflow Tracking: Parámetros, Métricas, Artefactos, Commit Git"]
-        ATOMIC --> MON["Verificaciones de Monitoreo: Actualización, Calidad y Resultados"]
-    end
-
-    subgraph Dashboard ["9. Consulta Directiva (Streamlit)"]
-        ATOMIC --> DASH["Tablero Streamlit: Lectura de Versión Aprobada"]
-        DASH --> UI["Visualización Directiva: Observado vs Estimado + Metadatos de Gobernanza"]
-    end
+    A[Fuentes: series_mensuales, pais_mensual, via_frontera] --> H[SHA-256 de cada fuente y de la configuración]
+    H --> M0{MLflow disponible?}
+    M0 -- no --> B0[BLOQUEADO_TRAZABILIDAD · no se publica]
+    M0 -- sí --> Q[QC-A…F sobre la fuente de modelado + QC de contexto]
+    Q -- fallo crítico --> F1[FALLIDO_CALIDAD · sin métricas · aprobado intacto]
+    Q -- ok --> S[Split temporal del YAML]
+    S --> MOD[Factores de reparto · Promedio Histórico · Seasonal Naive · Holt-Winters]
+    MOD --> EV[Evaluación en los 63 meses comparables: MAE, RMSE, ape_eps]
+    EV --> AC{Regla de aceptación}
+    AC -- no --> R[RECHAZADO · métricas reales · aprobado intacto]
+    AC -- sí --> T[Registro y relectura de artefactos en MLflow]
+    T --> P{--publish?}
+    P -- no --> D[APROBADO_NO_PUBLICADO]
+    P -- sí --> PUB[Respaldo + reemplazo atómico + manifiesto]
+    PUB --> MON[Monitoreo: actualización, calidad, resultados]
+    PUB --> TAB[Tablero lee solo la versión aprobada verificada]
+    PUB --> BK[Restauración: src.restore_version]
 ```
 
 ---
 
-## 2. Pipeline Reproducible y Configuración (Ejercicio 2)
+## 2. Pipeline reproducible y configuración (Ejercicio 2)
 
-### 2.1. Automatización Integral
-El flujo está implementado en `src/pipeline.py` y se orquesta de forma secuencial y atómica:
-1. **Lectura y Hash:** Lee los datos y genera su huella digital SHA-256 para verificar que las fuentes no han sido alteradas externamente.
-2. **Validación (Gate 1):** Aplica la suite de 6 controles de calidad. Si detecta anomalías críticas, cancela la ejecución antes de tocar ningún archivo de producción.
-3. **Preparación:** Normaliza tipos de datos y realiza la separación temporal estricta entre períodos de ajuste y evaluación.
-4. **Ajuste y Parámetros:** Ajusta los modelos y calcula los factores de reparto histórico $f_i$.
-5. **Evaluación Retrospectiva:** Oculta los meses observados de 2021-2026 y mide el error predictivo (MAE, RMSE, MAPE).
-6. **Regla de Aceptación (Gate 2):** Verifica si el candidato cumple con los estándares cuantitativos y de integridad.
-7. **Publicación y Backup:** Si la versión es aprobada, respalda la versión anterior en `data/backup_aprobadas/` y escribe atómicamente `data/estimaciones_aprobadas.csv`.
-8. **Monitoreo:** Ejecuta verificaciones de alerta sobre deriva de cobertura y variaciones anómalas.
-9. **Trazabilidad MLflow:** Registra el experimento, run ID, commit de git, hiperparámetros, métricas y artefactos.
+- **Orquestación:** `src/pipeline.py` (`TourismMLOpsPipeline`), entrada `pipeline.py`. Etapas: verificación de MLflow → lectura y huellas → QC → split → modelos y factores → evaluación → candidato, integridad y aceptación → registro verificado en MLflow → publicación atómica (opcional) → monitoreo y auditoría.
+- **Comando:** exactamente una bandera es obligatoria.
 
-### 2.2. Comando Documentado de Ejecución
-El pipeline no depende del estado de una sesión de Streamlit ni de variables en memoria:
 ```bash
-# Ejecución completa estándar (con validación, evaluación y publicación controlada)
-python pipeline.py --config config/pipeline_config.yaml --publish
-
-# Modo evaluación sin publicación (dry-run para auditoría o pruebas)
-python pipeline.py --config config/pipeline_config.yaml --no-publish
+python pipeline.py --config config/pipeline_config.yaml --publish     # publica si se aprueba
+python pipeline.py --config config/pipeline_config.yaml --no-publish  # dry-run
 ```
 
-### 2.3. Archivo de Configuración (`config/pipeline_config.yaml`)
-El archivo de configuración centraliza:
-* Rutas de lectura y publicación.
-* Períodos temporales (`train_start`, `train_end`, `eval_start`, `eval_end`).
-* Modelo activo (`historical_mean`, `holt_winters`, `seasonal_naive`).
-* Hiperparámetros de suavizamiento estacional (`seasonal_periods: 12`, `trend: add`, `seasonal: add`).
-* Umbrales de tolerancia (`max_mae_tolerance`, `permit_negative_forecasts: false`).
-* Semilla aleatoria fijada (`random_seed: 42`).
-* Parámetros de monitoreo (`max_relative_variation_alert: 0.50`).
+- **Códigos de salida:** 0 aprobado, 1 rechazado, 2 fallo, 3 bloqueado por trazabilidad.
+- **Configuración:** rutas, periodos, exclusiones, modelo activo, hiperparámetros de Holt-Winters, umbrales de aceptación y de monitoreo, semilla 42, estrategia MLflow y reintentos (todo en el YAML).
+- **Dependencias:** `requirements.txt` (directas, exactas) + `requirements.lock` (transitivas), Python 3.12.10 en la imagen.
 
 ---
 
-## 3. Controles Automáticos de Calidad (Ejercicio 3)
+## 3. Controles automáticos de calidad (Ejercicio 3)
 
-### 3.1. Matriz de Controles Implementados (`src/quality_checks.py`)
+| ID | Qué verifica (código real) | Advertencia | Detiene |
+|---|---|---|---|
+| QC-A | Columnas `serie`, `fecha`, `viajeros` y tipos convertibles | — | Columna ausente o tipo incompatible |
+| QC-B | Fechas válidas, día 1, sin huecos en la serie objetivo y ventana `train_start`–`eval_end` cubierta | — | Fecha inválida, día ≠ 1, hueco o ventana incompleta (no se imputa cero) |
+| QC-C | Unicidad de (`serie`, `fecha`) | — | Cualquier duplicado |
+| QC-D | Nulos en columnas indispensables | — | Nulo en `serie`/`fecha`/`viajeros` |
+| QC-E | Valores finitos y no negativos (el cero es válido) | — | NaN, infinito o negativo |
+| QC-F | Total ≈ Aérea + Terrestre + Marítima (tolerancia 2 %) | Si `methodological_fail_on_discrepancy: false` | Discrepancia material o insumos faltantes (`NO_VERIFICABLE`) |
+| Contexto | Unicidad y valores de `pais_mensual` y `via_frontera` | Fallos se degradan a WARNING (`context_sources_critical: false`) | Solo si se configura como crítico |
 
-| ID | Control | Qué se verifica | Cuándo genera Advertencia (WARNING) | Cuándo Detiene la Ejecución (CRITICAL / FAILED) |
-|---|---|---|---|---|
-| **QC-A** | **Columnas y tipos** | Presencia de las columnas obligatorias (`serie`, `fecha`, `viajeros`) y compatibilidad de tipos (fechas válidas, números finitos). | Nunca: toda columna indispensable o tipo corrupto es crítico. | Si falta una columna indispensable o una columna no puede ser convertida a su tipo correspondiente. |
-| **QC-B** | **Fechas y cobertura** | Fechas parseables, normalizadas al día 1 del mes (`day == 1`) y ausencia de huecos en la serie objetivo (`Total`). | Si el rango cubierto inicia después o finaliza antes del rango configurado, pero no hay huecos internos. | Si hay fechas inválidas (NaT), fechas no normalizadas al primer día, o meses faltantes dentro de la secuencia temporal continua. |
-| **QC-C** | **Unicidad** | Que la clave primaria de granularidad (`['serie', 'fecha']`) sea estrictamente única. | Nunca: la duplicidad en series temporales altera las sumas y descalibra modelos. | Si se detecta al menos un registro duplicado para la misma serie y fecha. |
-| **QC-D** | **Valores faltantes** | Distinción entre ausencias permitidas en variables opcionales y valores nulos en variables indispensables. | Si existen valores nulos en columnas opcionales o descriptivas secundarias. | Si existen valores nulos o vacíos en las variables indispensables (`serie`, `fecha`, `viajeros`) de la serie objetivo. |
-| **QC-E** | **Valores y denominadores** | Conteos no negativos, valores finitos ($\ne \pm \infty$) y denominadores $\ne 0$ en cálculos de proporciones / variaciones. | Si se detecta un conteo igual a 0 en una subserie donde es admisible (ej. cruceros en pandemia). | Si se detectan conteos negativos en observaciones históricas, infinitos, o divisiones por cero en factores de reparto. |
-| **QC-F** | **Regla metodológica** | Coherencia institucional: la serie `Total` mensual debe coincidir con la suma de las 3 vías exclusivas (`Via_Aérea` + `Via_Terrestre` + `Via_Marítima`). | Si la discrepancia mensual entre la suma de vías y el Total supera el 2% por causas documentadas de tránsito migratorio. | Si falta alguna de las series fundamentales de vía o si la estructura mensual fue imputada ciegamente con ceros. |
-
-### 3.2. Reporte y Política de Contención
-Cada ejecución genera un reporte estructurado `reports/quality_report_<run_id>.json`. Si cualquiera de los controles críticos falla, el pipeline genera una excepción `QualityControlError`, escribe el log de auditoría en MLflow y **aborta antes de tocar la versión aprobada**. Los períodos sin cobertura no se rellenan con ceros de forma sintética.
+**Denominador cero.** En el pipeline QC-E se invoca sin columnas denominador; un Total de entrenamiento igual a cero se detecta en el cálculo de factores (`calculate_repartition_factors` lanza `ValueError`) y la corrida termina `FALLIDO` en la etapa de modelado, sin publicar (ver §7.2).
 
 ---
 
-## 4. Registro y Trazabilidad con MLflow Tracking (Ejercicio 4)
+## 4. Trazabilidad con MLflow (Ejercicio 4)
 
-### 4.1. Configuración del Experimento
-* **Experimento:** `Observatorio_Turismo_Guatemala`
-* **Backend de almacenamiento:** `sqlite:///mlflow.db` (local y persistente)
-* **Destino de artefactos:** `./mlruns`
-* **Elementos registrados por corrida (*Run*):**
-  * `run_id` y timestamp ISO-8601.
-  * Versión del código fuente: Commit hash SHA de Git (`git rev-parse HEAD`).
-  * Huella digital SHA-256 del archivo de datos de entrada (`series_mensuales.csv`).
-  * Períodos de ajuste (`split.train_start`, `split.train_end`) y de evaluación (`split.eval_start`, `split.eval_end`).
-  * Hiperparámetros del modelo y factores de reparto calculados ($f_i$).
-  * Métricas de evaluación formal: `eval.active.mae`, `eval.active.rmse`, `eval.active.mape`, y métricas de los baselines.
-  * Resultados de controles de calidad: `qc.critical_passed`, `qc.warnings_count`, `qc.errors_count`.
-  * Artefactos almacenados: configuración YAML utilizada, reporte JSON de calidad, auditoría JSON y estimaciones candidatas generadas.
+### 4.1 Configuración
 
-### 4.2. Comprobación de Reproducibilidad Numérica
-Se realizaron ejecuciones consecutivas con la misma semilla (`random_seed: 42`) y configuración sobre el mismo dataset:
-* **Ejecución 1 (`run_20261029_155329_ba4b47`):** MAE: $80,365.74$ | RMSE: $94,175.26$ | MAPE: $38.67\%$
-* **Ejecución 2 (`run_20261029_155430_020086`):** MAE: $80,365.74$ | RMSE: $94,175.26$ | MAPE: $38.67\%$
-* **Diferencia numérica:** $0.000000$ (tolerancia alcanzada $\le 10^{-6}$). El procedimiento es completamente determinístico.
+- **Local:** `sqlite:///mlflow_store/mlflow.db`, artefactos en `mlflow_store/artifacts`.
+- **Docker Compose:** servidor `mlflow` (`--serve-artifacts`), SQLite y artefactos en el volumen `observatorio_turismo_mlflow_store`. El pipeline usa `MLFLOW_TRACKING_URI=http://mlflow:5000`.
+- **Por run:** etiquetas de estado, commit (`git rev-parse HEAD` o declarado con `GIT_COMMIT` en contenedor), huellas SHA-256 de fuentes, configuración y código, semilla, split, factores, modelo, QC, aceptación, métricas del modelo y de los baselines en los mismos meses, monitoreo, auditoría, estimaciones candidatas y manifiesto. Los artefactos se releen antes de publicar.
 
-### 4.3. Identificación de Ejecuciones Fallidas y Rechazadas
-1. **Ejecución Rechazada por Desempeño (`run_20261029_155156_e9d8e3`):** Se probó el modelo Holt-Winters con un umbral de tolerancia de MAE de 150,000. El modelo obtuvo un MAE de $178,765.59$ (debido al cambio estructural pospandemia 2021-2026 frente a 2009-2020). La compuerta de aceptación evaluó:
-   `Decisión: RECHAZADO | Causa: MAE (178765.59) excede la tolerancia máxima admisible (150000.0)`.
-   El pipeline no reemplazó los resultados vigentes y preservó la versión anterior.
-2. **Ejecución Fallida en Compuerta de Calidad (`run_20261029_155541_4fb2cf`):** Se inyectaron datos corruptos con claves duplicadas y conteos negativos. El pipeline detectó los fallos en QC-C y QC-E, detuvo inmediatamente la ejecución y registró el fallo en MLflow sin calcular métricas ni entrenar modelos.
+### 4.2 Reproducibilidad (resultado real)
+
+Dos ejecuciones `--no-publish` dentro de Docker, misma imagen, configuración y datos, registradas en el servidor MLflow de Compose:
+
+| Run | MLflow ID | Estado |
+|---|---|---|
+| `run_20261102_001410_ce7eea` | `7787c39f59d64cf69394bde8de3ea709` | APROBADO_NO_PUBLICADO |
+| `run_20261102_001413_338a6e` | `575d18e094f245f1bf51697e3cd11381` | APROBADO_NO_PUBLICADO |
+
+Comparación (`reports/reproducibilidad_lab11.json`): 8 series × 63 meses con `np.allclose(atol=1e-6, rtol=0)`; diferencia máxima **0.0**; huellas de configuración (`d12e42c6…`), código (`54c04097…`) y las tres fuentes idénticas; 25 métricas idénticas; estado **REPRODUCIBLE**. Se ignoraron solo campos volátiles (`run_id`, tiempos, `pipeline.duration_seconds` y las columnas `run_id`/`fecha_generacion` del CSV candidato, cuyo hash se recalculó sin ellas y coincide).
+
+**Holt-Winters no es reproducible entre entornos.** En el contenedor Linux (statsmodels 0.15.0) su MAE fue 302,827.47 en todas las corridas; la etapa previa registró 178,765.59 en Windows. El modelo activo (promedio histórico) da MAE 80,365.74 en todos los entornos observados. Holt-Winters no es el modelo activo.
+
+### 4.3 Ejecuciones fallidas y rechazadas
+
+Las corridas fallidas quedan en MLflow con su estado (`FALLIDO_CALIDAD`, `FALLIDO`; `BLOQUEADO_TRAZABILIDAD` queda solo en la auditoría local porque MLflow no está disponible) y **sin métricas de evaluación inventadas**. Ver §7.2 para los identificadores reales. El rechazo por desempeño se prueba en `tests/test_mlops_integracion.py::test_corrida_rechazada_registra_metricas_reales_sin_publicar` (tolerancia forzada) y en `tests/test_mlops_pipeline.py::test_acceptance_rule_rejection_on_high_mae`.
 
 ---
 
-## 5. Evaluación Temporal y Regla de Aceptación (Ejercicio 5)
+## 5. Evaluación temporal y regla de aceptación (Ejercicio 5)
 
-### 5.1. Protocolo de Evaluación Temporal Estricto
-* Se ocultaron los 63 meses observados comprendidos entre abril de 2021 y junio de 2026.
-* Los parámetros de los modelos y los factores de reparto se ajustaron exclusivamente con información previa a abril de 2021.
-* No se calculan errores predictivos para enero y febrero de 2026 debido a que las series de cierre anual en esa fecha sufrieron modificaciones de formato en las fuentes institucionales sin consolidación definitiva.
+### 5.1 Protocolo
 
-### 5.2. Métricas Formales y Tratamiento de Ceros
-* **MAE (Error Absoluto Medio):** $\text{MAE} = \frac{1}{N} \sum_{t=1}^N |y_t - \hat{y}_t|$ (en viajeros/mes).
-* **RMSE (Raíz del Error Cuadrático Medio):** $\text{RMSE} = \sqrt{\frac{1}{N} \sum_{t=1}^N (y_t - \hat{y}_t)^2}$ (penaliza desviaciones extremas).
-* **MAPE Protegido:** Para evitar indeterminaciones matemáticas ante valores observados iguales a cero ($y_t = 0$, como en cierres fronterizos durante la pandemia), se implementó:
-  $$\text{MAPE} = \frac{100\%}{N} \sum_{t=1}^N \frac{|y_t - \hat{y}_t|}{|y_t| + \epsilon}, \quad \text{con } \epsilon = 1.0 \text{ viajero}$$
+Backtest de origen fijo: se ajusta con 2009-01–2021-03 y se estiman los 63 meses 2021-04–2026-06 sin reajuste. `build_evaluation_mask` solo usa meses con observación finita; no hubo exclusiones. Prueba de no fuga: `tests/test_lab11_verificacion.py::SinFugaTemporal` (alterar ×10 los meses evaluados no cambia ningún parámetro, factor ni predicción).
 
-### 5.3. Comparación con Baselines de Referencia (sobre el mismo período de 63 meses)
-* **Modelo Activo Aprobado (Promedio Histórico Mensual en Train):**
-  * MAE: **$80,365.74$ viajeros/mes** | RMSE: **$94,175.26$** | MAPE: **$38.67\%$**
-* **Baseline 1 (Seasonal Naive, Lag 12):**
-  * MAE: **$235,730.91$ viajeros/mes** | RMSE: **$253,203.39$** | MAPE: **$83.86\%$**
-* **Modelo Alternativo (Holt-Winters Aditivo):**
-  * MAE: **$178,765.59$ viajeros/mes** | RMSE: **$196,258.66$** | MAPE: **$60.30\%$**
+### 5.2 Métricas
 
-### 5.4. Regla Verificable de Aceptación
-Una versión candidata es **APROBADA** para publicación únicamente si cumple conjuntamente:
-1. `qc.critical_passed == True` (100% de controles de calidad aprobados).
-2. Estimaciones válidas: 0 valores nulos, 0 infinitos y 0 predicciones negativas.
-3. Desempeño predictivo: $\text{MAE} \le \text{max\_mae\_tolerance}$ ($150,000$ viajeros/mes).
-4. El procedimiento supera o se encuentra justificado respecto al baseline Seasonal Naive.
+MAE y RMSE en viajeros/mes. La métrica relativa es `ape_eps_pct = mean(|e| / (|y| + 1)) × 100`; **no es el MAPE convencional** (el avance anterior la llamaba MAPE).
+
+### 5.3 Resultados en los mismos 63 meses (run `run_20261102_001410_ce7eea`)
+
+| Procedimiento | MAE | RMSE | ape_eps % | N |
+|---|---:|---:|---:|---:|
+| Promedio Histórico Mensual (activo) | 80,365.74 | 94,175.26 | 38.67 | 63 |
+| Seasonal Naive lag 12 (baseline) | 235,730.91 | 253,203.39 | 83.86 | 63 |
+| Holt-Winters aditivo (referencia) | 302,827.47 | 327,720.16 | 103.99 | 63 |
+
+El Seasonal Naive de origen fijo repite recursivamente el último año de ajuste (abr 2020–mar 2021, con la caída por COVID-19), por eso su error a horizonte largo es alto.
+
+**Backtest complementario de cortes múltiples** (8 orígenes, horizonte 12 meses, mismos meses para todos; `evidencias/lab11/evaluacion/backtest_cortes_multiples.json`): MAE promedio 100,571.55 (activo), 75,372.56 (Seasonal Naive) y 82,724.43 (Holt-Winters). **A horizonte de 12 meses el baseline supera al modelo activo en 6 de 8 cortes.** No se cambió el modelo ni la regla tras ver este resultado; se documenta como riesgo (ver auditoría).
+
+### 5.4 Regla de aceptación activa en el código
+
+Un candidato se aprueba solo si: (1) todos los QC críticos pasan; (2) la salida es íntegra (todas las series, sin nulos, finitos, no negativos tras recortar a ≥0); (3) MAE ≤ 150,000 y (4) RMSE ≤ 180,000 (`enforce_rmse_tolerance: true`). Superar al baseline **no** es obligatorio (`require_better_than_baseline: false`); se registra `acceptance.beats_baseline`. Los umbrales se fijaron antes de la evaluación (comentario en el YAML) y no se ajustaron.
 
 ---
 
-## 6. Integración con el Tablero de Control (Ejercicio 6)
+## 6. Integración con el tablero (Ejercicio 6)
 
-1. **Lectura de la Versión Aprobada:**
-   * El tablero (`app.py`) carga dinámicamente `data/estimaciones_aprobadas.csv` mediante `cargar_estimaciones_aprobadas()`.
-   * Si el archivo no existe o fue retenido por fallos de calidad, el dashboard muestra un mensaje comprensible y seguro para directivos:
-     *«Las estimaciones aprobadas no están disponibles en este momento o la última ejecución fue rechazada por controles de calidad. Se preserva la visualización histórica segura sin reemplazo de datos.»*
-2. **Diferenciación Visual y Metadatos de Gobernanza:**
-   * En la pestaña **Modelos**, se despliega el banner de gobernanza con:
-     * Versión del procedimiento (v1.0.0).
-     * Estado de aprobación oficial (`APROBADO`).
-     * Run ID del pipeline (`run_20261029_155430_020086`).
-     * Fecha y hora exacta de actualización.
-   * En el gráfico interactivo **V08 (Observado frente a pronósticos)**:
-     * Se visualiza la curva oficial `Observado (Oficial)` en azul continuo.
-     * Se superpone la `Estimación Aprobada MLOps` en verde continuo destacado con grosor reforzado.
-     * Se diferencian claramente de los pronósticos exploratorios multimodelo preexistentes.
-3. **Comunicación para Tomadores de Decisiones:**
-   * Se advierte claramente que las estimaciones corresponden a un modelo de series temporales de apoyo a la planificación y no representan causalidad ni predicciones macroeconómicas definitivas.
+- `data_logic.cargar_version_aprobada` lee el CSV vigente y su manifiesto; estados `ok`, `ausente`, `inaccesible`, `invalida`. Las métricas solo se muestran si el SHA-256 y el `run_id` del manifiesto coinciden con el CSV. Sin caché.
+- Pestaña **Modelos**: MAE de la versión aprobada, periodo evaluado, fecha de generación (no último mes de datos), versión del procedimiento (`run_id` en la ayuda) y expansor de límites (2026 parcial, reparto proporcional, recuperación pospandemia, sin causalidad).
+- Gráfico V08: Observado (azul), Estimación aprobada (verde) y banco Lab 10 (discontinuas).
+- Evidencia: `evidencias/lab11/dashboard/` (versión vigente, móvil, restaurada y sin versión aprobada). Cambiar filtros no creó runs (24 antes y después) ni archivos de salida.
+- Corrección de esta etapa: los valores de las tarjetas de métricas se truncaban con «…» en escritorio; se ajustó `styles.css`.
 
 ---
 
-## 7. Monitoreo, Detección de Fallos y Recuperación (Ejercicio 7)
+## 7. Monitoreo, fallos y recuperación (Ejercicio 7)
 
-### 7.1. Verificaciones de Monitoreo Continuo (`src/monitoring.py`)
-1. **Actualización:** Comprueba que la cobertura máxima de fuentes y resultados alcance el período esperado (`eval_end`).
-2. **Calidad:** Comprueba que no existan nulos ni claves duplicadas en la serie primaria.
-3. **Resultados:** Detecta estimaciones negativas, números no finitos y variaciones intermensuales/interanuales superiores al umbral de alerta ($50\%$). Las variaciones extremas disparan una alerta de revisión visual para directivos sin detener la publicación si el error matemático se mantiene acotado.
+### 7.1 Monitoreo (`src/monitoring.py`)
 
-### 7.2. Evidencia de Prueba Controlada de Fallo y Recuperación (`src/test_controlled_failure.py`)
-Se ejecutó la prueba de resiliencia automatizada (Ejercicio 7.4):
-* **Paso 1 (Inyección):** Se creó una copia temporal de `series_mensuales.csv` con un registro duplicado en fecha `2009-01-01` y conteo negativo (`viajeros = -9999`).
-* **Paso 2 (Detección):** El pipeline se ejecutó sobre los datos anómalos.
-  * QC-C detectó 2 registros con claves duplicadas.
-  * QC-E detectó 1 conteo negativo no permitido.
-  * El pipeline lanzó `QualityControlError` y se detuvo de forma inmediata.
-* **Paso 3 (Preservación):** Se comprobó byte por byte que `data/estimaciones_aprobadas.csv` en el tablero se mantuvo **100% idéntico e intacto**.
-* **Paso 4 (Recuperación):** Se restauraron los datos limpios y se relanzó el pipeline. La ejecución culminó con éxito en 0.76 segundos, generando una nueva versión aprobada con Run ID registrado en MLflow.
+1. **Actualización:** última observación de cada fuente frente a `expected_coverage_end` (2026-06) y última estimación frente a `eval_end`.
+2. **Calidad:** cobertura, nulos y duplicados con umbrales, comparados con la ejecución previa.
+3. **Resultados:** no finitos, negativos y variación intermensual > 50 % (alerta de revisión, no pérdida de precisión).
 
-### 7.3. Política de Respaldo y Rollback
-* Cada publicación exitosa respalda automáticamente la versión previa en `data/backup_aprobadas/estimaciones_aprobadas_backup_<timestamp>_<run_id>.csv`.
-* La función `restore_approved_version()` permite restaurar cualquier versión histórica previa con un solo comando si un directivo o auditor lo requiere.
+Demostración real (copia temporal): línea base 0 alertas; serie truncada a 2026-04 → alerta de actualización; 25 filas duplicadas → alerta de calidad (tasa 0.0147 > 0.0); Total 2024-07 ×3 → alerta de revisión (+236.8 % / −66.0 %).
 
----
+### 7.2 Prueba controlada (`scripts/lab11/fallos_controlados.py`, registrada en el experimento `Observatorio_Turismo_Guatemala_pruebas_controladas` del servidor Docker)
 
-## 8. Contenerización con Docker y Docker Compose (Ejercicio 8)
+Versión aprobada inicial A: `run_20261101_222030_d65c3b`, SHA-256 `d5795b8c…`.
 
-El entorno completo está preparado para despliegue local mediante Docker:
-* `Dockerfile`: Imagen base ligera `python:3.12-slim` con dependencias instaladas vía `requirements.txt`. No incorpora datos institucionales en la imagen.
-* `docker-compose.yml`: Define y orquesta:
-  1. `dashboard`: Tablero Streamlit en el puerto `8501`.
-  2. `mlflow`: Servidor de seguimiento de experimentos en el puerto `5000`.
-  3. `pipeline`: Tarea de ejecución por lotes (*profile tools*).
-* **Persistencia:** Volúmenes montados para `./data`, `./mlruns`, `./logs` y `./reports`, garantizando que ni los datos ni los registros de MLflow se pierdan al reiniciar contenedores.
+| Falla inyectada | Estado | Detección | Aprobado intacto |
+|---|---|---|---|
+| Columna `viajeros` ausente | FALLIDO_CALIDAD | QC-A FAILED, QC-F NO_VERIFICABLE | Sí |
+| Clave (`serie`,`fecha`) duplicada | FALLIDO_CALIDAD | QC-C FAILED, QC-F FAILED | Sí |
+| Conteo negativo (Total 2015-03) | FALLIDO_CALIDAD | QC-E FAILED, QC-F FAILED | Sí |
+| Denominador cero (Train en 0) | FALLIDO | `ValueError` en factores de reparto | Sí |
+| Error de escritura (`os.replace`) | FALLIDO | etapa «Publicación atómica», sin temporales | Sí |
+| MLflow inaccesible | BLOQUEADO_TRAZABILIDAD | verificación previa | Sí |
+| Artefacto no persistido | FALLIDO | «Registro verificado en MLflow» | Sí |
 
-### Comandos de Ejecución con Docker
-```bash
-# 1. Construir y levantar el Tablero y el Servidor de MLflow
-docker compose up -d
+Tras corregir los datos, la recuperación publicó la versión B (`run_20261102_001003_405131`, `594b7cff…`). La restauración del respaldo de A devolvió exactamente `d5795b8c…` con su manifiesto y el tablero leyó `run_20261101_222030_d65c3b` con metadatos verificados.
 
-# 2. Ejecutar el pipeline reproducible dentro del contenedor
-docker compose run --rm pipeline
+**Defecto encontrado y corregido.** `mlflow.set_tracking_uri()` escribe `MLFLOW_TRACKING_URI` en el entorno y esa variable tiene prioridad sobre el YAML: en un mismo proceso, una segunda corrida ignoraba su configuración (un servidor caído no bloqueaba la publicación). `TourismMLOpsPipeline.run()` ahora restituye las variables al terminar; prueba de regresión `AislamientoTrackingURI`.
 
-# 3. Acceso a las aplicaciones:
-#    - Tablero Streamlit: http://localhost:8501
-#    - Servidor MLflow UI: http://localhost:5000
+### 7.3 Respaldo y restauración
 
-# 4. Detener los servicios
-docker compose down
-```
+Cada publicación respalda CSV y manifiesto en `data/backup_aprobadas/`. Restauración con `python -m src.restore_version --list` / `--backup <archivo> --reason <motivo>`: valida ruta, esquema, estado, `run_id` y SHA-256, respalda la vigente (`_prerestauracion`) y reemplaza atómicamente; auditoría en `logs/restore_audit.jsonl`. Verificado en Docker (`evidencias/lab11/recuperacion/restauracion_docker.log`).
 
 ---
 
-## 9. Pruebas Automatizadas y Validación Final
+## 8. Docker y Docker Compose (Ejercicio 8)
 
-Se ejecutó la suite completa de pruebas unitarias:
-```bash
-python -B -m unittest discover -s tests -v
-```
-**Resultado:** **41 pruebas ejecutadas exitosamente (OK)**
-* 27 pruebas originales del Laboratorio 10 (carga, agregaciones, variaciones, interacción UI, conciliación).
-* 10 pruebas de Controles de Calidad de Laboratorio 11 (`tests/test_quality_checks.py`: QC-A a QC-F).
-* 4 pruebas de reproducibilidad, factores de reparto, tolerancia y baselines (`tests/test_mlops_pipeline.py`).
+- Imagen `observatorio-turismo:lab11` (`python:3.12.10-slim`), usuario `app` (uid 1000), `.dockerignore` como lista blanca: la imagen no contiene CSV, `.db`, `.env`, claves ni `.git` (inspección en el log).
+- Servicios: `mlflow` (healthcheck `/health`), `dashboard` (lee `./data` en solo lectura) y `pipeline` (perfil `tools`). Puertos solo en 127.0.0.1.
+- Verificado desde una copia limpia (`git clone` + cambios de la entrega): build, `up -d --wait`, `ps`, HTTP 200 en tablero y MLflow, dos dry-run, una publicación, `down` y `up` sin `-v` con los mismos 9 runs.
+- **Defecto corregido:** `--allowed-hosts` fijaba el puerto 5000; con `MLFLOW_PORT` distinto la UI y la API respondían «Invalid Host header». Se agregó `${MLFLOW_PORT:-5000}` (prueba `ComposePuertoMLflow`).
 
+---
+
+## 9. Pruebas automatizadas
+
+`python -B -m unittest discover -s tests -v`: **99 pruebas, 98 PASS, 0 FAIL, 1 SKIP** (la prueba Docker, que requiere `RUN_DOCKER_TESTS=1`). Con `RUN_DOCKER_TESTS=1 MLFLOW_PORT=5001` se ejecuta también la prueba contra Compose (ver `evidencias/lab11/tests_unitarios_docker.txt`).
+
+| Archivo | Pruebas |
+|---|---:|
+| `tests/test_lab10.py` | 27 |
+| `tests/test_quality_checks.py` | 18 |
+| `tests/test_mlops_pipeline.py` | 16 |
+| `tests/test_mlops_integracion.py` | 28 |
+| `tests/test_lab11_verificacion.py` (nuevo) | 10 |

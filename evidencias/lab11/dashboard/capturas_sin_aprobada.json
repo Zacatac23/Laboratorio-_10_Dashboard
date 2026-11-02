@@ -1,0 +1,27 @@
+{
+  "escenario": "sin_aprobada",
+  "url": "http://127.0.0.1:8599",
+  "datos_leidos_por_tablero": "/private/tmp/claude-501/-Users-mariorocha-Documents-Programacion-DataScience-Laboratorio--10-Dashboard-/fbfd37b0-8af7-4146-b38e-dfbacf25375d/scratchpad/sin_aprobada/data",
+  "generado": "2026-11-02T00:28:54-06:00",
+  "version_en_disco": {
+    "archivo": "ausente"
+  },
+  "navegador": "Google Chrome headless (CDP)",
+  "capturas": [
+    {
+      "archivo": "evidencias/lab11/dashboard/sin_aprobada_01_modelos_aviso.png",
+      "descripcion": "Sin estimaciones_aprobadas.csv: aviso informativo, sin métricas inventadas.",
+      "run_id_version_aprobada": null,
+      "avisos": [
+        "2026 es un año parcial: los datos llegan a Jun. Su total anual no equivale a un año completo; no se anualiza.",
+        "Aún no hay una versión aprobada publicada por el flujo MLOps. Las vistas históricas siguen disponibles."
+      ]
+    },
+    {
+      "archivo": "evidencias/lab11/dashboard/sin_aprobada_02_resumen_utilizable.png",
+      "descripcion": "Sin versión aprobada: la vista histórica Resumen sigue funcionando.",
+      "run_id_version_aprobada": null,
+      "graficos": 9
+    }
+  ]
+}

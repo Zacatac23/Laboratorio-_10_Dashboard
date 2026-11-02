@@ -1,0 +1,194 @@
+{
+  "run_id": "run_20261102_001003_553f9b",
+  "generado": "2026-11-02T00:10:03",
+  "configuracion": {
+    "cobertura_esperada_fuentes": "2026-06-01",
+    "cobertura_esperada_salidas": "2026-06-01",
+    "comparacion_variacion": "intermensual",
+    "umbral_variacion": 0.5,
+    "ejecucion_previa_comparada": "run_20261102_001002_ee857d"
+  },
+  "actualizacion": {
+    "fuentes": {
+      "series_mensuales.csv": {
+        "ultima_observacion_real": "2026-06-01",
+        "esperado": "2026-06-01",
+        "estado": "OK",
+        "series_atrasadas": {}
+      },
+      "pais_mensual.csv": {
+        "ultima_observacion_real": "2026-06-01",
+        "esperado": "2026-06-01",
+        "estado": "OK",
+        "series_atrasadas": {}
+      },
+      "via_frontera.csv": {
+        "ultima_observacion_real": "2026-06-01",
+        "esperado": "2026-06-01",
+        "estado": "OK",
+        "series_atrasadas": {}
+      }
+    },
+    "salida": {
+      "estado": "NO_DISPONIBLE",
+      "motivo": "La ejecución no produjo estimaciones."
+    }
+  },
+  "calidad": {
+    "umbrales": {
+      "max_null_rate": 0.0,
+      "max_duplicate_rate": 0.0,
+      "min_coverage_ratio": 1.0,
+      "max_row_drop_ratio_vs_previous": 0.0
+    },
+    "fuentes": {
+      "series_mensuales.csv": {
+        "perfil": {
+          "fuente": "series_mensuales.csv",
+          "filas": 1680,
+          "columnas_faltantes": [],
+          "filas_con_nulos": 0,
+          "tasa_nulos": 0.0,
+          "claves_duplicadas": 0,
+          "tasa_duplicados": 0.0,
+          "primera_observacion": "2009-01-01",
+          "ultima_observacion_real": "2026-06-01",
+          "cobertura": 1.0,
+          "ultima_observacion_por_serie": {
+            "Tipo_Cruceristas": "2026-06-01",
+            "Tipo_Excursionista": "2026-06-01",
+            "Tipo_Turista": "2026-06-01",
+            "Tipo_Viajero": "2026-06-01",
+            "Total": "2026-06-01",
+            "Via_Aérea": "2026-06-01",
+            "Via_Marítima": "2026-06-01",
+            "Via_Terrestre": "2026-06-01"
+          }
+        },
+        "comparacion_previa": {
+          "run_id_previo": "run_20261102_001002_ee857d",
+          "filas_previas": 1680,
+          "caida_filas": 0.0,
+          "aumento_tasa_nulos": 0.0,
+          "aumento_tasa_duplicados": 0.0
+        },
+        "estado": "OK",
+        "hallazgos": []
+      },
+      "pais_mensual.csv": {
+        "perfil": {
+          "fuente": "pais_mensual.csv",
+          "filas": 23887,
+          "columnas_faltantes": [],
+          "filas_con_nulos": 0,
+          "tasa_nulos": 0.0,
+          "claves_duplicadas": 0,
+          "tasa_duplicados": 0.0,
+          "primera_observacion": "2009-01-01",
+          "ultima_observacion_real": "2026-06-01",
+          "cobertura": 1.0,
+          "ultima_observacion_por_serie": {}
+        },
+        "comparacion_previa": {
+          "run_id_previo": "run_20261102_001002_ee857d",
+          "filas_previas": 23887,
+          "caida_filas": 0.0,
+          "aumento_tasa_nulos": 0.0,
+          "aumento_tasa_duplicados": 0.0
+        },
+        "estado": "OK",
+        "hallazgos": []
+      },
+      "via_frontera.csv": {
+        "perfil": {
+          "fuente": "via_frontera.csv",
+          "filas": 3857,
+          "columnas_faltantes": [],
+          "filas_con_nulos": 0,
+          "tasa_nulos": 0.0,
+          "claves_duplicadas": 0,
+          "tasa_duplicados": 0.0,
+          "primera_observacion": "2009-01-01",
+          "ultima_observacion_real": "2026-06-01",
+          "cobertura": 1.0,
+          "ultima_observacion_por_serie": {}
+        },
+        "comparacion_previa": {
+          "run_id_previo": "run_20261102_001002_ee857d",
+          "filas_previas": 3857,
+          "caida_filas": 0.0,
+          "aumento_tasa_nulos": 0.0,
+          "aumento_tasa_duplicados": 0.0
+        },
+        "estado": "OK",
+        "hallazgos": []
+      }
+    }
+  },
+  "resultados": {
+    "estado": "NO_DISPONIBLE",
+    "motivo": "Sin estimaciones que revisar."
+  },
+  "error_predictivo": {
+    "actualizado": false,
+    "motivo": "Sin estimaciones u observaciones disponibles.",
+    "por_serie": {}
+  },
+  "alertas": [],
+  "alerts_count": 0,
+  "all_healthy": true,
+  "ejecucion": {
+    "run_id": "run_20261102_001003_553f9b",
+    "git_commit": "4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302",
+    "start_time": "2026-11-02T00:10:03.104313",
+    "end_time": "2026-11-02T00:10:03.245921",
+    "duration_seconds": 0.14,
+    "stages": [
+      {
+        "stage_name": "Verificación de trazabilidad (MLflow)",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T00:10:03.133293",
+        "end_time": "2026-11-02T00:10:03.147114",
+        "details": "http://127.0.0.1:5001 (config:mlflow.tracking_uri)"
+      },
+      {
+        "stage_name": "Lectura de fuentes",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T00:10:03.184915",
+        "end_time": "2026-11-02T00:10:03.220089",
+        "details": "series_mensuales.csv=5077acdf11d0, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566"
+      },
+      {
+        "stage_name": "Controles de calidad QC-A…F",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T00:10:03.220098",
+        "end_time": "2026-11-02T00:10:03.237179",
+        "details": "QC críticos aprobados"
+      },
+      {
+        "stage_name": "Preparación y división temporal",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T00:10:03.237188",
+        "end_time": "2026-11-02T00:10:03.245566",
+        "details": ""
+      },
+      {
+        "stage_name": "Ajuste de modelo, baselines y factores",
+        "status": "FAILED",
+        "start_time": "2026-11-02T00:10:03.245571",
+        "end_time": "2026-11-02T00:10:03.245911",
+        "details": "Total de viajeros en entrenamiento es 0.0; denominador inválido."
+      }
+    ],
+    "warnings": [],
+    "errors": [
+      "Total de viajeros en entrenamiento es 0.0; denominador inválido."
+    ],
+    "published": false,
+    "status": "FALLIDO",
+    "failed_stage": "Ajuste de modelo, baselines y factores",
+    "publication_decision": "NO_PUBLICADO: fallido en etapa 'Ajuste de modelo, baselines y factores'",
+    "mlflow_run_id": "2c3ca0b765534d7c83997d95074e0aaf",
+    "tracking_uri": "http://127.0.0.1:5001"
+  }
+}

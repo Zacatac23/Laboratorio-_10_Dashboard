@@ -1,0 +1,64 @@
+{
+  "escenario": "vigente",
+  "url": "http://127.0.0.1:8501",
+  "datos_leidos_por_tablero": "/private/tmp/claude-501/-Users-mariorocha-Documents-Programacion-DataScience-Laboratorio--10-Dashboard-/fbfd37b0-8af7-4146-b38e-dfbacf25375d/scratchpad/copia_limpia/data",
+  "generado": "2026-11-02T00:21:46-06:00",
+  "version_en_disco": {
+    "run_id": "run_20261102_001416_15b4a2",
+    "fecha_generacion": "2026-11-02 00:14:16",
+    "sha256_csv": "f201419b9efe1054e60c9f79c7d513a70523dfaf030268561c1c06a50b2376ec"
+  },
+  "navegador": "Google Chrome headless (CDP)",
+  "capturas": [
+    {
+      "archivo": "evidencias/lab11/dashboard/vigente_01_resumen_escritorio.png",
+      "descripcion": "Pestaña Resumen (escritorio 1440x1000): KPIs históricos y aviso de año parcial 2026.",
+      "run_id_version_aprobada": "run_20261102_001416_15b4a2",
+      "avisos": [
+        "2026 es un año parcial: los datos llegan a Jun. Su total anual no equivale a un año completo; no se anualiza."
+      ]
+    },
+    {
+      "archivo": "evidencias/lab11/dashboard/vigente_02_modelos_version_aprobada.png",
+      "descripcion": "Pestaña Modelos: MAE de la versión aprobada, periodo evaluado, fecha de generación, versión y límites (2026 parcial, comparabilidad).",
+      "run_id_version_aprobada": "run_20261102_001416_15b4a2",
+      "metricas": [
+        "Error medio (MAE) — Total de viajeros | 80,366 viajeros/mes",
+        "Periodo evaluado | Abr 2021 – Jun 2026",
+        "Generada el | 2026-11-02 00:14",
+        "Versión del procedimiento | v1.0.0"
+      ]
+    },
+    {
+      "archivo": "evidencias/lab11/dashboard/vigente_03_observado_vs_aprobada.png",
+      "descripcion": "Gráfico V08: serie observada (azul) frente a la estimación aprobada retrospectiva (verde) y banco Lab 10 (líneas discontinuas), diferenciados por leyenda, color y estilo.",
+      "run_id_version_aprobada": "run_20261102_001416_15b4a2"
+    },
+    {
+      "archivo": "evidencias/lab11/dashboard/vigente_04_movil_modelos.png",
+      "descripcion": "Vista móvil (390x844): bloque de la versión aprobada vigente.",
+      "run_id_version_aprobada": "run_20261102_001416_15b4a2",
+      "metricas": [
+        "Error medio (MAE) — Total de viajeros | 80,366 viajeros/mes",
+        "Periodo evaluado | Abr 2021 – Jun 2026",
+        "Generada el | 2026-11-02 00:14",
+        "Versión del procedimiento | v1.0.0"
+      ]
+    }
+  ],
+  "filtros_sin_modelado": {
+    "acciones": {
+      "radio_mapa": true,
+      "restablecer_filtros": true
+    },
+    "antes": {
+      "runs_mlflow": 24,
+      "n_archivos": 31
+    },
+    "despues": {
+      "runs_mlflow": 24,
+      "n_archivos": 31
+    },
+    "sin_cambios": true
+  }
+}

@@ -1,134 +1,177 @@
-# Observatorio de Turismo Sostenible — Laboratorio 10
+# Observatorio de Inteligencia Turística — Guatemala (Laboratorios 10 y 11)
 
-Dashboard de ingreso de viajeros a Guatemala, enero 2009–junio 2026. Describe flujos migratorios/turísticos: no mide capacidad, impactos ambientales/sociales ni causalidad.
+Tablero Streamlit de ingreso mensual de viajeros a Guatemala (enero 2009 – junio 2026) y flujo MLOps reproducible que produce, valida, registra en MLflow, publica y restaura la **estimación aprobada** que consume el tablero.
 
-## Instalación y ejecución
-
-Versión de Python soportada: **3.12.10** (la misma de la imagen Docker `python:3.12.10-slim`). Dependencias directas con versión exacta en `requirements.txt`; transitivas fijadas en `requirements.lock` (generado con `pip freeze` en Linux; `pip check` sin conflictos). El resumen anterior mencionaba Python 3.14.7: esa combinación no se volvió a probar para el Laboratorio 11.
-
-```bash
-python3.12 -m venv .venv
-source .venv/bin/activate          # Windows (PowerShell): .venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt -c requirements.lock
-python -m streamlit run app.py
-```
-
-Abrir http://localhost:8501; detener con Ctrl+C. Las rutas se resuelven desde `app.py`, incluso al iniciar desde otra carpeta. `DATA_DIR` permite usar otro directorio de CSV sin cambiar el código.
-
-## Estructura y navegación
-
-- `app.py`: cuatro pestañas, filtros y enlaces. Resumen: histórico, regiones, distribución mensual regional. Explorar datos: países, evolución del país, vías/fronteras y calendario. Modelos: curvas y errores. Acerca de: fuentes y límites.
-- `data_logic.py`: carga validada, agregaciones, variación comparable y métricas sobre pares coincidentes. `ui_components.py`, `styles.css` y `.streamlit/config.toml`: presentación.
-- `data/`: cinco CSV originales, conservados byte por byte. `series_mensuales` tiene serie/fecha/viajeros; `pais_mensual`, fecha/pais/region/viajeros; `via_frontera`, fecha/via/frontera/viajeros; `pronosticos`, serie/modelo/fecha/prediccion; `catch22_pca`, serie/PC1/PC2/cluster. PCA se conserva, pero no tiene vista en este tablero.
-- `preparar_datos.py`: preparación desde Excel INGUAT declarado; requiere la base original no incluida. No se necesita ejecutarlo para usar los CSV existentes.
-- `EXPORTAR_DESDE_NOTEBOOKS.md`: guía de reutilización de salidas ya existentes; no demuestra el entrenamiento original.
-- `tests/`: pruebas automatizadas, métricas de referencia y prueba opcional de navegador. `evidencias/`: resultados/capturas de esta corrección.
-
-## Interacciones
-
-El selector lateral permite mostrar/ocultar cada una de las nueve vistas; no cuenta como gráfico. Las barras de país actualizan su historia; las de región actualizan su distribución mensual. Doble clic en el fondo limpia la selección. También hay selectores accesibles. Si se marcan varios puntos se utiliza el último. Cambiar región o fechas descarta selecciones obsoletas; Restablecer filtros recupera los valores iniciales. El treemap desglosa una vía; «Volver a todas las vías» regresa al resumen.
-
-Países/regiones no tienen categoría migratoria. Vías/fronteras solo admite fechas, pues carece de columnas de procedencia. Modelos tiene su propia serie y periodo de evaluación; el filtro lateral no altera las métricas. El último año se identifica como parcial.
-
-## Cálculos y límites
-
-Total = suma observada del intervalo. Variación = porcentaje entre los meses disponibles del año final y los mismos meses del año previo; sin base completa, muestra «Sin datos para comparación». Agregación anual suma observados sin extrapolar ni convertir años en meses. No hay KPI de futuro: las predicciones guardadas terminan en junio 2026.
-
-MAE = promedio de |predicción − observado|; RMSE = raíz del promedio de sus cuadrados. Se usan fechas comunes desde abril 2021 y se informa N, Inicio y Fin. Ambos se expresan en viajeros/mes, con redondeo igual a la auditoría anterior. Datos actuales: 42 pares serie/modelo, 63 meses cada uno, 586 pronósticos negativos. Se preservan valores negativos para reproducir evaluación y se advierte que no representan viajeros posibles.
-
-La fuente Excel, el origen exacto de L1/L2, particiones originales, parámetros y cambio metodológico 2023 están pendientes de documentación. Las fracciones de viajeros se conservan aunque se redondeen visualmente. No existen intervalos de confianza exportados. Una fecha ausente no equivale a cero. Archivo requerido vacío, tipos inválidos, nulos, duplicados y conteos históricos negativos producen un mensaje de validación, sin descartes silenciosos; fallos en archivos opcionales omiten solo sus vistas.
-
-## Pruebas y documentación
-
-```bash
-python -B -m unittest discover -s tests -v
-```
-
-No entrena modelos ni modifica CSV originales. Los fixtures usan carpetas temporales. Opcionalmente, con Firefox instalado:
-
-```bash
-python -B tests/browser_smoke.py "$PWD"
-```
-
-La prueba abre servidor/perfil temporales y escribe capturas en `evidencias/`. Consultar `PRUEBAS_LAB10.md`, `VISUALIZACIONES_FINAL.md`, `MODELOS_Y_FUENTES.md`, `AUDITORIA_CORRECCIONES_LAB10.md` y `AJUSTES_PENDIENTES_DOCUMENTO_DISENO.md`. No se certifican entrega administrativa ni PDF de diseño.
-
+Documentos relacionados: memoria técnica [AVANCE_LABORATORIO_11.md](AVANCE_LABORATORIO_11.md) · auditoría [docs/auditoria_final_lab11.md](docs/auditoria_final_lab11.md) · evidencias [docs/guia_evidencias_lab11.md](docs/guia_evidencias_lab11.md) · resumen de entrega [docs/resumen_entrega_lab11.md](docs/resumen_entrega_lab11.md) · contratos de datos [docs/contratos_datos_mlops.md](docs/contratos_datos_mlops.md) · seguridad [docs/seguridad_repositorio.md](docs/seguridad_repositorio.md) · informe [reporte_final_lab11/](reporte_final_lab11/).
 
 ---
 
+## 1. Objetivo, alcance y limitaciones
 
-# MLOps aplicado al Observatorio — Laboratorio 11
+- **Objetivo:** ofrecer a directivos una vista histórica de flujos de viajeros y una estimación retrospectiva aprobada, con su error, su versión y sus límites, producida por un procedimiento auditable.
+- **Alcance:** variable `viajeros` (viajeros/mes) para `Total` y siete subseries (tres vías de ingreso y cuatro categorías migratorias). Modelo activo: Promedio Histórico Mensual con reparto proporcional histórico para las subseries.
+- **Limitaciones:** describe flujos, no capacidad, impactos ambientales/sociales ni causalidad. 2026 es un año parcial (hasta junio). La estimación aprobada es retrospectiva (2021-04 a 2026-06), no un pronóstico futuro. El cambio metodológico de 2023 y la comparabilidad institucional de ene–feb 2026 no están certificados por la fuente.
 
-Flujo reproducible de preparación de datos, controles de calidad, evaluación temporal, trazabilidad en MLflow, monitoreo, publicación controlada y restauración de versiones aprobadas. Memoria técnica: [AVANCE_LABORATORIO_11.md](AVANCE_LABORATORIO_11.md). Contratos de datos: [docs/contratos_datos_mlops.md](docs/contratos_datos_mlops.md). Estado verificado: [docs/estado_verificacion_mlops.md](docs/estado_verificacion_mlops.md). Seguridad del repositorio: [docs/seguridad_repositorio.md](docs/seguridad_repositorio.md).
+## 2. Estructura y fuentes
 
-## Pipeline batch
+```
+app.py, data_logic.py, ui_components.py, mapa_guatemala.py, styles.css   # tablero
+pipeline.py, src/                    # pipeline MLOps (quality_checks, model_engine, monitoring, tracking, restore_version)
+config/pipeline_config.yaml          # configuración única del pipeline
+tests/                               # pruebas unittest (99)
+scripts/lab11/                       # scripts que generan las evidencias del Lab 11
+Dockerfile, docker-compose.yml, .dockerignore, .env.example
+data/                                # fuentes y versión aprobada (montado en contenedores; no va en la imagen)
+evidencias/lab11/                    # evidencias verificadas (tests, Docker, MLflow, recuperación, tablero)
+docs/, reporte_final_lab11/, reporte_final_lab10/
+```
+
+| Fuente | Columnas | Uso |
+|---|---|---|
+| `data/series_mensuales.csv` | serie, fecha, viajeros | Modelado, QC-A…F, tablero |
+| `data/pais_mensual.csv` | fecha, pais, region, viajeros | Tablero; QC de contexto y monitoreo |
+| `data/via_frontera.csv` | fecha, via, frontera, viajeros | Tablero; QC de contexto y monitoreo |
+| `data/pronosticos.csv` | serie, modelo, fecha, prediccion | Banco histórico de comparación del Lab 10 (no es la versión aprobada) |
+| `data/catch22_pca.csv` | serie, PC1, PC2, cluster | Conservado; sin vista |
+| `data/estimaciones_aprobadas.csv` + `.manifest.json` | ver contratos | Única versión que el tablero muestra como aprobada |
+
+**Datos de ejemplo:** las pruebas generan series **sintéticas** en carpetas temporales (`tests/test_mlops_integracion.py::synthetic_series`); nunca leen ni escriben `data/` salvo la prueba Docker opcional, que corre en modo `--no-publish`.
+
+## 3. Requisitos previos
+
+- Python **3.12.10** (imagen Docker). Verificado también con 3.12.13 en macOS.
+- Docker Engine ≥ 24 y Docker Compose v2 (verificado con Engine 29.8.0 / Compose v5.5.1).
+- ~2 GB libres (imagen de 1.61 GB y volumen MLflow de pocos MB, medidos en la verificación).
+- Acceso autorizado a los CSV institucionales en `data/` (ver §12).
+
+## 4. Configuración
+
+`config/pipeline_config.yaml` (comentado en el propio archivo):
+
+| Bloque | Claves principales | Significado |
+|---|---|---|
+| `pipeline` | `random_seed: 42`, `version: 1.0.0` | Semilla y versión del procedimiento |
+| `paths` | `raw_data_dir`, `output_dir`, `backup_dir`, `reports_dir`, `logs_dir` | Rutas relativas al repositorio |
+| `scope` | `target_series`, `secondary_series` | Serie objetivo y subseries |
+| `temporal_split` | `train_start/end`, `eval_start/end`, `excluded_evaluation_periods` | Ajuste 2009-01–2021-03, evaluación 2021-04–2026-06, sin exclusiones |
+| `models` | `active_model: historical_mean`, parámetros de Holt-Winters | Modelo activo y referencias |
+| `quality_thresholds` | `methodological_tolerance_pct: 0.02`, `max_mae_tolerance: 150000`, `max_rmse_tolerance: 180000` | QC-F y regla de aceptación |
+| `monitoring` | `expected_coverage_end`, `max_relative_variation_alert: 0.50`, `quality.*` | Umbrales de monitoreo |
+| `mlflow` | `tracking_uri`, `experiment_name`, `connect_retries` | Estrategia de tracking |
+
+Variables de entorno (ver [.env.example](.env.example)): `MLFLOW_TRACKING_URI` (prioridad sobre el YAML), `MLFLOW_CONNECT_RETRIES`, `MLFLOW_CONNECT_DELAY`, `GIT_COMMIT` (commit declarado en contenedor), `OBS_DATA_DIR`, `OBS_LOGS_DIR`, `OBS_REPORTS_DIR`, `OBS_MLFLOW_STORE`, `MLFLOW_PORT`, `DASHBOARD_PORT`, `RESTORE_OPERATOR`, `TZ`, `DATA_DIR` (tablero).
+
+## 5. Instalación local y ejecución del pipeline
 
 ```bash
-# Exactamente una bandera es obligatoria
-python pipeline.py --config config/pipeline_config.yaml --publish      # publica si el candidato es aceptado
+python3.12 -m venv .venv
+source .venv/bin/activate              # PowerShell: .venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt -c requirements.lock
+
 python pipeline.py --config config/pipeline_config.yaml --no-publish   # dry-run: no toca la versión aprobada
+python pipeline.py --config config/pipeline_config.yaml --publish      # publica si el candidato es aceptado
+python -m streamlit run app.py                                          # tablero en http://localhost:8501
 ```
 
-Códigos de salida: `0` aprobado, `1` rechazado por la regla de aceptación, `2` fallo (calidad u otro error), `3` bloqueado porque MLflow no garantiza la trazabilidad.
+Exactamente una de `--publish`/`--no-publish` es obligatoria. Códigos de salida: `0` aprobado, `1` rechazado, `2` fallo, `3` bloqueado por trazabilidad. En local, MLflow usa `sqlite:///mlflow_store/mlflow.db` (UI: `mlflow ui --backend-store-uri sqlite:///mlflow_store/mlflow.db --port 5000`).
 
-Cada ejecución (aprobada, rechazada o fallida) queda en MLflow con: `run_id`, inicio/fin y estado (`pipeline.status`), commit real de `git rev-parse HEAD` o `NO_DISPONIBLE`, SHA-256 y ruta lógica de cada fuente usada, configuración y su hash, huella SHA-256 del código, versiones de paquetes, semilla, ventanas de ajuste/evaluación y exclusiones, factores de reparto, perfil del modelo, reporte QC-A…F, regla y umbrales de aceptación, métricas reales del modelo y del baseline en los mismos meses, monitoreo, auditoría y, si se publica, el manifiesto. Un fallo antes de evaluar no registra MAE/RMSE.
-
-**Política de trazabilidad:** el CSV exacto que se publicará y su manifiesto se registran en MLflow y se releen antes del reemplazo atómico. Si MLflow no responde (con reintentos) o un artefacto no queda persistido, no se publica.
-
-## MLflow: una sola estrategia
-
-| Entorno | Tracking | Artefactos | Cómo se elige |
-| --- | --- | --- | --- |
-| Local | `sqlite:///mlflow_store/mlflow.db` | `mlflow_store/artifacts` | `mlflow.tracking_uri` del YAML |
-| Docker Compose | `http://mlflow:5000` (servidor) | `/mlflow/artifacts` servidos por HTTP | `MLFLOW_TRACKING_URI` (tiene prioridad sobre el YAML) |
-
-UI local: `mlflow ui --backend-store-uri sqlite:///mlflow_store/mlflow.db --port 5000`. En Compose: http://localhost:5000.
-
-## Docker Compose
+## 6. Docker Compose
 
 ```bash
-docker compose up -d --build                 # MLflow (127.0.0.1:5000) y tablero (127.0.0.1:8501)
-GIT_COMMIT=$(git rev-parse HEAD) docker compose run --rm pipeline            # publica si se aprueba
+docker compose up -d --build                                          # mlflow (127.0.0.1:5000) y dashboard (127.0.0.1:8501)
+docker compose ps
+GIT_COMMIT=$(git rev-parse HEAD) docker compose run --rm pipeline     # pipeline con publicación controlada
 docker compose run --rm pipeline python pipeline.py --config config/pipeline_config.yaml --no-publish
-docker compose down                          # detiene; datos, respaldos y MLflow persisten
+docker compose down                                                   # parada segura: datos, respaldos y MLflow persisten
 ```
 
-En PowerShell: `$env:GIT_COMMIT = git rev-parse HEAD` antes de `docker compose run`. Sin esa variable, el commit queda registrado como `NO_DISPONIBLE` (la imagen no incluye `.git`). Un commit declarado así se marca como «no verificado en contenedor».
+- **No usar `docker compose down -v`**: borra el volumen `observatorio_turismo_mlflow_store` (base y artefactos MLflow).
+- La imagen no contiene datos (`.dockerignore` es lista blanca de código); `data/`, `logs/` y `reports/` se montan desde el host. El tablero monta `data/` en solo lectura.
+- En PowerShell: `$env:GIT_COMMIT = git rev-parse HEAD`. Sin la variable, el commit queda `NO_DISPONIBLE`.
+- Verificación automatizada desde copia limpia: `bash scripts/lab11/docker_verificacion.sh <dir_copia> [puerto_mlflow] [--snapshot]`.
 
-- La imagen **no contiene datos**: `.dockerignore` es una lista blanca de código. `data/`, `logs/` y `reports/` se montan desde el host; las rutas se cambian con `OBS_DATA_DIR`, `OBS_LOGS_DIR`, `OBS_REPORTS_DIR` (ver [.env.example](.env.example)). El tablero monta `data/` en solo lectura.
-- MLflow guarda SQLite y artefactos en el volumen `mlflow_store` (o la ruta en `OBS_MLFLOW_STORE`). El servicio `pipeline` espera al healthcheck (`/health`) del servidor y además reintenta la conexión (`MLFLOW_CONNECT_RETRIES`).
-- **No usar `docker compose down -v`**: borra el volumen con la base y los artefactos de MLflow. Los respaldos de versiones aprobadas viven en `data/backup_aprobadas/` del host.
-- Contenedores sin privilegios (usuario `app`, uid 1000) y puertos publicados solo en `127.0.0.1`. Zona horaria: `TZ` (por defecto `America/Guatemala`), para que la fecha de generación no quede en UTC.
+## 7. Acceso y ubicación de salidas
 
-## Monitoreo
+| Recurso | Ubicación |
+|---|---|
+| Tablero | http://localhost:8501 |
+| MLflow UI | http://localhost:5000 (o `MLFLOW_PORT`) |
+| Versión aprobada | `data/estimaciones_aprobadas.csv` y `.manifest.json` |
+| Respaldos | `data/backup_aprobadas/` |
+| Reportes por run (QC, candidatos, aceptación, monitoreo) | `reports/` |
+| Auditoría por run y de restauraciones | `logs/audit_<run_id>.json`, `logs/restore_audit.jsonl` |
+| Almacén MLflow | local `mlflow_store/`; Docker volumen `observatorio_turismo_mlflow_store` |
 
-`reports/monitoring_<run_id>.json` en cada ejecución (también en las fallidas):
+## 8. Controles de calidad y regla de aceptación
 
-1. **Actualización:** última observación real de cada fuente frente a `monitoring.expected_coverage_end` (cobertura declarada de la entrega, no la fecha de hoy) y última estimación producida frente a `temporal_split.eval_end`.
-2. **Calidad:** cobertura, tasa de nulos y duplicados con umbrales en `monitoring.quality`, y comparación con el JSON de la ejecución previa si existe.
-3. **Resultados:** no finitos, negativos y variación **intermensual** mayor a 0.50. En el Total observado 2009–2019, el percentil 95 de la variación intermensual fue 32.4 % y solo 2 de 131 meses superaron 50 %. Una base cero se informa como variación no definida, sin dividir. Una alerta de variación es de revisión, no prueba pérdida de precisión.
+| Control | Detiene la ejecución si… |
+|---|---|
+| QC-A Columnas y tipos | falta `serie`/`fecha`/`viajeros` o un tipo no es convertible |
+| QC-B Fechas y cobertura | fecha inválida, día ≠ 1, hueco en la serie objetivo o ventana incompleta (no se imputa cero) |
+| QC-C Unicidad | hay claves (`serie`,`fecha`) duplicadas |
+| QC-D Faltantes | hay nulos en columnas indispensables |
+| QC-E Valores | hay NaN, infinitos o negativos (el cero es válido) |
+| QC-F Regla metodológica | Total difiere más de 2 % de Aérea+Terrestre+Marítima, o faltan insumos (`NO_VERIFICABLE`) |
 
-El error predictivo solo se recalcula con meses que tienen observación y estimación.
+Las fuentes de contexto (`pais_mensual`, `via_frontera`) generan **advertencias**, no bloqueos (`context_sources_critical: false`). Un Total de entrenamiento igual a cero detiene la corrida en el cálculo de factores.
 
-## Restauración de una versión aprobada
+**Regla de aceptación (predefinida):** QC críticos aprobados + salida íntegra (todas las series, finita, no negativa) + MAE ≤ 150,000 + RMSE ≤ 180,000 viajeros/mes. Superar al baseline Seasonal Naive se registra pero no es obligatorio. Los umbrales se fijaron antes de evaluar y no se ajustan después: el Total observado en el periodo evaluado promedia 276,685 viajeros/mes (mediana 279,790; rango 74,914–526,190), así que 150 mil acota errores de alrededor de la mitad del nivel típico y descarta candidatos claramente degradados (Holt-Winters, 302,827, se rechazaría).
 
-Cada publicación respalda la versión vigente (CSV y manifiesto) en `data/backup_aprobadas/`. El nombre incluye el `run_id` de origen.
+## 9. Validación temporal y métricas
+
+- Backtest de origen fijo: ajuste 2009-01–2021-03, evaluación de los 63 meses 2021-04–2026-06 con observación; **ene–feb 2026 se evalúan** (tienen dato). Ningún parámetro usa meses evaluados (prueba `SinFugaTemporal`).
+- MAE y RMSE en viajeros/mes; `ape_eps_pct = mean(|e|/(|y|+1))·100` (no es MAPE convencional).
+- Resultado vigente: MAE 80,365.74 · RMSE 94,175.26 (N=63) frente a Seasonal Naive 235,730.91 · 253,203.39 en los mismos meses.
+- Backtest complementario de 8 cortes a 12 meses: el baseline supera al modelo activo en 6 de 8 (riesgo documentado en la auditoría).
+
+## 10. Auditoría de runs, equivalencia y recuperación
 
 ```bash
+# Equivalencia de dos runs registrados (descarga artefactos del servidor y compara con np.allclose)
+python scripts/lab11/reproducibilidad.py http://127.0.0.1:5000 <run_id_1> <run_id_2>
+
+# Respaldos y restauración
 python -m src.restore_version --list
 python -m src.restore_version --backup <archivo.csv> --reason "motivo" [--operator nombre]
-# En Docker: docker compose run --rm --no-deps pipeline python -m src.restore_version --list
+docker compose run --rm --no-deps pipeline python -m src.restore_version --list
 ```
 
-Antes de restaurar se valida el nombre y la ruta (sin `..`, rutas absolutas ni enlaces fuera del directorio), el esquema completo, que todas las filas estén `APROBADO`, que haya un único `run_id` y, si existe manifiesto, el SHA-256. La versión vigente se respalda (`..._prerestauracion.csv`) y el reemplazo es atómico. La auditoría queda en `logs/restore_audit.jsonl`. Las fuentes institucionales no se modifican.
+En la UI de MLflow: experimento `Observatorio_Turismo_Guatemala`, filtrar por `tags.pipeline.status`, revisar parámetros `*.sha256` y artefactos (`estimaciones/`, `aceptacion/`, `calidad/`, `auditoria/`). Tras publicar o restaurar, recargar el tablero: la pestaña Modelos muestra la fecha de generación y el `run_id` (ayuda de «Versión del procedimiento») de la versión vigente.
 
-## Tablero
-
-La pestaña Modelos lee solo `data/estimaciones_aprobadas.csv` y su manifiesto `estimaciones_aprobadas.manifest.json`. Las métricas solo se muestran si el SHA-256 y el `run_id` del manifiesto coinciden con el CSV. Muestra el MAE de la versión aprobada, el periodo evaluado real, la fecha de generación (no el último mes de datos) y la versión del procedimiento. `pronosticos.csv` se presenta aparte como «Banco histórico de comparación (Lab 10)». Si la versión falta o es inválida, aparece un aviso y las vistas históricas siguen funcionando. No hay caché: una publicación o restauración se ve al recargar la página.
-
-## Pruebas
+## 11. Pruebas y fallo controlado sin tocar producción
 
 ```bash
-python -B -m unittest discover -s tests -v                           # 89 pruebas (1 omitida sin Docker)
+python -B -m unittest discover -s tests -v                                   # 99 pruebas (1 omitida sin Docker)
 RUN_DOCKER_TESTS=1 python -B -m unittest tests.test_mlops_integracion.DockerCompose -v
-python -m src.test_controlled_failure                                 # fallo controlado y recuperación
+python scripts/lab11/run_tests_evidencia.py [--docker]                       # suite + evidencia PASS/FAIL/SKIP
+python scripts/lab11/fallos_controlados.py http://127.0.0.1:5000             # fallos, monitoreo y restauración en copia temporal
+python -m src.test_controlled_failure                                        # prueba original (copia temporal)
 ```
+
+Todos los fixtures viven en carpetas temporales; los scripts de fallo copian `data/` a un directorio temporal y verifican al final que `data/` del repositorio no cambió.
+
+## 12. Datos institucionales, repositorio y permisos
+
+- El repositorio debe ser **privado** (hoy los repositorios remotos son públicos: ver [docs/seguridad_repositorio.md](docs/seguridad_repositorio.md); el cambio de visibilidad lo hace cada dueño).
+- `.gitignore` excluye secretos (`.env`, claves), el almacén MLflow (`mlflow_store/`, `mlruns/`, `*.db`), `logs/`, `reports/` y `data/backup_aprobadas/`. `.dockerignore` impide que datos o secretos entren a la imagen.
+- Las capturas y artefactos MLflow contienen agregados institucionales: compartir solo por el medio autorizado del curso.
+- Cada integrante debe contribuir con commits identificables (autor y correo propios).
+
+## 13. Limitaciones conocidas y solución de problemas
+
+| Síntoma | Causa / acción |
+|---|---|
+| `BLOQUEADO_TRAZABILIDAD` (código 3) | MLflow no responde: `docker compose up -d mlflow` y reintentar; revisar `MLFLOW_TRACKING_URI` |
+| Tablero: «Aún no hay una versión aprobada…» | Falta `data/estimaciones_aprobadas.csv`: ejecutar el pipeline con `--publish` o restaurar un respaldo |
+| Tablero: métricas «No verificable» | El manifiesto no coincide con el CSV: restaurar un respaldo válido |
+| Puerto 5000 ocupado (macOS AirPlay Receiver) | `MLFLOW_PORT=5001 docker compose up -d`; el compose acepta ese puerto en `--allowed-hosts` |
+| Puerto 8501 ocupado | `DASHBOARD_PORT=8502` |
+| Volumen MLflow vacío | Se perdió el almacén (p. ej. `down -v`): restaurar desde el `.tgz` exportado (ver guía de evidencias) o re-ejecutar el pipeline |
+| Hash de CSV distinto en Windows | `core.autocrlf` convierte LF→CRLF; el pipeline registra el hash de los bytes leídos |
+| Rutas Windows/Linux | Las rutas del YAML son relativas con `/`; en PowerShell usar `$env:VAR=...` |
+| Lecturas que se cuelgan en macOS | La carpeta está en iCloud con «Optimizar almacenamiento»: marcar «Mantener descargado» o crear el `.venv` fuera de iCloud |
+| Holt-Winters da otro MAE en otro equipo | Optimizador numérico de statsmodels; no es el modelo activo |
+
+### Tablero (Laboratorio 10)
+
+Cuatro pestañas (Resumen, Explorar datos, Modelos, Acerca de), nueve vistas ocultables y filtros laterales que solo afectan los históricos. La pestaña Modelos lee únicamente la versión aprobada y su manifiesto; `pronosticos.csv` se presenta aparte como banco histórico. Cambiar filtros no entrena modelos ni crea runs (verificado: 24 runs antes y después). Variación interanual solo con meses comparables; una fecha ausente no equivale a cero. Prueba de navegador opcional del Lab 10: `python -B tests/browser_smoke.py "$PWD"` (Firefox).

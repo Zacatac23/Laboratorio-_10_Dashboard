@@ -1,0 +1,31 @@
+{
+  "fuentes": [
+    {
+      "nombre": "series_mensuales.csv",
+      "rol": "modelado",
+      "ruta_logica": "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos_v48sbhxa/data/series_mensuales.csv",
+      "sha256": "fda116996b5637d6c7e44ec7ffbecd0a8dee97545654135fd8ff6e3f9dc381bd",
+      "bytes": 63622,
+      "filas": 1681,
+      "clave": "series"
+    },
+    {
+      "nombre": "pais_mensual.csv",
+      "rol": "contexto (QC y monitoreo)",
+      "ruta_logica": "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos_v48sbhxa/data/pais_mensual.csv",
+      "sha256": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8",
+      "bytes": 1110590,
+      "filas": 23887,
+      "clave": "pais"
+    },
+    {
+      "nombre": "via_frontera.csv",
+      "rol": "contexto (QC y monitoreo)",
+      "ruta_logica": "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos_v48sbhxa/data/via_frontera.csv",
+      "sha256": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359",
+      "bytes": 196254,
+      "filas": 3857,
+      "clave": "via"
+    }
+  ]
+}

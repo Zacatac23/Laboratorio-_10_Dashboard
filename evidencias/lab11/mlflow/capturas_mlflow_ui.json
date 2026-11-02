@@ -1,0 +1,30 @@
+{
+  "generado": "2026-11-02T00:39:28-06:00",
+  "mlflow_url": "http://127.0.0.1:5001",
+  "capturas": [
+    {
+      "archivo": "evidencias/lab11/mlflow/ui_01_experimento_runs.png",
+      "ruta_ui": "/#/experiments/1/runs",
+      "descripcion": "Experimento Observatorio_Turismo_Guatemala en el servidor MLflow de Docker Compose: lista de runs.",
+      "texto_esperado_encontrado": true
+    },
+    {
+      "archivo": "evidencias/lab11/mlflow/ui_02_comparacion_dos_runs.png",
+      "ruta_ui": "/#/compare-runs?runs=[\"7787c39f59d64cf69394bde8de3ea709\", \"575d18e094f245f1bf51697e3cd11381\"]&experiments=[\"1\"]",
+      "descripcion": "Comparación de las dos ejecuciones dry-run usadas para reproducibilidad (tabla de detalles y parámetros; el gráfico de coordenadas paralelas requiere WebGL, no disponible en Chrome headless).",
+      "texto_esperado_encontrado": true
+    },
+    {
+      "archivo": "evidencias/lab11/mlflow/ui_03_run_detalle.png",
+      "ruta_ui": "/#/experiments/1/runs/7787c39f59d64cf69394bde8de3ea709",
+      "descripcion": "Detalle de un run: parámetros (huellas SHA-256, split, factores), métricas y etiquetas.",
+      "texto_esperado_encontrado": true
+    },
+    {
+      "archivo": "evidencias/lab11/mlflow/ui_04_run_artefactos.png",
+      "ruta_ui": "/#/experiments/1/runs/7787c39f59d64cf69394bde8de3ea709/artifacts",
+      "descripcion": "Artefactos registrados del run (configuración, fuentes, calidad, modelo, estimaciones, aceptación, monitoreo, auditoría).",
+      "texto_esperado_encontrado": true
+    }
+  ]
+}
