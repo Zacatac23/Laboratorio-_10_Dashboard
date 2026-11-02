@@ -13,4 +13,8 @@ mlflow.db
 evidencias/
 reporte_final_lab10/
 .pytest_cache/
+# Microdatos institucionales: no se copian a la imagen; se montan por volumen
+data/
+logs/
+reports/
 

@@ -66,10 +66,12 @@ Consulte la memoria técnica completa en [AVANCE_LABORATORIO_11.md](file:///c:/U
 El pipeline desacopla totalmente el cómputo y calibración de la interfaz de usuario:
 
 ```bash
-# 1. Ejecución completa con validación, evaluación y publicación controlada
+# Obligatorio indicar exactamente una bandera: --publish o --no-publish
+
+# 1. Ejecución con publicación atómica si el candidato es aceptado
 python pipeline.py --config config/pipeline_config.yaml --publish
 
-# 2. Modo evaluación sin alterar la versión aprobada vigente (dry-run)
+# 2. Dry-run: evalúa y deja candidatos/reportes sin alterar estimaciones_aprobadas.csv
 python pipeline.py --config config/pipeline_config.yaml --no-publish
 ```
 
