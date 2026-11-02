@@ -1,6 +1,6 @@
 # Resumen de entrega — Laboratorio 11
 
-Fecha de verificación: 2026-11-02. Detalle por requisito: [auditoria_final_lab11.md](auditoria_final_lab11.md). Índice de evidencias: [guia_evidencias_lab11.md](guia_evidencias_lab11.md).
+Fecha de verificación: 2026-11-02. Enunciado: `Laboratorio_11_MLOps_2026.pdf`. Detalle por inciso: [auditoria_final_lab11.md](auditoria_final_lab11.md). Índice de evidencias: [guia_evidencias_lab11.md](guia_evidencias_lab11.md).
 
 ## Implementación definitiva
 
@@ -8,20 +8,19 @@ Fecha de verificación: 2026-11-02. Detalle por requisito: [auditoria_final_lab1
 - Tablero Streamlit que solo muestra la versión aprobada verificada por SHA-256 y `run_id`.
 - Docker Compose con `mlflow` (volumen persistente), `dashboard` y `pipeline`.
 
-## Cambios de esta etapa (sin commitear al momento de verificar)
+## Cambios de esta etapa
+
+Commiteados por el equipo en `571b479` (correcciones de pipeline, Compose y estilos) y `bced471` (pruebas, scripts, documentación, evidencias e informe).
+
+Pendientes de commit tras cotejar con el enunciado oficial:
 
 | Archivo | Tipo |
 |---|---|
-| `src/pipeline.py` | Corrección: restituir `MLFLOW_TRACKING_URI`/`MLFLOW_EXPERIMENT_ID` tras cada corrida |
-| `docker-compose.yml` | Corrección: `--allowed-hosts` con `${MLFLOW_PORT:-5000}` |
-| `styles.css` | Corrección visual: valores de métricas sin truncar |
-| `tests/test_mlops_integracion.py` | Prueba Docker con `MLFLOW_PORT` |
-| `tests/test_lab11_verificacion.py` | Nuevo (10 pruebas) |
-| `scripts/lab11/` | Nuevos: `run_tests_evidencia.py`, `_runner_estructurado.py`, `docker_verificacion.sh`, `reproducibilidad.py`, `fallos_controlados.py`, `backtest_cortes_multiples.py`, `capturas_dashboard.py`, `capturas_mlflow.py` |
-| `README.md`, `AVANCE_LABORATORIO_11.md` | Reescritos con resultados reales |
-| `docs/auditoria_final_lab11.md`, `docs/guia_evidencias_lab11.md`, `docs/resumen_entrega_lab11.md` | Nuevos |
-| `evidencias/lab11/` | Nuevas evidencias |
-| `reporte_final_lab11/` | Informe PDF, fuente `.tex` y diagrama `.dot`/`.pdf` |
+| `src/quality_checks.py` | Corrección (inciso 3.1 e): QC-E verifica el denominador del factor de reparto |
+| `tests/test_lab11_verificacion.py` | Prueba `DenominadorCeroEnQC` (suite: 100 pruebas) |
+| `scripts/lab11/sensibilidad_ene_feb_2026.py` | Nuevo: sensibilidad de la evaluación a ene–feb 2026 |
+| `README.md`, `AVANCE_LABORATORIO_11.md`, `docs/*.md`, `reporte_final_lab11/*` | Matriz e informe con la numeración oficial |
+| `evidencias/lab11/` | Verificación Docker desde el commit `bced471`, fallos controlados y pruebas re-ejecutados, sensibilidad |
 
 ## Comandos reproducibles
 
@@ -29,10 +28,11 @@ Fecha de verificación: 2026-11-02. Detalle por requisito: [auditoria_final_lab1
 python -m pip install -r requirements.txt -c requirements.lock
 python scripts/lab11/run_tests_evidencia.py                       # suite + evidencia
 MLFLOW_PORT=5001 python scripts/lab11/run_tests_evidencia.py --docker
-bash scripts/lab11/docker_verificacion.sh /tmp/obs_limpia 5001    # tras commitear (sin --snapshot)
+bash scripts/lab11/docker_verificacion.sh /tmp/obs_limpia 5001    # clon limpio del último commit
 python scripts/lab11/reproducibilidad.py http://127.0.0.1:5001 <run_1> <run_2>
 python scripts/lab11/fallos_controlados.py http://127.0.0.1:5001
 python scripts/lab11/backtest_cortes_multiples.py
+python scripts/lab11/sensibilidad_ene_feb_2026.py
 ```
 
 (En equipos donde el puerto 5000 esté libre, omitir `5001`/`MLFLOW_PORT`.)
@@ -43,11 +43,14 @@ python scripts/lab11/backtest_cortes_multiples.py
 |---|---|---|---|
 | Reproducibilidad 1 | `run_20261102_001410_ce7eea` | `7787c39f59d64cf69394bde8de3ea709` | APROBADO_NO_PUBLICADO |
 | Reproducibilidad 2 | `run_20261102_001413_338a6e` | `575d18e094f245f1bf51697e3cd11381` | APROBADO_NO_PUBLICADO |
-| Publicación en copia limpia (Docker) | `run_20261102_001416_15b4a2` | `255d7914ecb045edb435d5a6a7458da0` | APROBADO_PUBLICADO |
+| Publicación en copia limpia (Docker, antes del commit) | `run_20261102_001416_15b4a2` | `255d7914ecb045edb435d5a6a7458da0` | APROBADO_PUBLICADO |
+| Copia limpia del commit `bced471`: dry-run 1 | `run_20261102_013222_08ad93` | `3e1a9132d2fa477bbd8fdfe61cf61576` | APROBADO_NO_PUBLICADO |
+| Copia limpia del commit `bced471`: dry-run 2 | `run_20261102_013225_d69796` | `292cbce066cc4f6eb286f3b9a582c7ae` | APROBADO_NO_PUBLICADO |
+| Copia limpia del commit `bced471`: publicación | `run_20261102_013228_107c2c` | `5b66ca9cffb24a019dbcc52e87884e14` | APROBADO_PUBLICADO |
 | Versión aprobada versionada en `data/` (versión A) | `run_20261101_222030_d65c3b` | (registrado en la etapa previa, otro equipo) | APROBADO |
-| Recuperación tras fallos (copia temporal, versión B) | `run_20261102_001003_405131` | ver `fallos_controlados.json` | APROBADO_PUBLICADO |
+| Recuperación tras fallos (copia temporal, versión B) | `run_20261102_013359_237d8b` | `57abd5176cbb4a7d9b1006ba13a2b04b` | APROBADO_PUBLICADO |
 
-Fallos controlados (experimento `Observatorio_Turismo_Guatemala_pruebas_controladas`): `run_20261102_001002_4cea5b` (columna ausente), `run_20261102_001002_5ddc24` (duplicado), `run_20261102_001002_ee857d` (negativo), `run_20261102_001003_553f9b` (denominador cero), `run_20261102_001003_ec1d34` (escritura), `run_20261102_001004_d59228` (MLflow caído, solo auditoría local), `run_20261102_001004_4cceaf` (artefacto no persistido).
+Fallos controlados (experimento `Observatorio_Turismo_Guatemala_pruebas_controladas`, código con la corrección de QC-E): `run_20261102_013358_923651` (columna ausente, QC-A), `run_20261102_013359_fdce92` (duplicado, QC-C), `run_20261102_013359_167547` (negativo, QC-E), `run_20261102_013359_c9d842` (denominador cero, QC-E), `run_20261102_013400_1b5114` (escritura), `run_20261102_013401_5f3159` (MLflow caído, solo auditoría local), `run_20261102_013401_20a4e1` (artefacto no persistido).
 
 ## Hashes usados
 
@@ -59,16 +62,16 @@ Fallos controlados (experimento `Observatorio_Turismo_Guatemala_pruebas_controla
 | `config/pipeline_config.yaml` | `d12e42c69a09d6da2733b4b54ce518d661b71eba164b131b818ea1f4ec1fc0c7` |
 | Código ejecutado en Docker (`code.sha256`) | `54c040972bbd601e5c8c83fadee4c03fd8f28bc19c01d73f3ad0eee63cc7800a` |
 | Versión aprobada A (`data/estimaciones_aprobadas.csv`) | `d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872` |
-| Commit base declarado | `4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302` |
+| Commit verificado desde copia limpia | `bced471e35b393335f309a95c4a5afd8f792e6a9` |
 
 ## Decisión
 
-Candidato activo (Promedio Histórico Mensual) **APROBADO**: QC críticos aprobados, salida íntegra, MAE 80,365.74 ≤ 150,000 y RMSE 94,175.26 ≤ 180,000 (N=63, 2021-04 a 2026-06). Baseline en los mismos meses: MAE 235,730.91.
+Candidato activo (Promedio Histórico Mensual) **APROBADO**: QC críticos aprobados, salida íntegra, MAE 80,365.74 ≤ 150,000 y RMSE 94,175.26 ≤ 180,000 (N=63, 2021-04 a 2026-06). Baseline en los mismos meses: MAE 235,730.91. Sin ene–feb 2026 (sensibilidad, no cambia la regla): activo 81,388.83 y baseline 236,852.07 (N=61); la decisión no cambia.
 
 ## Pruebas
 
-- Sin Docker: 99 pruebas — 98 PASS, 0 FAIL, 1 SKIP (prueba Compose; requiere `RUN_DOCKER_TESTS=1`).
-- Con Docker (`RUN_DOCKER_TESTS=1`, `MLFLOW_PORT=5001`): 99 pruebas — 99 PASS.
+- Sin Docker: 100 pruebas — 99 PASS, 0 FAIL, 1 SKIP (prueba Compose; requiere `RUN_DOCKER_TESTS=1`).
+- Con Docker (`RUN_DOCKER_TESTS=1`, `MLFLOW_PORT=5001`): 100 pruebas — 100 PASS.
 - Evidencia: `evidencias/lab11/tests_unitarios.txt`, `tests_unitarios_docker.txt` y sus JSON.
 
 ## Evidencias
@@ -77,9 +80,9 @@ Candidato activo (Promedio Histórico Mensual) **APROBADO**: QC críticos aproba
 
 ## Bloqueos y decisiones pendientes de autorización humana
 
-1. **Enunciado oficial** `Laboratorio_11_MLOps_2026.pdf` no disponible: cotejar la matriz de auditoría.
-2. **Commit:** los cambios de esta etapa deben commitearse (por el equipo; no se hizo en esta etapa). Después, repetir `docker_verificacion.sh` sin `--snapshot` y `reproducibilidad.py` para que el commit registrado coincida con el código.
-3. **Privacidad:** cambiar a privados `Zacatac23/Laboratorio-_10_Dashboard` y `luispedrolira/lab10-data`; decidir si se dejan de versionar los CSV institucionales. Las capturas y el almacén MLflow solo deben compartirse por medio autorizado.
-4. **Autoría:** cada integrante debe aportar commits identificables.
-5. **Metodología (decisión del equipo):** a 12 meses el baseline supera al modelo activo en 6 de 8 cortes; evaluar otro modelo en una versión futura con reglas fijadas de antemano.
-6. **Entorno local (macOS):** la carpeta del proyecto está en iCloud con «Optimizar almacenamiento» y solo hay ~11 GiB libres; macOS desalojó archivos (incluido un pack de `.git` y el `.venv`), lo que causó lecturas colgadas. Marcar la carpeta como «Mantener descargado» o moverla fuera de iCloud.
+1. **Commit de la corrección de QC-E** y de la documentación cotejada con el enunciado (lo hace el equipo). Después, repetir `bash scripts/lab11/docker_verificacion.sh <dir> 5001`.
+2. **Privacidad (restricción del enunciado):** cambiar a privados `Zacatac23/Laboratorio-_10_Dashboard` y `luispedrolira/lab10-data` y dar acceso a docentes y auxiliares; decidir si se dejan de versionar los CSV institucionales. Las capturas y el almacén MLflow solo se comparten por medio autorizado.
+3. **Registros de MLflow:** exportar el volumen `observatorio_turismo_mlflow_store` (comando en `docs/auditoria_final_lab11.md` §4) y entregarlo por el medio autorizado.
+4. **Autoría:** hay commits de los cuatro integrantes, con alias mezclados; cada integrante debe usar un `user.name` reconocible.
+5. **Metodología (decisión del equipo):** a 12 meses el baseline supera al modelo activo en 6 de 8 cortes; evaluar otro modelo en una versión futura con reglas fijadas de antemano. La comparabilidad institucional de ene–feb 2026 no está certificada por la fuente.
+6. **Entorno local (macOS):** la carpeta del proyecto está en iCloud con «Optimizar almacenamiento»; macOS desalojó archivos (incluido un pack de `.git` y el `.venv`), lo que causó lecturas colgadas. Marcar la carpeta como «Mantener descargado» o moverla fuera de iCloud.

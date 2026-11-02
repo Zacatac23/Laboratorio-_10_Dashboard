@@ -1,0 +1,21 @@
+{
+  "run_id": "run_20261102_013401_20a4e1",
+  "estado": "FALLIDO",
+  "etapa": "Registro verificado en MLflow",
+  "tipo_error": "RuntimeError",
+  "mensaje": "artefacto no persistido (simulado)",
+  "publicado": false,
+  "version_aprobada_vigente_sha256": "59c2176b0839ae122d40fc891884aca785296a24dccca7d1c5af4d9293efec91",
+  "metricas": "Solo se registraron métricas calculadas antes del fallo; no se sustituyen por 0.",
+  "reportes_disponibles": [
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/environment_run_20261102_013401_20a4e1.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/code_fingerprint_run_20261102_013401_20a4e1.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/sources_run_20261102_013401_20a4e1.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/quality_report_run_20261102_013401_20a4e1.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/model_run_20261102_013401_20a4e1.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/acceptance_run_20261102_013401_20a4e1.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/estimaciones_candidatas_run_20261102_013401_20a4e1.csv",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/monitoring_run_20261102_013401_20a4e1.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/manifest_run_20261102_013401_20a4e1.json"
+  ]
+}

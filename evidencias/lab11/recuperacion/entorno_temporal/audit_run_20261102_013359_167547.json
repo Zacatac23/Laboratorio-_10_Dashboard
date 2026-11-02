@@ -1,0 +1,40 @@
+{
+  "run_id": "run_20261102_013359_167547",
+  "git_commit": "bced471e35b393335f309a95c4a5afd8f792e6a9",
+  "start_time": "2026-11-02T01:33:59.567509",
+  "end_time": "2026-11-02T01:33:59.709302",
+  "duration_seconds": 0.14,
+  "stages": [
+    {
+      "stage_name": "Verificación de trazabilidad (MLflow)",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T01:33:59.598990",
+      "end_time": "2026-11-02T01:33:59.613673",
+      "details": "http://127.0.0.1:5001 (config:mlflow.tracking_uri)"
+    },
+    {
+      "stage_name": "Lectura de fuentes",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T01:33:59.651974",
+      "end_time": "2026-11-02T01:33:59.689767",
+      "details": "series_mensuales.csv=1df2e05be306, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566"
+    },
+    {
+      "stage_name": "Controles de calidad QC-A…F",
+      "status": "FAILED",
+      "start_time": "2026-11-02T01:33:59.689777",
+      "end_time": "2026-11-02T01:33:59.709280",
+      "details": "Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv."
+    }
+  ],
+  "warnings": [],
+  "errors": [
+    "Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv."
+  ],
+  "published": false,
+  "status": "FALLIDO_CALIDAD",
+  "failed_stage": "Controles de calidad QC-A…F",
+  "publication_decision": "NO_PUBLICADO: fallido_calidad en etapa 'Controles de calidad QC-A…F'",
+  "mlflow_run_id": "da033db8ab48400989e9bca4446a05a2",
+  "tracking_uri": "http://127.0.0.1:5001"
+}

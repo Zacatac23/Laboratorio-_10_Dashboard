@@ -1,0 +1,17 @@
+{
+  "run_id": "run_20261102_013359_fdce92",
+  "estado": "FALLIDO_CALIDAD",
+  "etapa": "Controles de calidad QC-A…F",
+  "tipo_error": "QualityControlError",
+  "mensaje": "Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.",
+  "publicado": false,
+  "version_aprobada_vigente_sha256": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872",
+  "metricas": "Solo se registraron métricas calculadas antes del fallo; no se sustituyen por 0.",
+  "reportes_disponibles": [
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/environment_run_20261102_013359_fdce92.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/code_fingerprint_run_20261102_013359_fdce92.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/sources_run_20261102_013359_fdce92.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/quality_report_run_20261102_013359_fdce92.json",
+    "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/reports/monitoring_run_20261102_013359_fdce92.json"
+  ]
+}

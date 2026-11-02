@@ -1,0 +1,103 @@
+{
+  "run_id": "run_20261102_013401_20a4e1",
+  "timestamp": "2026-11-02T01:34:01.267031",
+  "critical_passed": true,
+  "errors_count": 0,
+  "warnings_count": 0,
+  "sources_used_in_modeling": [
+    "series_mensuales.csv"
+  ],
+  "sources_context_only": [
+    "pais_mensual.csv",
+    "via_frontera.csv"
+  ],
+  "checks": [
+    {
+      "check_id": "QC-A",
+      "name": "Columnas y tipos requeridos",
+      "status": "PASSED",
+      "is_critical": true,
+      "description": "Verificar presencia de columnas requeridas y tipos compatibles en series_mensuales.csv.",
+      "details": "Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].",
+      "diagnostics": {}
+    },
+    {
+      "check_id": "QC-B",
+      "name": "Fechas y cobertura temporal",
+      "status": "PASSED",
+      "is_critical": true,
+      "description": "Validar normalización mensual y cobertura indispensable de 'Total'. Los huecos no se rellenan con cero.",
+      "details": "Cobertura continua de 'Total' desde 2009-01 hasta 2026-06 (210 meses). Sin imputación de ceros.",
+      "diagnostics": {
+        "f_min": "2009-01-01",
+        "f_max": "2026-06-01",
+        "n_months": 210
+      }
+    },
+    {
+      "check_id": "QC-C",
+      "name": "Unicidad de clave primaria",
+      "status": "PASSED",
+      "is_critical": true,
+      "description": "Verificar unicidad de la clave ['serie', 'fecha'] en series_mensuales.csv.",
+      "details": "Clave ['serie', 'fecha'] única (1680 registros).",
+      "diagnostics": {}
+    },
+    {
+      "check_id": "QC-D",
+      "name": "Valores faltantes y completitud",
+      "status": "PASSED",
+      "is_critical": true,
+      "description": "Distinguir ausencias permitidas frente a nulos que impiden estimar en series_mensuales.csv.",
+      "details": "Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).",
+      "diagnostics": {}
+    },
+    {
+      "check_id": "QC-E",
+      "name": "Valores válidos y denominadores seguros",
+      "status": "PASSED",
+      "is_critical": true,
+      "description": "Verificar finitos, no negativos (si aplica) y denominadores ≠ 0 en series_mensuales.csv. Un cero legítimo de viajeros no es error.",
+      "details": "Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 34,856,774 ≠ 0.",
+      "diagnostics": {
+        "suma_Total_ajuste": 34856773.98212984
+      }
+    },
+    {
+      "check_id": "QC-F",
+      "name": "Regla metodológica del observatorio",
+      "status": "PASSED",
+      "is_critical": true,
+      "description": "Verificar coherencia mensual entre Total y la suma de vías excluyentes (aérea+terrestre+marítima). No suma tipos migratorios con vías.",
+      "details": "Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.",
+      "diagnostics": {}
+    },
+    {
+      "check_id": "QC-C",
+      "name": "Unicidad de clave primaria",
+      "status": "PASSED",
+      "is_critical": true,
+      "description": "Verificar unicidad de la clave ['fecha', 'pais'] en pais_mensual.csv.",
+      "details": "Clave ['fecha', 'pais'] única (23887 registros).",
+      "diagnostics": {}
+    },
+    {
+      "check_id": "QC-E",
+      "name": "Valores válidos y denominadores seguros",
+      "status": "PASSED",
+      "is_critical": true,
+      "description": "Verificar finitos, no negativos (si aplica) y denominadores ≠ 0 en pais_mensual.csv. Un cero legítimo de viajeros no es error.",
+      "details": "Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.",
+      "diagnostics": {}
+    },
+    {
+      "check_id": "QC-C",
+      "name": "Unicidad de clave primaria",
+      "status": "PASSED",
+      "is_critical": true,
+      "description": "Verificar unicidad de la clave ['fecha', 'via', 'frontera'] en via_frontera.csv.",
+      "details": "Clave ['fecha', 'via', 'frontera'] única (3857 registros).",
+      "diagnostics": {}
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "generado": "2026-11-02T01:31:42-06:00",
+  "proposito": "Análisis de sensibilidad. No modifica la regla de aceptación ni los periodos del YAML; la decisión oficial es la del pipeline.",
+  "fuentes_sha256": {
+    "series_mensuales.csv": "a178eb0207546ad92e7c64451ac00d353eaca1d0a2e91e46e9dace4536fba259",
+    "pais_mensual.csv": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8",
+    "via_frontera.csv": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359"
+  },
+  "ajuste": [
+    "2009-01-01",
+    "2021-03-01"
+  ],
+  "evaluacion": [
+    "2021-04-01",
+    "2026-06-01"
+  ],
+  "excluded_evaluation_periods_yaml": [],
+  "ene_feb_2026_por_fuente": {
+    "pais_mensual.csv": {
+      "2026-01": 319106.0000000001,
+      "2026-02": 254047.99999999994
+    },
+    "via_frontera.csv": {
+      "2026-01": 319106.0000000001,
+      "2026-02": 254047.99999999997
+    },
+    "series_mensuales.csv (Total)": {
+      "2026-01": 319106.0000000001,
+      "2026-02": 254047.99999999997
+    }
+  },
+  "ene_feb_2026_coinciden_entre_fuentes": true,
+  "ene_feb_2026_detalle": {
+    "2026-01": {
+      "observado": 319106.0000000001,
+      "activo": 262961.31,
+      "baseline": 104620.0
+    },
+    "2026-02": {
+      "observado": 254047.99999999997,
+      "activo": 211869.37,
+      "baseline": 65463.0
+    }
+  },
+  "umbrales_regla": {
+    "max_mae_tolerance": 150000.0,
+    "max_rmse_tolerance": 180000.0
+  },
+  "nota_holt_winters": "Holt-Winters varía entre sistemas operativos (statsmodels); el valor de este archivo corresponde a la máquina donde se ejecutó el script. No es el modelo activo.",
+  "resultados": [
+    {
+      "modelo": "promedio_historico_mensual (activo)",
+      "conjunto": "meses del pipeline (incluye ene-feb 2026)",
+      "n": 63,
+      "mae": 80365.74,
+      "rmse": 94175.26
+    },
+    {
+      "modelo": "promedio_historico_mensual (activo)",
+      "conjunto": "mismos meses sin ene-feb 2026",
+      "n": 61,
+      "mae": 81388.83,
+      "rmse": 95283.4
+    },
+    {
+      "modelo": "seasonal_naive_lag12 (baseline)",
+      "conjunto": "meses del pipeline (incluye ene-feb 2026)",
+      "n": 63,
+      "mae": 235730.91,
+      "rmse": 253203.39
+    },
+    {
+      "modelo": "seasonal_naive_lag12 (baseline)",
+      "conjunto": "mismos meses sin ene-feb 2026",
+      "n": 61,
+      "mae": 236852.07,
+      "rmse": 254709.24
+    },
+    {
+      "modelo": "holt_winters (referencia)",
+      "conjunto": "meses del pipeline (incluye ene-feb 2026)",
+      "n": 63,
+      "mae": 303201.01,
+      "rmse": 328143.27
+    },
+    {
+      "modelo": "holt_winters (referencia)",
+      "conjunto": "mismos meses sin ene-feb 2026",
+      "n": 61,
+      "mae": 299529.69,
+      "rmse": 324892.83
+    }
+  ]
+}

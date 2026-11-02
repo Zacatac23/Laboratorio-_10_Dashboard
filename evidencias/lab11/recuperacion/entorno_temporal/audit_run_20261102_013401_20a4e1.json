@@ -1,0 +1,82 @@
+{
+  "run_id": "run_20261102_013401_20a4e1",
+  "git_commit": "bced471e35b393335f309a95c4a5afd8f792e6a9",
+  "start_time": "2026-11-02T01:34:01.144807",
+  "end_time": "2026-11-02T01:34:01.484518",
+  "duration_seconds": 0.34,
+  "stages": [
+    {
+      "stage_name": "Verificación de trazabilidad (MLflow)",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T01:34:01.176124",
+      "end_time": "2026-11-02T01:34:01.191694",
+      "details": "http://127.0.0.1:5001 (config:mlflow.tracking_uri)"
+    },
+    {
+      "stage_name": "Lectura de fuentes",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T01:34:01.229358",
+      "end_time": "2026-11-02T01:34:01.267019",
+      "details": "series_mensuales.csv=bb14cb7e8367, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566"
+    },
+    {
+      "stage_name": "Controles de calidad QC-A…F",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T01:34:01.267028",
+      "end_time": "2026-11-02T01:34:01.286931",
+      "details": "QC críticos aprobados"
+    },
+    {
+      "stage_name": "Preparación y división temporal",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T01:34:01.286939",
+      "end_time": "2026-11-02T01:34:01.295026",
+      "details": ""
+    },
+    {
+      "stage_name": "Ajuste de modelo, baselines y factores",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T01:34:01.295031",
+      "end_time": "2026-11-02T01:34:01.353496",
+      "details": "Promedio Histórico Mensual"
+    },
+    {
+      "stage_name": "Evaluación temporal",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T01:34:01.353505",
+      "end_time": "2026-11-02T01:34:01.410900",
+      "details": "N evaluable=63"
+    },
+    {
+      "stage_name": "Candidato, integridad y regla de aceptación",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T01:34:01.410908",
+      "end_time": "2026-11-02T01:34:01.444179",
+      "details": "APROBADO"
+    },
+    {
+      "stage_name": "Monitoreo (actualización, calidad, resultados)",
+      "status": "COMPLETED",
+      "start_time": "2026-11-02T01:34:01.444187",
+      "end_time": "2026-11-02T01:34:01.467300",
+      "details": "alertas accionables=0"
+    },
+    {
+      "stage_name": "Registro verificado en MLflow",
+      "status": "FAILED",
+      "start_time": "2026-11-02T01:34:01.467308",
+      "end_time": "2026-11-02T01:34:01.484505",
+      "details": "artefacto no persistido (simulado)"
+    }
+  ],
+  "warnings": [],
+  "errors": [
+    "artefacto no persistido (simulado)"
+  ],
+  "published": false,
+  "status": "FALLIDO",
+  "failed_stage": "Registro verificado en MLflow",
+  "publication_decision": "NO_PUBLICADO: fallido en etapa 'Registro verificado en MLflow'",
+  "mlflow_run_id": "0cbfd97e0c3e4a5e946e3e469c5a31f7",
+  "tracking_uri": "http://127.0.0.1:5001"
+}

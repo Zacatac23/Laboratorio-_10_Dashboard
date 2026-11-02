@@ -68,9 +68,9 @@ Guatemala, 2 de noviembre de 2026\par
 \section*{Resumen ejecutivo}
 El Observatorio publica una estimación mensual de viajeros a Guatemala (serie \cod{Total} y siete subseries) mediante un pipeline batch reproducible: valida las fuentes con seis controles de calidad, evalúa el procedimiento sin fuga temporal frente a un baseline en los mismos meses, aplica una regla de aceptación predefinida, registra cada ejecución en MLflow y solo entonces publica de forma atómica la versión que lee el tablero.
 
-En la verificación final (2 de noviembre de 2026): la suite de 99 pruebas automatizadas pasó (98 PASS y 1 omitida sin Docker; 99 PASS con Docker); dos ejecuciones completas en contenedor fueron idénticas (diferencia máxima 0.0 en 504 estimaciones); siete fallos controlados se detectaron sin alterar la versión aprobada; se restauró una versión anterior con verificación SHA-256; y Docker Compose funcionó desde una copia limpia con persistencia de MLflow tras \cod{down}/\cod{up}. El modelo activo (Promedio Histórico Mensual) obtiene MAE 80{,}365.74 y RMSE 94{,}175.26 viajeros/mes en 63 meses (abril 2021–junio 2026), frente a 235{,}730.91 y 253{,}203.39 del baseline Seasonal Naive en los mismos meses.
+En la verificación final (2 de noviembre de 2026): la suite de 100 pruebas automatizadas pasó (99 PASS y 1 omitida sin Docker; 100 PASS con Docker); dos pares de ejecuciones completas en contenedor fueron idénticos (diferencia máxima 0.0 en 504 estimaciones); siete fallos controlados se detectaron sin alterar la versión aprobada; se restauró una versión anterior con verificación SHA-256; y Docker Compose funcionó desde una copia limpia del commit \cod{bced471} con persistencia de MLflow tras \cod{down}/\cod{up}. El modelo activo (Promedio Histórico Mensual) obtiene MAE 80{,}365.74 y RMSE 94{,}175.26 viajeros/mes en 63 meses (abril 2021–junio 2026), frente a 235{,}730.91 y 253{,}203.39 del baseline Seasonal Naive en los mismos meses.
 
-Se encontraron y corrigieron dos defectos (filtración de la URI de MLflow entre corridas y \cod{-{}-allowed-hosts} con puerto fijo) y un problema visual del tablero. Quedan abiertos: cotejar la matriz con el enunciado oficial (no disponible en el repositorio), hacer privado el repositorio y re-verificar desde un commit que incluya los cambios de esta etapa. Un backtest complementario muestra que, a 12 meses, el baseline supera al modelo activo en 6 de 8 cortes; se documenta como riesgo sin modificar reglas a posteriori.
+Se encontraron y corrigieron tres defectos (filtración de la URI de MLflow entre corridas, \cod{-{}-allowed-hosts} con puerto fijo y denominador cero detectado fuera de QC-E) y un problema visual del tablero. La correspondencia con cada inciso del enunciado (1.1--8.4) está en \cod{docs/auditoria\_final\_lab11.md}. Quedan abiertos: commitear la corrección de QC-E, hacer privado el repositorio y entregar el almacén de MLflow por un medio autorizado. Un backtest complementario muestra que, a 12 meses, el baseline supera al modelo activo en 6 de 8 cortes; se documenta como riesgo sin modificar reglas a posteriori.
 
 % ------------------------------------------------------------------ alcance
 \section{Alcance}
@@ -114,19 +114,19 @@ QC-A Columnas y tipos & falta \cod{serie}/\cod{fecha}/\cod{viajeros} o tipo inco
 QC-B Fechas y cobertura & fecha inválida, día $\neq$ 1, hueco o ventana incompleta & PASSED (210 meses continuos)\\
 QC-C Unicidad & clave (\cod{serie}, \cod{fecha}) duplicada & PASSED; FAILED al duplicar una fila\\
 QC-D Faltantes & nulos en columnas indispensables & PASSED\\
-QC-E Valores & NaN, infinito o negativo (cero válido) & PASSED; FAILED con Total 2015-03 = $-500$\\
+QC-E Valores y denominadores & NaN, infinito o negativo (cero válido) o denominador del factor de reparto (suma del Total en ajuste) igual a 0 & PASSED; FAILED con Total 2015-03 = $-500$ y con el ajuste en 0\\
 QC-F Regla metodológica & Total difiere $>$2\,\% de la suma de vías o faltan insumos & PASSED; FAILED/NO\_VERIFICABLE en los fallos inyectados\\
 Contexto & duplicados/valores en \cod{pais\_mensual}, \cod{via\_frontera} & Advertencia, no bloqueo (prueba \cod{FuentesMultiples})\\
 \bottomrule\end{tabularx}
 \end{table}
-\noindent\textbf{Observación.} En el pipeline QC-E se invoca sin columnas denominador; un Total de entrenamiento nulo se detecta en el cálculo de factores (estado \cod{FALLIDO}, etapa de modelado). La contención funciona (la versión aprobada no cambia), pero el control no queda registrado como QC-E.
+\noindent\textbf{Denominador cero (inciso 3.1 e).} QC-E verifica el denominador del factor de reparto antes del modelado; con el periodo de ajuste en cero la corrida termina \cod{FALLIDO\_CALIDAD} (prueba \cod{DenominadorCeroEnQC}, que falla sin el cambio). Antes de este ajuste el caso solo se detectaba en el cálculo de factores (\cod{FALLIDO}, etapa de modelado); esa validación se conserva como segunda barrera. Cada control registra qué verifica, su estado (PASSED, WARNING, FAILED o NO\_VERIFICABLE) y si es crítico en \cod{reports/quality\_report\_<run>.json}; los periodos sin cobertura no se imputan con cero.
 
 % ------------------------------------------------------------------ MLflow
 \section{Trazabilidad con MLflow}
 Cada run registra: estado, commit (en contenedor, declarado por \cod{GIT\_COMMIT}), SHA-256 de las tres fuentes, del YAML y del código, semilla, split, factores, perfil del modelo, reporte QC, regla y decisión, métricas del modelo y de los baselines, monitoreo, auditoría, estimaciones candidatas y manifiesto (11 artefactos, Figura~\ref{fig:mlflow}). Los artefactos se releen antes de publicar.
 
 \begin{table}[H]\centering\small
-\caption{Dos ejecuciones completas en el servidor MLflow de Docker Compose (\cod{reports/reproducibilidad\_lab11.json}).}
+\caption{Dos ejecuciones completas en el servidor MLflow de Docker Compose (\cod{reports/reproducibilidad\_lab11.json}).}\label{tab:repro}
 \begin{tabularx}{\textwidth}{@{}llL@{}}\toprule
 Run del pipeline & ID MLflow & Estado\\\midrule
 \cod{run\_20261102\_001410\_ce7eea} & {\footnotesize\texttt{7787c39f59d64cf69394bde8de3ea709}} & aprobado, no publicado (dry-run)\\
@@ -174,7 +174,7 @@ MAE promedio & 100{,}571.55 & 75{,}372.56 & 82{,}724.43\\
 \end{table}
 \noindent A 12 meses el baseline supera al modelo activo en 6 de 8 cortes. El promedio histórico es robusto a la ruptura de 2020--2021 (gana en 2019-12 y 2022-12), pero desaprovecha la información reciente. No se modificó el modelo ni la regla después de observarlo; se recomienda evaluar el cambio de modelo en una versión futura con reglas fijadas de antemano.
 
-\paragraph{Limitaciones de enero--febrero de 2026.} 2026 es parcial (hasta junio). La comparabilidad institucional de esos meses no está certificada; si la institución la declarara no comparable, debe registrarse una exclusión en el YAML con su motivo antes de evaluar.
+\paragraph{Limitaciones de enero--febrero de 2026 (incisos 5.1 y 5.5).} Ambos meses tienen valor observado en la fuente mensual y coinciden en las tres fuentes institucionales (319{,}106 y 254{,}048 viajeros), por eso se evalúan. El backtest no reproduce la situación real de esos meses: (1) se estiman desde el origen fijo 2021-03, con horizonte de 58--59 meses, no con la información disponible a inicios de 2026; (2) la fuente no documenta si las cifras son preliminares o revisadas, así que su comparabilidad institucional no está certificada; (3) 2026 es parcial (hasta junio). Como análisis de sensibilidad, sin cambiar la regla (\cod{scripts/lab11/sensibilidad\_ene\_feb\_2026.py}), sin esos dos meses el MAE del modelo activo pasa de 80{,}365.74 (N=63) a 81{,}388.83 (N=61) y el del baseline de 235{,}730.91 a 236{,}852.07: la decisión no cambia. Si la institución los declarara no comparables, la exclusión se registra en el YAML con su motivo antes de evaluar una nueva versión.
 
 % ------------------------------------------------------------------ aceptación
 \section{Regla de aceptación}
@@ -219,13 +219,13 @@ Falla & Estado & Detección & Aprobado intacto\\\midrule
 Columna \cod{viajeros} ausente & FALLIDO\_CALIDAD & QC-A, QC-F & Sí\\
 Clave duplicada & FALLIDO\_CALIDAD & QC-C, QC-F & Sí\\
 Conteo negativo & FALLIDO\_CALIDAD & QC-E, QC-F & Sí\\
-Denominador cero (ajuste en 0) & FALLIDO & factores de reparto & Sí\\
+Denominador cero (ajuste en 0) & FALLIDO\_CALIDAD & QC-E (denominador del factor) & Sí\\
 Error de escritura (\cod{os.replace}) & FALLIDO & publicación atómica; sin temporales & Sí\\
 MLflow inaccesible & BLOQUEADO\_TRAZ. & verificación previa & Sí\\
 Artefacto no persistido & FALLIDO & registro verificado & Sí\\
 \bottomrule\end{tabularx}
 \end{table}
-Corregidos los datos, la recuperación publicó la versión B (\cod{run\_20261102\_001003\_405131}, \cod{594b7cff\ldots}). La restauración del respaldo de A con \cod{src.restore\_version} devolvió exactamente \cod{d5795b8c\ldots} y su manifiesto, y el tablero leyó A con metadatos verificados. En Docker se repitió la restauración con el CLI (\cod{restauracion\_docker.log}): el hash pasó de \cod{f201419b\ldots} a \cod{d5795b8c\ldots}, con respaldo de seguridad \cod{\_prerestauracion} y registro en \cod{logs/restore\_audit.jsonl}.
+Corregidos los datos, la recuperación publicó la versión B (\cod{run\_20261102\_013359\_237d8b}, \cod{59c2176b\ldots}). La restauración del respaldo de A con \cod{src.restore\_version} devolvió exactamente \cod{d5795b8c\ldots} y su manifiesto, y el tablero leyó A con metadatos verificados. En Docker se repitió la restauración con el CLI (\cod{restauracion\_docker.log}): el hash pasó de \cod{f201419b\ldots} a \cod{d5795b8c\ldots}, con respaldo de seguridad \cod{\_prerestauracion} y registro en \cod{logs/restore\_audit.jsonl}.
 
 \paragraph{Defecto encontrado.} En la primera corrida de esta prueba, «MLflow inaccesible» terminó \cod{APROBADO\_PUBLICADO}: \cod{mlflow.set\_tracking\_uri()} escribe \cod{MLFLOW\_TRACKING\_URI} en el entorno y esa variable tiene prioridad sobre el YAML, de modo que una segunda corrida en el mismo proceso ignoraba su configuración. Se corrigió en \cod{TourismMLOpsPipeline.run()} y se agregó una prueba de regresión que falla sin la corrección.
 
@@ -233,7 +233,7 @@ Corregidos los datos, la recuperación publicó la versión B (\cod{run\_2026110
 \section{Docker}
 Servicios: \cod{mlflow} (SQLite y artefactos en el volumen \cod{observatorio\_turismo\_mlflow\_store}, \cod{-{}-serve-artifacts}, healthcheck), \cod{dashboard} (monta \cod{data/} en solo lectura) y \cod{pipeline} (perfil \cod{tools}). Imagen única \cod{observatorio-turismo:lab11} (1.61\,GB), usuario sin privilegios (uid 1000), puertos solo en 127.0.0.1.
 
-Verificación desde copia limpia (\cod{scripts/lab11/docker\_verificacion.sh}, 28 pasos con código 0): inspección de la imagen sin CSV, \cod{.db}, \cod{.env}, claves ni \cod{.git}; \cod{up -d -{}-wait}; HTTP 200 en tablero y MLflow; dos dry-run y una publicación en contenedor; \cod{down} y \cod{up} sin \cod{-v} con los mismos 9 runs. La prueba automatizada \cod{DockerCompose} también pasó. Se corrigió \cod{-{}-allowed-hosts}, que fijaba el puerto 5000 e impedía usar la UI con otro puerto. \textbf{Advertencia:} \cod{docker compose down -v} borra el almacén de MLflow.
+Verificación desde copia limpia (inciso 8.4; \cod{docker\_verificacion.sh}, log en \cod{evidencias/lab11/docker/}): \cod{git clone} del commit \cod{bced471} sin archivos locales añadidos, 28 pasos con código 0. Incluye la inspección de la imagen (sin CSV, \cod{.db}, \cod{.env}, claves ni \cod{.git}; \cod{/app/data} vacío; uid 1000), \cod{up -d -{}-wait}, HTTP 200 en tablero y MLflow, dos dry-run en contenedor (\cod{run\_20261102\_013222\_08ad93} y \cod{run\_20261102\_013225\_d69796}, reproducibles con diferencia máxima 0.0 según \cod{reproducibilidad\_commit\_bced471.json}), una publicación (\cod{run\_20261102\_013228\_107c2c}) con respaldo de la versión anterior, y \cod{down}/\cod{up} sin \cod{-v} con los mismos 16 runs antes y después. El \cod{code.sha256} de esas corridas (\cod{54c04097\ldots}) es idéntico al de las corridas de la Tabla~\ref{tab:repro}, hechas antes del commit: el código registrado coincide con el versionado. La prueba automatizada \cod{DockerCompose} también pasó. Se corrigió \cod{-{}-allowed-hosts}, que fijaba el puerto 5000 e impedía usar la UI con otro puerto. \textbf{Advertencia:} \cod{docker compose down -v} borra el almacén de MLflow.
 
 % ------------------------------------------------------------------ cierre
 \section{Pruebas automatizadas}
@@ -241,22 +241,22 @@ Verificación desde copia limpia (\cod{scripts/lab11/docker\_verificacion.sh}, 2
 \caption{Resultados de \cod{python -B -m unittest discover -s tests -v}. La prueba omitida sin Docker es la de Compose, que requiere \cod{RUN\_DOCKER\_TESTS=1}. Fuente: \cod{evidencias/lab11/tests\_unitarios*.txt}.}
 \begin{tabular}{@{}lrrrr@{}}\toprule
 Corrida & Pruebas & PASS & FAIL & SKIP\\\midrule
-Sin Docker & 99 & 98 & 0 & 1\\
-Con Docker (\cod{MLFLOW\_PORT=5001}) & 99 & 99 & 0 & 0\\
+Sin Docker & 100 & 99 & 0 & 1\\
+Con Docker (\cod{MLFLOW\_PORT=5001}) & 100 & 100 & 0 & 0\\
 \bottomrule\end{tabular}
 \end{table}
 
 \section{Limitaciones, riesgos y pendientes}
 \begin{itemize}
-\item \textbf{Enunciado oficial no disponible:} la matriz de \cod{docs/auditoria\_final\_lab11.md} sigue la numeración de la memoria; debe cotejarse con \cod{Laboratorio\_11\_MLOps\_2026.pdf}.
-\item \textbf{Commit:} las corridas usan el commit base \cod{4d8f5ba} declarado más cambios sin commitear (identificados por \cod{code.sha256}); tras commitear debe repetirse la verificación Docker sin \cod{-{}-snapshot}.
-\item \textbf{Privacidad:} los repositorios remotos son públicos y los CSV institucionales están versionados; el cambio de visibilidad corresponde al dueño.
+\item \textbf{Commit:} la corrección de QC-E (inciso 3.1 e) y su prueba están sin commitear; la verificación desde copia limpia corresponde al commit \cod{bced471}. Tras commitear debe repetirse \cod{docker\_verificacion.sh}.
+\item \textbf{Privacidad:} los repositorios remotos son públicos y los CSV institucionales están versionados; el enunciado exige un repositorio privado con acceso a docentes y auxiliares. El cambio de visibilidad corresponde al dueño.
+\item \textbf{Registros de MLflow:} el almacén completo vive en el volumen Docker; se versiona solo la exportación JSON de runs. El volumen debe entregarse por un medio autorizado.
 \item \textbf{Metodología:} a 12 meses el baseline supera al modelo activo en la mayoría de cortes; el umbral de MAE es tolerante (54\,\% del promedio observado); el reparto proporcional fija la estructura 2009--2021; el cambio metodológico de 2023 no está certificado.
 \item \textbf{Operación:} restauraciones auditadas en local, no en MLflow; Holt-Winters dependiente del entorno.
 \end{itemize}
 
 \section{Conclusiones}
-El flujo cumple su propósito de gobernanza: ninguna de las siete fallas probadas alteró la versión aprobada ni produjo una salida sin trazabilidad, las ejecuciones son reproducibles bit a bit dentro del mismo entorno, MLflow conserva los registros tras recrear contenedores y el tablero comunica la versión vigente con su error, su fecha y sus límites. La principal mejora pendiente es metodológica (revisar el modelo activo con reglas fijadas de antemano) y administrativa (repositorio privado y cotejo con el enunciado).
+El flujo cumple su propósito de gobernanza: ninguna de las siete fallas probadas alteró la versión aprobada ni produjo una salida sin trazabilidad, las ejecuciones son reproducibles bit a bit dentro del mismo entorno, MLflow conserva los registros tras recrear contenedores y el tablero comunica la versión vigente con su error, su fecha y sus límites. La principal mejora pendiente es metodológica (revisar el modelo activo con reglas fijadas de antemano) y administrativa (repositorio privado y entrega autorizada de los registros de MLflow).
 
 \section*{Referencias a evidencias}
 Todas las rutas son relativas al repositorio: \cod{docs/guia\_evidencias\_lab11.md} (índice), \cod{evidencias/lab11/} (tests, Docker, MLflow, evaluación, recuperación y tablero), \cod{reports/reproducibilidad\_lab11.json}, \cod{docs/auditoria\_final\_lab11.md} y \cod{docs/resumen\_entrega\_lab11.md}.

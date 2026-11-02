@@ -23,7 +23,7 @@
 | `data/via_frontera.csv` | `fecha`, `via`, `frontera`, `viajeros` | Contexto: QC de unicidad (no bloqueante) y monitoreo; no alimenta el modelo |
 
 - **Periodos (`config/pipeline_config.yaml`):** ajuste 2009-01 a 2021-03 (147 meses); evaluación por *backtest* de origen fijo 2021-04 a 2026-06 (63 meses). `excluded_evaluation_periods` está vacío: **enero y febrero de 2026 sí se evalúan** porque tienen observación en la fuente. La memoria anterior afirmaba que se excluían; eso no correspondía al código.
-- **Limitaciones de 2026:** año parcial (datos hasta junio). El tablero advierte que no se compara como año completo. La comparabilidad institucional de ene–feb 2026 no está certificada por la fuente; si la institución la declarara no comparable, debe agregarse una exclusión en el YAML con su motivo, **antes** de evaluar.
+- **Limitaciones de enero–febrero de 2026 (enunciado 5.1 y 5.5):** ambos meses tienen valor observado en la fuente mensual y coinciden en las tres fuentes institucionales (319,106 y 254,048 viajeros; `evidencias/lab11/evaluacion/sensibilidad_ene_feb_2026.json`), por eso se evalúan. El backtest **no reproduce** la situación real de esos meses: (1) se estiman desde el origen fijo 2021-03 (horizonte de 58–59 meses), no con la información disponible a inicios de 2026; (2) la fuente no documenta si las cifras son preliminares o revisadas, así que su comparabilidad institucional no está certificada; (3) 2026 es un año parcial (hasta junio). Sensibilidad sin cambiar la regla: sin ene–feb 2026 el MAE del modelo activo pasa de 80,365.74 (N=63) a 81,388.83 (N=61) y el del baseline de 235,730.91 a 236,852.07; la decisión no cambia. Si la institución los declarara no comparables, la exclusión se agrega al YAML con su motivo **antes** de evaluar una nueva versión.
 - **Modelo activo:** Promedio Histórico Mensual (promedio por mes calendario en el periodo de ajuste). Referencias: Seasonal Naive lag 12 (baseline de aceptación) y Holt-Winters aditivo (referencia, no activo).
 - **Factores de reparto** (proporción de cada subserie sobre el Total, calculada solo en el periodo de ajuste; valores del run `run_20261102_001410_ce7eea`): `Tipo_Turista` 0.740787, `Via_Terrestre` 0.590367, `Via_Aérea` 0.375932, `Tipo_Excursionista` 0.162625, `Tipo_Viajero` 0.065763, `Via_Marítima` 0.033701, `Tipo_Cruceristas` 0.030825.
 - **Archivo que usa el tablero:** `data/estimaciones_aprobadas.csv` y su manifiesto `data/estimaciones_aprobadas.manifest.json` (SHA-256, `run_id`, métricas y periodo evaluado).
@@ -77,11 +77,11 @@ python pipeline.py --config config/pipeline_config.yaml --no-publish  # dry-run
 | QC-B | Fechas válidas, día 1, sin huecos en la serie objetivo y ventana `train_start`–`eval_end` cubierta | — | Fecha inválida, día ≠ 1, hueco o ventana incompleta (no se imputa cero) |
 | QC-C | Unicidad de (`serie`, `fecha`) | — | Cualquier duplicado |
 | QC-D | Nulos en columnas indispensables | — | Nulo en `serie`/`fecha`/`viajeros` |
-| QC-E | Valores finitos y no negativos (el cero es válido) | — | NaN, infinito o negativo |
+| QC-E | Valores finitos y no negativos (el cero es válido) y denominador del factor de reparto ≠ 0 | — | NaN, infinito, negativo o suma del Total en ajuste = 0 |
 | QC-F | Total ≈ Aérea + Terrestre + Marítima (tolerancia 2 %) | Si `methodological_fail_on_discrepancy: false` | Discrepancia material o insumos faltantes (`NO_VERIFICABLE`) |
 | Contexto | Unicidad y valores de `pais_mensual` y `via_frontera` | Fallos se degradan a WARNING (`context_sources_critical: false`) | Solo si se configura como crítico |
 
-**Denominador cero.** En el pipeline QC-E se invoca sin columnas denominador; un Total de entrenamiento igual a cero se detecta en el cálculo de factores (`calculate_repartition_factors` lanza `ValueError`) y la corrida termina `FALLIDO` en la etapa de modelado, sin publicar (ver §7.2).
+**Denominador cero (3.1 e).** QC-E verifica también el denominador del factor de reparto (suma del Total en el periodo de ajuste, `src/quality_checks.py::_check_values_and_repartition_denominator`). Si es cero, la corrida termina `FALLIDO_CALIDAD` antes del modelado (prueba `tests/test_lab11_verificacion.py::DenominadorCeroEnQC`, que falla sin el cambio). `calculate_repartition_factors` conserva su propia validación como segunda barrera.
 
 ---
 
@@ -169,12 +169,12 @@ Versión aprobada inicial A: `run_20261101_222030_d65c3b`, SHA-256 `d5795b8c…`
 | Columna `viajeros` ausente | FALLIDO_CALIDAD | QC-A FAILED, QC-F NO_VERIFICABLE | Sí |
 | Clave (`serie`,`fecha`) duplicada | FALLIDO_CALIDAD | QC-C FAILED, QC-F FAILED | Sí |
 | Conteo negativo (Total 2015-03) | FALLIDO_CALIDAD | QC-E FAILED, QC-F FAILED | Sí |
-| Denominador cero (Train en 0) | FALLIDO | `ValueError` en factores de reparto | Sí |
+| Denominador cero (Train en 0) | FALLIDO_CALIDAD | QC-E FAILED (suma del Total en ajuste = 0) | Sí |
 | Error de escritura (`os.replace`) | FALLIDO | etapa «Publicación atómica», sin temporales | Sí |
 | MLflow inaccesible | BLOQUEADO_TRAZABILIDAD | verificación previa | Sí |
 | Artefacto no persistido | FALLIDO | «Registro verificado en MLflow» | Sí |
 
-Tras corregir los datos, la recuperación publicó la versión B (`run_20261102_001003_405131`, `594b7cff…`). La restauración del respaldo de A devolvió exactamente `d5795b8c…` con su manifiesto y el tablero leyó `run_20261101_222030_d65c3b` con metadatos verificados.
+Tras corregir los datos, la recuperación publicó la versión B (`run_20261102_013359_237d8b`, `59c2176b…`). La restauración del respaldo de A devolvió exactamente `d5795b8c…` con su manifiesto y el tablero leyó `run_20261101_222030_d65c3b` con metadatos verificados.
 
 **Defecto encontrado y corregido.** `mlflow.set_tracking_uri()` escribe `MLFLOW_TRACKING_URI` en el entorno y esa variable tiene prioridad sobre el YAML: en un mismo proceso, una segunda corrida ignoraba su configuración (un servidor caído no bloqueaba la publicación). `TourismMLOpsPipeline.run()` ahora restituye las variables al terminar; prueba de regresión `AislamientoTrackingURI`.
 
@@ -188,14 +188,14 @@ Cada publicación respalda CSV y manifiesto en `data/backup_aprobadas/`. Restaur
 
 - Imagen `observatorio-turismo:lab11` (`python:3.12.10-slim`), usuario `app` (uid 1000), `.dockerignore` como lista blanca: la imagen no contiene CSV, `.db`, `.env`, claves ni `.git` (inspección en el log).
 - Servicios: `mlflow` (healthcheck `/health`), `dashboard` (lee `./data` en solo lectura) y `pipeline` (perfil `tools`). Puertos solo en 127.0.0.1.
-- Verificado desde una copia limpia (`git clone` + cambios de la entrega): build, `up -d --wait`, `ps`, HTTP 200 en tablero y MLflow, dos dry-run, una publicación, `down` y `up` sin `-v` con los mismos 9 runs.
+- Verificado desde una copia limpia (`git clone` del commit `bced471`, sin archivos locales añadidos; inciso 8.4): build, `up -d --wait`, `ps`, HTTP 200 en tablero y MLflow, dos dry-run reproducibles (`run_20261102_013222_08ad93`, `run_20261102_013225_d69796`; diferencia máxima 0.0), una publicación (`run_20261102_013228_107c2c`), `down` y `up` sin `-v` con los mismos 16 runs. El `code.sha256` de esas corridas (`54c04097…`) es el mismo de las corridas hechas antes del commit.
 - **Defecto corregido:** `--allowed-hosts` fijaba el puerto 5000; con `MLFLOW_PORT` distinto la UI y la API respondían «Invalid Host header». Se agregó `${MLFLOW_PORT:-5000}` (prueba `ComposePuertoMLflow`).
 
 ---
 
 ## 9. Pruebas automatizadas
 
-`python -B -m unittest discover -s tests -v`: **99 pruebas, 98 PASS, 0 FAIL, 1 SKIP** (la prueba Docker, que requiere `RUN_DOCKER_TESTS=1`). Con `RUN_DOCKER_TESTS=1 MLFLOW_PORT=5001` se ejecuta también la prueba contra Compose (ver `evidencias/lab11/tests_unitarios_docker.txt`).
+`python -B -m unittest discover -s tests -v`: **100 pruebas, 99 PASS, 0 FAIL, 1 SKIP** (la prueba Docker, que requiere `RUN_DOCKER_TESTS=1`). Con `RUN_DOCKER_TESTS=1 MLFLOW_PORT=5001` se ejecuta también la prueba contra Compose: 100 PASS (ver `evidencias/lab11/tests_unitarios_docker.txt`).
 
 | Archivo | Pruebas |
 |---|---:|

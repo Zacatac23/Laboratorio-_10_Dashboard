@@ -471,6 +471,58 @@ def check_methodological_rule(
     )
 
 
+def _check_values_and_repartition_denominator(
+    series_df: pd.DataFrame,
+    target: str,
+    t_cfg: Dict[str, Any],
+) -> CheckResult:
+    """QC-E del pipeline: valores válidos y denominador del factor de reparto.
+
+    f_i = suma(serie_i en ajuste) / suma(target en ajuste)
+    (``model_engine.calculate_repartition_factors``). Si ese denominador es cero,
+    el flujo se detiene en QC, antes del modelado.
+    """
+    valores = check_values_and_denominators(
+        series_df, value_cols=["viajeros"], allow_negative_values=False, name="series_mensuales.csv"
+    )
+    if valores.status != "PASSED" or not {"serie", "fecha", "viajeros"} <= set(series_df.columns):
+        return valores
+
+    fechas = pd.to_datetime(series_df["fecha"], errors="coerce")
+    en_ajuste = series_df["serie"] == target
+    if t_cfg.get("train_start"):
+        en_ajuste &= fechas >= pd.Timestamp(t_cfg["train_start"])
+    if t_cfg.get("train_end"):
+        en_ajuste &= fechas <= pd.Timestamp(t_cfg["train_end"])
+    denominador = float(pd.to_numeric(series_df.loc[en_ajuste, "viajeros"], errors="coerce").sum())
+    columna = f"suma_{target}_ajuste"
+    resultado = check_values_and_denominators(
+        pd.DataFrame({columna: [denominador]}),
+        value_cols=[],
+        denominator_cols=[columna],
+        name="denominador del factor de reparto",
+    )
+    if resultado.status == "FAILED":
+        return CheckResult(
+            check_id=valores.check_id, name=valores.name, status="FAILED", is_critical=True,
+            description=valores.description,
+            details=(
+                f"Denominador del factor de reparto igual a cero: suma de {target} en el "
+                f"periodo de ajuste = {denominador:g}."
+            ),
+            diagnostics={"zero_denominators": {columna: 1}, columna: denominador},
+        )
+    return CheckResult(
+        check_id=valores.check_id, name=valores.name, status=valores.status,
+        is_critical=valores.is_critical, description=valores.description,
+        details=(
+            f"{valores.details} Denominador del factor de reparto "
+            f"(suma de {target} en ajuste) = {denominador:,.0f} ≠ 0."
+        ),
+        diagnostics={columna: denominador},
+    )
+
+
 def execute_all_quality_checks(
     series_df: pd.DataFrame,
     run_id: str,
@@ -508,11 +560,7 @@ def execute_all_quality_checks(
     report.add_result(
         check_missing_values(series_df, ["serie", "fecha", "viajeros"], name="series_mensuales.csv")
     )
-    report.add_result(
-        check_values_and_denominators(
-            series_df, value_cols=["viajeros"], allow_negative_values=False, name="series_mensuales.csv"
-        )
-    )
+    report.add_result(_check_values_and_repartition_denominator(series_df, target, t_cfg))
     report.add_result(
         check_methodological_rule(
             series_df,

@@ -1,8 +1,8 @@
 {
-  "generado": "2026-11-02T00:10:02-06:00",
+  "generado": "2026-11-02T01:33:58-06:00",
   "tracking_uri": "http://127.0.0.1:5001",
   "experimento_mlflow": "Observatorio_Turismo_Guatemala_pruebas_controladas",
-  "entorno_temporal": "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos_v48sbhxa",
+  "entorno_temporal": "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i",
   "nota": "Copia temporal de data/; los datos institucionales del repositorio no se modifican.",
   "version_aprobada_inicial_A": {
     "sha256_csv": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872",
@@ -11,10 +11,10 @@
   },
   "fallos_inyectados": [
     {
-      "run_id": "run_20261102_001002_4cea5b",
+      "run_id": "run_20261102_013358_923651",
       "excepcion": "QualityControlError: Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.",
       "estado": "FALLIDO_CALIDAD",
-      "mlflow_run_id": "b42ac0cdfc9a4bfcb2749404490ce4a0",
+      "mlflow_run_id": "78b4384e17dd44859eefeaab6cdc7a13",
       "etapa_fallida": "Controles de calidad QC-A…F",
       "qc_no_aprobados": [
         {
@@ -28,17 +28,17 @@
           "detalle": "Faltan columnas indispensables (serie/fecha/viajeros) para verificar la regla."
         }
       ],
-      "audit_local": "logs/audit_run_20261102_001002_4cea5b.json",
+      "audit_local": "logs/audit_run_20261102_013358_923651.json",
       "falla": "columna_indispensable_ausente (viajeros)",
       "sha256_aprobado_despues": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872",
       "aprobado_intacto": true,
       "candidato_no_publicado": true
     },
     {
-      "run_id": "run_20261102_001002_5ddc24",
+      "run_id": "run_20261102_013359_fdce92",
       "excepcion": "QualityControlError: Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.",
       "estado": "FALLIDO_CALIDAD",
-      "mlflow_run_id": "89a42a1837ec40b09e0881cfd5c4597a",
+      "mlflow_run_id": "1d514d9ee85641fda0f360eacb60cc91",
       "etapa_fallida": "Controles de calidad QC-A…F",
       "qc_no_aprobados": [
         {
@@ -52,17 +52,17 @@
           "detalle": "1 meses con discrepancia > 2.0% entre Total y suma de vías (ej. ['2009-11']). Invalidaría estimaciones que asumen esa identidad mensual."
         }
       ],
-      "audit_local": "logs/audit_run_20261102_001002_5ddc24.json",
+      "audit_local": "logs/audit_run_20261102_013359_fdce92.json",
       "falla": "clave_duplicada (serie,fecha)",
       "sha256_aprobado_despues": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872",
       "aprobado_intacto": true,
       "candidato_no_publicado": true
     },
     {
-      "run_id": "run_20261102_001002_ee857d",
+      "run_id": "run_20261102_013359_167547",
       "excepcion": "QualityControlError: Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.",
       "estado": "FALLIDO_CALIDAD",
-      "mlflow_run_id": "5774563eddd440e5aac630044317c95c",
+      "mlflow_run_id": "da033db8ab48400989e9bca4446a05a2",
       "etapa_fallida": "Controles de calidad QC-A…F",
       "qc_no_aprobados": [
         {
@@ -76,20 +76,26 @@
           "detalle": "1 meses con discrepancia > 2.0% entre Total y suma de vías (ej. ['2015-03']). Invalidaría estimaciones que asumen esa identidad mensual."
         }
       ],
-      "audit_local": "logs/audit_run_20261102_001002_ee857d.json",
+      "audit_local": "logs/audit_run_20261102_013359_167547.json",
       "falla": "conteo_negativo (Total 2015-03 = -500)",
       "sha256_aprobado_despues": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872",
       "aprobado_intacto": true,
       "candidato_no_publicado": true
     },
     {
-      "run_id": "run_20261102_001003_553f9b",
-      "excepcion": "ValueError: Total de viajeros en entrenamiento es 0.0; denominador inválido.",
-      "estado": "FALLIDO",
-      "mlflow_run_id": "2c3ca0b765534d7c83997d95074e0aaf",
-      "etapa_fallida": "Ajuste de modelo, baselines y factores",
-      "qc_no_aprobados": [],
-      "audit_local": "logs/audit_run_20261102_001003_553f9b.json",
+      "run_id": "run_20261102_013359_c9d842",
+      "excepcion": "QualityControlError: Fallo crítico en calidad (1 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.",
+      "estado": "FALLIDO_CALIDAD",
+      "mlflow_run_id": "1eb262538a19453690ab39878ed4ad92",
+      "etapa_fallida": "Controles de calidad QC-A…F",
+      "qc_no_aprobados": [
+        {
+          "id": "QC-E",
+          "estado": "FAILED",
+          "detalle": "Denominador del factor de reparto igual a cero: suma de Total en el periodo de ajuste = 0."
+        }
+      ],
+      "audit_local": "logs/audit_run_20261102_013359_c9d842.json",
       "falla": "denominador_cero (todas las series = 0 en Train)",
       "sha256_aprobado_despues": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872",
       "aprobado_intacto": true,
@@ -97,54 +103,54 @@
     }
   ],
   "recuperacion": {
-    "run_id": "run_20261102_001003_405131",
+    "run_id": "run_20261102_013359_237d8b",
     "estado": "APROBADO_PUBLICADO",
-    "mlflow_run_id": "b535b622c9824a118f0ba25dfbfb8736",
+    "mlflow_run_id": "57abd5176cbb4a7d9b1006ba13a2b04b",
     "excepcion": null,
     "qc_no_aprobados": [],
-    "audit_local": "logs/audit_run_20261102_001003_405131.json",
+    "audit_local": "logs/audit_run_20261102_013359_237d8b.json",
     "version_B": {
-      "sha256_csv": "594b7cff56ebcc2f3168a0a709af43aebf4ab6721311b2eee44505ee0e6377a0",
-      "sha256_manifiesto": "590c3f1b9f88bbd8ee7de8b34ca9e761858e80de4cb2daec467a885a7ca3c8bb",
-      "run_id": "run_20261102_001003_405131"
+      "sha256_csv": "59c2176b0839ae122d40fc891884aca785296a24dccca7d1c5af4d9293efec91",
+      "sha256_manifiesto": "936985d438d85af3b6452a49fc634b4941e5403d76c433df95a143b69a85f646",
+      "run_id": "run_20261102_013359_237d8b"
     },
     "respaldos": [
-      "estimaciones_aprobadas_backup_20261102_001003_773187_run_20261101_222030_d65c3b.csv",
-      "estimaciones_aprobadas_backup_20261102_001003_773187_run_20261101_222030_d65c3b.manifest.json"
+      "estimaciones_aprobadas_backup_20261102_013400_461311_run_20261101_222030_d65c3b.csv",
+      "estimaciones_aprobadas_backup_20261102_013400_461311_run_20261101_222030_d65c3b.manifest.json"
     ],
     "versiones_distintas": true
   },
   "fallos_infraestructura": [
     {
-      "run_id": "run_20261102_001003_ec1d34",
+      "run_id": "run_20261102_013400_1b5114",
       "excepcion": "OSError: fallo simulado de escritura",
       "estado": "FALLIDO",
-      "mlflow_run_id": "0c3d2078424f405aa9cbe487ee5fe70b",
+      "mlflow_run_id": "ddec7e59915f4a7bbd16fd8c270e111c",
       "etapa_fallida": "Publicación atómica",
       "qc_no_aprobados": [],
-      "audit_local": "logs/audit_run_20261102_001003_ec1d34.json",
+      "audit_local": "logs/audit_run_20261102_013400_1b5114.json",
       "falla": "escritura (os.replace lanza OSError)",
       "aprobado_intacto": true,
       "temporales_residuales": []
     },
     {
-      "run_id": "run_20261102_001004_d59228",
+      "run_id": "run_20261102_013401_5f3159",
       "excepcion": "TraceabilityError: MLflow no disponible en http://127.0.0.1:9 tras 1 intentos: <urlopen error [Errno 61] Connection refused>. Se bloquea la ejecución para no publicar una versión sin trazabilidad.",
       "estado": "BLOQUEADO_TRAZABILIDAD",
       "mlflow_run_id": null,
       "etapa_fallida": "Verificación de trazabilidad (MLflow)",
-      "audit_local": "logs/audit_run_20261102_001004_d59228.json",
+      "audit_local": "logs/audit_run_20261102_013401_5f3159.json",
       "falla": "MLflow inaccesible (http://127.0.0.1:9)",
       "aprobado_intacto": true
     },
     {
-      "run_id": "run_20261102_001004_4cceaf",
+      "run_id": "run_20261102_013401_20a4e1",
       "excepcion": "RuntimeError: artefacto no persistido (simulado)",
       "estado": "FALLIDO",
-      "mlflow_run_id": "874856115ca34fa79d88dd0286628cc9",
+      "mlflow_run_id": "0cbfd97e0c3e4a5e946e3e469c5a31f7",
       "etapa_fallida": "Registro verificado en MLflow",
       "qc_no_aprobados": [],
-      "audit_local": "logs/audit_run_20261102_001004_4cceaf.json",
+      "audit_local": "logs/audit_run_20261102_013401_20a4e1.json",
       "falla": "artefactos no persistidos en MLflow",
       "aprobado_intacto": true
     }
@@ -195,18 +201,18 @@
   "restauracion": {
     "respaldos_listados": [
       {
-        "archivo": "estimaciones_aprobadas_backup_20261102_001004_308228_run_20261102_001003_405131.csv",
-        "sha256": "594b7cff56ebcc2f3168a0a709af43aebf4ab6721311b2eee44505ee0e6377a0",
+        "archivo": "estimaciones_aprobadas_backup_20261102_013401_062956_run_20261102_013359_237d8b.csv",
+        "sha256": "59c2176b0839ae122d40fc891884aca785296a24dccca7d1c5af4d9293efec91",
         "tiene_manifiesto": true,
         "mae": 80365.74,
         "ok": true,
         "motivos": [],
-        "run_id": "run_20261102_001003_405131",
+        "run_id": "run_20261102_013359_237d8b",
         "filas": 504,
-        "fecha_generacion": "2026-11-02 00:10:03"
+        "fecha_generacion": "2026-11-02 01:33:59"
       },
       {
-        "archivo": "estimaciones_aprobadas_backup_20261102_001003_773187_run_20261101_222030_d65c3b.csv",
+        "archivo": "estimaciones_aprobadas_backup_20261102_013400_461311_run_20261101_222030_d65c3b.csv",
         "sha256": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872",
         "tiene_manifiesto": true,
         "mae": 80365.74,
@@ -217,19 +223,19 @@
         "fecha_generacion": "2026-11-01 22:20:30"
       }
     ],
-    "respaldo_restaurado": "estimaciones_aprobadas_backup_20261102_001003_773187_run_20261101_222030_d65c3b.csv",
+    "respaldo_restaurado": "estimaciones_aprobadas_backup_20261102_013400_461311_run_20261101_222030_d65c3b.csv",
     "resultado": {
       "evento": "RESTAURACION",
-      "fecha": "2026-11-02T00:10:04",
+      "fecha": "2026-11-02T01:34:01",
       "operador": "verificacion_lab11",
       "motivo": "Prueba controlada Lab 11: volver a la versión A",
-      "respaldo_origen": "estimaciones_aprobadas_backup_20261102_001003_773187_run_20261101_222030_d65c3b.csv",
+      "respaldo_origen": "estimaciones_aprobadas_backup_20261102_013400_461311_run_20261101_222030_d65c3b.csv",
       "run_id_restaurado": "run_20261101_222030_d65c3b",
       "sha256_restaurado": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872",
       "manifiesto_restaurado": true,
-      "run_id_reemplazado": "run_20261102_001003_405131",
-      "sha256_reemplazado": "594b7cff56ebcc2f3168a0a709af43aebf4ab6721311b2eee44505ee0e6377a0",
-      "respaldo_seguridad": "estimaciones_aprobadas_backup_20261102_001004_813414_run_20261102_001003_405131_prerestauracion.csv",
+      "run_id_reemplazado": "run_20261102_013359_237d8b",
+      "sha256_reemplazado": "59c2176b0839ae122d40fc891884aca785296a24dccca7d1c5af4d9293efec91",
+      "respaldo_seguridad": "estimaciones_aprobadas_backup_20261102_013401_586684_run_20261102_013359_237d8b_prerestauracion.csv",
       "sha256_vigente_verificado": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872"
     },
     "sha256_csv_tras_restaurar": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872",
@@ -237,8 +243,8 @@
     "manifiesto_coincide_con_A": true,
     "tablero_antes": {
       "estado": "ok",
-      "sha256": "594b7cff56ebcc2f3168a0a709af43aebf4ab6721311b2eee44505ee0e6377a0",
-      "run_id": "run_20261102_001003_405131"
+      "sha256": "59c2176b0839ae122d40fc891884aca785296a24dccca7d1c5af4d9293efec91",
+      "run_id": "run_20261102_013359_237d8b"
     },
     "tablero_despues": {
       "estado": "ok",
@@ -247,7 +253,7 @@
       "run_id": "run_20261101_222030_d65c3b"
     },
     "auditoria_restauracion": [
-      "{\"evento\": \"RESTAURACION\", \"fecha\": \"2026-11-02T00:10:04\", \"operador\": \"verificacion_lab11\", \"motivo\": \"Prueba controlada Lab 11: volver a la versión A\", \"respaldo_origen\": \"estimaciones_aprobadas_backup_20261102_001003_773187_run_20261101_222030_d65c3b.csv\", \"run_id_restaurado\": \"run_20261101_222030_d65c3b\", \"sha256_restaurado\": \"d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872\", \"manifiesto_restaurado\": true, \"run_id_reemplazado\": \"run_20261102_001003_405131\", \"sha256_reemplazado\": \"594b7cff56ebcc2f3168a0a709af43aebf4ab6721311b2eee44505ee0e6377a0\", \"respaldo_seguridad\": \"estimaciones_aprobadas_backup_20261102_001004_813414_run_20261102_001003_405131_prerestauracion.csv\", \"sha256_vigente_verificado\": \"d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872\"}"
+      "{\"evento\": \"RESTAURACION\", \"fecha\": \"2026-11-02T01:34:01\", \"operador\": \"verificacion_lab11\", \"motivo\": \"Prueba controlada Lab 11: volver a la versión A\", \"respaldo_origen\": \"estimaciones_aprobadas_backup_20261102_013400_461311_run_20261101_222030_d65c3b.csv\", \"run_id_restaurado\": \"run_20261101_222030_d65c3b\", \"sha256_restaurado\": \"d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872\", \"manifiesto_restaurado\": true, \"run_id_reemplazado\": \"run_20261102_013359_237d8b\", \"sha256_reemplazado\": \"59c2176b0839ae122d40fc891884aca785296a24dccca7d1c5af4d9293efec91\", \"respaldo_seguridad\": \"estimaciones_aprobadas_backup_20261102_013401_586684_run_20261102_013359_237d8b_prerestauracion.csv\", \"sha256_vigente_verificado\": \"d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872\"}"
     ]
   },
   "data_repositorio_intacta": true,

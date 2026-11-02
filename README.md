@@ -18,7 +18,7 @@ Documentos relacionados: memoria técnica [AVANCE_LABORATORIO_11.md](AVANCE_LABO
 app.py, data_logic.py, ui_components.py, mapa_guatemala.py, styles.css   # tablero
 pipeline.py, src/                    # pipeline MLOps (quality_checks, model_engine, monitoring, tracking, restore_version)
 config/pipeline_config.yaml          # configuración única del pipeline
-tests/                               # pruebas unittest (99)
+tests/                               # pruebas unittest (100)
 scripts/lab11/                       # scripts que generan las evidencias del Lab 11
 Dockerfile, docker-compose.yml, .dockerignore, .env.example
 data/                                # fuentes y versión aprobada (montado en contenedores; no va en la imagen)
@@ -88,7 +88,7 @@ docker compose down                                                   # parada s
 - **No usar `docker compose down -v`**: borra el volumen `observatorio_turismo_mlflow_store` (base y artefactos MLflow).
 - La imagen no contiene datos (`.dockerignore` es lista blanca de código); `data/`, `logs/` y `reports/` se montan desde el host. El tablero monta `data/` en solo lectura.
 - En PowerShell: `$env:GIT_COMMIT = git rev-parse HEAD`. Sin la variable, el commit queda `NO_DISPONIBLE`.
-- Verificación automatizada desde copia limpia: `bash scripts/lab11/docker_verificacion.sh <dir_copia> [puerto_mlflow] [--snapshot]`.
+- Verificación automatizada desde copia limpia del último commit: `bash scripts/lab11/docker_verificacion.sh <dir_copia> [puerto_mlflow]` (`--snapshot` añade cambios aún sin commitear; solo para revisar antes de commitear).
 
 ## 7. Acceso y ubicación de salidas
 
@@ -110,7 +110,7 @@ docker compose down                                                   # parada s
 | QC-B Fechas y cobertura | fecha inválida, día ≠ 1, hueco en la serie objetivo o ventana incompleta (no se imputa cero) |
 | QC-C Unicidad | hay claves (`serie`,`fecha`) duplicadas |
 | QC-D Faltantes | hay nulos en columnas indispensables |
-| QC-E Valores | hay NaN, infinitos o negativos (el cero es válido) |
+| QC-E Valores y denominadores | hay NaN, infinitos o negativos (el cero es válido) o la suma del Total en el periodo de ajuste (denominador del factor de reparto) es cero |
 | QC-F Regla metodológica | Total difiere más de 2 % de Aérea+Terrestre+Marítima, o faltan insumos (`NO_VERIFICABLE`) |
 
 Las fuentes de contexto (`pais_mensual`, `via_frontera`) generan **advertencias**, no bloqueos (`context_sources_critical: false`). Un Total de entrenamiento igual a cero detiene la corrida en el cálculo de factores.
@@ -141,7 +141,7 @@ En la UI de MLflow: experimento `Observatorio_Turismo_Guatemala`, filtrar por `t
 ## 11. Pruebas y fallo controlado sin tocar producción
 
 ```bash
-python -B -m unittest discover -s tests -v                                   # 99 pruebas (1 omitida sin Docker)
+python -B -m unittest discover -s tests -v                                   # 100 pruebas (1 omitida sin Docker)
 RUN_DOCKER_TESTS=1 python -B -m unittest tests.test_mlops_integracion.DockerCompose -v
 python scripts/lab11/run_tests_evidencia.py [--docker]                       # suite + evidencia PASS/FAIL/SKIP
 python scripts/lab11/fallos_controlados.py http://127.0.0.1:5000             # fallos, monitoreo y restauración en copia temporal

@@ -1,15 +1,15 @@
 comando: python -B -m unittest discover -s tests -v
 RUN_DOCKER_TESTS: 1
-inicio: 2026-11-02T00:44:03-06:00
-fin: 2026-11-02T00:44:45-06:00
+inicio: 2026-11-02T01:35:26-06:00
+fin: 2026-11-02T01:36:14-06:00
 python: 3.12.13
 plataforma: macOS-26.6.2-arm64-arm-64bit
-tests_ejecutados_unittest: 99
-duracion_s: 38.223
-PASS: 99
+tests_ejecutados_unittest: 100
+duracion_s: 45.571
+PASS: 100
 FAIL: 0
 ERROR: 0
-tests_runner_estructurado: 99
+tests_runner_estructurado: 100
 codigo_salida_runner_estructurado: 0
 SKIP: 0
 codigo_salida: 0
@@ -18,18 +18,18 @@ log: evidencias/lab11/tests_unitarios_docker.txt
 ===== STDOUT =====
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004412_2ad70d
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013535_be3a6b
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_f3b1oo89/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_qnn56ir1/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -45,36 +45,36 @@ Publicación solicitada: True
 [7/9] Monitoreo...
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] Publicación atómica...
-  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_f3b1oo89/data/estimaciones_aprobadas.csv
+  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_qnn56ir1/data/estimaciones_aprobadas.csv
 
-Pipeline APROBADO_PUBLICADO en 0.91s | publicado=True
+Pipeline APROBADO_PUBLICADO en 0.94s | publicado=True
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004413_bd2507
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013536_5d0b01
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
   [MLflow] intento 1/1 sin conexión a http://127.0.0.1:9: <urlopen error [Errno 61] Connection refused>
 
 [BLOQUEADO] MLflow no disponible en http://127.0.0.1:9 tras 1 intentos: <urlopen error [Errno 61] Connection refused>. Se bloquea la ejecución para no publicar una versión sin trazabilidad.
-Auditoría local: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_f3b1oo89/logs/audit_run_20261102_004413_bd2507.json
+Auditoría local: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_qnn56ir1/logs/audit_run_20261102_013536_5d0b01.json
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004413_a161d7
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013536_ba7b51
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_iya_qhg8/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_0r210zmx/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -90,25 +90,78 @@ Publicación solicitada: True
 [7/9] Monitoreo...
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] Publicación atómica...
-  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_iya_qhg8/data/estimaciones_aprobadas.csv
+  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_0r210zmx/data/estimaciones_aprobadas.csv
 
-Pipeline APROBADO_PUBLICADO en 0.53s | publicado=True
+Pipeline APROBADO_PUBLICADO en 0.54s | publicado=True
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004414_734628
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
-Publicación solicitada: False
+Iniciando Pipeline MLOps: run_20261102_013536_6319ef
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
+Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_iya_qhg8/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_0r210zmx/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[1/9] Lectura: series_mensuales.csv=7f9c4b8ed015
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [FAILED] QC-E Valores válidos y denominadores seguros: Denominador del factor de reparto igual a cero: suma de Total en el periodo de ajuste = 0.
+  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
+
+[FALLIDO_CALIDAD] Etapa 'Controles de calidad QC-A…F': Fallo crítico en calidad (1 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv.
+Se conserva la versión aprobada vigente sin alteraciones.
+
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_013537_d96105
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
+Publicación solicitada: True
+=======================================================
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_r49mt62r/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
+  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
+[3/9] Preparación y división temporal (YAML)...
+  Train: 2015-01–2018-12 (N=48)
+  Eval (backtest origen fijo): 2019-01–2020-12 (N=24)
+[4/9] Modelo, baselines y factores de reparto...
+[5/9] Evaluación temporal (meses comparables)...
+  Promedio Histórico Mensual: MAE=36.00 | RMSE=36.50 | APE_eps%=3.53 (N=24)
+  HW: MAE=0.00 | RMSE=0.00 | APE_eps%=0.00 (N=24)
+  Seasonal Naive: MAE=18.00 | RMSE=18.97 | APE_eps%=1.76 (N=24)
+  Promedio histórico: MAE=36.00 | RMSE=36.50 | APE_eps%=3.53 (N=24)
+[6/9] Candidato, integridad y regla de aceptación...
+  Decisión: APROBADO (beats_baseline=False, no obligatorio)
+[7/9] Monitoreo...
+[8/9] Registro y verificación de artefactos en MLflow...
+[9/9] Publicación atómica...
+  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_r49mt62r/data/estimaciones_aprobadas.csv
+
+Pipeline APROBADO_PUBLICADO en 0.48s | publicado=True
+=======================================================
+
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_013537_46003c
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
+Publicación solicitada: False
+=======================================================
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_r49mt62r/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[1/9] Lectura: series_mensuales.csv=658c1df0ef54
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -130,18 +183,18 @@ Pipeline APROBADO_NO_PUBLICADO en 0.17s | publicado=False
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004414_628260
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013537_565767
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: False
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_w7c9_x26/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_hwuh09bq/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54, pais_mensual.csv=9da1b1a7d4cb, via_frontera.csv=a6362719804c
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
   - [WARNING] QC-C Unicidad de clave primaria: Se detectaron 2 filas con clave duplicada en pais_mensual.csv.
   - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
@@ -162,27 +215,60 @@ Publicación solicitada: False
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] NO_PUBLICADO: ejecución --no-publish (dry-run). Versión aprobada intacta.
 
-Pipeline APROBADO_NO_PUBLICADO en 0.48s | publicado=False
+Pipeline APROBADO_NO_PUBLICADO en 0.6s | publicado=False
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004415_8a0fad
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013538_e40f8c
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: False
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_grbihd09/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_97xlxc7g/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54, pais_mensual.csv=0bfb4dc80767, via_frontera.csv=a6362719804c
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'pais'] única (144 registros).
   - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en pais_mensual.csv; ceros de viajeros permitidos.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['fecha', 'via', 'frontera'] única (144 registros).
+[3/9] Preparación y división temporal (YAML)...
+  Train: 2015-01–2018-12 (N=48)
+  Eval (backtest origen fijo): 2019-01–2020-12 (N=24)
+[4/9] Modelo, baselines y factores de reparto...
+[5/9] Evaluación temporal (meses comparables)...
+  Promedio Histórico Mensual: MAE=36.00 | RMSE=36.50 | APE_eps%=3.53 (N=24)
+  HW: MAE=0.00 | RMSE=0.00 | APE_eps%=0.00 (N=24)
+  Seasonal Naive: MAE=18.00 | RMSE=18.97 | APE_eps%=1.76 (N=24)
+  Promedio histórico: MAE=36.00 | RMSE=36.50 | APE_eps%=3.53 (N=24)
+[6/9] Candidato, integridad y regla de aceptación...
+  Decisión: APROBADO (beats_baseline=False, no obligatorio)
+[7/9] Monitoreo...
+[8/9] Registro y verificación de artefactos en MLflow...
+[9/9] NO_PUBLICADO: ejecución --no-publish (dry-run). Versión aprobada intacta.
+
+Pipeline APROBADO_NO_PUBLICADO en 0.5s | publicado=False
+=======================================================
+
+
+=======================================================
+Iniciando Pipeline MLOps: run_20261102_013538_6a19ed
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
+Publicación solicitada: False
+=======================================================
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_awlautkt/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[1/9] Lectura: series_mensuales.csv=658c1df0ef54
+[2/9] Controles automáticos de calidad...
+  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
+  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
+  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
+  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
+  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
   Eval (backtest origen fijo): 2019-01–2020-12 (N=24)
@@ -203,18 +289,18 @@ Pipeline APROBADO_NO_PUBLICADO en 0.58s | publicado=False
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004415_fd5c87
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013539_5621f3
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: False
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_p7mc3amv/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_vz_6wd84/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -231,56 +317,23 @@ Publicación solicitada: False
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] NO_PUBLICADO: ejecución --no-publish (dry-run). Versión aprobada intacta.
 
-Pipeline APROBADO_NO_PUBLICADO en 0.47s | publicado=False
+Pipeline APROBADO_NO_PUBLICADO en 0.5s | publicado=False
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004416_23af60
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013540_d6611f
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: False
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops__abjc91c/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
-[1/9] Lectura: series_mensuales.csv=658c1df0ef54
-[2/9] Controles automáticos de calidad...
-  - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
-  - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
-  - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
-  - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
-  - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
-[3/9] Preparación y división temporal (YAML)...
-  Train: 2015-01–2018-12 (N=48)
-  Eval (backtest origen fijo): 2019-01–2020-12 (N=24)
-[4/9] Modelo, baselines y factores de reparto...
-[5/9] Evaluación temporal (meses comparables)...
-  Promedio Histórico Mensual: MAE=36.00 | RMSE=36.50 | APE_eps%=3.53 (N=24)
-  HW: MAE=0.00 | RMSE=0.00 | APE_eps%=0.00 (N=24)
-  Seasonal Naive: MAE=18.00 | RMSE=18.97 | APE_eps%=1.76 (N=24)
-  Promedio histórico: MAE=36.00 | RMSE=36.50 | APE_eps%=3.53 (N=24)
-[6/9] Candidato, integridad y regla de aceptación...
-  Decisión: APROBADO (beats_baseline=False, no obligatorio)
-[7/9] Monitoreo...
-[8/9] Registro y verificación de artefactos en MLflow...
-[9/9] NO_PUBLICADO: ejecución --no-publish (dry-run). Versión aprobada intacta.
-
-Pipeline APROBADO_NO_PUBLICADO en 0.57s | publicado=False
-=======================================================
-
-
-=======================================================
-Iniciando Pipeline MLOps: run_20261102_004416_cfeb0c
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
-Publicación solicitada: False
-=======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops__abjc91c/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_vz_6wd84/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=f6fed148f1a0
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -297,23 +350,23 @@ Publicación solicitada: False
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] NO_PUBLICADO: ejecución --no-publish (dry-run). Versión aprobada intacta.
 
-Pipeline APROBADO_NO_PUBLICADO en 0.17s | publicado=False
+Pipeline APROBADO_NO_PUBLICADO en 0.18s | publicado=False
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004432_2474af
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013601_6f00fc
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: http://127.0.0.1:55036 (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: http://127.0.0.1:55418 (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -329,27 +382,27 @@ Publicación solicitada: True
 [7/9] Monitoreo...
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] Publicación atómica...
-  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_otymkhwr/data/estimaciones_aprobadas.csv
+  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_2hmm55d3/data/estimaciones_aprobadas.csv
 
-Pipeline APROBADO_PUBLICADO en 0.99s | publicado=True
+Pipeline APROBADO_PUBLICADO en 1.23s | publicado=True
 =======================================================
 
-🏃 View run run_20261102_004432_2474af at: http://127.0.0.1:55036/#/experiments/1/runs/9412fa49b8df44f7aad45bf2a2f563df
-🧪 View experiment at: http://127.0.0.1:55036/#/experiments/1
+🏃 View run run_20261102_013601_6f00fc at: http://127.0.0.1:55418/#/experiments/1/runs/2f6de3378ef446dc8fd32645d9b9e706
+🧪 View experiment at: http://127.0.0.1:55418/#/experiments/1
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004439_5e3925
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013608_cc2c11
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: False
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_t7661gov/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops__4woedak/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -366,23 +419,23 @@ Publicación solicitada: False
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] NO_PUBLICADO: ejecución --no-publish (dry-run). Versión aprobada intacta.
 
-Pipeline APROBADO_NO_PUBLICADO en 0.48s | publicado=False
+Pipeline APROBADO_NO_PUBLICADO en 0.49s | publicado=False
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004440_85c1ec
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013609_679965
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_t7661gov/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops__4woedak/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -400,34 +453,34 @@ Publicación solicitada: True
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] NO_PUBLICADO: candidato rechazado por la regla de aceptación. Versión aprobada intacta.
 
-Pipeline RECHAZADO en 0.17s | publicado=False
+Pipeline RECHAZADO en 0.31s | publicado=False
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004440_81fa3d
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013609_8d09fa
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
   [MLflow] intento 1/1 sin conexión a http://127.0.0.1:9: <urlopen error [Errno 61] Connection refused>
 
 [BLOQUEADO] MLflow no disponible en http://127.0.0.1:9 tras 1 intentos: <urlopen error [Errno 61] Connection refused>. Se bloquea la ejecución para no publicar una versión sin trazabilidad.
-Auditoría local: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_t7661gov/logs/audit_run_20261102_004440_81fa3d.json
+Auditoría local: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops__4woedak/logs/audit_run_20261102_013609_8d09fa.json
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004440_1161e9
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013609_8f5e28
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_echk08mj/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_9n659dsx/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -443,25 +496,25 @@ Publicación solicitada: True
 [7/9] Monitoreo...
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] Publicación atómica...
-  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_echk08mj/data/estimaciones_aprobadas.csv
+  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_9n659dsx/data/estimaciones_aprobadas.csv
 
-Pipeline APROBADO_PUBLICADO en 0.48s | publicado=True
+Pipeline APROBADO_PUBLICADO en 0.5s | publicado=True
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004440_48f26b
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013610_f09775
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_9nzt8nqx/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_qmo55i8y/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -477,18 +530,18 @@ Publicación solicitada: True
 [7/9] Monitoreo...
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] Publicación atómica...
-  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_9nzt8nqx/data/estimaciones_aprobadas.csv
+  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_qmo55i8y/data/estimaciones_aprobadas.csv
 
-Pipeline APROBADO_PUBLICADO en 0.49s | publicado=True
+Pipeline APROBADO_PUBLICADO en 0.5s | publicado=True
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004441_8eb3af
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013610_209c50
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_9nzt8nqx/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_qmo55i8y/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=f3be8507f6c2
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
@@ -503,18 +556,18 @@ Se conserva la versión aprobada vigente sin alteraciones.
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004441_242f71
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013611_a02c2c
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_x8xn6pbr/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_10synbtp/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -532,23 +585,23 @@ Publicación solicitada: True
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] NO_PUBLICADO: candidato rechazado por la regla de aceptación. Versión aprobada intacta.
 
-Pipeline RECHAZADO en 0.46s | publicado=False
+Pipeline RECHAZADO en 0.5s | publicado=False
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004442_b079f9
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013611_074128
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_cw5cmlxw/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_rvz_h6kd/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -564,25 +617,25 @@ Publicación solicitada: True
 [7/9] Monitoreo...
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] Publicación atómica...
-  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_cw5cmlxw/data/estimaciones_aprobadas.csv
+  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_rvz_h6kd/data/estimaciones_aprobadas.csv
 
-Pipeline APROBADO_PUBLICADO en 0.48s | publicado=True
+Pipeline APROBADO_PUBLICADO en 0.64s | publicado=True
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004442_d723fe
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013612_520317
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_cw5cmlxw/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_rvz_h6kd/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=3a8a762e0619
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 63,866 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -598,26 +651,26 @@ Publicación solicitada: True
 [7/9] Monitoreo...
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] Publicación atómica...
-  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_cw5cmlxw/data/estimaciones_aprobadas.csv
-  Respaldo de la versión previa: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_cw5cmlxw/data/backup_aprobadas/estimaciones_aprobadas_backup_20261102_004442_771799_run_20261102_004442_b079f9.csv
+  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_rvz_h6kd/data/estimaciones_aprobadas.csv
+  Respaldo de la versión previa: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_rvz_h6kd/data/backup_aprobadas/estimaciones_aprobadas_backup_20261102_013612_409010_run_20261102_013611_074128.csv
 
 Pipeline APROBADO_PUBLICADO en 0.18s | publicado=True
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004442_4ed572
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013612_dc0471
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_qrkmd8ub/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_y737w6gz/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -638,18 +691,18 @@ Se conserva la versión aprobada vigente sin alteraciones.
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004443_543def
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013612_6552ea
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
-[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_o1i4v4m1/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
+[0/9] MLflow: sqlite:////var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_smdyq5kq/mlflow/mlflow.db (config:mlflow.tracking_uri), experimento 'Observatorio_Turismo_Guatemala'
 [1/9] Lectura: series_mensuales.csv=658c1df0ef54
 [2/9] Controles automáticos de calidad...
   - [PASSED] QC-A Columnas y tipos requeridos: Columnas y tipos conformes en series_mensuales.csv: ['serie', 'fecha', 'viajeros'].
   - [PASSED] QC-B Fechas y cobertura temporal: Cobertura continua de 'Total' desde 2015-01 hasta 2020-12 (72 meses). Sin imputación de ceros.
   - [PASSED] QC-C Unicidad de clave primaria: Clave ['serie', 'fecha'] única (576 registros).
   - [PASSED] QC-D Valores faltantes y completitud: Sin nulos en obligatorias de series_mensuales.csv (['serie', 'fecha', 'viajeros']).
-  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos.
+  - [PASSED] QC-E Valores válidos y denominadores seguros: Valores finitos y seguros en series_mensuales.csv; ceros de viajeros permitidos. Denominador del factor de reparto (suma de Total en ajuste) = 49,128 ≠ 0.
   - [PASSED] QC-F Regla metodológica del observatorio: Conciliación mensual Total ≈ suma de vías dentro de la tolerancia.
 [3/9] Preparación y división temporal (YAML)...
   Train: 2015-01–2018-12 (N=48)
@@ -665,28 +718,29 @@ Publicación solicitada: True
 [7/9] Monitoreo...
 [8/9] Registro y verificación de artefactos en MLflow...
 [9/9] Publicación atómica...
-  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_o1i4v4m1/data/estimaciones_aprobadas.csv
+  Publicado: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_smdyq5kq/data/estimaciones_aprobadas.csv
 
-Pipeline APROBADO_PUBLICADO en 0.48s | publicado=True
+Pipeline APROBADO_PUBLICADO en 0.5s | publicado=True
 =======================================================
 
 
 =======================================================
-Iniciando Pipeline MLOps: run_20261102_004443_195f9d
-Commit Git: 4d8f5ba4cc1d69ed7338ecbb8d7911fd0e858302 (git rev-parse HEAD)
+Iniciando Pipeline MLOps: run_20261102_013613_c5713d
+Commit Git: bced471e35b393335f309a95c4a5afd8f792e6a9 (git rev-parse HEAD)
 Publicación solicitada: True
 =======================================================
   [MLflow] intento 1/1 sin conexión a http://127.0.0.1:9: <urlopen error [Errno 61] Connection refused>
 
 [BLOQUEADO] MLflow no disponible en http://127.0.0.1:9 tras 1 intentos: <urlopen error [Errno 61] Connection refused>. Se bloquea la ejecución para no publicar una versión sin trazabilidad.
-Auditoría local: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_o1i4v4m1/logs/audit_run_20261102_004443_195f9d.json
+Auditoría local: /var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_mlops_smdyq5kq/logs/audit_run_20261102_013613_c5713d.json
 
 
 ===== STDERR (reporte unittest) =====
-test_16_inicio_nueve_vistas (test_lab10.Dashboard.test_16_inicio_nueve_vistas) ... 2026-11-02 00:44:05.787 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026/11/02 01:35:27 INFO mlflow.agent.hint: Load the `instrumenting-with-mlflow-tracing` skill at /private/tmp/claude-501/-Users-mariorocha-Documents-Programacion-DataScience-Laboratorio--10-Dashboard-/fbfd37b0-8af7-4146-b38e-dfbacf25375d/scratchpad/venv/lib/python3.12/site-packages/mlflow/assistant/skills/instrumenting-with-mlflow-tracing/SKILL.md before writing any tracing code; it ships with this MLflow install. Set MLFLOW_DISABLE_AGENT_HINT=1 to silence this.
+test_16_inicio_nueve_vistas (test_lab10.Dashboard.test_16_inicio_nueve_vistas) ... 2026-11-02 01:35:28.006 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_17_todas_las_vistas_ocultables (test_lab10.Dashboard.test_17_todas_las_vistas_ocultables) ... 2026-11-02 00:44:06.269 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
-2026-11-02 00:44:06.660 The widget with key "modelos" was created with a default value but also had its value set via the Session State API.
+test_17_todas_las_vistas_ocultables (test_lab10.Dashboard.test_17_todas_las_vistas_ocultables) ... 2026-11-02 01:35:28.512 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-02 01:35:28.902 The widget with key "modelos" was created with a default value but also had its value set via the Session State API.
 Stack (most recent call last):
   File "/opt/homebrew/Cellar/python@3.12/3.12.13_4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/threading.py", line 1032, in _bootstrap
     self._bootstrap_inner()
@@ -717,23 +771,23 @@ Stack (most recent call last):
   File "/private/tmp/claude-501/-Users-mariorocha-Documents-Programacion-DataScience-Laboratorio--10-Dashboard-/fbfd37b0-8af7-4146-b38e-dfbacf25375d/scratchpad/venv/lib/python3.12/site-packages/streamlit/elements/lib/policies.py", line 90, in check_session_state_rules
     _LOGGER.warning(
 ok
-test_18_mensual_anual_regreso (test_lab10.Dashboard.test_18_mensual_anual_regreso) ... 2026-11-02 00:44:07.936 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_18_mensual_anual_regreso (test_lab10.Dashboard.test_18_mensual_anual_regreso) ... 2026-11-02 01:35:30.228 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_19_region_global_y_reset (test_lab10.Dashboard.test_19_region_global_y_reset) ... 2026-11-02 00:44:08.507 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_19_region_global_y_reset (test_lab10.Dashboard.test_19_region_global_y_reset) ... 2026-11-02 01:35:30.845 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_20_2009_no_inventa_porcentaje (test_lab10.Dashboard.test_20_2009_no_inventa_porcentaje) ... 2026-11-02 00:44:09.204 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_20_2009_no_inventa_porcentaje (test_lab10.Dashboard.test_20_2009_no_inventa_porcentaje) ... 2026-11-02 01:35:31.565 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_21_cero_modelos (test_lab10.Dashboard.test_21_cero_modelos) ... 2026-11-02 00:44:09.617 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_21_cero_modelos (test_lab10.Dashboard.test_21_cero_modelos) ... 2026-11-02 01:35:31.977 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_22_modelos_metricas_y_negativos (test_lab10.Dashboard.test_22_modelos_metricas_y_negativos) ... 2026-11-02 00:44:10.010 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_22_modelos_metricas_y_negativos (test_lab10.Dashboard.test_22_modelos_metricas_y_negativos) ... 2026-11-02 01:35:32.369 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_23_heatmap_anios (test_lab10.Dashboard.test_23_heatmap_anios) ... 2026-11-02 00:44:12.039 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_23_heatmap_anios (test_lab10.Dashboard.test_23_heatmap_anios) ... 2026-11-02 01:35:34.422 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_24_filtros_sin_filas (test_lab10.Dashboard.test_24_filtros_sin_filas) ... 2026-11-02 00:44:12.310 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_24_filtros_sin_filas (test_lab10.Dashboard.test_24_filtros_sin_filas) ... 2026-11-02 01:35:34.691 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_25_error_csv_sin_stacktrace (test_lab10.Dashboard.test_25_error_csv_sin_stacktrace) ... 2026-11-02 00:44:12.486 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_25_error_csv_sin_stacktrace (test_lab10.Dashboard.test_25_error_csv_sin_stacktrace) ... 2026-11-02 01:35:34.868 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_26_modelos_opcionales (test_lab10.Dashboard.test_26_modelos_opcionales) ... 2026-11-02 00:44:12.605 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_26_modelos_opcionales (test_lab10.Dashboard.test_26_modelos_opcionales) ... 2026-11-02 01:35:34.987 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
 test_01_datos_actuales (test_lab10.Datos.test_01_datos_actuales) ... ok
 test_02_metricas_42_pares_sin_regresion (test_lab10.Datos.test_02_metricas_42_pares_sin_regresion) ... ok
@@ -753,28 +807,31 @@ test_15_conciliacion (test_lab10.Datos.test_15_conciliacion) ... ok
 test_27_cero_uno_multiples_y_obsoleto (test_lab10.Datos.test_27_cero_uno_multiples_y_obsoleto) ... ok
 test_segunda_corrida_respeta_su_config_y_bloquea_si_mlflow_cae (test_lab11_verificacion.AislamientoTrackingURI.test_segunda_corrida_respeta_su_config_y_bloquea_si_mlflow_cae) ... /private/tmp/claude-501/-Users-mariorocha-Documents-Programacion-DataScience-Laboratorio--10-Dashboard-/fbfd37b0-8af7-4146-b38e-dfbacf25375d/scratchpad/venv/lib/python3.12/site-packages/mlflow/store/tracking/sqlalchemy_store.py:327: SADeprecationWarning: The ``noload`` loader strategy is deprecated and will be removed in a future release.  This option produces incorrect results by returning ``None`` for related items. (deprecated since: 2.1)
   sqlalchemy.orm.configure_mappers()
-2026/11/02 00:44:13 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:13 INFO mlflow.store.db.utils: Updating database tables
+2026/11/02 01:35:35 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:35:35 INFO mlflow.store.db.utils: Updating database tables
 ok
 test_allowed_hosts_incluye_puerto_publicado_configurable (test_lab11_verificacion.ComposePuertoMLflow.test_allowed_hosts_incluye_puerto_publicado_configurable) ... ok
-test_no_publish_no_altera_version_aprobada (test_lab11_verificacion.DryRun.test_no_publish_no_altera_version_aprobada) ... 2026/11/02 00:44:13 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:13 INFO mlflow.store.db.utils: Updating database tables
+test_qc_e_del_pipeline_detecta_denominador_cero (test_lab11_verificacion.DenominadorCeroEnQC.test_qc_e_del_pipeline_detecta_denominador_cero) ... 2026/11/02 01:35:36 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:35:36 INFO mlflow.store.db.utils: Updating database tables
 ok
-test_duplicado_en_fuente_de_contexto_advierte_sin_bloquear (test_lab11_verificacion.FuentesMultiples.test_duplicado_en_fuente_de_contexto_advierte_sin_bloquear) ... 2026/11/02 00:44:14 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:14 INFO mlflow.store.db.utils: Updating database tables
+test_no_publish_no_altera_version_aprobada (test_lab11_verificacion.DryRun.test_no_publish_no_altera_version_aprobada) ... 2026/11/02 01:35:37 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:35:37 INFO mlflow.store.db.utils: Updating database tables
 ok
-test_tres_fuentes_registradas_con_hash_y_qc_de_contexto (test_lab11_verificacion.FuentesMultiples.test_tres_fuentes_registradas_con_hash_y_qc_de_contexto) ... 2026/11/02 00:44:15 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:15 INFO mlflow.store.db.utils: Updating database tables
+test_duplicado_en_fuente_de_contexto_advierte_sin_bloquear (test_lab11_verificacion.FuentesMultiples.test_duplicado_en_fuente_de_contexto_advierte_sin_bloquear) ... 2026/11/02 01:35:37 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:35:37 INFO mlflow.store.db.utils: Updating database tables
 ok
-test_baseline_y_modelo_activo_en_los_mismos_meses (test_lab11_verificacion.MetricasYBaseline.test_baseline_y_modelo_activo_en_los_mismos_meses) ... 2026/11/02 00:44:15 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:15 INFO mlflow.store.db.utils: Updating database tables
+test_tres_fuentes_registradas_con_hash_y_qc_de_contexto (test_lab11_verificacion.FuentesMultiples.test_tres_fuentes_registradas_con_hash_y_qc_de_contexto) ... 2026/11/02 01:35:38 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:35:38 INFO mlflow.store.db.utils: Updating database tables
+ok
+test_baseline_y_modelo_activo_en_los_mismos_meses (test_lab11_verificacion.MetricasYBaseline.test_baseline_y_modelo_activo_en_los_mismos_meses) ... 2026/11/02 01:35:38 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:35:38 INFO mlflow.store.db.utils: Updating database tables
 ok
 test_mae_rmse_contra_calculo_manual (test_lab11_verificacion.MetricasYBaseline.test_mae_rmse_contra_calculo_manual) ... ok
 test_meses_sin_observacion_no_se_evaluan (test_lab11_verificacion.MetricasYBaseline.test_meses_sin_observacion_no_se_evaluan) ... ok
 test_parametros_y_predicciones_no_dependen_de_meses_evaluados (test_lab11_verificacion.SinFugaTemporal.test_parametros_y_predicciones_no_dependen_de_meses_evaluados) ... ok
 test_pipeline_completo_sin_fuga (test_lab11_verificacion.SinFugaTemporal.test_pipeline_completo_sin_fuga)
-Mismo resultado de estimación con meses evaluados alterados; solo cambian las métricas. ... 2026/11/02 00:44:16 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:16 INFO mlflow.store.db.utils: Updating database tables
+Mismo resultado de estimación con meses evaluados alterados; solo cambian las métricas. ... 2026/11/02 01:35:39 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:35:39 INFO mlflow.store.db.utils: Updating database tables
 ok
 test_pipeline_en_contenedor_registra_en_mlflow_compose_y_persiste (test_mlops_integracion.DockerCompose.test_pipeline_en_contenedor_registra_en_mlflow_compose_y_persiste) ... ok
 test_dependencias_fijadas (test_mlops_integracion.DockerConfiguracion.test_dependencias_fijadas) ... ok
@@ -794,34 +851,34 @@ test_rechaza_respaldos_invalidos_sin_tocar_vigente (test_mlops_integracion.Resta
 test_rechaza_rutas_inseguras (test_mlops_integracion.Restauracion.test_rechaza_rutas_inseguras) ... ok
 test_restauracion_valida_atomica_con_auditoria (test_mlops_integracion.Restauracion.test_restauracion_valida_atomica_con_auditoria) ... ok
 test_artefactos_por_http_persisten_tras_reiniciar_servidor (test_mlops_integracion.ServidorMLflowHTTP.test_artefactos_por_http_persisten_tras_reiniciar_servidor) ... ok
-test_sin_version_aprobada_aviso_informativo (test_mlops_integracion.TableroVersionAprobada.test_sin_version_aprobada_aviso_informativo) ... 2026-11-02 00:44:37.851 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_sin_version_aprobada_aviso_informativo (test_mlops_integracion.TableroVersionAprobada.test_sin_version_aprobada_aviso_informativo) ... 2026-11-02 01:36:07.088 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_version_invalida_o_manifiesto_inconsistente (test_mlops_integracion.TableroVersionAprobada.test_version_invalida_o_manifiesto_inconsistente) ... 2026-11-02 00:44:38.184 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
-2026-11-02 00:44:38.453 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
-2026-11-02 00:44:38.716 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_version_invalida_o_manifiesto_inconsistente (test_mlops_integracion.TableroVersionAprobada.test_version_invalida_o_manifiesto_inconsistente) ... 2026-11-02 01:36:07.464 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-02 01:36:07.755 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-02 01:36:08.021 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_version_valida_actualizacion_y_restauracion (test_mlops_integracion.TableroVersionAprobada.test_version_valida_actualizacion_y_restauracion) ... 2026-11-02 00:44:38.980 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+test_version_valida_actualizacion_y_restauracion (test_mlops_integracion.TableroVersionAprobada.test_version_valida_actualizacion_y_restauracion) ... 2026-11-02 01:36:08.295 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
 ok
-test_codigos_de_salida_del_cli (test_mlops_integracion.TrazabilidadMLflow.test_codigos_de_salida_del_cli) ... 2026/11/02 00:44:39 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:39 INFO mlflow.store.db.utils: Updating database tables
+test_codigos_de_salida_del_cli (test_mlops_integracion.TrazabilidadMLflow.test_codigos_de_salida_del_cli) ... 2026/11/02 01:36:08 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:36:08 INFO mlflow.store.db.utils: Updating database tables
 ok
-test_corrida_aprobada_publicada_registra_trazabilidad_completa (test_mlops_integracion.TrazabilidadMLflow.test_corrida_aprobada_publicada_registra_trazabilidad_completa) ... 2026/11/02 00:44:40 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:40 INFO mlflow.store.db.utils: Updating database tables
+test_corrida_aprobada_publicada_registra_trazabilidad_completa (test_mlops_integracion.TrazabilidadMLflow.test_corrida_aprobada_publicada_registra_trazabilidad_completa) ... 2026/11/02 01:36:09 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:36:09 INFO mlflow.store.db.utils: Updating database tables
 ok
-test_corrida_fallida_por_calidad_no_inventa_metricas (test_mlops_integracion.TrazabilidadMLflow.test_corrida_fallida_por_calidad_no_inventa_metricas) ... 2026/11/02 00:44:41 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:41 INFO mlflow.store.db.utils: Updating database tables
+test_corrida_fallida_por_calidad_no_inventa_metricas (test_mlops_integracion.TrazabilidadMLflow.test_corrida_fallida_por_calidad_no_inventa_metricas) ... 2026/11/02 01:36:10 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:36:10 INFO mlflow.store.db.utils: Updating database tables
 ok
-test_corrida_rechazada_registra_metricas_reales_sin_publicar (test_mlops_integracion.TrazabilidadMLflow.test_corrida_rechazada_registra_metricas_reales_sin_publicar) ... 2026/11/02 00:44:41 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:41 INFO mlflow.store.db.utils: Updating database tables
+test_corrida_rechazada_registra_metricas_reales_sin_publicar (test_mlops_integracion.TrazabilidadMLflow.test_corrida_rechazada_registra_metricas_reales_sin_publicar) ... 2026/11/02 01:36:11 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:36:11 INFO mlflow.store.db.utils: Updating database tables
 ok
-test_dos_versiones_respaldo_restauracion_y_lectura_del_tablero (test_mlops_integracion.TrazabilidadMLflow.test_dos_versiones_respaldo_restauracion_y_lectura_del_tablero) ... 2026/11/02 00:44:42 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:42 INFO mlflow.store.db.utils: Updating database tables
+test_dos_versiones_respaldo_restauracion_y_lectura_del_tablero (test_mlops_integracion.TrazabilidadMLflow.test_dos_versiones_respaldo_restauracion_y_lectura_del_tablero) ... 2026/11/02 01:36:11 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:36:11 INFO mlflow.store.db.utils: Updating database tables
 ok
-test_fallo_al_persistir_artefactos_impide_publicacion_no_trazable (test_mlops_integracion.TrazabilidadMLflow.test_fallo_al_persistir_artefactos_impide_publicacion_no_trazable) ... 2026/11/02 00:44:42 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:42 INFO mlflow.store.db.utils: Updating database tables
+test_fallo_al_persistir_artefactos_impide_publicacion_no_trazable (test_mlops_integracion.TrazabilidadMLflow.test_fallo_al_persistir_artefactos_impide_publicacion_no_trazable) ... 2026/11/02 01:36:12 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:36:12 INFO mlflow.store.db.utils: Updating database tables
 ok
-test_mlflow_no_disponible_bloquea_publicacion (test_mlops_integracion.TrazabilidadMLflow.test_mlflow_no_disponible_bloquea_publicacion) ... 2026/11/02 00:44:43 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
-2026/11/02 00:44:43 INFO mlflow.store.db.utils: Updating database tables
+test_mlflow_no_disponible_bloquea_publicacion (test_mlops_integracion.TrazabilidadMLflow.test_mlflow_no_disponible_bloquea_publicacion) ... 2026/11/02 01:36:12 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/02 01:36:12 INFO mlflow.store.db.utils: Updating database tables
 ok
 test_acceptance_documenta_baseline_sin_exigirlo (test_mlops_pipeline.TestMLOpsPipeline.test_acceptance_documenta_baseline_sin_exigirlo) ... ok
 test_acceptance_rule_rejection_on_high_mae (test_mlops_pipeline.TestMLOpsPipeline.test_acceptance_rule_rejection_on_high_mae) ... ok
@@ -862,6 +919,6 @@ test_qc_f_regla_metodologica_conciliacion (test_quality_checks.TestQualityChecks
 test_qc_f_sin_insumos_no_verificable (test_quality_checks.TestQualityChecks.test_qc_f_sin_insumos_no_verificable) ... ok
 
 ----------------------------------------------------------------------
-Ran 99 tests in 38.223s
+Ran 100 tests in 45.571s
 
 OK

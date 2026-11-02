@@ -2,6 +2,3014 @@
   "runs": [
     {
       "info": {
+        "run_uuid": "5b66ca9cffb24a019dbcc52e87884e14",
+        "experiment_id": "1",
+        "run_name": "run_20261102_013228_107c2c",
+        "user_id": "app",
+        "status": "FINISHED",
+        "start_time": 1793604748266,
+        "end_time": 1793604748760,
+        "artifact_uri": "mlflow-artifacts:/1/5b66ca9cffb24a019dbcc52e87884e14/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "5b66ca9cffb24a019dbcc52e87884e14"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "qc.critical_passed",
+            "value": 1.0,
+            "timestamp": 1793604748365,
+            "step": 0
+          },
+          {
+            "key": "qc.warnings_count",
+            "value": 0.0,
+            "timestamp": 1793604748365,
+            "step": 0
+          },
+          {
+            "key": "qc.errors_count",
+            "value": 0.0,
+            "timestamp": 1793604748365,
+            "step": 0
+          },
+          {
+            "key": "eval.n_total",
+            "value": 63.0,
+            "timestamp": 1793604748468,
+            "step": 0
+          },
+          {
+            "key": "eval.n_evaluable",
+            "value": 63.0,
+            "timestamp": 1793604748468,
+            "step": 0
+          },
+          {
+            "key": "eval.active.n",
+            "value": 63.0,
+            "timestamp": 1793604748485,
+            "step": 0
+          },
+          {
+            "key": "eval.active.mae",
+            "value": 80365.74,
+            "timestamp": 1793604748496,
+            "step": 0
+          },
+          {
+            "key": "eval.active.rmse",
+            "value": 94175.26,
+            "timestamp": 1793604748496,
+            "step": 0
+          },
+          {
+            "key": "eval.active.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793604748496,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.n",
+            "value": 63.0,
+            "timestamp": 1793604748507,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.mae",
+            "value": 302827.47,
+            "timestamp": 1793604748511,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.rmse",
+            "value": 327720.16,
+            "timestamp": 1793604748511,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.ape_eps_pct",
+            "value": 103.99,
+            "timestamp": 1793604748511,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.n",
+            "value": 63.0,
+            "timestamp": 1793604748515,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.mae",
+            "value": 235730.91,
+            "timestamp": 1793604748518,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.rmse",
+            "value": 253203.39,
+            "timestamp": 1793604748518,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.ape_eps_pct",
+            "value": 83.86,
+            "timestamp": 1793604748518,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.n",
+            "value": 63.0,
+            "timestamp": 1793604748522,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.mae",
+            "value": 80365.74,
+            "timestamp": 1793604748525,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.rmse",
+            "value": 94175.26,
+            "timestamp": 1793604748525,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793604748525,
+            "step": 0
+          },
+          {
+            "key": "eval.active_minus_baseline.mae",
+            "value": -155365.16999999998,
+            "timestamp": 1793604748530,
+            "step": 0
+          },
+          {
+            "key": "acceptance.is_accepted",
+            "value": 1.0,
+            "timestamp": 1793604748546,
+            "step": 0
+          },
+          {
+            "key": "monitoring.healthy",
+            "value": 1.0,
+            "timestamp": 1793604748581,
+            "step": 0
+          },
+          {
+            "key": "monitoring.alerts_count",
+            "value": 0.0,
+            "timestamp": 1793604748581,
+            "step": 0
+          },
+          {
+            "key": "pipeline.duration_seconds",
+            "value": 0.53,
+            "timestamp": 1793604748752,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "procedure.version",
+            "value": "1.0.0"
+          },
+          {
+            "key": "code.sha256",
+            "value": "54c040972bbd601e5c8c83fadee4c03fd8f28bc19c01d73f3ad0eee63cc7800a"
+          },
+          {
+            "key": "config.sha256",
+            "value": "d12e42c69a09d6da2733b4b54ce518d661b71eba164b131b818ea1f4ec1fc0c7"
+          },
+          {
+            "key": "random_seed",
+            "value": "42"
+          },
+          {
+            "key": "python.version",
+            "value": "3.12.10"
+          },
+          {
+            "key": "source.series.sha256",
+            "value": "a178eb0207546ad92e7c64451ac00d353eaca1d0a2e91e46e9dace4536fba259"
+          },
+          {
+            "key": "source.series.path",
+            "value": "data/series_mensuales.csv"
+          },
+          {
+            "key": "source.pais.sha256",
+            "value": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8"
+          },
+          {
+            "key": "source.pais.path",
+            "value": "data/pais_mensual.csv"
+          },
+          {
+            "key": "source.via.sha256",
+            "value": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359"
+          },
+          {
+            "key": "source.via.path",
+            "value": "data/via_frontera.csv"
+          },
+          {
+            "key": "split.train_start",
+            "value": "2009-01-01"
+          },
+          {
+            "key": "split.train_end",
+            "value": "2021-03-01"
+          },
+          {
+            "key": "split.eval_start",
+            "value": "2021-04-01"
+          },
+          {
+            "key": "split.eval_end",
+            "value": "2026-06-01"
+          },
+          {
+            "key": "split.n_train",
+            "value": "147"
+          },
+          {
+            "key": "split.excluded_periods_config",
+            "value": "[]"
+          },
+          {
+            "key": "factor_reparto.Tipo_Cruceristas",
+            "value": "0.030825"
+          },
+          {
+            "key": "factor_reparto.Tipo_Excursionista",
+            "value": "0.162625"
+          },
+          {
+            "key": "factor_reparto.Tipo_Turista",
+            "value": "0.740787"
+          },
+          {
+            "key": "factor_reparto.Tipo_Viajero",
+            "value": "0.065763"
+          },
+          {
+            "key": "factor_reparto.Total",
+            "value": "1.0"
+          },
+          {
+            "key": "factor_reparto.Via_A\u00e9rea",
+            "value": "0.375932"
+          },
+          {
+            "key": "factor_reparto.Via_Mar\u00edtima",
+            "value": "0.033701"
+          },
+          {
+            "key": "factor_reparto.Via_Terrestre",
+            "value": "0.590367"
+          },
+          {
+            "key": "model.active",
+            "value": "Promedio Hist\u00f3rico Mensual"
+          },
+          {
+            "key": "model.baseline",
+            "value": "Seasonal Naive (Lag 12)"
+          },
+          {
+            "key": "model.holt_winters.enabled",
+            "value": "True"
+          },
+          {
+            "key": "model.holt_winters.seasonal_periods",
+            "value": "12"
+          },
+          {
+            "key": "model.holt_winters.trend",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.seasonal",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.damped_trend",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.use_boxcox",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.clip_negative_for_evaluation",
+            "value": "False"
+          },
+          {
+            "key": "eval.excluded_months",
+            "value": "[]"
+          },
+          {
+            "key": "acceptance.max_mae_tolerance",
+            "value": "150000.0"
+          },
+          {
+            "key": "acceptance.max_rmse_tolerance",
+            "value": "180000.0"
+          },
+          {
+            "key": "acceptance.enforce_rmse_tolerance",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.require_better_than_baseline",
+            "value": "False"
+          },
+          {
+            "key": "acceptance.permit_negative_forecasts_in_evaluation",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.round_predictions_decimals",
+            "value": "2"
+          },
+          {
+            "key": "candidate.sha256",
+            "value": "f41974cb3168f47af2dabd03030266dc20f294679b67d4b61510bb43dedc97db"
+          },
+          {
+            "key": "publish.previous_sha256",
+            "value": "d5795b8c1b305fa47f98d02ed26dafba15be365094b9b755d55de644506ed872"
+          },
+          {
+            "key": "publish.new_sha256",
+            "value": "f41974cb3168f47af2dabd03030266dc20f294679b67d4b61510bb43dedc97db"
+          },
+          {
+            "key": "publish.backup_file",
+            "value": "estimaciones_aprobadas_backup_20261102_013228_739881_run_20261101_222030_d65c3b.csv"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "app"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "pipeline.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "run_20261102_013228_107c2c"
+          },
+          {
+            "key": "run_id",
+            "value": "run_20261102_013228_107c2c"
+          },
+          {
+            "key": "run.start",
+            "value": "2026-11-02T01:32:28"
+          },
+          {
+            "key": "pipeline.name",
+            "value": "observatorio_turismo_pipeline"
+          },
+          {
+            "key": "pipeline.status",
+            "value": "APROBADO_PUBLICADO"
+          },
+          {
+            "key": "destination",
+            "value": "Guatemala"
+          },
+          {
+            "key": "git.commit",
+            "value": "bced471e35b393335f309a95c4a5afd8f792e6a9"
+          },
+          {
+            "key": "git.commit_source",
+            "value": "declarado en GIT_COMMIT (no verificado en contenedor)"
+          },
+          {
+            "key": "git.code_dirty",
+            "value": "None"
+          },
+          {
+            "key": "publish.requested",
+            "value": "True"
+          },
+          {
+            "key": "tracking.uri_source",
+            "value": "entorno:MLFLOW_TRACKING_URI"
+          },
+          {
+            "key": "evaluation.mode",
+            "value": "fixed_origin_backtest"
+          },
+          {
+            "key": "acceptance.decision",
+            "value": "APPROVED"
+          },
+          {
+            "key": "acceptance.beats_baseline",
+            "value": "True"
+          },
+          {
+            "key": "publication.decision",
+            "value": "PUBLICAR"
+          },
+          {
+            "key": "run.end",
+            "value": "2026-11-02T01:32:28.741933"
+          },
+          {
+            "key": "publication.status",
+            "value": "PUBLICADO"
+          }
+        ]
+      },
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "292cbce066cc4f6eb286f3b9a582c7ae",
+        "experiment_id": "1",
+        "run_name": "run_20261102_013225_d69796",
+        "user_id": "app",
+        "status": "FINISHED",
+        "start_time": 1793604745438,
+        "end_time": 1793604745928,
+        "artifact_uri": "mlflow-artifacts:/1/292cbce066cc4f6eb286f3b9a582c7ae/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "292cbce066cc4f6eb286f3b9a582c7ae"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "qc.critical_passed",
+            "value": 1.0,
+            "timestamp": 1793604745537,
+            "step": 0
+          },
+          {
+            "key": "qc.warnings_count",
+            "value": 0.0,
+            "timestamp": 1793604745537,
+            "step": 0
+          },
+          {
+            "key": "qc.errors_count",
+            "value": 0.0,
+            "timestamp": 1793604745537,
+            "step": 0
+          },
+          {
+            "key": "eval.n_total",
+            "value": 63.0,
+            "timestamp": 1793604745660,
+            "step": 0
+          },
+          {
+            "key": "eval.n_evaluable",
+            "value": 63.0,
+            "timestamp": 1793604745660,
+            "step": 0
+          },
+          {
+            "key": "eval.active.n",
+            "value": 63.0,
+            "timestamp": 1793604745673,
+            "step": 0
+          },
+          {
+            "key": "eval.active.mae",
+            "value": 80365.74,
+            "timestamp": 1793604745677,
+            "step": 0
+          },
+          {
+            "key": "eval.active.rmse",
+            "value": 94175.26,
+            "timestamp": 1793604745677,
+            "step": 0
+          },
+          {
+            "key": "eval.active.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793604745677,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.n",
+            "value": 63.0,
+            "timestamp": 1793604745682,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.mae",
+            "value": 302827.47,
+            "timestamp": 1793604745686,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.rmse",
+            "value": 327720.16,
+            "timestamp": 1793604745686,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.ape_eps_pct",
+            "value": 103.99,
+            "timestamp": 1793604745686,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.n",
+            "value": 63.0,
+            "timestamp": 1793604745691,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.mae",
+            "value": 235730.91,
+            "timestamp": 1793604745695,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.rmse",
+            "value": 253203.39,
+            "timestamp": 1793604745695,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.ape_eps_pct",
+            "value": 83.86,
+            "timestamp": 1793604745695,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.n",
+            "value": 63.0,
+            "timestamp": 1793604745699,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.mae",
+            "value": 80365.74,
+            "timestamp": 1793604745703,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.rmse",
+            "value": 94175.26,
+            "timestamp": 1793604745703,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793604745703,
+            "step": 0
+          },
+          {
+            "key": "eval.active_minus_baseline.mae",
+            "value": -155365.16999999998,
+            "timestamp": 1793604745707,
+            "step": 0
+          },
+          {
+            "key": "acceptance.is_accepted",
+            "value": 1.0,
+            "timestamp": 1793604745724,
+            "step": 0
+          },
+          {
+            "key": "monitoring.healthy",
+            "value": 1.0,
+            "timestamp": 1793604745759,
+            "step": 0
+          },
+          {
+            "key": "monitoring.alerts_count",
+            "value": 0.0,
+            "timestamp": 1793604745759,
+            "step": 0
+          },
+          {
+            "key": "pipeline.duration_seconds",
+            "value": 0.53,
+            "timestamp": 1793604745919,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "procedure.version",
+            "value": "1.0.0"
+          },
+          {
+            "key": "code.sha256",
+            "value": "54c040972bbd601e5c8c83fadee4c03fd8f28bc19c01d73f3ad0eee63cc7800a"
+          },
+          {
+            "key": "config.sha256",
+            "value": "d12e42c69a09d6da2733b4b54ce518d661b71eba164b131b818ea1f4ec1fc0c7"
+          },
+          {
+            "key": "random_seed",
+            "value": "42"
+          },
+          {
+            "key": "python.version",
+            "value": "3.12.10"
+          },
+          {
+            "key": "source.series.sha256",
+            "value": "a178eb0207546ad92e7c64451ac00d353eaca1d0a2e91e46e9dace4536fba259"
+          },
+          {
+            "key": "source.series.path",
+            "value": "data/series_mensuales.csv"
+          },
+          {
+            "key": "source.pais.sha256",
+            "value": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8"
+          },
+          {
+            "key": "source.pais.path",
+            "value": "data/pais_mensual.csv"
+          },
+          {
+            "key": "source.via.sha256",
+            "value": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359"
+          },
+          {
+            "key": "source.via.path",
+            "value": "data/via_frontera.csv"
+          },
+          {
+            "key": "split.train_start",
+            "value": "2009-01-01"
+          },
+          {
+            "key": "split.train_end",
+            "value": "2021-03-01"
+          },
+          {
+            "key": "split.eval_start",
+            "value": "2021-04-01"
+          },
+          {
+            "key": "split.eval_end",
+            "value": "2026-06-01"
+          },
+          {
+            "key": "split.n_train",
+            "value": "147"
+          },
+          {
+            "key": "split.excluded_periods_config",
+            "value": "[]"
+          },
+          {
+            "key": "factor_reparto.Tipo_Cruceristas",
+            "value": "0.030825"
+          },
+          {
+            "key": "factor_reparto.Tipo_Excursionista",
+            "value": "0.162625"
+          },
+          {
+            "key": "factor_reparto.Tipo_Turista",
+            "value": "0.740787"
+          },
+          {
+            "key": "factor_reparto.Tipo_Viajero",
+            "value": "0.065763"
+          },
+          {
+            "key": "factor_reparto.Total",
+            "value": "1.0"
+          },
+          {
+            "key": "factor_reparto.Via_A\u00e9rea",
+            "value": "0.375932"
+          },
+          {
+            "key": "factor_reparto.Via_Mar\u00edtima",
+            "value": "0.033701"
+          },
+          {
+            "key": "factor_reparto.Via_Terrestre",
+            "value": "0.590367"
+          },
+          {
+            "key": "model.active",
+            "value": "Promedio Hist\u00f3rico Mensual"
+          },
+          {
+            "key": "model.baseline",
+            "value": "Seasonal Naive (Lag 12)"
+          },
+          {
+            "key": "model.holt_winters.enabled",
+            "value": "True"
+          },
+          {
+            "key": "model.holt_winters.seasonal_periods",
+            "value": "12"
+          },
+          {
+            "key": "model.holt_winters.trend",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.seasonal",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.damped_trend",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.use_boxcox",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.clip_negative_for_evaluation",
+            "value": "False"
+          },
+          {
+            "key": "eval.excluded_months",
+            "value": "[]"
+          },
+          {
+            "key": "acceptance.max_mae_tolerance",
+            "value": "150000.0"
+          },
+          {
+            "key": "acceptance.max_rmse_tolerance",
+            "value": "180000.0"
+          },
+          {
+            "key": "acceptance.enforce_rmse_tolerance",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.require_better_than_baseline",
+            "value": "False"
+          },
+          {
+            "key": "acceptance.permit_negative_forecasts_in_evaluation",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.round_predictions_decimals",
+            "value": "2"
+          },
+          {
+            "key": "candidate.sha256",
+            "value": "1fcf3c6a988d5a38f62edeab46db10aecc5b8ce890af879414cd05ca0403ec57"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "app"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "pipeline.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "run_20261102_013225_d69796"
+          },
+          {
+            "key": "run_id",
+            "value": "run_20261102_013225_d69796"
+          },
+          {
+            "key": "run.start",
+            "value": "2026-11-02T01:32:25"
+          },
+          {
+            "key": "pipeline.name",
+            "value": "observatorio_turismo_pipeline"
+          },
+          {
+            "key": "pipeline.status",
+            "value": "APROBADO_NO_PUBLICADO"
+          },
+          {
+            "key": "destination",
+            "value": "Guatemala"
+          },
+          {
+            "key": "git.commit",
+            "value": "bced471e35b393335f309a95c4a5afd8f792e6a9"
+          },
+          {
+            "key": "git.commit_source",
+            "value": "declarado en GIT_COMMIT (no verificado en contenedor)"
+          },
+          {
+            "key": "git.code_dirty",
+            "value": "None"
+          },
+          {
+            "key": "publish.requested",
+            "value": "False"
+          },
+          {
+            "key": "tracking.uri_source",
+            "value": "entorno:MLFLOW_TRACKING_URI"
+          },
+          {
+            "key": "evaluation.mode",
+            "value": "fixed_origin_backtest"
+          },
+          {
+            "key": "acceptance.decision",
+            "value": "APPROVED"
+          },
+          {
+            "key": "acceptance.beats_baseline",
+            "value": "True"
+          },
+          {
+            "key": "publication.decision",
+            "value": "NO_PUBLICADO: ejecuci\u00f3n --no-publish (dry-run)"
+          },
+          {
+            "key": "run.end",
+            "value": "2026-11-02T01:32:25.914386"
+          },
+          {
+            "key": "publication.status",
+            "value": "NO_PUBLICADO"
+          }
+        ]
+      },
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "3e1a9132d2fa477bbd8fdfe61cf61576",
+        "experiment_id": "1",
+        "run_name": "run_20261102_013222_08ad93",
+        "user_id": "app",
+        "status": "FINISHED",
+        "start_time": 1793604742563,
+        "end_time": 1793604743110,
+        "artifact_uri": "mlflow-artifacts:/1/3e1a9132d2fa477bbd8fdfe61cf61576/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "3e1a9132d2fa477bbd8fdfe61cf61576"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "qc.critical_passed",
+            "value": 1.0,
+            "timestamp": 1793604742692,
+            "step": 0
+          },
+          {
+            "key": "qc.warnings_count",
+            "value": 0.0,
+            "timestamp": 1793604742692,
+            "step": 0
+          },
+          {
+            "key": "qc.errors_count",
+            "value": 0.0,
+            "timestamp": 1793604742692,
+            "step": 0
+          },
+          {
+            "key": "eval.n_total",
+            "value": 63.0,
+            "timestamp": 1793604742831,
+            "step": 0
+          },
+          {
+            "key": "eval.n_evaluable",
+            "value": 63.0,
+            "timestamp": 1793604742831,
+            "step": 0
+          },
+          {
+            "key": "eval.active.n",
+            "value": 63.0,
+            "timestamp": 1793604742845,
+            "step": 0
+          },
+          {
+            "key": "eval.active.mae",
+            "value": 80365.74,
+            "timestamp": 1793604742849,
+            "step": 0
+          },
+          {
+            "key": "eval.active.rmse",
+            "value": 94175.26,
+            "timestamp": 1793604742849,
+            "step": 0
+          },
+          {
+            "key": "eval.active.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793604742849,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.n",
+            "value": 63.0,
+            "timestamp": 1793604742854,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.mae",
+            "value": 302827.47,
+            "timestamp": 1793604742857,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.rmse",
+            "value": 327720.16,
+            "timestamp": 1793604742857,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.ape_eps_pct",
+            "value": 103.99,
+            "timestamp": 1793604742857,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.n",
+            "value": 63.0,
+            "timestamp": 1793604742861,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.mae",
+            "value": 235730.91,
+            "timestamp": 1793604742865,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.rmse",
+            "value": 253203.39,
+            "timestamp": 1793604742865,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.ape_eps_pct",
+            "value": 83.86,
+            "timestamp": 1793604742865,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.n",
+            "value": 63.0,
+            "timestamp": 1793604742869,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.mae",
+            "value": 80365.74,
+            "timestamp": 1793604742873,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.rmse",
+            "value": 94175.26,
+            "timestamp": 1793604742873,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793604742873,
+            "step": 0
+          },
+          {
+            "key": "eval.active_minus_baseline.mae",
+            "value": -155365.16999999998,
+            "timestamp": 1793604742877,
+            "step": 0
+          },
+          {
+            "key": "acceptance.is_accepted",
+            "value": 1.0,
+            "timestamp": 1793604742893,
+            "step": 0
+          },
+          {
+            "key": "monitoring.healthy",
+            "value": 1.0,
+            "timestamp": 1793604742928,
+            "step": 0
+          },
+          {
+            "key": "monitoring.alerts_count",
+            "value": 0.0,
+            "timestamp": 1793604742928,
+            "step": 0
+          },
+          {
+            "key": "pipeline.duration_seconds",
+            "value": 0.62,
+            "timestamp": 1793604743103,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "procedure.version",
+            "value": "1.0.0"
+          },
+          {
+            "key": "code.sha256",
+            "value": "54c040972bbd601e5c8c83fadee4c03fd8f28bc19c01d73f3ad0eee63cc7800a"
+          },
+          {
+            "key": "config.sha256",
+            "value": "d12e42c69a09d6da2733b4b54ce518d661b71eba164b131b818ea1f4ec1fc0c7"
+          },
+          {
+            "key": "random_seed",
+            "value": "42"
+          },
+          {
+            "key": "python.version",
+            "value": "3.12.10"
+          },
+          {
+            "key": "source.series.sha256",
+            "value": "a178eb0207546ad92e7c64451ac00d353eaca1d0a2e91e46e9dace4536fba259"
+          },
+          {
+            "key": "source.series.path",
+            "value": "data/series_mensuales.csv"
+          },
+          {
+            "key": "source.pais.sha256",
+            "value": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8"
+          },
+          {
+            "key": "source.pais.path",
+            "value": "data/pais_mensual.csv"
+          },
+          {
+            "key": "source.via.sha256",
+            "value": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359"
+          },
+          {
+            "key": "source.via.path",
+            "value": "data/via_frontera.csv"
+          },
+          {
+            "key": "split.train_start",
+            "value": "2009-01-01"
+          },
+          {
+            "key": "split.train_end",
+            "value": "2021-03-01"
+          },
+          {
+            "key": "split.eval_start",
+            "value": "2021-04-01"
+          },
+          {
+            "key": "split.eval_end",
+            "value": "2026-06-01"
+          },
+          {
+            "key": "split.n_train",
+            "value": "147"
+          },
+          {
+            "key": "split.excluded_periods_config",
+            "value": "[]"
+          },
+          {
+            "key": "factor_reparto.Tipo_Cruceristas",
+            "value": "0.030825"
+          },
+          {
+            "key": "factor_reparto.Tipo_Excursionista",
+            "value": "0.162625"
+          },
+          {
+            "key": "factor_reparto.Tipo_Turista",
+            "value": "0.740787"
+          },
+          {
+            "key": "factor_reparto.Tipo_Viajero",
+            "value": "0.065763"
+          },
+          {
+            "key": "factor_reparto.Total",
+            "value": "1.0"
+          },
+          {
+            "key": "factor_reparto.Via_A\u00e9rea",
+            "value": "0.375932"
+          },
+          {
+            "key": "factor_reparto.Via_Mar\u00edtima",
+            "value": "0.033701"
+          },
+          {
+            "key": "factor_reparto.Via_Terrestre",
+            "value": "0.590367"
+          },
+          {
+            "key": "model.active",
+            "value": "Promedio Hist\u00f3rico Mensual"
+          },
+          {
+            "key": "model.baseline",
+            "value": "Seasonal Naive (Lag 12)"
+          },
+          {
+            "key": "model.holt_winters.enabled",
+            "value": "True"
+          },
+          {
+            "key": "model.holt_winters.seasonal_periods",
+            "value": "12"
+          },
+          {
+            "key": "model.holt_winters.trend",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.seasonal",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.damped_trend",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.use_boxcox",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.clip_negative_for_evaluation",
+            "value": "False"
+          },
+          {
+            "key": "eval.excluded_months",
+            "value": "[]"
+          },
+          {
+            "key": "acceptance.max_mae_tolerance",
+            "value": "150000.0"
+          },
+          {
+            "key": "acceptance.max_rmse_tolerance",
+            "value": "180000.0"
+          },
+          {
+            "key": "acceptance.enforce_rmse_tolerance",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.require_better_than_baseline",
+            "value": "False"
+          },
+          {
+            "key": "acceptance.permit_negative_forecasts_in_evaluation",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.round_predictions_decimals",
+            "value": "2"
+          },
+          {
+            "key": "candidate.sha256",
+            "value": "ce6769fad8d708b69b3f7597bf55dc2c88bcc99431e89123d732f627af3f3df5"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "app"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "pipeline.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "run_20261102_013222_08ad93"
+          },
+          {
+            "key": "run_id",
+            "value": "run_20261102_013222_08ad93"
+          },
+          {
+            "key": "run.start",
+            "value": "2026-11-02T01:32:22"
+          },
+          {
+            "key": "pipeline.name",
+            "value": "observatorio_turismo_pipeline"
+          },
+          {
+            "key": "pipeline.status",
+            "value": "APROBADO_NO_PUBLICADO"
+          },
+          {
+            "key": "destination",
+            "value": "Guatemala"
+          },
+          {
+            "key": "git.commit",
+            "value": "bced471e35b393335f309a95c4a5afd8f792e6a9"
+          },
+          {
+            "key": "git.commit_source",
+            "value": "declarado en GIT_COMMIT (no verificado en contenedor)"
+          },
+          {
+            "key": "git.code_dirty",
+            "value": "None"
+          },
+          {
+            "key": "publish.requested",
+            "value": "False"
+          },
+          {
+            "key": "tracking.uri_source",
+            "value": "entorno:MLFLOW_TRACKING_URI"
+          },
+          {
+            "key": "evaluation.mode",
+            "value": "fixed_origin_backtest"
+          },
+          {
+            "key": "acceptance.decision",
+            "value": "APPROVED"
+          },
+          {
+            "key": "acceptance.beats_baseline",
+            "value": "True"
+          },
+          {
+            "key": "publication.decision",
+            "value": "NO_PUBLICADO: ejecuci\u00f3n --no-publish (dry-run)"
+          },
+          {
+            "key": "run.end",
+            "value": "2026-11-02T01:32:23.095684"
+          },
+          {
+            "key": "publication.status",
+            "value": "NO_PUBLICADO"
+          }
+        ]
+      },
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "bf97017fc3a642b3a98382dad96ca107",
+        "experiment_id": "1",
+        "run_name": "run_20261102_004500_fdf0f1",
+        "user_id": "app",
+        "status": "FINISHED",
+        "start_time": 1793601901044,
+        "end_time": 1793601901546,
+        "artifact_uri": "mlflow-artifacts:/1/bf97017fc3a642b3a98382dad96ca107/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "bf97017fc3a642b3a98382dad96ca107"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "qc.critical_passed",
+            "value": 1.0,
+            "timestamp": 1793601901159,
+            "step": 0
+          },
+          {
+            "key": "qc.warnings_count",
+            "value": 0.0,
+            "timestamp": 1793601901159,
+            "step": 0
+          },
+          {
+            "key": "qc.errors_count",
+            "value": 0.0,
+            "timestamp": 1793601901159,
+            "step": 0
+          },
+          {
+            "key": "eval.n_total",
+            "value": 63.0,
+            "timestamp": 1793601901271,
+            "step": 0
+          },
+          {
+            "key": "eval.n_evaluable",
+            "value": 63.0,
+            "timestamp": 1793601901271,
+            "step": 0
+          },
+          {
+            "key": "eval.active.n",
+            "value": 63.0,
+            "timestamp": 1793601901286,
+            "step": 0
+          },
+          {
+            "key": "eval.active.mae",
+            "value": 80365.74,
+            "timestamp": 1793601901291,
+            "step": 0
+          },
+          {
+            "key": "eval.active.rmse",
+            "value": 94175.26,
+            "timestamp": 1793601901291,
+            "step": 0
+          },
+          {
+            "key": "eval.active.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793601901291,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.n",
+            "value": 63.0,
+            "timestamp": 1793601901298,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.mae",
+            "value": 302827.47,
+            "timestamp": 1793601901307,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.rmse",
+            "value": 327720.16,
+            "timestamp": 1793601901307,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.ape_eps_pct",
+            "value": 103.99,
+            "timestamp": 1793601901307,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.n",
+            "value": 63.0,
+            "timestamp": 1793601901311,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.mae",
+            "value": 235730.91,
+            "timestamp": 1793601901315,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.rmse",
+            "value": 253203.39,
+            "timestamp": 1793601901315,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.ape_eps_pct",
+            "value": 83.86,
+            "timestamp": 1793601901315,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.n",
+            "value": 63.0,
+            "timestamp": 1793601901319,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.mae",
+            "value": 80365.74,
+            "timestamp": 1793601901322,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.rmse",
+            "value": 94175.26,
+            "timestamp": 1793601901322,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793601901322,
+            "step": 0
+          },
+          {
+            "key": "eval.active_minus_baseline.mae",
+            "value": -155365.16999999998,
+            "timestamp": 1793601901326,
+            "step": 0
+          },
+          {
+            "key": "acceptance.is_accepted",
+            "value": 1.0,
+            "timestamp": 1793601901342,
+            "step": 0
+          },
+          {
+            "key": "monitoring.healthy",
+            "value": 1.0,
+            "timestamp": 1793601901378,
+            "step": 0
+          },
+          {
+            "key": "monitoring.alerts_count",
+            "value": 0.0,
+            "timestamp": 1793601901378,
+            "step": 0
+          },
+          {
+            "key": "pipeline.duration_seconds",
+            "value": 0.55,
+            "timestamp": 1793601901539,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "procedure.version",
+            "value": "1.0.0"
+          },
+          {
+            "key": "code.sha256",
+            "value": "54c040972bbd601e5c8c83fadee4c03fd8f28bc19c01d73f3ad0eee63cc7800a"
+          },
+          {
+            "key": "config.sha256",
+            "value": "d12e42c69a09d6da2733b4b54ce518d661b71eba164b131b818ea1f4ec1fc0c7"
+          },
+          {
+            "key": "random_seed",
+            "value": "42"
+          },
+          {
+            "key": "python.version",
+            "value": "3.12.10"
+          },
+          {
+            "key": "source.series.sha256",
+            "value": "a178eb0207546ad92e7c64451ac00d353eaca1d0a2e91e46e9dace4536fba259"
+          },
+          {
+            "key": "source.series.path",
+            "value": "data/series_mensuales.csv"
+          },
+          {
+            "key": "source.pais.sha256",
+            "value": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8"
+          },
+          {
+            "key": "source.pais.path",
+            "value": "data/pais_mensual.csv"
+          },
+          {
+            "key": "source.via.sha256",
+            "value": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359"
+          },
+          {
+            "key": "source.via.path",
+            "value": "data/via_frontera.csv"
+          },
+          {
+            "key": "split.train_start",
+            "value": "2009-01-01"
+          },
+          {
+            "key": "split.train_end",
+            "value": "2021-03-01"
+          },
+          {
+            "key": "split.eval_start",
+            "value": "2021-04-01"
+          },
+          {
+            "key": "split.eval_end",
+            "value": "2026-06-01"
+          },
+          {
+            "key": "split.n_train",
+            "value": "147"
+          },
+          {
+            "key": "split.excluded_periods_config",
+            "value": "[]"
+          },
+          {
+            "key": "factor_reparto.Tipo_Cruceristas",
+            "value": "0.030825"
+          },
+          {
+            "key": "factor_reparto.Tipo_Excursionista",
+            "value": "0.162625"
+          },
+          {
+            "key": "factor_reparto.Tipo_Turista",
+            "value": "0.740787"
+          },
+          {
+            "key": "factor_reparto.Tipo_Viajero",
+            "value": "0.065763"
+          },
+          {
+            "key": "factor_reparto.Total",
+            "value": "1.0"
+          },
+          {
+            "key": "factor_reparto.Via_A\u00e9rea",
+            "value": "0.375932"
+          },
+          {
+            "key": "factor_reparto.Via_Mar\u00edtima",
+            "value": "0.033701"
+          },
+          {
+            "key": "factor_reparto.Via_Terrestre",
+            "value": "0.590367"
+          },
+          {
+            "key": "model.active",
+            "value": "Promedio Hist\u00f3rico Mensual"
+          },
+          {
+            "key": "model.baseline",
+            "value": "Seasonal Naive (Lag 12)"
+          },
+          {
+            "key": "model.holt_winters.enabled",
+            "value": "True"
+          },
+          {
+            "key": "model.holt_winters.seasonal_periods",
+            "value": "12"
+          },
+          {
+            "key": "model.holt_winters.trend",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.seasonal",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.damped_trend",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.use_boxcox",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.clip_negative_for_evaluation",
+            "value": "False"
+          },
+          {
+            "key": "eval.excluded_months",
+            "value": "[]"
+          },
+          {
+            "key": "acceptance.max_mae_tolerance",
+            "value": "150000.0"
+          },
+          {
+            "key": "acceptance.max_rmse_tolerance",
+            "value": "180000.0"
+          },
+          {
+            "key": "acceptance.enforce_rmse_tolerance",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.require_better_than_baseline",
+            "value": "False"
+          },
+          {
+            "key": "acceptance.permit_negative_forecasts_in_evaluation",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.round_predictions_decimals",
+            "value": "2"
+          },
+          {
+            "key": "candidate.sha256",
+            "value": "6bb46290d463793d251c05b19c6659ebe633511f9a8f1dad64486b0b48d603e2"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "app"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "pipeline.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "run_20261102_004500_fdf0f1"
+          },
+          {
+            "key": "run_id",
+            "value": "run_20261102_004500_fdf0f1"
+          },
+          {
+            "key": "run.start",
+            "value": "2026-11-02T00:45:00"
+          },
+          {
+            "key": "pipeline.name",
+            "value": "observatorio_turismo_pipeline"
+          },
+          {
+            "key": "pipeline.status",
+            "value": "APROBADO_NO_PUBLICADO"
+          },
+          {
+            "key": "destination",
+            "value": "Guatemala"
+          },
+          {
+            "key": "git.commit",
+            "value": "NO_DISPONIBLE"
+          },
+          {
+            "key": "git.commit_source",
+            "value": "sin repositorio git ni GIT_COMMIT v\u00e1lido"
+          },
+          {
+            "key": "git.code_dirty",
+            "value": "None"
+          },
+          {
+            "key": "publish.requested",
+            "value": "False"
+          },
+          {
+            "key": "tracking.uri_source",
+            "value": "entorno:MLFLOW_TRACKING_URI"
+          },
+          {
+            "key": "evaluation.mode",
+            "value": "fixed_origin_backtest"
+          },
+          {
+            "key": "acceptance.decision",
+            "value": "APPROVED"
+          },
+          {
+            "key": "acceptance.beats_baseline",
+            "value": "True"
+          },
+          {
+            "key": "publication.decision",
+            "value": "NO_PUBLICADO: ejecuci\u00f3n --no-publish (dry-run)"
+          },
+          {
+            "key": "run.end",
+            "value": "2026-11-02T00:45:01.533805"
+          },
+          {
+            "key": "publication.status",
+            "value": "NO_PUBLICADO"
+          }
+        ]
+      },
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "4c032e3e28464e768f88e32a20991c7a",
+        "experiment_id": "1",
+        "run_name": "run_20261102_004420_29a1c1",
+        "user_id": "app",
+        "status": "FINISHED",
+        "start_time": 1793601860630,
+        "end_time": 1793601861131,
+        "artifact_uri": "mlflow-artifacts:/1/4c032e3e28464e768f88e32a20991c7a/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "4c032e3e28464e768f88e32a20991c7a"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "qc.critical_passed",
+            "value": 1.0,
+            "timestamp": 1793601860745,
+            "step": 0
+          },
+          {
+            "key": "qc.warnings_count",
+            "value": 0.0,
+            "timestamp": 1793601860745,
+            "step": 0
+          },
+          {
+            "key": "qc.errors_count",
+            "value": 0.0,
+            "timestamp": 1793601860745,
+            "step": 0
+          },
+          {
+            "key": "eval.n_total",
+            "value": 63.0,
+            "timestamp": 1793601860838,
+            "step": 0
+          },
+          {
+            "key": "eval.n_evaluable",
+            "value": 63.0,
+            "timestamp": 1793601860838,
+            "step": 0
+          },
+          {
+            "key": "eval.active.n",
+            "value": 63.0,
+            "timestamp": 1793601860855,
+            "step": 0
+          },
+          {
+            "key": "eval.active.mae",
+            "value": 80365.74,
+            "timestamp": 1793601860860,
+            "step": 0
+          },
+          {
+            "key": "eval.active.rmse",
+            "value": 94175.26,
+            "timestamp": 1793601860860,
+            "step": 0
+          },
+          {
+            "key": "eval.active.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793601860860,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.n",
+            "value": 63.0,
+            "timestamp": 1793601860866,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.mae",
+            "value": 302827.47,
+            "timestamp": 1793601860874,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.rmse",
+            "value": 327720.16,
+            "timestamp": 1793601860874,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.ape_eps_pct",
+            "value": 103.99,
+            "timestamp": 1793601860874,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.n",
+            "value": 63.0,
+            "timestamp": 1793601860882,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.mae",
+            "value": 235730.91,
+            "timestamp": 1793601860886,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.rmse",
+            "value": 253203.39,
+            "timestamp": 1793601860886,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.ape_eps_pct",
+            "value": 83.86,
+            "timestamp": 1793601860886,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.n",
+            "value": 63.0,
+            "timestamp": 1793601860892,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.mae",
+            "value": 80365.74,
+            "timestamp": 1793601860895,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.rmse",
+            "value": 94175.26,
+            "timestamp": 1793601860895,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793601860895,
+            "step": 0
+          },
+          {
+            "key": "eval.active_minus_baseline.mae",
+            "value": -155365.16999999998,
+            "timestamp": 1793601860899,
+            "step": 0
+          },
+          {
+            "key": "acceptance.is_accepted",
+            "value": 1.0,
+            "timestamp": 1793601860916,
+            "step": 0
+          },
+          {
+            "key": "monitoring.healthy",
+            "value": 1.0,
+            "timestamp": 1793601860953,
+            "step": 0
+          },
+          {
+            "key": "monitoring.alerts_count",
+            "value": 0.0,
+            "timestamp": 1793601860953,
+            "step": 0
+          },
+          {
+            "key": "pipeline.duration_seconds",
+            "value": 0.57,
+            "timestamp": 1793601861123,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "procedure.version",
+            "value": "1.0.0"
+          },
+          {
+            "key": "code.sha256",
+            "value": "54c040972bbd601e5c8c83fadee4c03fd8f28bc19c01d73f3ad0eee63cc7800a"
+          },
+          {
+            "key": "config.sha256",
+            "value": "d12e42c69a09d6da2733b4b54ce518d661b71eba164b131b818ea1f4ec1fc0c7"
+          },
+          {
+            "key": "random_seed",
+            "value": "42"
+          },
+          {
+            "key": "python.version",
+            "value": "3.12.10"
+          },
+          {
+            "key": "source.series.sha256",
+            "value": "a178eb0207546ad92e7c64451ac00d353eaca1d0a2e91e46e9dace4536fba259"
+          },
+          {
+            "key": "source.series.path",
+            "value": "data/series_mensuales.csv"
+          },
+          {
+            "key": "source.pais.sha256",
+            "value": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8"
+          },
+          {
+            "key": "source.pais.path",
+            "value": "data/pais_mensual.csv"
+          },
+          {
+            "key": "source.via.sha256",
+            "value": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359"
+          },
+          {
+            "key": "source.via.path",
+            "value": "data/via_frontera.csv"
+          },
+          {
+            "key": "split.train_start",
+            "value": "2009-01-01"
+          },
+          {
+            "key": "split.train_end",
+            "value": "2021-03-01"
+          },
+          {
+            "key": "split.eval_start",
+            "value": "2021-04-01"
+          },
+          {
+            "key": "split.eval_end",
+            "value": "2026-06-01"
+          },
+          {
+            "key": "split.n_train",
+            "value": "147"
+          },
+          {
+            "key": "split.excluded_periods_config",
+            "value": "[]"
+          },
+          {
+            "key": "factor_reparto.Tipo_Cruceristas",
+            "value": "0.030825"
+          },
+          {
+            "key": "factor_reparto.Tipo_Excursionista",
+            "value": "0.162625"
+          },
+          {
+            "key": "factor_reparto.Tipo_Turista",
+            "value": "0.740787"
+          },
+          {
+            "key": "factor_reparto.Tipo_Viajero",
+            "value": "0.065763"
+          },
+          {
+            "key": "factor_reparto.Total",
+            "value": "1.0"
+          },
+          {
+            "key": "factor_reparto.Via_A\u00e9rea",
+            "value": "0.375932"
+          },
+          {
+            "key": "factor_reparto.Via_Mar\u00edtima",
+            "value": "0.033701"
+          },
+          {
+            "key": "factor_reparto.Via_Terrestre",
+            "value": "0.590367"
+          },
+          {
+            "key": "model.active",
+            "value": "Promedio Hist\u00f3rico Mensual"
+          },
+          {
+            "key": "model.baseline",
+            "value": "Seasonal Naive (Lag 12)"
+          },
+          {
+            "key": "model.holt_winters.enabled",
+            "value": "True"
+          },
+          {
+            "key": "model.holt_winters.seasonal_periods",
+            "value": "12"
+          },
+          {
+            "key": "model.holt_winters.trend",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.seasonal",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.damped_trend",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.use_boxcox",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.clip_negative_for_evaluation",
+            "value": "False"
+          },
+          {
+            "key": "eval.excluded_months",
+            "value": "[]"
+          },
+          {
+            "key": "acceptance.max_mae_tolerance",
+            "value": "150000.0"
+          },
+          {
+            "key": "acceptance.max_rmse_tolerance",
+            "value": "180000.0"
+          },
+          {
+            "key": "acceptance.enforce_rmse_tolerance",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.require_better_than_baseline",
+            "value": "False"
+          },
+          {
+            "key": "acceptance.permit_negative_forecasts_in_evaluation",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.round_predictions_decimals",
+            "value": "2"
+          },
+          {
+            "key": "candidate.sha256",
+            "value": "bfb19da48f95f22c8eaaa76dac035532450b427b141342c6d3726ae86371c545"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "app"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "pipeline.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "run_20261102_004420_29a1c1"
+          },
+          {
+            "key": "run_id",
+            "value": "run_20261102_004420_29a1c1"
+          },
+          {
+            "key": "run.start",
+            "value": "2026-11-02T00:44:20"
+          },
+          {
+            "key": "pipeline.name",
+            "value": "observatorio_turismo_pipeline"
+          },
+          {
+            "key": "pipeline.status",
+            "value": "APROBADO_NO_PUBLICADO"
+          },
+          {
+            "key": "destination",
+            "value": "Guatemala"
+          },
+          {
+            "key": "git.commit",
+            "value": "NO_DISPONIBLE"
+          },
+          {
+            "key": "git.commit_source",
+            "value": "sin repositorio git ni GIT_COMMIT v\u00e1lido"
+          },
+          {
+            "key": "git.code_dirty",
+            "value": "None"
+          },
+          {
+            "key": "publish.requested",
+            "value": "False"
+          },
+          {
+            "key": "tracking.uri_source",
+            "value": "entorno:MLFLOW_TRACKING_URI"
+          },
+          {
+            "key": "evaluation.mode",
+            "value": "fixed_origin_backtest"
+          },
+          {
+            "key": "acceptance.decision",
+            "value": "APPROVED"
+          },
+          {
+            "key": "acceptance.beats_baseline",
+            "value": "True"
+          },
+          {
+            "key": "publication.decision",
+            "value": "NO_PUBLICADO: ejecuci\u00f3n --no-publish (dry-run)"
+          },
+          {
+            "key": "run.end",
+            "value": "2026-11-02T00:44:21.118310"
+          },
+          {
+            "key": "publication.status",
+            "value": "NO_PUBLICADO"
+          }
+        ]
+      },
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "932f729e5f8b46db92289b3ad9406224",
+        "experiment_id": "1",
+        "run_name": "run_20261102_003323_54768b",
+        "user_id": "app",
+        "status": "FINISHED",
+        "start_time": 1793601203838,
+        "end_time": 1793601204349,
+        "artifact_uri": "mlflow-artifacts:/1/932f729e5f8b46db92289b3ad9406224/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "932f729e5f8b46db92289b3ad9406224"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "qc.critical_passed",
+            "value": 1.0,
+            "timestamp": 1793601203951,
+            "step": 0
+          },
+          {
+            "key": "qc.warnings_count",
+            "value": 0.0,
+            "timestamp": 1793601203951,
+            "step": 0
+          },
+          {
+            "key": "qc.errors_count",
+            "value": 0.0,
+            "timestamp": 1793601203951,
+            "step": 0
+          },
+          {
+            "key": "eval.n_total",
+            "value": 63.0,
+            "timestamp": 1793601204073,
+            "step": 0
+          },
+          {
+            "key": "eval.n_evaluable",
+            "value": 63.0,
+            "timestamp": 1793601204073,
+            "step": 0
+          },
+          {
+            "key": "eval.active.n",
+            "value": 63.0,
+            "timestamp": 1793601204098,
+            "step": 0
+          },
+          {
+            "key": "eval.active.mae",
+            "value": 80365.74,
+            "timestamp": 1793601204102,
+            "step": 0
+          },
+          {
+            "key": "eval.active.rmse",
+            "value": 94175.26,
+            "timestamp": 1793601204102,
+            "step": 0
+          },
+          {
+            "key": "eval.active.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793601204102,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.n",
+            "value": 63.0,
+            "timestamp": 1793601204106,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.mae",
+            "value": 302827.47,
+            "timestamp": 1793601204109,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.rmse",
+            "value": 327720.16,
+            "timestamp": 1793601204109,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.ape_eps_pct",
+            "value": 103.99,
+            "timestamp": 1793601204109,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.n",
+            "value": 63.0,
+            "timestamp": 1793601204113,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.mae",
+            "value": 235730.91,
+            "timestamp": 1793601204116,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.rmse",
+            "value": 253203.39,
+            "timestamp": 1793601204116,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.ape_eps_pct",
+            "value": 83.86,
+            "timestamp": 1793601204116,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.n",
+            "value": 63.0,
+            "timestamp": 1793601204120,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.mae",
+            "value": 80365.74,
+            "timestamp": 1793601204124,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.rmse",
+            "value": 94175.26,
+            "timestamp": 1793601204124,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793601204124,
+            "step": 0
+          },
+          {
+            "key": "eval.active_minus_baseline.mae",
+            "value": -155365.16999999998,
+            "timestamp": 1793601204128,
+            "step": 0
+          },
+          {
+            "key": "acceptance.is_accepted",
+            "value": 1.0,
+            "timestamp": 1793601204146,
+            "step": 0
+          },
+          {
+            "key": "monitoring.healthy",
+            "value": 1.0,
+            "timestamp": 1793601204183,
+            "step": 0
+          },
+          {
+            "key": "monitoring.alerts_count",
+            "value": 0.0,
+            "timestamp": 1793601204183,
+            "step": 0
+          },
+          {
+            "key": "pipeline.duration_seconds",
+            "value": 0.56,
+            "timestamp": 1793601204342,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "procedure.version",
+            "value": "1.0.0"
+          },
+          {
+            "key": "code.sha256",
+            "value": "54c040972bbd601e5c8c83fadee4c03fd8f28bc19c01d73f3ad0eee63cc7800a"
+          },
+          {
+            "key": "config.sha256",
+            "value": "d12e42c69a09d6da2733b4b54ce518d661b71eba164b131b818ea1f4ec1fc0c7"
+          },
+          {
+            "key": "random_seed",
+            "value": "42"
+          },
+          {
+            "key": "python.version",
+            "value": "3.12.10"
+          },
+          {
+            "key": "source.series.sha256",
+            "value": "a178eb0207546ad92e7c64451ac00d353eaca1d0a2e91e46e9dace4536fba259"
+          },
+          {
+            "key": "source.series.path",
+            "value": "data/series_mensuales.csv"
+          },
+          {
+            "key": "source.pais.sha256",
+            "value": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8"
+          },
+          {
+            "key": "source.pais.path",
+            "value": "data/pais_mensual.csv"
+          },
+          {
+            "key": "source.via.sha256",
+            "value": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359"
+          },
+          {
+            "key": "source.via.path",
+            "value": "data/via_frontera.csv"
+          },
+          {
+            "key": "split.train_start",
+            "value": "2009-01-01"
+          },
+          {
+            "key": "split.train_end",
+            "value": "2021-03-01"
+          },
+          {
+            "key": "split.eval_start",
+            "value": "2021-04-01"
+          },
+          {
+            "key": "split.eval_end",
+            "value": "2026-06-01"
+          },
+          {
+            "key": "split.n_train",
+            "value": "147"
+          },
+          {
+            "key": "split.excluded_periods_config",
+            "value": "[]"
+          },
+          {
+            "key": "factor_reparto.Tipo_Cruceristas",
+            "value": "0.030825"
+          },
+          {
+            "key": "factor_reparto.Tipo_Excursionista",
+            "value": "0.162625"
+          },
+          {
+            "key": "factor_reparto.Tipo_Turista",
+            "value": "0.740787"
+          },
+          {
+            "key": "factor_reparto.Tipo_Viajero",
+            "value": "0.065763"
+          },
+          {
+            "key": "factor_reparto.Total",
+            "value": "1.0"
+          },
+          {
+            "key": "factor_reparto.Via_A\u00e9rea",
+            "value": "0.375932"
+          },
+          {
+            "key": "factor_reparto.Via_Mar\u00edtima",
+            "value": "0.033701"
+          },
+          {
+            "key": "factor_reparto.Via_Terrestre",
+            "value": "0.590367"
+          },
+          {
+            "key": "model.active",
+            "value": "Promedio Hist\u00f3rico Mensual"
+          },
+          {
+            "key": "model.baseline",
+            "value": "Seasonal Naive (Lag 12)"
+          },
+          {
+            "key": "model.holt_winters.enabled",
+            "value": "True"
+          },
+          {
+            "key": "model.holt_winters.seasonal_periods",
+            "value": "12"
+          },
+          {
+            "key": "model.holt_winters.trend",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.seasonal",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.damped_trend",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.use_boxcox",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.clip_negative_for_evaluation",
+            "value": "False"
+          },
+          {
+            "key": "eval.excluded_months",
+            "value": "[]"
+          },
+          {
+            "key": "acceptance.max_mae_tolerance",
+            "value": "150000.0"
+          },
+          {
+            "key": "acceptance.max_rmse_tolerance",
+            "value": "180000.0"
+          },
+          {
+            "key": "acceptance.enforce_rmse_tolerance",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.require_better_than_baseline",
+            "value": "False"
+          },
+          {
+            "key": "acceptance.permit_negative_forecasts_in_evaluation",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.round_predictions_decimals",
+            "value": "2"
+          },
+          {
+            "key": "candidate.sha256",
+            "value": "3fe11729bab4bfbe76e812f31477af2e952e4792019987f25254fc33b0b0dac0"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "app"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "pipeline.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "run_20261102_003323_54768b"
+          },
+          {
+            "key": "run_id",
+            "value": "run_20261102_003323_54768b"
+          },
+          {
+            "key": "run.start",
+            "value": "2026-11-02T00:33:23"
+          },
+          {
+            "key": "pipeline.name",
+            "value": "observatorio_turismo_pipeline"
+          },
+          {
+            "key": "pipeline.status",
+            "value": "APROBADO_NO_PUBLICADO"
+          },
+          {
+            "key": "destination",
+            "value": "Guatemala"
+          },
+          {
+            "key": "git.commit",
+            "value": "NO_DISPONIBLE"
+          },
+          {
+            "key": "git.commit_source",
+            "value": "sin repositorio git ni GIT_COMMIT v\u00e1lido"
+          },
+          {
+            "key": "git.code_dirty",
+            "value": "None"
+          },
+          {
+            "key": "publish.requested",
+            "value": "False"
+          },
+          {
+            "key": "tracking.uri_source",
+            "value": "entorno:MLFLOW_TRACKING_URI"
+          },
+          {
+            "key": "evaluation.mode",
+            "value": "fixed_origin_backtest"
+          },
+          {
+            "key": "acceptance.decision",
+            "value": "APPROVED"
+          },
+          {
+            "key": "acceptance.beats_baseline",
+            "value": "True"
+          },
+          {
+            "key": "publication.decision",
+            "value": "NO_PUBLICADO: ejecuci\u00f3n --no-publish (dry-run)"
+          },
+          {
+            "key": "run.end",
+            "value": "2026-11-02T00:33:24.336903"
+          },
+          {
+            "key": "publication.status",
+            "value": "NO_PUBLICADO"
+          }
+        ]
+      },
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "info": {
+        "run_uuid": "d7ed70a2c40c4aa9b55d4b8120352585",
+        "experiment_id": "1",
+        "run_name": "run_20261102_003243_c6bd2c",
+        "user_id": "app",
+        "status": "FINISHED",
+        "start_time": 1793601163192,
+        "end_time": 1793601163765,
+        "artifact_uri": "mlflow-artifacts:/1/d7ed70a2c40c4aa9b55d4b8120352585/artifacts",
+        "lifecycle_stage": "active",
+        "run_id": "d7ed70a2c40c4aa9b55d4b8120352585"
+      },
+      "data": {
+        "metrics": [
+          {
+            "key": "qc.critical_passed",
+            "value": 1.0,
+            "timestamp": 1793601163328,
+            "step": 0
+          },
+          {
+            "key": "qc.warnings_count",
+            "value": 0.0,
+            "timestamp": 1793601163328,
+            "step": 0
+          },
+          {
+            "key": "qc.errors_count",
+            "value": 0.0,
+            "timestamp": 1793601163328,
+            "step": 0
+          },
+          {
+            "key": "eval.n_total",
+            "value": 63.0,
+            "timestamp": 1793601163477,
+            "step": 0
+          },
+          {
+            "key": "eval.n_evaluable",
+            "value": 63.0,
+            "timestamp": 1793601163477,
+            "step": 0
+          },
+          {
+            "key": "eval.active.n",
+            "value": 63.0,
+            "timestamp": 1793601163493,
+            "step": 0
+          },
+          {
+            "key": "eval.active.mae",
+            "value": 80365.74,
+            "timestamp": 1793601163498,
+            "step": 0
+          },
+          {
+            "key": "eval.active.rmse",
+            "value": 94175.26,
+            "timestamp": 1793601163498,
+            "step": 0
+          },
+          {
+            "key": "eval.active.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793601163498,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.n",
+            "value": 63.0,
+            "timestamp": 1793601163502,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.mae",
+            "value": 302827.47,
+            "timestamp": 1793601163506,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.rmse",
+            "value": 327720.16,
+            "timestamp": 1793601163506,
+            "step": 0
+          },
+          {
+            "key": "eval.hw.ape_eps_pct",
+            "value": 103.99,
+            "timestamp": 1793601163506,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.n",
+            "value": 63.0,
+            "timestamp": 1793601163511,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.mae",
+            "value": 235730.91,
+            "timestamp": 1793601163514,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.rmse",
+            "value": 253203.39,
+            "timestamp": 1793601163514,
+            "step": 0
+          },
+          {
+            "key": "eval.snaive.ape_eps_pct",
+            "value": 83.86,
+            "timestamp": 1793601163514,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.n",
+            "value": 63.0,
+            "timestamp": 1793601163518,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.mae",
+            "value": 80365.74,
+            "timestamp": 1793601163522,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.rmse",
+            "value": 94175.26,
+            "timestamp": 1793601163522,
+            "step": 0
+          },
+          {
+            "key": "eval.hmean.ape_eps_pct",
+            "value": 38.67,
+            "timestamp": 1793601163522,
+            "step": 0
+          },
+          {
+            "key": "eval.active_minus_baseline.mae",
+            "value": -155365.16999999998,
+            "timestamp": 1793601163526,
+            "step": 0
+          },
+          {
+            "key": "acceptance.is_accepted",
+            "value": 1.0,
+            "timestamp": 1793601163544,
+            "step": 0
+          },
+          {
+            "key": "monitoring.healthy",
+            "value": 1.0,
+            "timestamp": 1793601163582,
+            "step": 0
+          },
+          {
+            "key": "monitoring.alerts_count",
+            "value": 0.0,
+            "timestamp": 1793601163582,
+            "step": 0
+          },
+          {
+            "key": "pipeline.duration_seconds",
+            "value": 0.65,
+            "timestamp": 1793601163756,
+            "step": 0
+          }
+        ],
+        "params": [
+          {
+            "key": "procedure.version",
+            "value": "1.0.0"
+          },
+          {
+            "key": "code.sha256",
+            "value": "54c040972bbd601e5c8c83fadee4c03fd8f28bc19c01d73f3ad0eee63cc7800a"
+          },
+          {
+            "key": "config.sha256",
+            "value": "d12e42c69a09d6da2733b4b54ce518d661b71eba164b131b818ea1f4ec1fc0c7"
+          },
+          {
+            "key": "random_seed",
+            "value": "42"
+          },
+          {
+            "key": "python.version",
+            "value": "3.12.10"
+          },
+          {
+            "key": "source.series.sha256",
+            "value": "a178eb0207546ad92e7c64451ac00d353eaca1d0a2e91e46e9dace4536fba259"
+          },
+          {
+            "key": "source.series.path",
+            "value": "data/series_mensuales.csv"
+          },
+          {
+            "key": "source.pais.sha256",
+            "value": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8"
+          },
+          {
+            "key": "source.pais.path",
+            "value": "data/pais_mensual.csv"
+          },
+          {
+            "key": "source.via.sha256",
+            "value": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359"
+          },
+          {
+            "key": "source.via.path",
+            "value": "data/via_frontera.csv"
+          },
+          {
+            "key": "split.train_start",
+            "value": "2009-01-01"
+          },
+          {
+            "key": "split.train_end",
+            "value": "2021-03-01"
+          },
+          {
+            "key": "split.eval_start",
+            "value": "2021-04-01"
+          },
+          {
+            "key": "split.eval_end",
+            "value": "2026-06-01"
+          },
+          {
+            "key": "split.n_train",
+            "value": "147"
+          },
+          {
+            "key": "split.excluded_periods_config",
+            "value": "[]"
+          },
+          {
+            "key": "factor_reparto.Tipo_Cruceristas",
+            "value": "0.030825"
+          },
+          {
+            "key": "factor_reparto.Tipo_Excursionista",
+            "value": "0.162625"
+          },
+          {
+            "key": "factor_reparto.Tipo_Turista",
+            "value": "0.740787"
+          },
+          {
+            "key": "factor_reparto.Tipo_Viajero",
+            "value": "0.065763"
+          },
+          {
+            "key": "factor_reparto.Total",
+            "value": "1.0"
+          },
+          {
+            "key": "factor_reparto.Via_A\u00e9rea",
+            "value": "0.375932"
+          },
+          {
+            "key": "factor_reparto.Via_Mar\u00edtima",
+            "value": "0.033701"
+          },
+          {
+            "key": "factor_reparto.Via_Terrestre",
+            "value": "0.590367"
+          },
+          {
+            "key": "model.active",
+            "value": "Promedio Hist\u00f3rico Mensual"
+          },
+          {
+            "key": "model.baseline",
+            "value": "Seasonal Naive (Lag 12)"
+          },
+          {
+            "key": "model.holt_winters.enabled",
+            "value": "True"
+          },
+          {
+            "key": "model.holt_winters.seasonal_periods",
+            "value": "12"
+          },
+          {
+            "key": "model.holt_winters.trend",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.seasonal",
+            "value": "add"
+          },
+          {
+            "key": "model.holt_winters.damped_trend",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.use_boxcox",
+            "value": "False"
+          },
+          {
+            "key": "model.holt_winters.clip_negative_for_evaluation",
+            "value": "False"
+          },
+          {
+            "key": "eval.excluded_months",
+            "value": "[]"
+          },
+          {
+            "key": "acceptance.max_mae_tolerance",
+            "value": "150000.0"
+          },
+          {
+            "key": "acceptance.max_rmse_tolerance",
+            "value": "180000.0"
+          },
+          {
+            "key": "acceptance.enforce_rmse_tolerance",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.require_better_than_baseline",
+            "value": "False"
+          },
+          {
+            "key": "acceptance.permit_negative_forecasts_in_evaluation",
+            "value": "True"
+          },
+          {
+            "key": "acceptance.round_predictions_decimals",
+            "value": "2"
+          },
+          {
+            "key": "candidate.sha256",
+            "value": "b4660602cbeb0ba1bd63243e733ecf68f149bb39a8e49963e427e6a342741a8e"
+          }
+        ],
+        "tags": [
+          {
+            "key": "mlflow.user",
+            "value": "app"
+          },
+          {
+            "key": "mlflow.source.name",
+            "value": "pipeline.py"
+          },
+          {
+            "key": "mlflow.source.type",
+            "value": "LOCAL"
+          },
+          {
+            "key": "mlflow.runName",
+            "value": "run_20261102_003243_c6bd2c"
+          },
+          {
+            "key": "run_id",
+            "value": "run_20261102_003243_c6bd2c"
+          },
+          {
+            "key": "run.start",
+            "value": "2026-11-02T00:32:43"
+          },
+          {
+            "key": "pipeline.name",
+            "value": "observatorio_turismo_pipeline"
+          },
+          {
+            "key": "pipeline.status",
+            "value": "APROBADO_NO_PUBLICADO"
+          },
+          {
+            "key": "destination",
+            "value": "Guatemala"
+          },
+          {
+            "key": "git.commit",
+            "value": "NO_DISPONIBLE"
+          },
+          {
+            "key": "git.commit_source",
+            "value": "sin repositorio git ni GIT_COMMIT v\u00e1lido"
+          },
+          {
+            "key": "git.code_dirty",
+            "value": "None"
+          },
+          {
+            "key": "publish.requested",
+            "value": "False"
+          },
+          {
+            "key": "tracking.uri_source",
+            "value": "entorno:MLFLOW_TRACKING_URI"
+          },
+          {
+            "key": "evaluation.mode",
+            "value": "fixed_origin_backtest"
+          },
+          {
+            "key": "acceptance.decision",
+            "value": "APPROVED"
+          },
+          {
+            "key": "acceptance.beats_baseline",
+            "value": "True"
+          },
+          {
+            "key": "publication.decision",
+            "value": "NO_PUBLICADO: ejecuci\u00f3n --no-publish (dry-run)"
+          },
+          {
+            "key": "run.end",
+            "value": "2026-11-02T00:32:43.749644"
+          },
+          {
+            "key": "publication.status",
+            "value": "NO_PUBLICADO"
+          }
+        ]
+      },
+      "inputs": {},
+      "outputs": {}
+    },
+    {
+      "info": {
         "run_uuid": "255d7914ecb045edb435d5a6a7458da0",
         "experiment_id": "1",
         "run_name": "run_20261102_001416_15b4a2",

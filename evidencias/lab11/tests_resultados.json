@@ -2,16 +2,16 @@
   "resumen": {
     "comando": "python -B -m unittest discover -s tests -v",
     "RUN_DOCKER_TESTS": "",
-    "inicio": "2026-11-02T00:43:01-06:00",
-    "fin": "2026-11-02T00:43:31-06:00",
+    "inicio": "2026-11-02T01:34:22-06:00",
+    "fin": "2026-11-02T01:34:54-06:00",
     "python": "3.12.13",
     "plataforma": "macOS-26.6.2-arm64-arm-64bit",
-    "tests_ejecutados_unittest": 99,
-    "duracion_s": 27.064,
-    "PASS": 98,
+    "tests_ejecutados_unittest": 100,
+    "duracion_s": 28.842,
+    "PASS": 99,
     "FAIL": 0,
     "ERROR": 0,
-    "tests_runner_estructurado": 99,
+    "tests_runner_estructurado": 100,
     "codigo_salida_runner_estructurado": 0,
     "SKIP": 1,
     "codigo_salida": 0,
@@ -160,6 +160,11 @@
     },
     {
       "test": "test_lab11_verificacion.ComposePuertoMLflow.test_allowed_hosts_incluye_puerto_publicado_configurable",
+      "estado": "PASS",
+      "motivo_skip_o_fallo": ""
+    },
+    {
+      "test": "test_lab11_verificacion.DenominadorCeroEnQC.test_qc_e_del_pipeline_detecta_denominador_cero",
       "estado": "PASS",
       "motivo_skip_o_fallo": ""
     },

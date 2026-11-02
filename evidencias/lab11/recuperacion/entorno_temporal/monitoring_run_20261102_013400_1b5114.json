@@ -1,0 +1,295 @@
+{
+  "run_id": "run_20261102_013400_1b5114",
+  "generado": "2026-11-02T01:34:00",
+  "configuracion": {
+    "cobertura_esperada_fuentes": "2026-06-01",
+    "cobertura_esperada_salidas": "2026-06-01",
+    "comparacion_variacion": "intermensual",
+    "umbral_variacion": 0.5,
+    "ejecucion_previa_comparada": "run_20261102_013359_237d8b"
+  },
+  "actualizacion": {
+    "fuentes": {
+      "series_mensuales.csv": {
+        "ultima_observacion_real": "2026-06-01",
+        "esperado": "2026-06-01",
+        "estado": "OK",
+        "series_atrasadas": {}
+      },
+      "pais_mensual.csv": {
+        "ultima_observacion_real": "2026-06-01",
+        "esperado": "2026-06-01",
+        "estado": "OK",
+        "series_atrasadas": {}
+      },
+      "via_frontera.csv": {
+        "ultima_observacion_real": "2026-06-01",
+        "esperado": "2026-06-01",
+        "estado": "OK",
+        "series_atrasadas": {}
+      }
+    },
+    "salida": {
+      "ultima_estimacion_producida": "2026-06-01",
+      "esperado": "2026-06-01",
+      "estado": "OK"
+    }
+  },
+  "calidad": {
+    "umbrales": {
+      "max_null_rate": 0.0,
+      "max_duplicate_rate": 0.0,
+      "min_coverage_ratio": 1.0,
+      "max_row_drop_ratio_vs_previous": 0.0
+    },
+    "fuentes": {
+      "series_mensuales.csv": {
+        "perfil": {
+          "fuente": "series_mensuales.csv",
+          "filas": 1680,
+          "columnas_faltantes": [],
+          "filas_con_nulos": 0,
+          "tasa_nulos": 0.0,
+          "claves_duplicadas": 0,
+          "tasa_duplicados": 0.0,
+          "primera_observacion": "2009-01-01",
+          "ultima_observacion_real": "2026-06-01",
+          "cobertura": 1.0,
+          "ultima_observacion_por_serie": {
+            "Tipo_Cruceristas": "2026-06-01",
+            "Tipo_Excursionista": "2026-06-01",
+            "Tipo_Turista": "2026-06-01",
+            "Tipo_Viajero": "2026-06-01",
+            "Total": "2026-06-01",
+            "Via_Aérea": "2026-06-01",
+            "Via_Marítima": "2026-06-01",
+            "Via_Terrestre": "2026-06-01"
+          }
+        },
+        "comparacion_previa": {
+          "run_id_previo": "run_20261102_013359_237d8b",
+          "filas_previas": 1680,
+          "caida_filas": 0.0,
+          "aumento_tasa_nulos": 0.0,
+          "aumento_tasa_duplicados": 0.0
+        },
+        "estado": "OK",
+        "hallazgos": []
+      },
+      "pais_mensual.csv": {
+        "perfil": {
+          "fuente": "pais_mensual.csv",
+          "filas": 23887,
+          "columnas_faltantes": [],
+          "filas_con_nulos": 0,
+          "tasa_nulos": 0.0,
+          "claves_duplicadas": 0,
+          "tasa_duplicados": 0.0,
+          "primera_observacion": "2009-01-01",
+          "ultima_observacion_real": "2026-06-01",
+          "cobertura": 1.0,
+          "ultima_observacion_por_serie": {}
+        },
+        "comparacion_previa": {
+          "run_id_previo": "run_20261102_013359_237d8b",
+          "filas_previas": 23887,
+          "caida_filas": 0.0,
+          "aumento_tasa_nulos": 0.0,
+          "aumento_tasa_duplicados": 0.0
+        },
+        "estado": "OK",
+        "hallazgos": []
+      },
+      "via_frontera.csv": {
+        "perfil": {
+          "fuente": "via_frontera.csv",
+          "filas": 3857,
+          "columnas_faltantes": [],
+          "filas_con_nulos": 0,
+          "tasa_nulos": 0.0,
+          "claves_duplicadas": 0,
+          "tasa_duplicados": 0.0,
+          "primera_observacion": "2009-01-01",
+          "ultima_observacion_real": "2026-06-01",
+          "cobertura": 1.0,
+          "ultima_observacion_por_serie": {}
+        },
+        "comparacion_previa": {
+          "run_id_previo": "run_20261102_013359_237d8b",
+          "filas_previas": 3857,
+          "caida_filas": 0.0,
+          "aumento_tasa_nulos": 0.0,
+          "aumento_tasa_duplicados": 0.0
+        },
+        "estado": "OK",
+        "hallazgos": []
+      }
+    }
+  },
+  "resultados": {
+    "estado": "OK",
+    "comparacion": "intermensual",
+    "umbral_variacion": 0.5,
+    "negativos": 0,
+    "no_finitos": 0,
+    "pares_comparados": 496,
+    "variaciones_sobre_umbral": 0,
+    "variaciones_base_cero": 0,
+    "variacion_maxima_abs": 0.275397,
+    "ejemplos": []
+  },
+  "error_predictivo": {
+    "actualizado": true,
+    "n_pares": 504,
+    "por_serie": {
+      "Tipo_Cruceristas": {
+        "n": 63,
+        "mae": 6817.64,
+        "rmse": 6991.66,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Tipo_Excursionista": {
+        "n": 63,
+        "mae": 26316.45,
+        "rmse": 27949.24,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Tipo_Turista": {
+        "n": 63,
+        "mae": 41146.25,
+        "rmse": 50109.27,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Tipo_Viajero": {
+        "n": 63,
+        "mae": 20022.25,
+        "rmse": 35687.12,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Total": {
+        "n": 63,
+        "mae": 80365.74,
+        "rmse": 94175.26,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Via_Aérea": {
+        "n": 63,
+        "mae": 16219.6,
+        "rmse": 20937.21,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Via_Marítima": {
+        "n": 63,
+        "mae": 7104.55,
+        "rmse": 7263.04,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Via_Terrestre": {
+        "n": 63,
+        "mae": 72073.61,
+        "rmse": 80887.34,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      }
+    }
+  },
+  "alertas": [],
+  "alerts_count": 0,
+  "all_healthy": true,
+  "ejecucion": {
+    "run_id": "run_20261102_013400_1b5114",
+    "git_commit": "bced471e35b393335f309a95c4a5afd8f792e6a9",
+    "start_time": "2026-11-02T01:34:00.500828",
+    "end_time": "2026-11-02T01:34:01.063595",
+    "duration_seconds": 0.56,
+    "stages": [
+      {
+        "stage_name": "Verificación de trazabilidad (MLflow)",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:34:00.540629",
+        "end_time": "2026-11-02T01:34:00.554780",
+        "details": "http://127.0.0.1:5001 (config:mlflow.tracking_uri)"
+      },
+      {
+        "stage_name": "Lectura de fuentes",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:34:00.598203",
+        "end_time": "2026-11-02T01:34:00.639974",
+        "details": "series_mensuales.csv=bb14cb7e8367, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566"
+      },
+      {
+        "stage_name": "Controles de calidad QC-A…F",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:34:00.639983",
+        "end_time": "2026-11-02T01:34:00.658912",
+        "details": "QC críticos aprobados"
+      },
+      {
+        "stage_name": "Preparación y división temporal",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:34:00.658923",
+        "end_time": "2026-11-02T01:34:00.666376",
+        "details": ""
+      },
+      {
+        "stage_name": "Ajuste de modelo, baselines y factores",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:34:00.666382",
+        "end_time": "2026-11-02T01:34:00.726526",
+        "details": "Promedio Histórico Mensual"
+      },
+      {
+        "stage_name": "Evaluación temporal",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:34:00.726536",
+        "end_time": "2026-11-02T01:34:00.790207",
+        "details": "N evaluable=63"
+      },
+      {
+        "stage_name": "Candidato, integridad y regla de aceptación",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:34:00.790216",
+        "end_time": "2026-11-02T01:34:00.824328",
+        "details": "APROBADO"
+      },
+      {
+        "stage_name": "Monitoreo (actualización, calidad, resultados)",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:34:00.824337",
+        "end_time": "2026-11-02T01:34:00.847170",
+        "details": "alertas accionables=0"
+      },
+      {
+        "stage_name": "Registro verificado en MLflow",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:34:00.847178",
+        "end_time": "2026-11-02T01:34:01.055482",
+        "details": "11 artefactos releídos"
+      },
+      {
+        "stage_name": "Publicación atómica",
+        "status": "FAILED",
+        "start_time": "2026-11-02T01:34:01.055496",
+        "end_time": "2026-11-02T01:34:01.063576",
+        "details": "fallo simulado de escritura"
+      }
+    ],
+    "warnings": [],
+    "errors": [
+      "fallo simulado de escritura"
+    ],
+    "published": false,
+    "status": "FALLIDO",
+    "failed_stage": "Publicación atómica",
+    "publication_decision": "NO_PUBLICADO: fallido en etapa 'Publicación atómica'",
+    "mlflow_run_id": "ddec7e59915f4a7bbd16fd8c270e111c",
+    "tracking_uri": "http://127.0.0.1:5001"
+  }
+}

@@ -1,6 +1,6 @@
 # Contratos de datos MLOps
 
-Especificación aplicada: `01_pipeline_gobernanza.md`. El PDF `Laboratorio_11_MLOps_2026.pdf` **no está** en el repositorio; esta limitación queda registrada.
+Especificación aplicada: `01_pipeline_gobernanza.md` y el enunciado oficial `Laboratorio_11_MLOps_2026.pdf` (ejercicios 1.1–8.4; matriz en `docs/auditoria_final_lab11.md`).
 
 ## Distinción de roles temporales
 

@@ -5,6 +5,7 @@ Cubren requisitos que no tenían una prueba explícita:
 - MAE/RMSE contra un cálculo manual y baseline evaluado exactamente en los mismos meses.
 - El modo dry-run (--no-publish) no altera la versión aprobada vigente.
 - Fuentes múltiples: las tres fuentes se registran con hash y las de contexto pasan por QC.
+- QC-E del pipeline detecta un denominador del factor de reparto igual a cero antes del modelado.
 
 Todo corre sobre datos sintéticos en carpetas temporales (PipelineSandbox); no se tocan
 data/, reports/, logs/ ni el almacén MLflow del repositorio.
@@ -206,6 +207,38 @@ class AislamientoTrackingURI(EnvIsolation):
                 box.run(publish=True, **{"mlflow.tracking_uri": "http://127.0.0.1:9",
                                          "mlflow.connect_retries": 1, "mlflow.connect_retry_delay_seconds": 0})
             self.assertEqual(file_sha256(str(box.approved)), sha)
+        finally:
+            shutil.rmtree(box.tmp, ignore_errors=True)
+
+
+class DenominadorCeroEnQC(EnvIsolation):
+    """Enunciado 3.1 e): el denominador cero debe detectarse en QC-E, no solo en el modelado."""
+
+    def test_qc_e_del_pipeline_detecta_denominador_cero(self):
+        from src.quality_checks import execute_all_quality_checks
+        box = PipelineSandbox()
+        try:
+            df = synthetic_series()
+            fechas = pd.to_datetime(df["fecha"])
+            ajuste = (fechas >= pd.Timestamp("2015-01-01")) & (fechas <= TRAIN_END)
+            df_mal = df.assign(viajeros=df["viajeros"].where(~ajuste, 0.0))
+            rep = execute_all_quality_checks(df_mal, "t", "t", box.cfg)
+            qc_e = [c for c in rep.checks if c.check_id == "QC-E" and c.name.startswith("Valores")][0]
+            self.assertEqual(qc_e.status, "FAILED")
+            self.assertIn("zero_denominators", qc_e.diagnostics)
+
+            ok = execute_all_quality_checks(df, "t", "t", box.cfg)
+            qc_ok = [c for c in ok.checks if c.check_id == "QC-E" and c.name.startswith("Valores")][0]
+            self.assertEqual(qc_ok.status, "PASSED")
+            self.assertGreater(qc_ok.diagnostics["suma_Total_ajuste"], 0)
+
+            from src.quality_checks import QualityControlError
+            self.assertEqual(box.run(publish=True)["status"], "APROBADO_PUBLICADO")
+            sha_previo = file_sha256(str(box.approved))
+            box.write_series(df_mal)
+            with self.assertRaises(QualityControlError):
+                box.run(publish=True)
+            self.assertEqual(file_sha256(str(box.approved)), sha_previo)
         finally:
             shutil.rmtree(box.tmp, ignore_errors=True)
 

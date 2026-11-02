@@ -1,0 +1,177 @@
+{
+  "run_id": "run_20261102_013358_923651",
+  "generado": "2026-11-02T01:33:59",
+  "configuracion": {
+    "cobertura_esperada_fuentes": "2026-06-01",
+    "cobertura_esperada_salidas": "2026-06-01",
+    "comparacion_variacion": "intermensual",
+    "umbral_variacion": 0.5,
+    "ejecucion_previa_comparada": null
+  },
+  "actualizacion": {
+    "fuentes": {
+      "series_mensuales.csv": {
+        "ultima_observacion_real": null,
+        "esperado": "2026-06-01",
+        "estado": "ALERTA",
+        "series_atrasadas": {}
+      },
+      "pais_mensual.csv": {
+        "ultima_observacion_real": "2026-06-01",
+        "esperado": "2026-06-01",
+        "estado": "OK",
+        "series_atrasadas": {}
+      },
+      "via_frontera.csv": {
+        "ultima_observacion_real": "2026-06-01",
+        "esperado": "2026-06-01",
+        "estado": "OK",
+        "series_atrasadas": {}
+      }
+    },
+    "salida": {
+      "estado": "NO_DISPONIBLE",
+      "motivo": "La ejecución no produjo estimaciones."
+    }
+  },
+  "calidad": {
+    "umbrales": {
+      "max_null_rate": 0.0,
+      "max_duplicate_rate": 0.0,
+      "min_coverage_ratio": 1.0,
+      "max_row_drop_ratio_vs_previous": 0.0
+    },
+    "fuentes": {
+      "series_mensuales.csv": {
+        "perfil": {
+          "fuente": "series_mensuales.csv",
+          "filas": 1680,
+          "columnas_faltantes": [
+            "viajeros"
+          ],
+          "filas_con_nulos": 0,
+          "tasa_nulos": 0.0,
+          "claves_duplicadas": 0,
+          "tasa_duplicados": 0.0,
+          "primera_observacion": null,
+          "ultima_observacion_real": null,
+          "cobertura": 0.0,
+          "ultima_observacion_por_serie": {}
+        },
+        "comparacion_previa": {
+          "estado": "SIN_EJECUCION_PREVIA"
+        },
+        "estado": "ALERTA",
+        "hallazgos": [
+          "faltan columnas ['viajeros']",
+          "cobertura 0.0000 < 1.0"
+        ]
+      },
+      "pais_mensual.csv": {
+        "perfil": {
+          "fuente": "pais_mensual.csv",
+          "filas": 23887,
+          "columnas_faltantes": [],
+          "filas_con_nulos": 0,
+          "tasa_nulos": 0.0,
+          "claves_duplicadas": 0,
+          "tasa_duplicados": 0.0,
+          "primera_observacion": "2009-01-01",
+          "ultima_observacion_real": "2026-06-01",
+          "cobertura": 1.0,
+          "ultima_observacion_por_serie": {}
+        },
+        "comparacion_previa": {
+          "estado": "SIN_EJECUCION_PREVIA"
+        },
+        "estado": "OK",
+        "hallazgos": []
+      },
+      "via_frontera.csv": {
+        "perfil": {
+          "fuente": "via_frontera.csv",
+          "filas": 3857,
+          "columnas_faltantes": [],
+          "filas_con_nulos": 0,
+          "tasa_nulos": 0.0,
+          "claves_duplicadas": 0,
+          "tasa_duplicados": 0.0,
+          "primera_observacion": "2009-01-01",
+          "ultima_observacion_real": "2026-06-01",
+          "cobertura": 1.0,
+          "ultima_observacion_por_serie": {}
+        },
+        "comparacion_previa": {
+          "estado": "SIN_EJECUCION_PREVIA"
+        },
+        "estado": "OK",
+        "hallazgos": []
+      }
+    }
+  },
+  "resultados": {
+    "estado": "NO_DISPONIBLE",
+    "motivo": "Sin estimaciones que revisar."
+  },
+  "error_predictivo": {
+    "actualizado": false,
+    "motivo": "Sin estimaciones u observaciones disponibles.",
+    "por_serie": {}
+  },
+  "alertas": [
+    {
+      "control": "actualizacion",
+      "severidad": "ALERTA",
+      "mensaje": "series_mensuales.csv: última observación real ninguna no alcanza la cobertura configurada 2026-06.",
+      "accion": "Verificar la entrega institucional o corregir monitoring.expected_coverage_end; no presentar la salida como actualizada."
+    },
+    {
+      "control": "calidad",
+      "severidad": "ALERTA",
+      "mensaje": "series_mensuales.csv: faltan columnas ['viajeros']; cobertura 0.0000 < 1.0.",
+      "accion": "Corregir la fuente en origen; no editar estimaciones aprobadas a mano."
+    }
+  ],
+  "alerts_count": 2,
+  "all_healthy": false,
+  "ejecucion": {
+    "run_id": "run_20261102_013358_923651",
+    "git_commit": "bced471e35b393335f309a95c4a5afd8f792e6a9",
+    "start_time": "2026-11-02T01:33:58.976417",
+    "end_time": "2026-11-02T01:33:59.289861",
+    "duration_seconds": 0.31,
+    "stages": [
+      {
+        "stage_name": "Verificación de trazabilidad (MLflow)",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:33:59.015887",
+        "end_time": "2026-11-02T01:33:59.075415",
+        "details": "http://127.0.0.1:5001 (config:mlflow.tracking_uri)"
+      },
+      {
+        "stage_name": "Lectura de fuentes",
+        "status": "COMPLETED",
+        "start_time": "2026-11-02T01:33:59.225124",
+        "end_time": "2026-11-02T01:33:59.266609",
+        "details": "series_mensuales.csv=268f3b9c1e0e, pais_mensual.csv=f767f19a6ed0, via_frontera.csv=a7eb9d045566"
+      },
+      {
+        "stage_name": "Controles de calidad QC-A…F",
+        "status": "FAILED",
+        "start_time": "2026-11-02T01:33:59.266621",
+        "end_time": "2026-11-02T01:33:59.289844",
+        "details": "Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv."
+      }
+    ],
+    "warnings": [],
+    "errors": [
+      "Fallo crítico en calidad (2 errores). No se modela ni publica; se preserva estimaciones_aprobadas.csv."
+    ],
+    "published": false,
+    "status": "FALLIDO_CALIDAD",
+    "failed_stage": "Controles de calidad QC-A…F",
+    "publication_decision": "NO_PUBLICADO: fallido_calidad en etapa 'Controles de calidad QC-A…F'",
+    "mlflow_run_id": "78b4384e17dd44859eefeaab6cdc7a13",
+    "tracking_uri": "http://127.0.0.1:5001"
+  }
+}

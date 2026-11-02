@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "estado_aprobacion": "APROBADO",
+  "run_id": "run_20261102_013400_1b5114",
+  "mlflow_run_id": "ddec7e59915f4a7bbd16fd8c270e111c",
+  "mlflow_experiment": "Observatorio_Turismo_Guatemala_pruebas_controladas",
+  "fecha_generacion": "2026-11-02 01:34:00",
+  "fecha_generacion_utc_offset": "-0600",
+  "version_procedimiento": "1.0.0",
+  "modelo": "Promedio Histórico Mensual",
+  "destino": "Guatemala",
+  "unidad_medida": "viajeros/mes",
+  "series": [
+    "Tipo_Cruceristas",
+    "Tipo_Excursionista",
+    "Tipo_Turista",
+    "Tipo_Viajero",
+    "Total",
+    "Via_Aérea",
+    "Via_Marítima",
+    "Via_Terrestre"
+  ],
+  "n_filas": 504,
+  "rango_estimaciones": {
+    "inicio": "2021-04-01",
+    "fin": "2026-06-01"
+  },
+  "tipo_estimaciones": "retrospectiva (backtest de origen fijo)",
+  "corte_datos_observados": "2026-06-01",
+  "incluye_pronostico_futuro": false,
+  "periodo_ajuste": {
+    "inicio": "2009-01-01",
+    "fin": "2021-03-01",
+    "n": 147
+  },
+  "periodo_evaluacion": {
+    "inicio": "2021-04-01",
+    "fin": "2026-06-01",
+    "n_evaluable": 63,
+    "meses_excluidos": [],
+    "exclusiones": []
+  },
+  "metricas": {
+    "serie": "Total",
+    "mae": 80365.74,
+    "rmse": 94175.26,
+    "ape_eps_pct": 38.67,
+    "n": 63
+  },
+  "baseline": {
+    "modelo": "Seasonal Naive (Lag 12)",
+    "mae": 235730.91,
+    "rmse": 253203.39,
+    "n": 63,
+    "mismos_meses": true,
+    "supera_baseline": true
+  },
+  "metricas_por_serie": {
+    "nota": "Diagnóstico sobre los valores publicados (≥0) frente a lo observado; no es criterio de aceptación.",
+    "series": {
+      "Tipo_Cruceristas": {
+        "n": 63,
+        "mae": 6817.64,
+        "rmse": 6991.66,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Tipo_Excursionista": {
+        "n": 63,
+        "mae": 26316.45,
+        "rmse": 27949.24,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Tipo_Turista": {
+        "n": 63,
+        "mae": 41146.25,
+        "rmse": 50109.27,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Tipo_Viajero": {
+        "n": 63,
+        "mae": 20022.25,
+        "rmse": 35687.12,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Total": {
+        "n": 63,
+        "mae": 80365.74,
+        "rmse": 94175.26,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Via_Aérea": {
+        "n": 63,
+        "mae": 16219.6,
+        "rmse": 20937.21,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Via_Marítima": {
+        "n": 63,
+        "mae": 7104.55,
+        "rmse": 7263.04,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      },
+      "Via_Terrestre": {
+        "n": 63,
+        "mae": 72073.61,
+        "rmse": 80887.34,
+        "inicio": "2021-04-01",
+        "fin": "2026-06-01"
+      }
+    }
+  },
+  "regla_aceptacion": {
+    "max_mae": 150000.0,
+    "max_rmse": 180000.0,
+    "nota": "No es obligatorio superar el baseline; beats_baseline queda documentado. Umbral MAE inicial 150000 según configuración, sin ajuste post-hoc."
+  },
+  "trazabilidad": {
+    "git_commit": "bced471e35b393335f309a95c4a5afd8f792e6a9",
+    "git_commit_source": "git rev-parse HEAD",
+    "codigo_sha256": "a0a56ffac9d56efc15a5d10b842d87fdf5b1d834b0ea7f81dbf44251b6e34544",
+    "config_sha256": "0412e092e473954d9ce795a59a976fd20d98401ac488258645afcfff0ab51b0a",
+    "fuentes": [
+      {
+        "nombre": "series_mensuales.csv",
+        "rol": "modelado",
+        "ruta_logica": "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/data/series_mensuales.csv",
+        "sha256": "bb14cb7e8367ba5d38ed7aa8350b09ef0b1c92c8aefd6579c2e989472b0d67f1"
+      },
+      {
+        "nombre": "pais_mensual.csv",
+        "rol": "contexto (QC y monitoreo)",
+        "ruta_logica": "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/data/pais_mensual.csv",
+        "sha256": "f767f19a6ed00ac72b61fbe46693e4892e49a7104da63e79cad189359b551dd8"
+      },
+      {
+        "nombre": "via_frontera.csv",
+        "rol": "contexto (QC y monitoreo)",
+        "ruta_logica": "/var/folders/cz/cct0cxhd31g2z0kjvl04t5500000gn/T/lab11_fallos__oooxk2i/data/via_frontera.csv",
+        "sha256": "a7eb9d045566e829069ffc9bf31597f2168f5af5f1d11182d1709ef284e29359"
+      }
+    ]
+  },
+  "csv_sha256": "476eb7fe6031e981d04655ffe5e820f411999181e3906981f84f48c5a63553af"
+}
