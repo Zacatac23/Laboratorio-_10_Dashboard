@@ -1,54 +1,86 @@
-version: "3.8"
+# Observatorio de Inteligencia Turística — Laboratorio 11
+#
+#   docker compose up -d --build          # MLflow (127.0.0.1:5000) y tablero (127.0.0.1:8501)
+#   docker compose run --rm pipeline      # ejecución batch con publicación controlada
+#   docker compose down                   # detiene; datos, respaldos y MLflow persisten
+#
+# NO usar `docker compose down -v`: borra el volumen con la base y artefactos de MLflow.
+# Rutas del host configurables con variables (ver .env.example); por defecto ./data, ./logs, ./reports.
+name: observatorio_turismo
+
+x-app-image: &app-image
+  image: observatorio-turismo:lab11
+  build:
+    context: .
+    dockerfile: Dockerfile
 
 services:
-  # Servicio 1: Tablero Streamlit para directivos
-  dashboard:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: observatorio_turismo_dashboard
-    ports:
-      - "8501:8501"
-    environment:
-      - DATA_DIR=/app/data
-    volumes:
-      - ./data:/app/data
-      - ./logs:/app/logs
-      - ./reports:/app/reports
-    restart: unless-stopped
-    depends_on:
-      - mlflow
-
-  # Servicio 2: Servidor de MLflow Tracking UI
+  # Servidor de tracking: SQLite y artefactos en volumen persistente /mlflow.
+  # --serve-artifacts: el pipeline sube/lee artefactos por HTTP (mlflow-artifacts:/).
   mlflow:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    <<: *app-image
     container_name: observatorio_turismo_mlflow
+    environment:
+      TZ: ${TZ:-America/Guatemala}
+    command:
+      - mlflow
+      - server
+      - --host=0.0.0.0
+      - --port=5000
+      - --workers=1
+      - --backend-store-uri=sqlite:////mlflow/mlflow.db
+      - --artifacts-destination=/mlflow/artifacts
+      - --serve-artifacts
+      # Host headers válidos: nombre del servicio en la red de Compose y acceso local
+      - --allowed-hosts=mlflow,mlflow:5000,localhost,localhost:5000,127.0.0.1,127.0.0.1:5000
     ports:
-      - "5000:5000"
-    command: >
-      mlflow ui --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:////app/data/mlflow.db --artifacts-destination /app/mlruns
+      - "127.0.0.1:${MLFLOW_PORT:-5000}:5000"
     volumes:
-      - ./data:/app/data
-      - ./mlruns:/app/mlruns
-      - ./logs:/app/logs
+      - ${OBS_MLFLOW_STORE:-mlflow_store}:/mlflow
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
     restart: unless-stopped
 
-  # Servicio 3: Ejecución batch del Pipeline reproducible (bajo demanda)
-  # Uso: docker compose run --rm pipeline
-  pipeline:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: observatorio_turismo_pipeline
-    command: python pipeline.py --config config/pipeline_config.yaml --publish
+  # Tablero para directivos: solo lee data/ (montado en modo lectura). No requiere MLflow.
+  dashboard:
+    <<: *app-image
+    container_name: observatorio_turismo_dashboard
+    environment:
+      DATA_DIR: /app/data
+      TZ: ${TZ:-America/Guatemala}
+    ports:
+      - "127.0.0.1:${DASHBOARD_PORT:-8501}:8501"
     volumes:
-      - ./data:/app/data
-      - ./logs:/app/logs
-      - ./reports:/app/reports
-      - ./mlruns:/app/mlruns
-      - ./config:/app/config
-    profiles:
-      - tools
+      - ${OBS_DATA_DIR:-./data}:/app/data:ro
+    restart: unless-stopped
 
+  # Pipeline batch bajo demanda. Espera a que MLflow esté sano; si aun así no logra
+  # registrar (reintentos agotados), termina sin publicar (código 3).
+  pipeline:
+    <<: *app-image
+    container_name: observatorio_turismo_pipeline
+    profiles: ["tools"]
+    depends_on:
+      mlflow:
+        condition: service_healthy
+    environment:
+      TZ: ${TZ:-America/Guatemala}   # fecha_generacion en hora local declarada
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+      MLFLOW_CONNECT_RETRIES: "10"
+      MLFLOW_CONNECT_DELAY: "3"
+      # Sin .git en la imagen: declarar el commit desde el host (ver README). Vacío = NO_DISPONIBLE.
+      GIT_COMMIT: ${GIT_COMMIT:-}
+      RESTORE_OPERATOR: ${RESTORE_OPERATOR:-}
+    command: ["python", "pipeline.py", "--config", "config/pipeline_config.yaml", "--publish"]
+    volumes:
+      - ${OBS_DATA_DIR:-./data}:/app/data
+      - ${OBS_LOGS_DIR:-./logs}:/app/logs
+      - ${OBS_REPORTS_DIR:-./reports}:/app/reports
+      - ./config:/app/config:ro
+
+volumes:
+  mlflow_store:

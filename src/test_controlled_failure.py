@@ -49,8 +49,14 @@ def run_controlled_failure_and_recovery_test():
         cfg_corrupt = cfg.copy()
         cfg_corrupt['paths']['raw_data_dir'] = temp_dir
         cfg_corrupt['paths']['series_file'] = "series_mensuales_corrupta.csv"
-        # Mantener ruta de salida real para verificar que NO se altere
+        # Salidas en una copia temporal de la versión aprobada: se verifica que no se
+        # altere tras el fallo y la recuperación publica ahí, no en data/.
+        cfg_corrupt['paths']['output_dir'] = temp_dir
         cfg_corrupt['paths']['approved_file'] = "estimaciones_aprobadas.csv"
+        cfg_corrupt['paths']['backup_dir'] = os.path.join(temp_dir, "backup_aprobadas")
+        shutil.copy2(approved_file, os.path.join(temp_dir, "estimaciones_aprobadas.csv"))
+        approved_file = os.path.join(temp_dir, "estimaciones_aprobadas.csv")
+        original_approved_content = open(approved_file, "r", encoding="utf-8").read()
         
         temp_cfg_path = os.path.join(temp_dir, "pipeline_config_corrupt.yaml")
         with open(temp_cfg_path, "w", encoding="utf-8") as f:
@@ -85,7 +91,7 @@ def run_controlled_failure_and_recovery_test():
         print("\n[PASO 5] Re-ejecutando pipeline tras corrección...")
         pipe_recovered = TourismMLOpsPipeline(config_path=temp_cfg_path, publish=True)
         result = pipe_recovered.run()
-        assert result["status"] == "SUCCESS", "El pipeline recuperado debió finalizar con SUCCESS."
+        assert result["status"] == "APROBADO_PUBLICADO", "El pipeline recuperado debió aprobar y publicar."
         print(f"  -> Recuperación exitosa. Nuevo Run ID aprobado: {result['run_id']}")
 
         print("\n=================================================================")

@@ -1,4 +1,7 @@
 """Carga validada y cálculos reproducibles; nunca extrapola pronósticos."""
+import hashlib
+import io
+import json
 import os
 import numpy as np
 import pandas as pd
@@ -170,18 +173,81 @@ def calcular_metricas_error(series, pron, ms, corte=CORTE):
     return pd.DataFrame(filas, columns=columnas).sort_values('MAE (Error medio)', na_position='last').reset_index(drop=True)
 
 
-def cargar_estimaciones_aprobadas(data_dir='data'):
-    """Carga el archivo de estimaciones aprobadas por el pipeline de MLOps con metadatos de gobernanza (Laboratorio 11)."""
-    ruta = os.path.join(data_dir, 'estimaciones_aprobadas.csv')
+APROBADAS = 'estimaciones_aprobadas.csv'
+COLUMNAS_APROBADAS = ['destino', 'serie', 'modelo', 'fecha', 'prediccion', 'unidad_medida',
+                      'run_id', 'fecha_generacion', 'version_procedimiento', 'estado_aprobacion']
+
+
+def cargar_version_aprobada(data_dir='data'):
+    """Lee solo la versión vigente publicada por el pipeline; nunca la reconstruye.
+
+    Devuelve dict con estado ('ok', 'ausente', 'inaccesible', 'invalida'), mensaje,
+    df, manifiesto y metadatos_verificados (manifiesto con mismo SHA-256 y run_id).
+    Sin caché: cada lectura refleja la última publicación o restauración.
+    """
+    ruta = os.path.join(data_dir, APROBADAS)
+    res = {'estado': 'ausente', 'mensaje': '', 'df': None, 'manifiesto': None,
+           'metadatos_verificados': False, 'sha256': None}
     if not os.path.isfile(ruta):
-        return None
+        res['mensaje'] = ('Aún no hay una versión aprobada publicada por el flujo MLOps. '
+                          'Las vistas históricas siguen disponibles.')
+        return res
     try:
-        df = pd.read_csv(ruta)
-        if 'fecha' in df:
-            df['fecha'] = pd.to_datetime(df['fecha'])
-        return df
-    except Exception:
-        return None
+        with open(ruta, 'rb') as fh:
+            contenido = fh.read()
+    except OSError:
+        res.update(estado='inaccesible', mensaje='La versión aprobada existe, pero no se pudo leer. '
+                   'Consulte al equipo técnico; las vistas históricas siguen disponibles.')
+        return res
+    res['sha256'] = hashlib.sha256(contenido).hexdigest()
+    invalida = 'La versión aprobada no es válida ({}); no se muestra. Las vistas históricas siguen disponibles.'
+    try:
+        df = pd.read_csv(io.BytesIO(contenido))
+    except (ValueError, pd.errors.ParserError):
+        res.update(estado='invalida', mensaje=invalida.format('formato ilegible o archivo vacío'))
+        return res
+    faltan = [c for c in COLUMNAS_APROBADAS if c not in df.columns]
+    fechas = pd.to_datetime(df['fecha'], errors='coerce') if 'fecha' in df else None
+    pred = pd.to_numeric(df['prediccion'], errors='coerce') if 'prediccion' in df else None
+    problema = None
+    if faltan:
+        problema = f'faltan columnas: {", ".join(faltan)}'
+    elif df.empty:
+        problema = 'archivo sin filas'
+    elif fechas.isna().any() or (fechas.dt.day != 1).any():
+        problema = 'fechas inválidas'
+    elif not np.isfinite(pred.to_numpy(dtype=float, na_value=np.nan)).all() or (pred < 0).any():
+        problema = 'estimaciones nulas, no finitas o negativas'
+    elif not df['estado_aprobacion'].eq('APROBADO').all():
+        problema = 'contiene filas no aprobadas'
+    elif df['run_id'].nunique() != 1:
+        problema = 'mezcla varias ejecuciones'
+    elif df.duplicated(['serie', 'fecha']).any():
+        problema = 'claves serie/fecha duplicadas'
+    if problema:
+        res.update(estado='invalida', mensaje=invalida.format(problema))
+        return res
+    df = df.assign(fecha=fechas, prediccion=pred)
+    df['serie'] = df['serie'].astype(str).str.replace('Via_A.*rea', 'Via_Aérea', regex=True) \
+        .str.replace('Via_Mar.*tima', 'Via_Marítima', regex=True)
+    res.update(estado='ok', df=df.sort_values(['serie', 'fecha']).reset_index(drop=True))
+
+    ruta_manifiesto = os.path.splitext(ruta)[0] + '.manifest.json'
+    try:
+        with open(ruta_manifiesto, 'r', encoding='utf-8') as fh:
+            manifiesto = json.load(fh)
+    except FileNotFoundError:
+        res['mensaje'] = 'Esta versión no tiene manifiesto: su error (MAE) no puede verificarse.'
+        return res
+    except (OSError, ValueError):
+        res['mensaje'] = 'El manifiesto de la versión no se pudo leer: su error (MAE) no puede verificarse.'
+        return res
+    if manifiesto.get('csv_sha256') == res['sha256'] and manifiesto.get('run_id') == df['run_id'].iloc[0]:
+        res.update(manifiesto=manifiesto, metadatos_verificados=True)
+    else:
+        res['mensaje'] = ('El manifiesto no corresponde al archivo vigente (huella distinta): '
+                          'no se muestran métricas no verificadas.')
+    return res
 
 
 # =====================================================

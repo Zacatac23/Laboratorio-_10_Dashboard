@@ -1,20 +1,26 @@
-__pycache__
-*.pyc
-*.pyo
-*.pyd
-.venv
-venv/
-env/
-.git
-.gitignore
-.dockerignore
-mlruns/
-mlflow.db
-evidencias/
-reporte_final_lab10/
-.pytest_cache/
-# Microdatos institucionales: no se copian a la imagen; se montan por volumen
-data/
-logs/
-reports/
+# Lista blanca: todo se excluye salvo el código necesario para ejecutar.
+# Quedan fuera de la imagen: data/ (CSV institucionales y versiones aprobadas),
+# respaldos, reports/, logs/, mlflow_store/, mlruns/, *.db, evidencias/, PDF,
+# .env, secretos de Streamlit, llaves, .git y entornos virtuales.
+*
 
+!app.py
+!data_logic.py
+!ui_components.py
+!mapa_guatemala.py
+!pipeline.py
+!styles.css
+!guatemala-departments.geojson
+!requirements.txt
+!requirements.lock
+!.streamlit/config.toml
+!config/pipeline_config.yaml
+!src/*.py
+
+# Reexclusión defensiva aunque una regla anterior los incluyera
+**/__pycache__
+**/*.pyc
+**/.env
+**/*.pem
+**/*.key
+**/secrets.toml

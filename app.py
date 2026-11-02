@@ -7,7 +7,7 @@ import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 from data_logic import (cargar_todo, agrupar_serie, calcular_variacion_interanual,
-    calcular_metricas_error, cargar_estimaciones_aprobadas, preparar_datos_mapa_origen, seleccion_vigente, ErrorDatos, ETIQ, TODAS, CORTE)
+    calcular_metricas_error, cargar_version_aprobada, preparar_datos_mapa_origen, seleccion_vigente, ErrorDatos, ETIQ, TODAS, CORTE)
 from ui_components import (aplicar_estilos, mostrar_grafico, estilo_plotly,
     render_banner, render_kpis_resumen, crear_figura_evolucion, crear_figura_mapa_origen,
     titulo_seccion, render_footer_leyenda,
@@ -56,6 +56,53 @@ def enlazar(origen, destino, opciones):
 
 def mostrar(fig, identidad):
     return mostrar_grafico(fig, key='viz_' + identidad)
+
+
+def mes_anio(fecha):
+    fecha = pd.Timestamp(fecha)
+    return f'{MESES[fecha.month - 1]} {fecha.year}'
+
+
+def render_version_aprobada(version):
+    """Resumen directivo de la versión aprobada vigente; no usa métricas del banco Lab 10."""
+    st.markdown('#### Estimación aprobada vigente')
+    if version['estado'] != 'ok':
+        (st.info if version['estado'] == 'ausente' else st.warning)(version['mensaje'])
+        return
+    df, man = version['df'], version['manifiesto'] or {}
+    met, ev = man.get('metricas') or {}, man.get('periodo_evaluacion') or {}
+    verificada = version['metadatos_verificados'] and met.get('mae') is not None
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric(f"Error medio (MAE) — {ETIQ.get(met.get('serie', 'Total'), 'Total')}",
+              f"{met['mae']:,.0f} viajeros/mes" if verificada else 'No verificable')
+    c2.metric('Periodo evaluado', f"{mes_anio(ev['inicio'])} – {mes_anio(ev['fin'])}" if verificada else 'No verificable')
+    c3.metric('Generada el', str(df.fecha_generacion.iloc[0])[:16],
+              help='Fecha en que se produjo esta versión; no es el último mes de datos.')
+    c4.metric('Versión del procedimiento', f'v{df.version_procedimiento.iloc[0]}',
+              help=f'Identificador de ejecución: {df.run_id.iloc[0]}')
+    if not verificada:
+        st.warning(version['mensaje'])
+    else:
+        obs = series[(series.serie == met['serie']) & series.fecha.between(ev['inicio'], ev['fin'])].viajeros
+        relativo = f' (≈{met["mae"] / obs.mean():.0%} del promedio mensual observado)' if len(obs) and obs.mean() > 0 else ''
+        st.caption(f"Cómo leerlo: en {met['n']} meses comparables, la estimación aprobada se separó en promedio "
+                   f"{met['mae']:,.0f} viajeros/mes de lo observado{relativo}. Es una evaluación retrospectiva: "
+                   'describe el error típico pasado, no garantiza el de meses futuros.')
+    corte = pd.Timestamp(man.get('corte_datos_observados') or series.fecha.max())
+    futuro = df.fecha.gt(corte).any()
+    modelo = man.get('modelo') or df.loc[df.serie.eq('Total'), 'modelo'].head(1).squeeze() or df.modelo.iloc[0]
+    st.caption(f"Modelo: {modelo}. Estimaciones retrospectivas {mes_anio(df.fecha.min())}–"
+               f"{mes_anio(df.fecha.max())} para {df.serie.nunique()} series; datos observados hasta {mes_anio(corte)}. "
+               + ('Incluye meses de pronóstico futuro, marcados aparte.' if futuro else
+                  'Esta versión no incluye pronóstico futuro.'))
+    with st.expander('Límites de esta versión'):
+        st.markdown(
+            f'- {corte.year} es un año parcial (datos hasta {mes_anio(corte)}); no se compara como año completo.\n'
+            '- Las series por vía y tipo de viajero reparten el total con proporciones históricas 2009–2021; '
+            'no se modelan por separado.\n'
+            '- El periodo evaluado incluye la recuperación pospandemia y el cambio metodológico de 2023 '
+            '(pendiente de certificar): compare solo periodos equivalentes.\n'
+            '- No hay variables ambientales, sociales ni de capacidad; las estimaciones no explican causas.')
 
 
 with st.sidebar:
@@ -226,26 +273,17 @@ with tab_exp:
             mostrar(fig, 'V07')
 
 with tab_mod:
-    st.subheader('Modelos y Estimaciones: Gobernanza MLOps y Evaluación')
-    st.caption('Esta sección consulta la versión aprobada y el banco de evaluación retrospectiva desde abril de 2021; '
-               'los filtros laterales de históricos no cambian sus métricas. No son pronósticos para fechas posteriores al archivo exportado.')
+    st.subheader('Modelos y estimaciones')
+    st.caption('Los filtros laterales de históricos no cambian estas métricas. '
+               'El tablero solo lee resultados ya calculados: no entrena ni recalcula modelos.')
+    # Sin caché: refleja la última publicación o restauración en la siguiente recarga
+    version = cargar_version_aprobada(os.environ.get('DATA_DIR', str(ROOT / 'data')))
+    aprobadas = version['df']
+    render_version_aprobada(version)
 
-    # Integración de versión aprobada oficial (Ejercicio 6)
-    aprobadas = cargar_estimaciones_aprobadas(os.environ.get('DATA_DIR', str(ROOT / 'data')))
-    if aprobadas is not None and not aprobadas.empty:
-        ap_first = aprobadas.iloc[0]
-        st.success(
-            f"**Versión Oficial Aprobada (MLOps):** Procedimiento v{ap_first.get('version_procedimiento', '1.0.0')} | "
-            f"**Estado:** {ap_first.get('estado_aprobacion', 'APROBADO')} | "
-            f"**Run ID:** `{ap_first.get('run_id', 'N/A')}` | "
-            f"**Actualizado:** {ap_first.get('fecha_generacion', 'N/A')}"
-        )
-    else:
-        st.warning('Las estimaciones aprobadas no están disponibles en este momento o la última ejecución fue rechazada por controles de calidad. '
-                   'Se preserva la visualización histórica segura sin reemplazo de datos.')
-
-    st.info('Origen L1/L2 declarado en la guía de exportación; trazabilidad gobernada mediante MLflow Tracking. '
-            'Los directivos consultan versiones aprobadas verificables; los detalles de runs y parámetros residen en MLflow.')
+    st.markdown('#### Banco histórico de comparación (Lab 10)')
+    st.caption('pronosticos.csv conserva resultados previos de seis familias de modelos (origen L1/L2 declarado, no verificado). '
+               'Sirve para comparar; no es la versión aprobada y sus métricas no describen a la versión vigente.')
     if pron is None or pron.empty:
         st.info('No hay pronósticos válidos disponibles. Revise data/pronosticos.csv y los avisos de carga.')
     else:
@@ -278,18 +316,27 @@ with tab_mod:
             if tabla.N.nunique() > 1:
                 st.warning('Las coberturas difieren entre modelos: compare solo periodos comunes; revise N, Inicio y Fin.')
             if 'V08' in visibles:
-                st.subheader('Observado frente a pronósticos exportados')
-                st.caption('¿Qué modelos reproducen mejor la trayectoria observada? Las curvas son evaluación retrospectiva; no demuestran causalidad.')
+                st.subheader('Observado, estimación aprobada y banco Lab 10')
+                st.caption('¿Qué estimaciones reproducen mejor la trayectoria observada? Las curvas son evaluación retrospectiva; no demuestran causalidad.')
                 full = series[(series.serie == ms) & (series.fecha >= CORTE)]
-                fig = go.Figure(go.Scatter(x=full.fecha, y=full.viajeros, name='Observado (Oficial)', line=dict(color=AZUL, width=2.8)))
-                if aprobadas is not None and ms in set(aprobadas['serie']):
-                    ap_serie = aprobadas[aprobadas['serie'] == ms].sort_values('fecha')
-                    fig.add_trace(go.Scatter(x=ap_serie.fecha, y=ap_serie.prediccion,
-                        name=f"Estimación Aprobada MLOps ({ap_serie.iloc[0].get('modelo', 'Oficial')})",
-                        line=dict(color=VERDE, width=3.2)))
+                fig = go.Figure(go.Scatter(x=full.fecha, y=full.viajeros, name='Observado', line=dict(color=AZUL, width=2.8)))
+                if aprobadas is not None and ms in set(aprobadas.serie):
+                    ap_serie = aprobadas[aprobadas.serie == ms]
+                    corte_ms = series.loc[series.serie == ms, 'fecha'].max()
+                    for nombre_traza, tramo, dash in [
+                            ('Estimación aprobada (retrospectiva)', ap_serie[ap_serie.fecha <= corte_ms], None),
+                            ('Pronóstico futuro (versión aprobada)', ap_serie[ap_serie.fecha > corte_ms], 'dot')]:
+                        if not tramo.empty:
+                            fig.add_trace(go.Scatter(x=tramo.fecha, y=tramo.prediccion, name=nombre_traza,
+                                line=dict(color=VERDE, width=3.2, dash=dash)))
+                    por_serie = ((version['manifiesto'] or {}).get('metricas_por_serie') or {}).get('series', {})
+                    serie_criterio = ((version['manifiesto'] or {}).get('metricas') or {}).get('serie')
+                    if version['metadatos_verificados'] and ms in por_serie and ms != serie_criterio:
+                        st.caption(f"MAE de la versión aprobada para {ETIQ[ms]}: {por_serie[ms]['mae']:,.0f} viajeros/mes "
+                                   f"({por_serie[ms]['n']} meses; diagnóstico, el criterio de aprobación usa el total).")
                 for i, modelo in enumerate(elegidos):
                     g = pm[pm.modelo == modelo]
-                    fig.add_trace(go.Scatter(x=g.fecha, y=g.prediccion, name=f'{modelo} (evaluación)',
+                    fig.add_trace(go.Scatter(x=g.fecha, y=g.prediccion, name=f'{modelo} (banco Lab 10)',
                         line=dict(color=TONOS[i % len(TONOS)], dash=DASHES[i % len(DASHES)])))
                 mostrar(estilo_plotly(fig, 420, xaxis_title='Mes de evaluación', yaxis_title='Viajeros/mes',
                                       legend=dict(orientation='h', y=-.3)), 'V08')

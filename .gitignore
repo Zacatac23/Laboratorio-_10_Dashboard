@@ -3,10 +3,25 @@ venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-.streamlit/secrets.toml
+
+# Secretos y credenciales (nunca versionar)
 .env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+*.p12
+credentials*.json
+
+# Tracking MLflow (local y Compose) y bases de datos
+mlflow_store/
 mlruns/
 mlflow.db
+*.db
+
+# Salidas operativas del pipeline
 data/backup_aprobadas/
+data/*.tmp
 logs/
 reports/

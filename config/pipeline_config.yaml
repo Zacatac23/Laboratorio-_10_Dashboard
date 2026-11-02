@@ -15,7 +15,7 @@ paths:
   pais_file: "pais_mensual.csv"
   via_frontera_file: "via_frontera.csv"
   historical_forecasts_file: "pronosticos.csv"
-  output_dir: "data"
+  output_dir: "data"               # destino de estimaciones_aprobadas.csv y su manifiesto
   approved_file: "estimaciones_aprobadas.csv"
   backup_dir: "data/backup_aprobadas"
   reports_dir: "reports"
@@ -99,11 +99,37 @@ quality_thresholds:
     round_predictions_decimals: 2
 
 monitoring:
-  max_relative_variation_alert: 0.50
+  # Cobertura declarada de la entrega de datos vigente (no es "hoy"). Las fuentes
+  # deben llegar a este mes; las salidas deben llegar a temporal_split.eval_end.
+  # Actualizar solo cuando llegue una nueva entrega institucional.
+  expected_coverage_end: "2026-06-01"
   expected_monthly_frequency: "MS"
+  # Variación intermensual (mes t contra mes t-1 de la misma serie). Justificación:
+  # en el Total observado 2009-2019, el p95 de |variación intermensual| fue 32.4 %
+  # y solo 2 de 131 meses superaron 50 %. Una variación >50 % es alerta de revisión,
+  # no prueba de pérdida de precisión. Alternativa configurable: "interanual".
+  variation_comparison: "intermensual"
+  max_relative_variation_alert: 0.50
+  quality:
+    max_null_rate: 0.0            # proporción de filas con nulos en columnas clave
+    max_duplicate_rate: 0.0       # proporción de claves duplicadas
+    min_coverage_ratio: 1.0       # meses presentes / meses esperados entre min y max
+    # Comparación con la ejecución previa (si existe su JSON de monitoreo)
+    max_row_drop_ratio_vs_previous: 0.0
+    max_null_rate_increase_vs_previous: 0.0
+    max_duplicate_rate_increase_vs_previous: 0.0
   retention_versions_count: 5
 
 mlflow:
   experiment_name: "Observatorio_Turismo_Guatemala"
-  tracking_uri: "sqlite:///mlflow.db"
-  artifact_location: "./mlruns"
+  # Estrategia única:
+  # - Local: SQLite en mlflow_store/mlflow.db y artefactos en mlflow_store/artifacts
+  #   (UI local: mlflow ui --backend-store-uri sqlite:///mlflow_store/mlflow.db).
+  # - Docker Compose: MLFLOW_TRACKING_URI=http://mlflow:5000 (variable de entorno)
+  #   tiene prioridad sobre este valor; el servidor guarda SQLite y artefactos en
+  #   el volumen persistente /mlflow.
+  tracking_uri: "sqlite:///mlflow_store/mlflow.db"
+  artifact_location: "mlflow_store/artifacts"
+  # Reintentos de conectividad antes de iniciar; sin MLflow no se publica.
+  connect_retries: 5
+  connect_retry_delay_seconds: 3
