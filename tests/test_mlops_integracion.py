@@ -654,7 +654,8 @@ class DockerCompose(unittest.TestCase):
         # Recrear el contenedor del servidor: la base y los artefactos deben seguir ahí
         self.assertEqual(self.compose("rm", "-sf", "mlflow").returncode, 0)
         self.assertEqual(self.compose("up", "-d", "--wait", "mlflow").returncode, 0)
-        client = MlflowClient(tracking_uri="http://127.0.0.1:5000")
+        # Puerto publicado configurable (MLFLOW_PORT), igual que en docker-compose.yml
+        client = MlflowClient(tracking_uri=f"http://127.0.0.1:{os.environ.get('MLFLOW_PORT', '5000')}")
         exp = client.get_experiment_by_name("Observatorio_Turismo_Guatemala")
         runs = client.search_runs([exp.experiment_id], f"attributes.run_name = '{run_name}'")
         self.assertEqual(len(runs), 1)

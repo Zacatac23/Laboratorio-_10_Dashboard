@@ -196,6 +196,23 @@ class TourismMLOpsPipeline:
 
     # ------------------------------------------------------------------ ejecución
     def run(self) -> Dict[str, Any]:
+        # mlflow.set_tracking_uri() escribe MLFLOW_TRACKING_URI en os.environ. Como esa variable
+        # tiene prioridad sobre el YAML (resolve_tracking_uri), una ejecución previa en el mismo
+        # proceso fijaría la URI de las siguientes e ignoraría su configuración (p. ej. un servidor
+        # caído no bloquearía la publicación). Se restituye el valor original al terminar.
+        # Igual con MLFLOW_EXPERIMENT_ID, que mlflow.set_experiment() también escribe.
+        claves = ("MLFLOW_TRACKING_URI", "MLFLOW_EXPERIMENT_ID")
+        env_previo = {k: os.environ.get(k) for k in claves}
+        try:
+            return self._run()
+        finally:
+            for clave, valor in env_previo.items():
+                if valor is None:
+                    os.environ.pop(clave, None)
+                else:
+                    os.environ[clave] = valor
+
+    def _run(self) -> Dict[str, Any]:
         print("\n=======================================================")
         print(f"Iniciando Pipeline MLOps: {self.run_id}")
         print(f"Commit Git: {self.git_commit} ({self.git['source']})")

@@ -586,3 +586,14 @@ div[data-testid="stPlotlyChart"] {
   .content-card { padding: 16px !important; }
   .logo-circle { flex-shrink: 0; }
 }
+
+/* Tarjetas st.metric de la versión aprobada: valor completo visible (sin "…") en escritorio y móvil */
+[data-testid="stMetricValue"] {
+  font-size: clamp(1.15rem, 1.6vw, 1.7rem);
+}
+[data-testid="stMetricValue"] > div {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+}
